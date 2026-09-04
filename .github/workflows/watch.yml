@@ -21,6 +21,7 @@ concurrency:
 jobs:
   watch:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,12 +29,14 @@ jobs:
       - name: Run watcher
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          SCAN_BATCH_SIZE: '200'
+          SCAN_WORKERS: '8'
         run: python3 watch.py
       - name: Commit latest data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state.json latest.json
+          git add state.json latest.json scan_state.json market_scan.json
           if git diff --cached --quiet; then
             echo "No data changes to commit"
             exit 0
