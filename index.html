@@ -56,7 +56,7 @@
       <article class="panel">
         <div class="panel-head"><div><h2>東証・全上場銘柄一覧</h2><div class="muted" style="font-size:12px;margin-top:4px">JPX公表データ・2026年8月末時点</div></div><button class="btn" onclick="loadListed()">一覧更新</button></div>
         <div class="catalog-tools"><input id="stockSearch" class="catalog-input" type="search" placeholder="銘柄名・証券コードで検索" aria-label="銘柄検索" oninput="filterListed()"><select id="marketFilter" class="catalog-input" aria-label="市場区分" onchange="filterListed()"><option value="">すべての市場・商品</option></select></div>
-        <div class="catalog-meta"><span id="listedCount">全銘柄データを読み込んでいます…</span><span>価格・AI判定は監視中の11銘柄に表示</span></div>
+        <div class="catalog-meta"><span id="listedCount">全銘柄データを読み込んでいます…</span><span>未監視の銘柄は「監視に追加」から登録できます</span></div>
         <div class="table-wrap"><table><thead><tr><th>証券コード</th><th>銘柄名</th><th>市場・商品区分</th><th>業種</th><th>価格・AI監視</th></tr></thead><tbody id="allRows"><tr><td colspan="5" class="empty">全銘柄データを読み込んでいます…</td></tr></tbody></table></div>
         <div class="pager"><button id="prevPage" class="btn" onclick="changeListedPage(-1)">前へ</button><span id="pageLabel">—</span><button id="nextPage" class="btn" onclick="changeListedPage(1)">次へ</button></div>
       </article>
@@ -142,11 +142,12 @@
     function filterListed(){const q=(document.getElementById('stockSearch')?.value||'').trim().toLocaleLowerCase('ja'),m=document.getElementById('marketFilter')?.value||'';listedFiltered=listed.filter(s=>(!m||s.market===m)&&(!q||s.code.toLocaleLowerCase().includes(q)||s.name.toLocaleLowerCase().includes(q)));listedPage=1;renderAllStocks()}
     function renderAllStocks(){
       const rows=document.getElementById('allRows');if(!rows)return;const pages=Math.max(1,Math.ceil(listedFiltered.length/LISTED_PAGE_SIZE));listedPage=Math.min(listedPage,pages);const start=(listedPage-1)*LISTED_PAGE_SIZE,items=listedFiltered.slice(start,start+LISTED_PAGE_SIZE);
-      rows.innerHTML=items.length?items.map(s=>{const live=stock(s.code);return `<tr><td><b>${esc(s.code)}</b></td><td><div class="stock-name">${esc(s.name)}</div></td><td>${esc(s.market)}</td><td>${esc(s.sector||'—')}</td><td>${live?`<button class="row-btn monitored" onclick="openStock('${esc(s.code)}')">${yen.format(live.price)}・${esc(live.tag)}を見る</button>`:'<span class="unmonitored">未監視</span>'}</td></tr>`}).join(''):'<tr><td colspan="5" class="empty">条件に一致する銘柄がありません</td></tr>';
+      rows.innerHTML=items.length?items.map(s=>{const live=stock(s.code);return `<tr><td><b>${esc(s.code)}</b></td><td><div class="stock-name">${esc(s.name)}</div></td><td>${esc(s.market)}</td><td>${esc(s.sector||'—')}</td><td>${live?`<button class="row-btn monitored" onclick="openStock('${esc(s.code)}')">${yen.format(live.price)}・${esc(live.tag)}を見る</button>`:`<button class="row-btn" onclick="requestWatch('${esc(s.code)}','${esc(s.name)}')">監視に追加</button>`}</td></tr>`}).join(''):'<tr><td colspan="5" class="empty">条件に一致する銘柄がありません</td></tr>';
       document.getElementById('listedCount').textContent=`全${listedFiltered.length.toLocaleString('ja-JP')}銘柄${listedFiltered.length?`（${start+1}〜${Math.min(start+LISTED_PAGE_SIZE,listedFiltered.length)}件）`:''}`;document.getElementById('pageLabel').textContent=`${listedPage} / ${pages}ページ`;document.getElementById('prevPage').disabled=listedPage<=1;document.getElementById('nextPage').disabled=listedPage>=pages;
     }
     function changeListedPage(step){listedPage+=step;renderAllStocks();document.getElementById('all').scrollIntoView({behavior:'smooth',block:'start'})}
     function openStock(code){selectedCode=code;document.querySelectorAll('.tab,.view').forEach(x=>x.classList.remove('active'));document.querySelector('[data-view="sim"]').classList.add('active');document.getElementById('sim').classList.add('active');renderTrade();document.getElementById('tradePanel').scrollIntoView({behavior:'smooth',block:'start'})}
+    function requestWatch(code,name){const title=encodeURIComponent('監視追加:'+code),body=encodeURIComponent(`${name}（${code}）を15分監視・AI判定・LINE通知の対象へ追加します。`);window.open(`https://github.com/life111koutan-coder/ai-stock-watcher/issues/new?title=${title}&body=${body}`,'_blank','noopener')}
     function selectStock(code){selectedCode=code;renderTrade();if(innerWidth<981)document.getElementById('tradePanel').scrollIntoView({behavior:'smooth',block:'start'})}
     function chartMarkup(s){
       const h=Array.isArray(s.history)?s.history.filter(x=>Number.isFinite(Number(x.close))):[];

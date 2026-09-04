@@ -1,0 +1,69 @@
+name: Add Stock Monitor
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  add-stock:
+    if: github.actor == 'life111koutan-coder' && startsWith(github.event.issue.title, '監視追加:')
+    runs-on: ubuntu-latest
+    env:
+      ISSUE_TITLE: ${{ github.event.issue.title }}
+      GH_TOKEN: ${{ github.token }}
+      LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Add selected stock
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+
+          title = os.environ["ISSUE_TITLE"]
+          match = re.fullmatch(r"監視追加:([0-9A-Z]{4})", title)
+          if not match:
+              raise SystemExit("監視追加の形式が正しくありません")
+
+          code = match.group(1)
+          with open("all_stocks.json", encoding="utf-8") as f:
+              listed = json.load(f)["stocks"]
+          selected = next((x for x in listed if x["code"] == code), None)
+          if not selected:
+              raise SystemExit("上場銘柄一覧にない証券コードです")
+
+          with open("watchlist.json", encoding="utf-8") as f:
+              watchlist = json.load(f)
+          if not any(x["code"] == code for x in watchlist):
+              watchlist.append({"code": code, "name": selected["name"]})
+              with open("watchlist.json", "w", encoding="utf-8") as f:
+                  json.dump(watchlist, f, ensure_ascii=False, indent=2)
+                  f.write("\n")
+          PY
+
+      - name: Update prices and AI decisions
+        run: python watch.py
+
+      - name: Save monitoring data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add watchlist.json state.json latest.json
+          git diff --cached --quiet || git commit -m "chore: add requested stock monitor"
+          git pull --rebase origin main
+          git push
+
+      - name: Close completed request
+        run: gh issue close "${{ github.event.issue.number }}" --comment "監視対象への追加と最新データの更新が完了しました。"
