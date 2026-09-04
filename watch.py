@@ -25,26 +25,40 @@ def save_json(path, data):
 
 def fetch_price_series(code):
     symbol = f"{code}.T"
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range=1mo&interval=1d"
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range=3mo&interval=1d"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=15) as res:
         data = json.load(res)
     result = data["chart"]["result"][0]
-    raw_closes = result["indicators"]["quote"][0]["close"]
+    quote = result["indicators"]["quote"][0]
+    raw_closes = quote["close"]
     timestamps = result.get("timestamp", [])
-    history = [
-        {
+    bars = []
+    for ts, open_, high, low, close, volume in zip(
+        timestamps,
+        quote.get("open", []),
+        quote.get("high", []),
+        quote.get("low", []),
+        raw_closes,
+        quote.get("volume", []),
+    ):
+        if close is None:
+            continue
+        close = float(close)
+        bars.append({
             "date": datetime.fromtimestamp(ts, timezone.utc).date().isoformat(),
-            "close": round(float(close), 2),
-        }
-        for ts, close in zip(timestamps, raw_closes)
-        if close is not None
-    ]
-    closes = [item["close"] for item in history]
+            "open": round(float(open_ if open_ is not None else close), 2),
+            "high": round(float(high if high is not None else close), 2),
+            "low": round(float(low if low is not None else close), 2),
+            "close": round(close, 2),
+            "volume": int(volume or 0),
+        })
+    closes = [item["close"] for item in bars]
+    history = [{"date": item["date"], "close": item["close"]} for item in bars[-23:]]
     meta = result["meta"]
     price = meta.get("regularMarketPrice") or closes[-1]
     prev_close = meta.get("previousClose") or closes[-2]
-    return price, prev_close, closes, history
+    return price, prev_close, closes[-23:], history, bars
 
 
 def compute_score(closes):
@@ -106,7 +120,7 @@ def main():
     for item in watchlist:
         code, name = item["code"], item["name"]
         try:
-            price, prev_close, closes, history = fetch_price_series(code)
+            price, prev_close, closes, history, bars = fetch_price_series(code)
         except Exception as e:
             error = f"{code} {name}: price fetch failed: {e}"
             print(error)
@@ -130,7 +144,8 @@ def main():
         state[code] = {"tag": tag, "score": score}
         stocks.append({"code": code, "name": name, "price": price, "previous_close": prev_close,
                        "change_pct": round(change_pct, 2), "score": score, "tag": tag,
-                       "reasons": reasons, "history": history, "updated_at": generated_at})
+                       "reasons": reasons, "history": history, "bars": bars,
+                       "updated_at": generated_at})
 
     save_json(STATE_PATH, state)
     save_json(LATEST_PATH, {"generated_at": generated_at, "stocks": stocks, "errors": errors})
