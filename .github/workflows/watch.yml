@@ -1,6 +1,12 @@
 name: AI Stock Watch
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'watch.py'
+      - 'watchlist.json'
+      - '.github/workflows/watch.yml'
   schedule:
     - cron: '*/15 0-6 * * 1-5'
   workflow_dispatch:
