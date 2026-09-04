@@ -2,51 +2,168 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#07111f">
   <title>AI株取引パイロット</title>
   <style>
-    :root{color-scheme:dark;--bg:#07111f;--panel:#0d1a2b;--line:#21334a;--text:#eef5ff;--muted:#8fa2b9;--cyan:#2dd4bf;--blue:#60a5fa;--red:#fb7185;--amber:#fbbf24}
-    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#142a49 0,transparent 35%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif}
-    .wrap{width:min(1180px,calc(100% - 28px));margin:auto;padding:28px 0 56px}.head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:22px}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.12em;font-size:12px}.title{font-size:clamp(26px,5vw,44px);margin:5px 0 3px}.sub,.muted{color:var(--muted)}.status{display:flex;align-items:center;gap:8px;color:#b9f6e9;font-size:13px}.dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
-    .notice{border:1px solid #26415b;background:#0b2130;color:#bfe9ff;border-radius:12px;padding:12px 15px;margin-bottom:16px;font-size:13px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.card,.panel{background:linear-gradient(160deg,rgba(17,34,55,.96),rgba(10,23,39,.96));border:1px solid var(--line);border-radius:16px;box-shadow:0 14px 36px rgba(0,0,0,.2)}.card{padding:17px}.label{font-size:12px;color:var(--muted);margin-bottom:8px}.value{font-size:24px;font-weight:850}.unit{font-size:12px;color:var(--muted);margin-left:6px}.panel{overflow:hidden}.panel-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}.panel-head h2{font-size:18px;margin:0}.refresh{border:1px solid #2d4865;background:#10243a;color:#d9e9ff;border-radius:9px;padding:8px 12px;cursor:pointer}.refresh:hover{border-color:var(--blue)}
-    table{width:100%;border-collapse:collapse}th{color:var(--muted);font-size:12px;text-align:left;font-weight:650;padding:12px 16px;background:#0a1727}td{padding:14px 16px;border-top:1px solid rgba(43,63,87,.7);font-size:14px}.name{font-weight:750}.code{font-size:12px;color:var(--muted);margin-top:3px}.num{text-align:right;font-variant-numeric:tabular-nums}.tag{display:inline-block;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800}.strong{background:rgba(45,212,191,.13);color:#6ee7d8}.weak{background:rgba(251,113,133,.13);color:#fda4af}.wait{background:rgba(251,191,36,.12);color:#fcd34d}.up{color:#55e2c6}.down{color:#ff8ca0}.empty{text-align:center;padding:42px 18px;color:var(--muted)}.foot{margin-top:14px;color:#71859d;font-size:12px;line-height:1.7}
-    @media(max-width:780px){.head{display:block}.status{margin-top:12px}.cards{grid-template-columns:repeat(2,1fr)}.table-wrap{overflow-x:auto}table{min-width:720px}.wrap{width:min(100% - 18px,1180px);padding-top:18px}}
+    :root{color-scheme:dark;--bg:#07111f;--panel:#0d1a2b;--panel2:#101f33;--line:#21344d;--text:#eff6ff;--muted:#94a6ba;--cyan:#2dd4bf;--blue:#60a5fa;--red:#fb7185;--amber:#fbbf24;--shadow:0 18px 46px rgba(0,0,0,.24)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 82% -5%,#19375e 0,transparent 31%),linear-gradient(180deg,#07111f,#081421 55%,#06101c);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;min-height:100vh}
+    button,input,select{font:inherit}button{cursor:pointer}.app{width:min(1280px,calc(100% - 28px));margin:auto;padding:24px 0 56px}.top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:18px}.eyebrow{font-size:12px;letter-spacing:.14em;color:var(--cyan);font-weight:850}.top h1{font-size:clamp(26px,4vw,43px);margin:5px 0 2px;line-height:1.15}.subtitle,.muted{color:var(--muted)}.feed{display:flex;align-items:center;gap:8px;font-size:13px;color:#c8fff3}.feed-dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}.feed-dot.error{background:var(--red);box-shadow:0 0 14px var(--red)}
+    .notice{border:1px solid #28445e;background:rgba(11,34,49,.88);color:#c6eaff;border-radius:12px;padding:11px 14px;font-size:13px;margin-bottom:14px}.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 13px;scrollbar-width:none}.tab{white-space:nowrap;border:1px solid var(--line);background:#0c192a;color:#aebed0;border-radius:10px;padding:10px 16px;font-weight:750}.tab.active{background:linear-gradient(135deg,#164a65,#12645e);border-color:#2b948c;color:#fff}
+    .view{display:none}.view.active{display:block}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-bottom:14px}.metric,.panel{background:linear-gradient(155deg,rgba(17,34,55,.97),rgba(10,23,39,.97));border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.metric{padding:16px}.metric-label{font-size:12px;color:var(--muted);margin-bottom:7px}.metric-value{font-size:clamp(20px,3vw,27px);font-weight:850;font-variant-numeric:tabular-nums}.metric-sub{font-size:12px;color:var(--muted);margin-top:5px}.loss{color:var(--red)}.grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,.75fr);gap:14px}.panel{overflow:hidden}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 18px;border-bottom:1px solid var(--line)}.panel-head h2{font-size:18px;margin:0}.panel-body{padding:17px}.btn{border:1px solid #31506e;background:#10243a;color:#e3efff;border-radius:9px;padding:9px 12px;font-weight:750}.btn:hover{border-color:var(--blue)}.btn.primary{background:#0f766e;border-color:#20aa9e}.btn.sell{background:#842f42;border-color:#b94b63}.btn.danger{background:#351c28;border-color:#7e3548;color:#ffc0cc}.btn:disabled{opacity:.45;cursor:not-allowed}
+    .table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th{background:#091725;color:var(--muted);font-size:12px;text-align:left;padding:11px 13px;position:sticky;top:0}td{padding:13px;border-top:1px solid rgba(42,63,89,.72);font-size:14px;vertical-align:middle}.num{text-align:right;font-variant-numeric:tabular-nums}.stock-name{font-weight:800}.stock-meta{font-size:12px;color:var(--muted);margin-top:3px}.row-btn{border:0;background:transparent;color:#8cc8ff;padding:4px;font-weight:750}.row-btn:hover{text-decoration:underline}.up{color:#58e1c8}.down{color:#ff8ca0}.badge{display:inline-block;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:850}.strong{background:rgba(45,212,191,.14);color:#73ead9}.weak{background:rgba(251,113,133,.14);color:#fda4af}.watch{background:rgba(251,191,36,.13);color:#fcd34d}.risk-low{color:#74e5d3}.risk-mid{color:#fcd34d}.risk-high{color:#ff8ca0}
+    .selected{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:16px}.selected h3{margin:0 0 4px;font-size:20px}.price{font-size:24px;font-weight:900;text-align:right}.score{height:8px;background:#172a40;border-radius:999px;overflow:hidden;margin:12px 0 7px}.score>span{display:block;height:100%;background:linear-gradient(90deg,#60a5fa,#2dd4bf);border-radius:inherit}.reasons{margin:12px 0 0;padding-left:20px;color:#b5c4d5;font-size:13px;line-height:1.7}.trade-box{border-top:1px solid var(--line);margin-top:17px;padding-top:16px}.field{margin-bottom:12px}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.input{width:100%;background:#081521;border:1px solid #2a425e;color:var(--text);border-radius:9px;padding:11px}.order-preview{display:flex;justify-content:space-between;color:#c8d6e6;background:#0a1725;border-radius:10px;padding:11px;margin:10px 0 12px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.message{min-height:21px;margin-top:10px;font-size:13px}.message.ok{color:#66e5cb}.message.err{color:#ff9bad}
+    .empty{padding:38px 18px;text-align:center;color:var(--muted)}.history-empty{padding:34px;text-align:center;color:var(--muted)}.rule-list{display:grid;gap:10px}.rule{display:flex;gap:11px;align-items:flex-start;background:#0a1726;border:1px solid #203650;border-radius:11px;padding:12px}.rule-icon{color:var(--cyan);font-weight:900}.lock-card{text-align:center;padding:25px 18px}.lock-icon{font-size:42px}.lock-card h2{margin:9px 0}.lock-card p{color:var(--muted);line-height:1.7}.emergency{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#261620;border:1px solid #713145;border-radius:12px;padding:13px;margin-top:15px}.switch{width:50px;height:29px;border:0;border-radius:999px;background:#30445b;position:relative}.switch:after{content:"";position:absolute;width:21px;height:21px;border-radius:50%;background:#fff;top:4px;left:4px;transition:.2s}.switch.on{background:#a82e4a}.switch.on:after{left:25px}.section-stack{display:grid;gap:14px}.footer{font-size:12px;color:#71859d;line-height:1.7;margin-top:14px}
+    @media(max-width:980px){.metrics{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.metric:first-child{grid-column:span 2}}@media(max-width:620px){.app{width:min(100% - 16px,1280px);padding-top:16px}.top{display:block}.feed{margin-top:10px}.metrics{gap:8px}.metric{padding:13px}.panel-head{padding:14px}.panel-body{padding:14px}.tabs{margin-right:-8px}.tab{padding:9px 13px}.selected{align-items:center}.price{font-size:21px}}
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <header class="head"><div><div class="eyebrow">AI STOCK WATCHER</div><h1 class="title">AI株取引パイロット</h1><div class="sub">学んで、試して、確認してから本番へ</div></div><div class="status"><span class="dot"></span><span id="updated">データ取得中</span></div></header>
-    <div class="notice">これは情報確認・仮想検証用です。自動判定は投資助言ではなく、実際の注文は行いません。</div>
-    <section class="cards">
-      <div class="card"><div class="label">監視銘柄</div><div class="value"><span id="count">—</span><span class="unit">銘柄</span></div></div>
-      <div class="card"><div class="label">強気判定</div><div class="value"><span id="strong">—</span><span class="unit">銘柄</span></div></div>
-      <div class="card"><div class="label">様子見</div><div class="value"><span id="wait">—</span><span class="unit">銘柄</span></div></div>
-      <div class="card"><div class="label">平均AIスコア</div><div class="value"><span id="average">—</span><span class="unit">/ 100</span></div></div>
+  <main class="app">
+    <header class="top">
+      <div><div class="eyebrow">AI STOCK WATCHER</div><h1>AI株取引パイロット</h1><div class="subtitle">学んで、試して、確認してから本番へ</div></div>
+      <div class="feed"><span id="feedDot" class="feed-dot"></span><span id="updated">市場価格を取得中</span></div>
+    </header>
+    <div class="notice">自動判定は判断材料のひとつです。仮想売買は実際の資金や証券口座を動かしません。実売買は未接続です。</div>
+    <nav class="tabs" aria-label="画面切り替え">
+      <button class="tab active" data-view="sim">仮想売買</button>
+      <button class="tab" data-view="all">全銘柄</button>
+      <button class="tab" data-view="live">実売買</button>
+      <button class="tab" data-view="history">履歴</button>
+    </nav>
+
+    <section id="sim" class="view active">
+      <div class="metrics">
+        <div class="metric"><div class="metric-label">総資産</div><div id="totalAssets" class="metric-value">￥1,000,000</div><div id="assetChange" class="metric-sub">開始時から ￥0</div></div>
+        <div class="metric"><div class="metric-label">現金残高</div><div id="cash" class="metric-value">￥1,000,000</div><div class="metric-sub">仮想資金</div></div>
+        <div class="metric"><div class="metric-label">保有評価額</div><div id="holdingValue" class="metric-value">￥0</div><div id="holdingCount" class="metric-sub">0銘柄</div></div>
+        <div class="metric"><div class="metric-label">本日の実現損益</div><div id="dailyPnl" class="metric-value">￥0</div><div class="metric-sub">損失上限 20,000円</div></div>
+        <div class="metric"><div class="metric-label">監視状況</div><div id="watchCount" class="metric-value">—</div><div id="watchSummary" class="metric-sub">取得中</div></div>
+      </div>
+      <div class="grid">
+        <article class="panel">
+          <div class="panel-head"><h2>銘柄一覧</h2><button class="btn" type="button" onclick="loadMarket()">価格更新</button></div>
+          <div class="table-wrap"><table><thead><tr><th>銘柄</th><th>分類</th><th class="num">現在値</th><th class="num">前日比</th><th>自動判定</th><th class="num">信頼度</th><th>危険度</th><th></th></tr></thead><tbody id="stockRows"><tr><td colspan="8" class="empty">最新データを読み込んでいます…</td></tr></tbody></table></div>
+        </article>
+        <aside class="panel">
+          <div class="panel-head"><h2>仮想注文</h2><span class="badge watch">承認式</span></div>
+          <div id="tradePanel" class="panel-body"><div class="empty">銘柄の「選択」を押してください</div></div>
+        </aside>
+      </div>
     </section>
-    <section class="panel">
-      <div class="panel-head"><h2>銘柄一覧</h2><button class="refresh" type="button" onclick="loadData()">更新</button></div>
-      <div class="table-wrap"><table><thead><tr><th>銘柄</th><th class="num">現在値</th><th class="num">前日比</th><th>自動判定</th><th class="num">AIスコア</th><th>判定理由</th></tr></thead><tbody id="rows"><tr><td class="empty" colspan="6">最新データを読み込んでいます…</td></tr></tbody></table></div>
+
+    <section id="all" class="view">
+      <article class="panel">
+        <div class="panel-head"><div><h2>全銘柄のAI判定</h2><div class="muted" style="font-size:12px;margin-top:4px">AIスコアが高い順・価格は遅延する場合があります</div></div><button class="btn" onclick="loadMarket()">更新</button></div>
+        <div class="table-wrap"><table><thead><tr><th>銘柄</th><th>分類</th><th class="num">現在値</th><th class="num">前日比</th><th>判定</th><th class="num">AIスコア</th><th>判定理由</th></tr></thead><tbody id="allRows"></tbody></table></div>
+      </article>
     </section>
-    <p class="foot">価格はYahoo Financeの公開データを利用し、遅延する場合があります。売買判断は必ずご自身で確認してください。</p>
+
+    <section id="live" class="view">
+      <div class="grid">
+        <article class="panel lock-card">
+          <div class="lock-icon">🔒</div><h2>実売買は未接続です</h2>
+          <p>この画面から証券口座へ注文は送信されません。接続後も、注文内容の検査と師匠の最終承認がなければ実行しない設計です。</p>
+          <button class="btn" disabled>Windows接続ブリッジ：未接続</button>
+          <div class="emergency"><div style="text-align:left"><b>緊急停止ロック</b><div class="muted" style="font-size:12px;margin-top:3px">仮想売買も停止します</div></div><button id="emergencySwitch" class="switch" aria-label="緊急停止" onclick="toggleEmergency()"></button></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><h2>注文前の安全検査</h2></div>
+          <div class="panel-body rule-list">
+            <div class="rule"><span class="rule-icon">✓</span><div><b>現物取引のみ</b><div class="muted">信用取引と空売りは禁止</div></div></div>
+            <div class="rule"><span class="rule-icon">✓</span><div><b>1回20万円まで</b><div class="muted">大きすぎる注文は拒否</div></div></div>
+            <div class="rule"><span class="rule-icon">✓</span><div><b>1銘柄は総資産の20％まで</b><div class="muted">集中しすぎを防止</div></div></div>
+            <div class="rule"><span class="rule-icon">✓</span><div><b>1日の損失上限は2万円</b><div class="muted">到達時は新規注文を停止</div></div></div>
+            <div class="rule"><span class="rule-icon">✓</span><div><b>最終実行権限は師匠のみ</b><div class="muted">AIは提案のみ。自動発注しません</div></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="history" class="view">
+      <article class="panel">
+        <div class="panel-head"><h2>仮想取引履歴</h2><button class="btn danger" onclick="resetSimulation()">仮想資金をリセット</button></div>
+        <div class="table-wrap"><table><thead><tr><th>日時</th><th>売買</th><th>銘柄</th><th class="num">数量</th><th class="num">価格</th><th class="num">金額</th><th class="num">実現損益</th></tr></thead><tbody id="historyRows"></tbody></table></div>
+      </article>
+    </section>
+    <p class="footer">価格データはYahoo Finance由来で遅延する場合があります。取得できなかった銘柄には架空価格を表示しません。投資判断は必ずご自身で行ってください。</p>
   </main>
+
   <script>
-    const yen = new Intl.NumberFormat('ja-JP',{style:'currency',currency:'JPY',maximumFractionDigits:1});
-    const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-    async function loadData(){
+    const STARTING_CASH=1000000,MAX_ORDER=200000,MAX_POSITION_RATE=.2,DAILY_LOSS_LIMIT=20000,STORE='ai-stock-pilot-v2';
+    const CLASS_MAP={'6702':'AI・量子','9432':'AI・通信','6758':'AI','9984':'AI','6701':'AI・量子','6501':'AI・量子','3778':'AI','3993':'AI','7203':'一般','8306':'一般','9983':'一般'};
+    const yen=new Intl.NumberFormat('ja-JP',{style:'currency',currency:'JPY',maximumFractionDigits:1});
+    const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const today=()=>new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Tokyo'});
+    let market=[],selectedCode=null;
+    let sim=loadSim();
+    function loadSim(){try{const v=JSON.parse(localStorage.getItem(STORE));if(v&&typeof v.cash==='number')return {...v,holdings:v.holdings||{},trades:v.trades||[],daily:v.daily||{}}}catch(e){}return {cash:STARTING_CASH,holdings:{},trades:[],daily:{},emergency:false}}
+    function saveSim(){localStorage.setItem(STORE,JSON.stringify(sim))}
+    function stock(code){return market.find(s=>s.code===code)}
+    function totalAssets(){return sim.cash+Object.entries(sim.holdings).reduce((n,[code,h])=>n+(stock(code)?.price||h.avg)*h.qty,0)}
+    function confidence(s){return Math.max(50,Math.min(95,Math.round(50+Math.abs((s.score||50)-50)*1.25)))}
+    function risk(s){const c=Math.abs(Number(s.change_pct||0));return c>=4?'高':c>=1.5?'中':'低'}
+    function tagClass(tag){return tag==='強気'?'strong':tag==='弱気'?'weak':'watch'}
+    function showMessage(text,ok=false){const el=document.getElementById('tradeMessage');if(el){el.textContent=text;el.className='message '+(ok?'ok':'err')}}
+    document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab,.view').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.view).classList.add('active');renderHistory()}));
+
+    async function loadMarket(){
+      const dot=document.getElementById('feedDot');document.getElementById('updated').textContent='市場価格を取得中';dot.classList.remove('error');
       try{
-        const res=await fetch('./latest.json?ts='+Date.now(),{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
-        const data=await res.json(); const stocks=Array.isArray(data.stocks)?data.stocks:[];
-        stocks.sort((a,b)=>(b.score??0)-(a.score??0));
-        document.getElementById('count').textContent=stocks.length;
-        document.getElementById('strong').textContent=stocks.filter(s=>s.tag==='強気').length;
-        document.getElementById('wait').textContent=stocks.filter(s=>s.tag==='様子見').length;
-        document.getElementById('average').textContent=stocks.length?Math.round(stocks.reduce((n,s)=>n+(s.score||0),0)/stocks.length):'—';
-        document.getElementById('updated').textContent=data.generated_at?new Date(data.generated_at).toLocaleString('ja-JP')+' 更新':'更新時刻不明';
-        document.getElementById('rows').innerHTML=stocks.length?stocks.map(s=>{const ch=Number(s.change_pct||0);const cls=s.tag==='強気'?'strong':s.tag==='弱気'?'weak':'wait';return `<tr><td><div class="name">${esc(s.name)}</div><div class="code">${esc(s.code)}</div></td><td class="num">${yen.format(Number(s.price||0))}</td><td class="num ${ch>=0?'up':'down'}">${ch>=0?'+':''}${ch.toFixed(2)}%</td><td><span class="tag ${cls}">${esc(s.tag)}</span></td><td class="num"><b>${Number(s.score||0)}</b> / 100</td><td class="muted">${esc((s.reasons||[]).join(' / '))}</td></tr>`}).join(''):'<tr><td class="empty" colspan="6">表示できる銘柄データがありません</td></tr>';
-      }catch(e){document.getElementById('updated').textContent='データ未取得';document.getElementById('rows').innerHTML='<tr><td class="empty" colspan="6">初回の株価監視が完了すると、ここに最新データが表示されます。</td></tr>';}
+        const r=await fetch('./latest.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
+        const d=await r.json();market=Array.isArray(d.stocks)?d.stocks:[];market.sort((a,b)=>(b.score||0)-(a.score||0));
+        document.getElementById('updated').textContent=(d.generated_at?new Date(d.generated_at).toLocaleString('ja-JP'):'時刻不明')+' 更新';
+        if(!selectedCode&&market[0])selectedCode=market[0].code;
+        renderAll();
+      }catch(e){dot.classList.add('error');document.getElementById('updated').textContent='価格データを取得できません';document.getElementById('stockRows').innerHTML='<tr><td colspan="8" class="empty">取得に失敗しました。架空価格は表示しません。</td></tr>'}
     }
-    loadData(); setInterval(loadData,60000);
+    function renderAll(){renderMetrics();renderStocks();renderAllStocks();renderTrade();renderHistory();renderEmergency()}
+    function renderMetrics(){
+      const total=totalAssets(),hv=total-sim.cash,pnl=Number(sim.daily[today()]||0),strong=market.filter(s=>s.tag==='強気').length;
+      document.getElementById('totalAssets').textContent=yen.format(total);document.getElementById('assetChange').textContent='開始時から '+(total-STARTING_CASH>=0?'+':'')+yen.format(total-STARTING_CASH);
+      document.getElementById('cash').textContent=yen.format(sim.cash);document.getElementById('holdingValue').textContent=yen.format(hv);document.getElementById('holdingCount').textContent=Object.keys(sim.holdings).filter(k=>sim.holdings[k].qty>0).length+'銘柄';
+      const pe=document.getElementById('dailyPnl');pe.textContent=(pnl>0?'+':'')+yen.format(pnl);pe.className='metric-value'+(pnl<0?' loss':'');
+      document.getElementById('watchCount').textContent=market.length+'銘柄';document.getElementById('watchSummary').textContent='強気 '+strong+'・様子見 '+market.filter(s=>s.tag==='様子見').length;
+    }
+    function renderStocks(){
+      document.getElementById('stockRows').innerHTML=market.length?market.map(s=>{const ch=Number(s.change_pct||0),r=risk(s);return `<tr><td><div class="stock-name">${esc(s.name)}</div><div class="stock-meta">${esc(s.code)}</div></td><td>${esc(CLASS_MAP[s.code]||'一般')}</td><td class="num">${yen.format(s.price)}</td><td class="num ${ch>=0?'up':'down'}">${ch>=0?'+':''}${ch.toFixed(2)}%</td><td><span class="badge ${tagClass(s.tag)}">${esc(s.tag)}</span></td><td class="num">${confidence(s)}%</td><td class="risk-${r==='低'?'low':r==='中'?'mid':'high'}">${r}</td><td><button class="row-btn" onclick="selectStock('${esc(s.code)}')">選択</button></td></tr>`}).join(''):'<tr><td colspan="8" class="empty">表示できる価格データがありません</td></tr>';
+    }
+    function renderAllStocks(){
+      document.getElementById('allRows').innerHTML=market.length?market.map(s=>{const ch=Number(s.change_pct||0);return `<tr><td><div class="stock-name">${esc(s.name)}</div><div class="stock-meta">${esc(s.code)}</div></td><td>${esc(CLASS_MAP[s.code]||'一般')}</td><td class="num">${yen.format(s.price)}</td><td class="num ${ch>=0?'up':'down'}">${ch>=0?'+':''}${ch.toFixed(2)}%</td><td><span class="badge ${tagClass(s.tag)}">${esc(s.tag)}</span></td><td class="num"><b>${s.score}</b>/100</td><td class="muted">${esc((s.reasons||[]).join(' / '))}</td></tr>`}).join(''):'<tr><td colspan="7" class="empty">データがありません</td></tr>';
+    }
+    function selectStock(code){selectedCode=code;renderTrade();if(innerWidth<981)document.getElementById('tradePanel').scrollIntoView({behavior:'smooth',block:'start'})}
+    function renderTrade(){
+      const s=stock(selectedCode),panel=document.getElementById('tradePanel');if(!s){panel.innerHTML='<div class="empty">価格データのある銘柄を選択してください</div>';return}
+      const h=sim.holdings[s.code]||{qty:0,avg:0},ch=Number(s.change_pct||0);
+      panel.innerHTML=`<div class="selected"><div><h3>${esc(s.name)}</h3><div class="muted">${esc(s.code)}・保有 ${h.qty}株</div></div><div><div class="price">${yen.format(s.price)}</div><div class="num ${ch>=0?'up':'down'}">${ch>=0?'+':''}${ch.toFixed(2)}%</div></div></div>
+        <div><span class="badge ${tagClass(s.tag)}">${esc(s.tag)}</span> <span class="muted" style="font-size:13px">AIスコア ${s.score}/100</span></div><div class="score"><span style="width:${s.score}%"></span></div>
+        <ul class="reasons">${(s.reasons||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+        <div class="trade-box"><div class="field"><label for="qty">数量（株）</label><input id="qty" class="input" type="number" min="1" step="1" value="1" oninput="updatePreview()"></div>
+        <div class="order-preview"><span>概算金額</span><b id="orderAmount">${yen.format(s.price)}</b></div>
+        <div class="actions"><button class="btn primary" onclick="executeTrade('buy')">仮想で買う</button><button class="btn sell" onclick="executeTrade('sell')">仮想で売る</button></div><div id="tradeMessage" class="message"></div></div>`;
+    }
+    function updatePreview(){const s=stock(selectedCode),q=Math.max(0,Number(document.getElementById('qty')?.value||0));const el=document.getElementById('orderAmount');if(el&&s)el.textContent=yen.format(s.price*q)}
+    function executeTrade(side){
+      const s=stock(selectedCode),q=Number(document.getElementById('qty')?.value);if(!s||!Number.isInteger(q)||q<1)return showMessage('数量は1株以上の整数で入力してください');
+      if(sim.emergency)return showMessage('緊急停止ロック中です');const amount=s.price*q;if(amount>MAX_ORDER)return showMessage('1回の上限20万円を超えています');
+      const pnlToday=Number(sim.daily[today()]||0);if(pnlToday<=-DAILY_LOSS_LIMIT)return showMessage('本日の損失上限2万円に達したため停止中です');
+      const h=sim.holdings[s.code]||{qty:0,avg:0};let realized=0;
+      if(side==='buy'){
+        if(amount>sim.cash)return showMessage('現金残高が不足しています');
+        if((h.qty+q)*s.price>totalAssets()*MAX_POSITION_RATE)return showMessage('1銘柄20％の保有上限を超えます');
+        h.avg=((h.avg*h.qty)+amount)/(h.qty+q);h.qty+=q;sim.cash-=amount;sim.holdings[s.code]=h;
+      }else{
+        if(q>h.qty)return showMessage('保有数を超えて売ることはできません');
+        realized=(s.price-h.avg)*q;h.qty-=q;sim.cash+=amount;if(h.qty===0)delete sim.holdings[s.code];else sim.holdings[s.code]=h;sim.daily[today()]=pnlToday+realized;
+      }
+      sim.trades.unshift({time:new Date().toISOString(),side,code:s.code,name:s.name,qty:q,price:s.price,amount,realized});saveSim();renderAll();showMessage((side==='buy'?'買い':'売り')+'の仮想注文を記録しました',true);
+    }
+    function renderHistory(){
+      const el=document.getElementById('historyRows');if(!el)return;el.innerHTML=sim.trades.length?sim.trades.map(t=>`<tr><td>${new Date(t.time).toLocaleString('ja-JP')}</td><td><span class="badge ${t.side==='buy'?'strong':'weak'}">${t.side==='buy'?'買い':'売り'}</span></td><td><b>${esc(t.name)}</b><div class="stock-meta">${esc(t.code)}</div></td><td class="num">${t.qty}株</td><td class="num">${yen.format(t.price)}</td><td class="num">${yen.format(t.amount)}</td><td class="num ${t.realized>=0?'up':'down'}">${t.side==='sell'?(t.realized>=0?'+':'')+yen.format(t.realized):'—'}</td></tr>`).join(''):'<tr><td colspan="7" class="history-empty">まだ仮想取引の履歴はありません</td></tr>';
+    }
+    function toggleEmergency(){sim.emergency=!sim.emergency;saveSim();renderEmergency();renderTrade()}
+    function renderEmergency(){const b=document.getElementById('emergencySwitch');if(b)b.classList.toggle('on',!!sim.emergency)}
+    function resetSimulation(){if(!confirm('仮想資金・保有銘柄・履歴をすべて初期状態に戻しますか？'))return;sim={cash:STARTING_CASH,holdings:{},trades:[],daily:{},emergency:false};saveSim();renderAll()}
+    loadMarket();setInterval(loadMarket,60000);
   </script>
 </body>
 </html>
