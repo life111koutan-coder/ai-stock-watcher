@@ -1,0 +1,16 @@
+name: AI Stock Watch
+
+on:
+  schedule:
+    - cron: '*/15 0-6 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run watcher
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        run: python3 watch.py
