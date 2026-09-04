@@ -30,11 +30,21 @@ def fetch_price_series(code):
     with urllib.request.urlopen(req, timeout=15) as res:
         data = json.load(res)
     result = data["chart"]["result"][0]
-    closes = [c for c in result["indicators"]["quote"][0]["close"] if c is not None]
+    raw_closes = result["indicators"]["quote"][0]["close"]
+    timestamps = result.get("timestamp", [])
+    history = [
+        {
+            "date": datetime.fromtimestamp(ts, timezone.utc).date().isoformat(),
+            "close": round(float(close), 2),
+        }
+        for ts, close in zip(timestamps, raw_closes)
+        if close is not None
+    ]
+    closes = [item["close"] for item in history]
     meta = result["meta"]
     price = meta.get("regularMarketPrice") or closes[-1]
     prev_close = meta.get("previousClose") or closes[-2]
-    return price, prev_close, closes
+    return price, prev_close, closes, history
 
 
 def compute_score(closes):
@@ -96,7 +106,7 @@ def main():
     for item in watchlist:
         code, name = item["code"], item["name"]
         try:
-            price, prev_close, closes = fetch_price_series(code)
+            price, prev_close, closes, history = fetch_price_series(code)
         except Exception as e:
             error = f"{code} {name}: price fetch failed: {e}"
             print(error)
@@ -120,7 +130,7 @@ def main():
         state[code] = {"tag": tag, "score": score}
         stocks.append({"code": code, "name": name, "price": price, "previous_close": prev_close,
                        "change_pct": round(change_pct, 2), "score": score, "tag": tag,
-                       "reasons": reasons, "updated_at": generated_at})
+                       "reasons": reasons, "history": history, "updated_at": generated_at})
 
     save_json(STATE_PATH, state)
     save_json(LATEST_PATH, {"generated_at": generated_at, "stocks": stocks, "errors": errors})
