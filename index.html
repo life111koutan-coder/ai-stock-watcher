@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>AI株取引パイロット</title>
+  <style>
+    :root{color-scheme:dark;--bg:#07111f;--panel:#0d1a2b;--line:#21334a;--text:#eef5ff;--muted:#8fa2b9;--cyan:#2dd4bf;--blue:#60a5fa;--red:#fb7185;--amber:#fbbf24}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#142a49 0,transparent 35%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif}
+    .wrap{width:min(1180px,calc(100% - 28px));margin:auto;padding:28px 0 56px}.head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:22px}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.12em;font-size:12px}.title{font-size:clamp(26px,5vw,44px);margin:5px 0 3px}.sub,.muted{color:var(--muted)}.status{display:flex;align-items:center;gap:8px;color:#b9f6e9;font-size:13px}.dot{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+    .notice{border:1px solid #26415b;background:#0b2130;color:#bfe9ff;border-radius:12px;padding:12px 15px;margin-bottom:16px;font-size:13px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.card,.panel{background:linear-gradient(160deg,rgba(17,34,55,.96),rgba(10,23,39,.96));border:1px solid var(--line);border-radius:16px;box-shadow:0 14px 36px rgba(0,0,0,.2)}.card{padding:17px}.label{font-size:12px;color:var(--muted);margin-bottom:8px}.value{font-size:24px;font-weight:850}.unit{font-size:12px;color:var(--muted);margin-left:6px}.panel{overflow:hidden}.panel-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}.panel-head h2{font-size:18px;margin:0}.refresh{border:1px solid #2d4865;background:#10243a;color:#d9e9ff;border-radius:9px;padding:8px 12px;cursor:pointer}.refresh:hover{border-color:var(--blue)}
+    table{width:100%;border-collapse:collapse}th{color:var(--muted);font-size:12px;text-align:left;font-weight:650;padding:12px 16px;background:#0a1727}td{padding:14px 16px;border-top:1px solid rgba(43,63,87,.7);font-size:14px}.name{font-weight:750}.code{font-size:12px;color:var(--muted);margin-top:3px}.num{text-align:right;font-variant-numeric:tabular-nums}.tag{display:inline-block;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800}.strong{background:rgba(45,212,191,.13);color:#6ee7d8}.weak{background:rgba(251,113,133,.13);color:#fda4af}.wait{background:rgba(251,191,36,.12);color:#fcd34d}.up{color:#55e2c6}.down{color:#ff8ca0}.empty{text-align:center;padding:42px 18px;color:var(--muted)}.foot{margin-top:14px;color:#71859d;font-size:12px;line-height:1.7}
+    @media(max-width:780px){.head{display:block}.status{margin-top:12px}.cards{grid-template-columns:repeat(2,1fr)}.table-wrap{overflow-x:auto}table{min-width:720px}.wrap{width:min(100% - 18px,1180px);padding-top:18px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="head"><div><div class="eyebrow">AI STOCK WATCHER</div><h1 class="title">AI株取引パイロット</h1><div class="sub">学んで、試して、確認してから本番へ</div></div><div class="status"><span class="dot"></span><span id="updated">データ取得中</span></div></header>
+    <div class="notice">これは情報確認・仮想検証用です。自動判定は投資助言ではなく、実際の注文は行いません。</div>
+    <section class="cards">
+      <div class="card"><div class="label">監視銘柄</div><div class="value"><span id="count">—</span><span class="unit">銘柄</span></div></div>
+      <div class="card"><div class="label">強気判定</div><div class="value"><span id="strong">—</span><span class="unit">銘柄</span></div></div>
+      <div class="card"><div class="label">様子見</div><div class="value"><span id="wait">—</span><span class="unit">銘柄</span></div></div>
+      <div class="card"><div class="label">平均AIスコア</div><div class="value"><span id="average">—</span><span class="unit">/ 100</span></div></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h2>銘柄一覧</h2><button class="refresh" type="button" onclick="loadData()">更新</button></div>
+      <div class="table-wrap"><table><thead><tr><th>銘柄</th><th class="num">現在値</th><th class="num">前日比</th><th>自動判定</th><th class="num">AIスコア</th><th>判定理由</th></tr></thead><tbody id="rows"><tr><td class="empty" colspan="6">最新データを読み込んでいます…</td></tr></tbody></table></div>
+    </section>
+    <p class="foot">価格はYahoo Financeの公開データを利用し、遅延する場合があります。売買判断は必ずご自身で確認してください。</p>
+  </main>
+  <script>
+    const yen = new Intl.NumberFormat('ja-JP',{style:'currency',currency:'JPY',maximumFractionDigits:1});
+    const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    async function loadData(){
+      try{
+        const res=await fetch('./latest.json?ts='+Date.now(),{cache:'no-store'}); if(!res.ok) throw new Error('HTTP '+res.status);
+        const data=await res.json(); const stocks=Array.isArray(data.stocks)?data.stocks:[];
+        stocks.sort((a,b)=>(b.score??0)-(a.score??0));
+        document.getElementById('count').textContent=stocks.length;
+        document.getElementById('strong').textContent=stocks.filter(s=>s.tag==='強気').length;
+        document.getElementById('wait').textContent=stocks.filter(s=>s.tag==='様子見').length;
+        document.getElementById('average').textContent=stocks.length?Math.round(stocks.reduce((n,s)=>n+(s.score||0),0)/stocks.length):'—';
+        document.getElementById('updated').textContent=data.generated_at?new Date(data.generated_at).toLocaleString('ja-JP')+' 更新':'更新時刻不明';
+        document.getElementById('rows').innerHTML=stocks.length?stocks.map(s=>{const ch=Number(s.change_pct||0);const cls=s.tag==='強気'?'strong':s.tag==='弱気'?'weak':'wait';return `<tr><td><div class="name">${esc(s.name)}</div><div class="code">${esc(s.code)}</div></td><td class="num">${yen.format(Number(s.price||0))}</td><td class="num ${ch>=0?'up':'down'}">${ch>=0?'+':''}${ch.toFixed(2)}%</td><td><span class="tag ${cls}">${esc(s.tag)}</span></td><td class="num"><b>${Number(s.score||0)}</b> / 100</td><td class="muted">${esc((s.reasons||[]).join(' / '))}</td></tr>`}).join(''):'<tr><td class="empty" colspan="6">表示できる銘柄データがありません</td></tr>';
+      }catch(e){document.getElementById('updated').textContent='データ未取得';document.getElementById('rows').innerHTML='<tr><td class="empty" colspan="6">初回の株価監視が完了すると、ここに最新データが表示されます。</td></tr>';}
+    }
+    loadData(); setInterval(loadData,60000);
+  </script>
+</body>
+</html>
