@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#07111f">
   <title>AI株取引パイロット</title>
+  <link rel="stylesheet" href="news.css">
   <style>
     :root{color-scheme:dark;--bg:#07111f;--panel:#0d1a2b;--panel2:#101f33;--line:#21344d;--text:#eff6ff;--muted:#94a6ba;--cyan:#2dd4bf;--blue:#60a5fa;--red:#fb7185;--amber:#fbbf24;--shadow:0 18px 46px rgba(0,0,0,.24)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 82% -5%,#19375e 0,transparent 31%),linear-gradient(180deg,#07111f,#081421 55%,#06101c);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;min-height:100vh}
@@ -31,9 +32,28 @@
       <button class="tab active" data-view="sim">仮想売買</button>
       <button class="tab" data-view="chart">本格チャート</button>
       <button class="tab" data-view="all">全銘柄</button>
+      <button class="tab" data-view="news">AIニュース</button>
       <button class="tab" data-view="live">実売買</button>
       <button class="tab" data-view="history">履歴</button>
     </nav>
+
+    <section id="news" class="view">
+      <article class="panel">
+        <div class="panel-head"><div><h2>AIニュース監視</h2><div class="muted">AI・ロボット・量子・半導体と国内監視銘柄</div></div><button class="btn" id="newsReload" type="button">表示を再読込</button></div>
+        <div class="news-status" id="newsStatus" role="status" aria-live="polite">取得状況を確認中…</div>
+        <div class="news-tools">
+          <label>検索<input id="newsSearch" class="catalog-input" type="search" placeholder="企業名・キーワード"></label>
+          <label>分野<select id="newsTheme" class="catalog-input"><option value="">すべての分野</option><option>AI</option><option>ロボット</option><option>量子・IOWN</option><option>半導体・基盤</option></select></label>
+          <label>関連銘柄<select id="newsStock" class="catalog-input"><option value="">すべての記事</option><option value="watched">監視銘柄の名前あり</option></select></label>
+          <label>情報源<select id="newsOfficial" class="catalog-input"><option value="">公式＋報道</option><option value="official">企業公式のみ</option></select></label>
+          <label>並び順<select id="newsSort" class="catalog-input"><option value="new">新しい順</option><option value="priority">重要度順</option></select></label>
+        </div>
+        <div class="news-count" id="newsCount"></div>
+        <div id="newsRows" class="news-list"><div class="empty">ニュースを読み込んでいます…</div></div>
+        <div class="news-more"><button class="btn" id="newsMore" type="button" hidden>さらに20件</button></div>
+        <details class="news-details"><summary>取得元・更新・判定方法</summary><p>ニュースは終日15分間隔で取得予定です。実行や配信元の反映には遅れがあります。再読込ボタンは保存済みデータを読み直すだけで、収集処理は開始しません。</p><p>見出しのキーワードで重要度・分野を自動整理します。生成AIによる本文要約や、好材料・悪材料の断定は行いません。株価のAIスコアとは別の情報です。企業名が見出しにない記事は銘柄に結びつけません。</p><p>Google News経由の検索結果を掲載しています。公式表示は配信元ドメインで判断しており、公式発表やTDnetの網羅収集ではありません。</p><div id="newsSources"></div><p id="newsNotifications"></p></details>
+      </article>
+    </section>
 
     <section id="sim" class="view active">
       <div class="metrics">
@@ -140,7 +160,7 @@
         renderAll();
       }catch(e){dot.classList.add('error');document.getElementById('updated').textContent='価格データを取得できません';document.getElementById('stockRows').innerHTML='<tr><td colspan="8" class="empty">取得に失敗しました。架空価格は表示しません。</td></tr>'}
     }
-    function renderAll(){renderMetrics();renderStocks();renderAllStocks();renderTrade();renderTerminal();renderHistory();renderEmergency()}
+    function renderAll(){renderMetrics();renderStocks();renderAllStocks();renderTrade();renderTerminal();renderHistory();renderEmergency();renderMarketScan();window.dispatchEvent(new Event('stock-data-updated'))}
     function renderMetrics(){
       const total=totalAssets(),hv=total-sim.cash,pnl=Number(sim.daily[today()]||0),strong=market.filter(s=>s.tag==='強気').length;
       document.getElementById('totalAssets').textContent=yen.format(total);document.getElementById('assetChange').textContent='開始時から '+(total-STARTING_CASH>=0?'+':'')+yen.format(total-STARTING_CASH);
@@ -249,5 +269,6 @@
     function resetSimulation(){if(!confirm('仮想資金・保有銘柄・履歴をすべて初期状態に戻しますか？'))return;sim={cash:STARTING_CASH,holdings:{},trades:[],daily:{},emergency:false};saveSim();renderAll()}
     loadMarket();loadListed();loadMarketScan();setInterval(loadMarket,60000);setInterval(loadMarketScan,300000);
   </script>
+  <script src="news.js"></script>
 </body>
 </html>

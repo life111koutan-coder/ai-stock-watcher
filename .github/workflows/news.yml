@@ -1,0 +1,47 @@
+name: AI News Watch
+on:
+  push:
+    branches: [main]
+    paths: ['news.py', 'news_sources.json', 'watchlist.json', '.github/workflows/news.yml']
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ai-news-watch-main
+  cancel-in-progress: false
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Test headline monitoring
+        run: python3 -m unittest discover -s tests -p 'test_news.py'
+      - name: Collect news
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_NEWS_USER_ID: ${{ secrets.LINE_NEWS_USER_ID }}
+          NEWS_LINE_ENABLED: ${{ vars.NEWS_LINE_ENABLED }}
+        run: |
+          if [ "$NEWS_LINE_ENABLED" = "true" ]; then
+            python3 news.py --notify
+          else
+            python3 news.py
+          fi
+      - name: Save news without overwriting price updates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add news.json
+          if [ -f news_notify_state.json ]; then git add news_notify_state.json; fi
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: update AI news'
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
