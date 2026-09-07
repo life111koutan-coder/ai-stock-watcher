@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-07T02:41:46.237344+00:00",
+  "generated_at": "2026-09-07T02:53:59.316597+00:00",
   "universe_count": 4434,
-  "covered_count": 2556,
-  "cycle_scanned_count": 2600,
-  "progress_pct": 58.6,
+  "covered_count": 2750,
+  "cycle_scanned_count": 2800,
+  "progress_pct": 63.1,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-04T20:56:17.392809+00:00",
   "last_completed_at": null,
@@ -405,6 +405,28 @@
       "updated_at": "2026-09-06T09:21:05.529264+00:00"
     },
     {
+      "code": "6036",
+      "name": "ＫｅｅＰｅｒ技研",
+      "market": "プライム（内国株式）",
+      "sector": "サービス業",
+      "price": 3590.0,
+      "previous_close": 3535.0,
+      "change_pct": 1.56,
+      "five_day_pct": 6.53,
+      "twenty_day_pct": 24.96,
+      "avg_turnover": 577931545,
+      "score": 84,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+8.28%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.38%→リスク中→-4点",
+        "5日騰落率+6.53%→+7点",
+        "平均売買代金5,000万円以上→+4点"
+      ],
+      "updated_at": "2026-09-07T02:53:59.316597+00:00"
+    },
+    {
       "code": "4506",
       "name": "住友ファーマ",
       "market": "プライム（内国株式）",
@@ -425,34 +447,15 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-07T01:52:56.124331+00:00"
-    },
-    {
-      "code": "2001",
-      "name": "ニップン",
-      "market": "プライム（内国株式）",
-      "sector": "食料品",
-      "price": 2953.0,
-      "previous_close": 2978.0,
-      "change_pct": -0.84,
-      "five_day_pct": 1.62,
-      "twenty_day_pct": 3.91,
-      "avg_turnover": 429436425,
-      "score": 83,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+2.65%→+11点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ0.91%→リスク低→+4点",
-        "5日騰落率+1.62%→+2点",
-        "平均売買代金5,000万円以上→+4点"
-      ],
-      "updated_at": "2026-09-04T21:09:32.541939+00:00"
     }
   ],
   "batch_errors": [
-    "5584 Ｓｔｒａｗｂｅｒｒｙ　ｊａｍｓ: list index out of range",
-    "5887 光響: list index out of range",
-    "5886 ＯＯＫＡＢＥ　ＧＬＡＳＳ: list index out of range"
+    "614A 山八商事: insufficient data",
+    "615A インターパーク: insufficient data",
+    "6168 ＯＮＥ　ＧＲＯＵＰ: list index out of range",
+    "616A 数理技研: insufficient data",
+    "6174 デンタス: list index out of range",
+    "617A レイシャス: insufficient data"
   ],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
