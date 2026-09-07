@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-07T05:41:02.163116+00:00",
+  "generated_at": "2026-09-07T05:54:01.036564+00:00",
   "universe_count": 4434,
   "covered_count": 4365,
-  "cycle_scanned_count": 200,
-  "progress_pct": 4.5,
+  "cycle_scanned_count": 400,
+  "progress_pct": 9.0,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-07T05:41:02.163116+00:00",
   "last_completed_at": "2026-09-07T05:25:59.051549+00:00",
@@ -117,28 +117,6 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-04T22:00:23.727045+00:00"
-    },
-    {
-      "code": "2004",
-      "name": "昭和産業",
-      "market": "プライム（内国株式）",
-      "sector": "食料品",
-      "price": 3860.0,
-      "previous_close": 3870.0,
-      "change_pct": -0.26,
-      "five_day_pct": 2.8,
-      "twenty_day_pct": 10.76,
-      "avg_turnover": 198214225,
-      "score": 88,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+4.26%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ0.87%→リスク低→+4点",
-        "5日騰落率+2.80%→+3点",
-        "平均売買代金5,000万円以上→+4点"
-      ],
-      "updated_at": "2026-09-04T21:09:32.541939+00:00"
     },
     {
       "code": "7246",
@@ -447,12 +425,45 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-07T05:41:02.163116+00:00"
+    },
+    {
+      "code": "2805",
+      "name": "ヱスビー食品",
+      "market": "スタンダード（内国株式）",
+      "sector": "食料品",
+      "price": 7400.0,
+      "previous_close": 7320.0,
+      "change_pct": 1.09,
+      "five_day_pct": 7.87,
+      "twenty_day_pct": 7.4,
+      "avg_turnover": 569706300,
+      "score": 85,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+4.66%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.96%→リスク中→-4点",
+        "5日騰落率+7.87%→+8点",
+        "平均売買代金5,000万円以上→+4点"
+      ],
+      "updated_at": "2026-09-07T00:16:30.898025+00:00"
     }
   ],
   "batch_errors": [
-    "1432 動力: list index out of range",
-    "1445 ひかりホールディングス: list index out of range",
-    "1452 横浜ライト工業: list index out of range"
+    "1672 ＷｉｓｄｏｍＴｒｅｅ　金上場投資信託: insufficient data",
+    "1685 ＷｉｓｄｏｍＴｒｅｅ　エネルギー上場投資信託: list index out of range",
+    "1687 ＷｉｓｄｏｍＴｒｅｅ　農産物上場投資信託: insufficient data",
+    "1688 ＷｉｓｄｏｍＴｒｅｅ　穀物上場投資信託: insufficient data",
+    "1696 ＷｉｓｄｏｍＴｒｅｅ　とうもろこし上場投資信託: insufficient data",
+    "1697 ＷｉｓｄｏｍＴｒｅｅ　大豆上場投資信託: insufficient data",
+    "2032 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ベア　ＥＴＮ: list index out of range",
+    "2031 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ダブル・ブル　ＥＴＮ: list index out of range",
+    "2033 ＮＥＸＴ　ＮＯＴＥＳ　韓国ＫＯＳＰＩ・ダブル・ブル　ＥＴＮ: list index out of range",
+    "2036 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ダブル・ブル　ＥＴＮ: list index out of range",
+    "2037 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ベア　ＥＴＮ: list index out of range",
+    "2040 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ダブル・ブル・ドルヘッジ　ＥＴＮ: list index out of range",
+    "2041 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ベア・ドルヘッジ　ＥＴＮ: list index out of range",
+    "2043 ＮＥＸＴ　ＮＯＴＥＳ　ＳＴＯＸＸ　アセアン好配当５０（円、ネットリターン）ＥＴＮ: list index out of range"
   ],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
