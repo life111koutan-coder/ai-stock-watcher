@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-07T00:46:11.623617+00:00",
+  "generated_at": "2026-09-07T01:09:14.837067+00:00",
   "universe_count": 4434,
-  "covered_count": 1173,
-  "cycle_scanned_count": 1200,
-  "progress_pct": 27.1,
+  "covered_count": 1370,
+  "cycle_scanned_count": 1400,
+  "progress_pct": 31.6,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-04T20:56:17.392809+00:00",
   "last_completed_at": null,
@@ -339,6 +339,28 @@
       "updated_at": "2026-09-07T00:16:30.898025+00:00"
     },
     {
+      "code": "350A",
+      "name": "デジタルグリッド",
+      "market": "グロース（内国株式）",
+      "sector": "電気・ガス業",
+      "price": 842.0,
+      "previous_close": 819.0,
+      "change_pct": 2.81,
+      "five_day_pct": 7.54,
+      "twenty_day_pct": 13.48,
+      "avg_turnover": 220775275,
+      "score": 81,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+2.68%→+11点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.67%→リスク中→-4点",
+        "5日騰落率+7.54%→+8点",
+        "平均売買代金5,000万円以上→+4点"
+      ],
+      "updated_at": "2026-09-07T01:09:14.837067+00:00"
+    },
+    {
       "code": "276A",
       "name": "ククレブ・アドバイザーズ",
       "market": "グロース（内国株式）",
@@ -425,30 +447,12 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-04T21:09:32.541939+00:00"
-    },
-    {
-      "code": "2270",
-      "name": "雪印メグミルク",
-      "market": "プライム（内国株式）",
-      "sector": "食料品",
-      "price": 3760.0,
-      "previous_close": 3800.0,
-      "change_pct": -1.05,
-      "five_day_pct": 0.67,
-      "twenty_day_pct": 2.04,
-      "avg_turnover": 662609050,
-      "score": 81,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+2.51%→+10点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ1.07%→リスク低→+4点",
-        "5日騰落率+0.67%→+1点",
-        "平均売買代金5,000万円以上→+4点"
-      ],
-      "updated_at": "2026-09-04T22:00:23.727045+00:00"
     }
   ],
-  "batch_errors": [],
+  "batch_errors": [
+    "3448 清鋼材: list index out of range",
+    "3483 翔栄: list index out of range",
+    "3670 協立情報通信: insufficient data"
+  ],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
