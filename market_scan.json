@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-07T01:09:14.837067+00:00",
+  "generated_at": "2026-09-07T01:24:54.150392+00:00",
   "universe_count": 4434,
-  "covered_count": 1370,
-  "cycle_scanned_count": 1400,
-  "progress_pct": 31.6,
+  "covered_count": 1570,
+  "cycle_scanned_count": 1600,
+  "progress_pct": 36.1,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-04T20:56:17.392809+00:00",
   "last_completed_at": null,
@@ -317,6 +317,28 @@
       "updated_at": "2026-09-04T21:09:32.541939+00:00"
     },
     {
+      "code": "3850",
+      "name": "エヌ・ティ・ティ・データ・イントラマート",
+      "market": "スタンダード（内国株式）",
+      "sector": "情報・通信業",
+      "price": 3860.0,
+      "previous_close": 3840.0,
+      "change_pct": 0.52,
+      "five_day_pct": 5.03,
+      "twenty_day_pct": 18.04,
+      "avg_turnover": 140465350,
+      "score": 82,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+10.32%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.69%→リスク中→-4点",
+        "5日騰落率+5.03%→+5点",
+        "平均売買代金5,000万円以上→+4点"
+      ],
+      "updated_at": "2026-09-07T01:24:54.150392+00:00"
+    },
+    {
       "code": "2820",
       "name": "やまみ",
       "market": "スタンダード（内国株式）",
@@ -425,34 +447,8 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-07T00:16:30.898025+00:00"
-    },
-    {
-      "code": "1820",
-      "name": "西松建設",
-      "market": "プライム（内国株式）",
-      "sector": "建設業",
-      "price": 5617.0,
-      "previous_close": 5611.0,
-      "change_pct": 0.11,
-      "five_day_pct": 1.52,
-      "twenty_day_pct": 5.56,
-      "avg_turnover": 755650075,
-      "score": 81,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+2.27%→+9点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ1.07%→リスク低→+4点",
-        "5日騰落率+1.52%→+2点",
-        "平均売買代金5,000万円以上→+4点"
-      ],
-      "updated_at": "2026-09-04T21:09:32.541939+00:00"
     }
   ],
-  "batch_errors": [
-    "3448 清鋼材: list index out of range",
-    "3483 翔栄: list index out of range",
-    "3670 協立情報通信: insufficient data"
-  ],
+  "batch_errors": [],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
