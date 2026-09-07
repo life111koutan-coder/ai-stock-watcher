@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-07T02:53:59.316597+00:00",
+  "generated_at": "2026-09-07T03:10:29.680329+00:00",
   "universe_count": 4434,
-  "covered_count": 2750,
-  "cycle_scanned_count": 2800,
-  "progress_pct": 63.1,
+  "covered_count": 2947,
+  "cycle_scanned_count": 3000,
+  "progress_pct": 67.7,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-04T20:56:17.392809+00:00",
   "last_completed_at": null,
@@ -295,6 +295,28 @@
       "updated_at": "2026-09-07T00:16:30.898025+00:00"
     },
     {
+      "code": "6380",
+      "name": "オリエンタルチエン工業",
+      "market": "スタンダード（内国株式）",
+      "sector": "機械",
+      "price": 4150.0,
+      "previous_close": 3990.0,
+      "change_pct": 4.01,
+      "five_day_pct": 7.79,
+      "twenty_day_pct": 11.56,
+      "avg_turnover": 56763175,
+      "score": 85,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+4.54%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.50%→リスク中→-4点",
+        "5日騰落率+7.79%→+8点",
+        "平均売買代金5,000万円以上→+4点"
+      ],
+      "updated_at": "2026-09-07T03:10:29.680329+00:00"
+    },
+    {
       "code": "4661",
       "name": "オリエンタルランド",
       "market": "プライム（内国株式）",
@@ -425,37 +447,12 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-07T02:53:59.316597+00:00"
-    },
-    {
-      "code": "4506",
-      "name": "住友ファーマ",
-      "market": "プライム（内国株式）",
-      "sector": "医薬品",
-      "price": 1647.5,
-      "previous_close": 1653.0,
-      "change_pct": -0.33,
-      "five_day_pct": 6.02,
-      "twenty_day_pct": 27.22,
-      "avg_turnover": 5159932925,
-      "score": 83,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+13.48%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.46%→リスク中→-4点",
-        "5日騰落率+6.02%→+6点",
-        "平均売買代金5,000万円以上→+4点"
-      ],
-      "updated_at": "2026-09-07T01:52:56.124331+00:00"
     }
   ],
   "batch_errors": [
-    "614A 山八商事: insufficient data",
-    "615A インターパーク: insufficient data",
-    "6168 ＯＮＥ　ＧＲＯＵＰ: list index out of range",
-    "616A 数理技研: insufficient data",
-    "6174 デンタス: list index out of range",
-    "617A レイシャス: insufficient data"
+    "6527 ワカ製作所: list index out of range",
+    "6576 揚工舎: HTTP Error 404: Not Found",
+    "6695 キャストリコ: list index out of range"
   ],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
