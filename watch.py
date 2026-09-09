@@ -14,24 +14,17 @@ ALL_STOCKS_PATH = "all_stocks.json"
 SCAN_STATE_PATH = "scan_state.json"
 MARKET_SCAN_PATH = "market_scan.json"
 NEWS_PATH = "news.json"
-NEWS_SOURCES_PATH = "news_sources.json"
-LINE_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
+NEWS_CONFIG_PATH = "news_sources.json"
+RECOMMENDATION_HISTORY_PATH = "recommendation_history.json"
 SCAN_BATCH_SIZE = max(1, int(os.environ.get("SCAN_BATCH_SIZE", "200")))
 SCAN_WORKERS = max(1, min(16, int(os.environ.get("SCAN_WORKERS", "8"))))
 RANKING_SIZE = 20
 SCAN_MAX_RETRIES = max(1, int(os.environ.get("SCAN_MAX_RETRIES", "3")))
 AUTO_WATCH_MIN_SCORE = max(65, int(os.environ.get("AUTO_WATCH_MIN_SCORE", "75")))
 AUTO_WATCH_MIN_TURNOVER = max(50_000_000, int(os.environ.get("AUTO_WATCH_MIN_TURNOVER", "100000000")))
+NEWS_DATA_MAX_AGE = timedelta(hours=2)
+NEWS_LOOKBACK = timedelta(hours=72)
 JST = timezone(timedelta(hours=9))
-
-POSITIVE_MATERIALS = {
-    "上方修正": 8, "黒字転換": 8, "最高益": 7, "増配": 6,
-    "自社株買い": 6, "受注": 4, "採用": 4, "提携": 3, "実用化": 3,
-}
-NEGATIVE_MATERIALS = {
-    "下方修正": -10, "不正": -10, "減配": -8, "リコール": -8,
-    "赤字": -7, "公募増資": -6, "希薄化": -6, "障害": -4, "制裁": -4,
-}
 
 
 def load_json(path, default):
@@ -45,95 +38,6 @@ def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
-
-
-def normalize_text(value):
-    return unicodedata.normalize("NFKC", str(value or "")).casefold()
-
-
-def contains_company_term(title, term):
-    title, term = normalize_text(title), normalize_text(term).strip()
-    if len(term) < 2:
-        return False
-    if re.fullmatch(r"[a-z0-9 .&-]+", term):
-        return bool(re.search(r"(?<![a-z0-9])" + re.escape(term) + r"(?![a-z0-9])", title))
-    return term in title
-
-
-def build_information_context():
-    news = load_json(NEWS_PATH, {"articles": []})
-    config = load_json(NEWS_SOURCES_PATH, {"aliases": {}})
-    return {"articles": news.get("articles", []), "aliases": config.get("aliases", {})}
-
-
-def article_matches_stock(article, code, name, aliases):
-    if any(str(item.get("code", "")) == str(code) for item in article.get("related_stocks", [])):
-        return True
-    terms = [name, *aliases.get(str(code), [])]
-    return any(contains_company_term(article.get("title", ""), term) for term in terms)
-
-
-def material_signal(title):
-    matches = [(word, points) for word, points in {**POSITIVE_MATERIALS, **NEGATIVE_MATERIALS}.items()
-               if word in title]
-    return max(matches, key=lambda item: abs(item[1])) if matches else (None, 0)
-
-
-def score_company_information(code, name, generated_at, context):
-    now = datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
-    matched = []
-    adjustment = 0
-    seen_titles = set()
-    for article in context.get("articles", []):
-        if not article_matches_stock(article, code, name, context.get("aliases", {})):
-            continue
-        title_key = normalize_text(article.get("title", ""))
-        if not title_key or title_key in seen_titles:
-            continue
-        seen_titles.add(title_key)
-        try:
-            published = datetime.fromisoformat(article.get("published_at", "").replace("Z", "+00:00"))
-        except (TypeError, ValueError):
-            continue
-        age = now - published
-        if age < timedelta(minutes=-10) or age > timedelta(days=7):
-            continue
-        word, base_points = material_signal(article.get("title", ""))
-        points = base_points
-        if points and not article.get("official"):
-            points = max(1, round(points * 0.35)) if points > 0 else min(-1, round(points * 0.35))
-        if age > timedelta(days=2):
-            points = round(points * 0.5)
-        adjustment += points
-        matched.append({
-            "title": article.get("title", "")[:180],
-            "url": article.get("url", ""),
-            "publisher": article.get("publisher", ""),
-            "published_at": article.get("published_at"),
-            "official": bool(article.get("official")),
-            "material": word or "関連情報",
-            "points": points,
-        })
-
-    adjustment = max(-15, min(15, adjustment))
-    matched.sort(key=lambda item: (abs(item["points"]), item.get("published_at") or ""), reverse=True)
-    reasons = []
-    for item in matched[:3]:
-        source = "公式" if item["official"] else "報道"
-        title = item["title"][:72] + ("…" if len(item["title"]) > 72 else "")
-        reasons.append(f"企業情報({source}): {title}→{item['points']:+d}点")
-    if not reasons:
-        reasons.append("企業・ニュース材料: 銘柄に直接結び付く直近情報なし→0点")
-    return adjustment, reasons, matched[:3]
-
-
-def combine_information_score(technical_score, technical_reasons, code, name, generated_at, context):
-    adjustment, information_reasons, related_news = score_company_information(
-        code, name, generated_at, context
-    )
-    total_score = max(0, min(100, round(technical_score + adjustment)))
-    tag = "強気" if total_score >= 65 else "弱気" if total_score <= 35 else "様子見"
-    return total_score, tag, [*technical_reasons, *information_reasons], adjustment, related_news
 
 
 def fetch_price_series(code):
@@ -230,15 +134,12 @@ def compute_market_score(closes, bars):
     return score, tag, reasons, avg_turnover, five_day, twenty_day
 
 
-def scan_one_stock(item, generated_at, information_context):
+def scan_one_stock(item, generated_at):
     code, name = str(item["code"]), item["name"]
     price, prev_close, closes, _, bars = fetch_price_series(code)
     if len(closes) < 21:
         raise ValueError("insufficient data")
-    technical_score, _, technical_reasons, avg_turnover, five_day, twenty_day = compute_market_score(closes, bars)
-    score, tag, reasons, information_adjustment, related_news = combine_information_score(
-        technical_score, technical_reasons, code, name, generated_at, information_context
-    )
+    score, tag, reasons, avg_turnover, five_day, twenty_day = compute_market_score(closes, bars)
     change_pct = ((price - prev_close) / prev_close) * 100
     return {
         "code": code,
@@ -251,14 +152,93 @@ def scan_one_stock(item, generated_at, information_context):
         "five_day_pct": round(five_day, 2),
         "twenty_day_pct": round(twenty_day, 2),
         "avg_turnover": round(avg_turnover),
-        "technical_score": technical_score,
-        "information_adjustment": information_adjustment,
         "score": score,
         "tag": tag,
         "reasons": reasons,
-        "related_news": related_news,
         "updated_at": generated_at,
     }
+
+
+def parse_time(value):
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        return parsed.replace(tzinfo=timezone.utc) if parsed.tzinfo is None else parsed.astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+
+def has_term(text, term):
+    text = unicodedata.normalize("NFKC", str(text or ""))
+    term = unicodedata.normalize("NFKC", str(term or "")).strip()
+    if len(term) < 3:
+        return False
+    if re.fullmatch(r"[A-Za-z0-9 .&+-]+", term):
+        return bool(re.search(r"(?<![A-Za-z0-9])" + re.escape(term) + r"(?![A-Za-z0-9])", text, re.I))
+    return term.casefold() in text.casefold()
+
+
+def analyze_stock_news(stock, news_data, aliases, generated_at):
+    now = parse_time(generated_at)
+    news_updated = parse_time(news_data.get("generated_at"))
+    if not now or not news_updated or news_data.get("status") == "error":
+        return [], [], 0
+    if news_updated > now + timedelta(minutes=10) or now - news_updated > NEWS_DATA_MAX_AGE:
+        return [], [], 0
+
+    code = str(stock.get("code", ""))
+    terms = [stock.get("name", ""), *aliases.get(code, [])]
+    positive_words = ("上方修正", "黒字転換", "増益", "最高益", "増配", "自社株買い", "受注", "提携", "買収", "投資", "採用", "開始", "開発", "発表", "実用化")
+    warning_words = ("下方修正", "減益", "減配", "赤字", "不正", "障害", "公募増資", "希薄化", "輸出規制", "制裁", "リコール")
+    positive, cautions = [], []
+    for article in news_data.get("articles", []):
+        published = parse_time(article.get("published_at"))
+        if not published or published > now + timedelta(minutes=10) or now - published > NEWS_LOOKBACK:
+            continue
+        title = str(article.get("title", ""))
+        related = {str(item.get("code", "")) for item in article.get("related_stocks", [])}
+        if code not in related and not any(has_term(title, term) for term in terms):
+            continue
+        item = {
+            "title": title[:400],
+            "url": str(article.get("url", ""))[:1200],
+            "published_at": published.isoformat(),
+            "publisher": str(article.get("publisher", ""))[:120],
+            "official": bool(article.get("official")),
+            "priority": str(article.get("priority", "参考")),
+            "themes": list(article.get("themes", []))[:8],
+        }
+        if any(word in title for word in warning_words) or str(article.get("signal", "")).startswith("注意語"):
+            cautions.append(item)
+        elif any(word in title for word in positive_words):
+            positive.append(item)
+
+    positive.sort(key=lambda item: item["published_at"], reverse=True)
+    cautions.sort(key=lambda item: item["published_at"], reverse=True)
+    evidence = positive[:3]
+    points = min(20, len(evidence) * 4 + sum(4 for x in evidence if x["official"]) + sum(2 for x in evidence if x["priority"] == "重要"))
+    return evidence, cautions[:3], points
+
+
+def enrich_with_news(stocks, news_data, aliases, generated_at):
+    enriched = []
+    for stock in stocks:
+        item = dict(stock)
+        evidence, cautions, points = analyze_stock_news(item, news_data, aliases, generated_at)
+        technical = int(item.get("score", 0))
+        caution_penalty = min(24, len(cautions) * 12)
+        news_adjustment = points - caution_penalty
+        item["technical_score"] = technical
+        item["news_score"] = points
+        item["information_adjustment"] = news_adjustment
+        item["score"] = max(0, min(100, technical + news_adjustment))
+        item["news_evidence"] = evidence
+        item["news_cautions"] = cautions
+        news_reasons = [f"直近72時間の好材料見出し{len(evidence)}件→+{points}点"] if evidence else ["直近72時間に追加判断へ使える好材料見出しなし→+0点"]
+        if cautions:
+            news_reasons.append(f"注意見出し{len(cautions)}件→-{caution_penalty}点・自動追加対象外")
+        item["reasons"] = list(item.get("reasons", [])) + news_reasons
+        enriched.append(item)
+    return enriched
 
 
 def choose_auto_watch(rankings, watchlist):
@@ -267,6 +247,10 @@ def choose_auto_watch(rankings, watchlist):
         if str(item.get("code", "")) in watched_codes:
             continue
         if int(item.get("score", 0)) < AUTO_WATCH_MIN_SCORE:
+            continue
+        if int(item.get("technical_score", item.get("score", 0))) < 65:
+            continue
+        if not item.get("news_evidence") or item.get("news_cautions"):
             continue
         if float(item.get("five_day_pct", 0)) <= 0 or float(item.get("twenty_day_pct", 0)) <= 0:
             continue
@@ -280,43 +264,85 @@ def add_recommendation_to_watchlist(rankings, watchlist, scan_state, generated_a
     if scan_state.get("auto_watch_checked_date") == scan_date:
         return None
 
-    scan_state["auto_watch_checked_date"] = scan_date
     candidate = choose_auto_watch(rankings, watchlist)
     if not candidate:
         print("auto watch: no stock met today's strict criteria")
         return None
 
+    evidence = candidate["news_evidence"][0]
+    recommendation_id = f"{scan_date}-{candidate['code']}"
+    reason_summary = (
+        f"株価分析{candidate.get('technical_score', candidate['score'])}/100、ニュース加点+{candidate.get('news_score', 0)}。"
+        f"5日{candidate['five_day_pct']:+.2f}%・20日{candidate['twenty_day_pct']:+.2f}%、"
+        f"平均売買代金{candidate['avg_turnover']:,.0f}円。関連ニュース：{evidence['title']}"
+    )
     added = {
         "code": candidate["code"],
         "name": candidate["name"],
         "auto_added_at": generated_at,
-        "source": "全銘柄AIランキング",
+        "source": "全銘柄の株価分析＋直近ニュース",
+        "recommendation_id": recommendation_id,
+        "reason": reason_summary,
+        "technical_score": candidate.get("technical_score", candidate["score"]),
+        "news_score": candidate.get("news_score", 0),
+        "combined_score": candidate["score"],
+        "news_evidence": candidate["news_evidence"],
     }
     watchlist.append(added)
     save_json(WATCHLIST_PATH, watchlist)
     scan_state["last_auto_added"] = added
+    scan_state["auto_watch_checked_date"] = scan_date
     message = (
-        "【AIイチオシ銘柄を監視へ追加】\n"
+        "【ニュース＋株価分析：監視銘柄を追加】\n"
         f"{candidate['name']}（{candidate['code']}）\n"
-        f"総合AIスコア: {candidate['score']}/100\n"
-        f"株価分析: {candidate.get('technical_score', candidate['score'])}/100\n"
-        f"企業・ニュース材料: {candidate.get('information_adjustment', 0):+d}点\n"
+        f"総合スコア: {candidate['score']}/100（株価{candidate.get('technical_score', candidate['score'])}・ニュース+{candidate.get('news_score', 0)}）\n"
         f"現在値: ¥{candidate['price']:,.0f}\n"
         f"5日騰落率: {candidate['five_day_pct']:+.2f}%\n"
         f"20日騰落率: {candidate['twenty_day_pct']:+.2f}%\n"
+        f"参考ニュース: {evidence['title']}\n{evidence['url']}\n"
         "監視対象へ自動追加しました。売買は実行していません。\n"
         "※AI判定は判断材料の一つです。最終判断はご自身で。"
     )
-    send_line_message(message)
+    notification_status = send_line_message(message)
+    added["notification_status"] = notification_status
+    save_json(WATCHLIST_PATH, watchlist)
+    scan_state["last_line_status"] = notification_status
+    history = load_json(RECOMMENDATION_HISTORY_PATH, [])
+    history = [item for item in history if item.get("recommendation_id") != recommendation_id]
+    history.append(added)
+    save_json(RECOMMENDATION_HISTORY_PATH, history[-365:])
+    if notification_status != "送信済み":
+        scan_state["pending_line"] = {"recommendation_id": recommendation_id, "message": message, "attempts": 1}
     print(f"auto watch: added {candidate['code']} {candidate['name']}")
     return added
 
 
-def run_market_scan(generated_at, watchlist, information_context):
+def retry_pending_line(scan_state):
+    pending = scan_state.get("pending_line")
+    if not pending:
+        return scan_state.get("last_line_status", "未実行")
+    status = send_line_message(str(pending.get("message", "")))
+    scan_state["last_line_status"] = status
+    pending["attempts"] = int(pending.get("attempts", 0)) + 1
+    history = load_json(RECOMMENDATION_HISTORY_PATH, [])
+    for item in history:
+        if item.get("recommendation_id") == pending.get("recommendation_id"):
+            item["notification_status"] = status
+            item["notification_attempts"] = pending["attempts"]
+    save_json(RECOMMENDATION_HISTORY_PATH, history[-365:])
+    if status == "送信済み":
+        scan_state.pop("pending_line", None)
+    else:
+        scan_state["pending_line"] = pending
+    return status
+
+
+def run_market_scan(generated_at, watchlist):
     catalog = load_json(ALL_STOCKS_PATH, {"stocks": []})
     universe = [x for x in catalog.get("stocks", []) if len(str(x.get("code", ""))) == 4]
     universe_by_code = {str(item["code"]): item for item in universe}
     scan_state = load_json(SCAN_STATE_PATH, {})
+    retry_pending_line(scan_state)
     cached = scan_state.get("stocks", {})
     scan_date = datetime.now(JST).date().isoformat()
 
@@ -349,7 +375,7 @@ def run_market_scan(generated_at, watchlist, information_context):
     errors = []
     failed_this_batch = []
     with ThreadPoolExecutor(max_workers=SCAN_WORKERS) as pool:
-        futures = {pool.submit(scan_one_stock, item, generated_at, information_context): item for item in batch}
+        futures = {pool.submit(scan_one_stock, item, generated_at): item for item in batch}
         for future in as_completed(futures):
             item = futures[future]
             try:
@@ -389,11 +415,14 @@ def run_market_scan(generated_at, watchlist, information_context):
         and float(x.get("price", 0)) >= 100
         and int(x.get("avg_turnover", 0)) >= 50_000_000
     ]
-    rankings = sorted(
-        common_stocks,
+    news_data = load_json(NEWS_PATH, {})
+    news_config = load_json(NEWS_CONFIG_PATH, {})
+    ranked_stocks = sorted(
+        enrich_with_news(common_stocks, news_data, news_config.get("aliases", {}), generated_at),
         key=lambda x: (int(x.get("score", 0)), float(x.get("five_day_pct", 0)), int(x.get("avg_turnover", 0))),
         reverse=True,
-    )[:RANKING_SIZE]
+    )
+    rankings = ranked_stocks[:RANKING_SIZE]
     scan_output = {
         "generated_at": generated_at,
         "universe_count": len(universe),
@@ -410,12 +439,15 @@ def run_market_scan(generated_at, watchlist, information_context):
         "auto_added": scan_state.get("last_auto_added") if scan_state.get("auto_watch_checked_date") == scan_date else None,
         "rankings": rankings,
         "batch_errors": errors[:30],
-        "note": "国内上場銘柄を営業日ごとに全件調査。株価・出来高に、銘柄へ直接結び付く直近7日間の企業公式発表と報道材料を加えて総合判定します。一般報道の点数は公式情報より小さく制限しています。売買推奨ではありません。",
+        "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
+        "line_notification": scan_state.get("last_line_status", "未実行"),
+        "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
     }
-    if cycle_complete and rankings:
-        added = add_recommendation_to_watchlist(rankings, watchlist, scan_state, generated_at, scan_date)
+    if cycle_complete and ranked_stocks:
+        added = add_recommendation_to_watchlist(ranked_stocks, watchlist, scan_state, generated_at, scan_date)
         if added:
             scan_output["auto_added"] = added
+            scan_output["line_notification"] = added["notification_status"]
     save_json(SCAN_STATE_PATH, scan_state)
     save_json(MARKET_SCAN_PATH, scan_output)
     print(
@@ -425,32 +457,37 @@ def run_market_scan(generated_at, watchlist, information_context):
 
 
 def send_line_message(text):
-    if not LINE_TOKEN:
-        print("LINE token not set, skip sending")
-        return
-    url = "https://api.line.me/v2/bot/message/broadcast"
-    body = json.dumps({"messages": [{"type": "text", "text": text}]}).encode("utf-8")
+    token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
+    recipient = os.environ.get("LINE_NEWS_USER_ID")
+    if not token or not recipient:
+        print("LINE owner token/recipient not set, keep notification pending")
+        return "未設定（宛先またはトークン不足）"
+    url = "https://api.line.me/v2/bot/message/push"
+    body = json.dumps({"to": recipient, "messages": [{"type": "text", "text": text[:5000]}]}).encode("utf-8")
     req = urllib.request.Request(url, data=body, method="POST")
     req.add_header("Content-Type", "application/json")
-    req.add_header("Authorization", f"Bearer {LINE_TOKEN}")
+    req.add_header("Authorization", f"Bearer {token}")
     try:
         with urllib.request.urlopen(req, timeout=15) as res:
             print("LINE send status:", res.status)
+            return "送信済み" if res.status == 200 else f"送信失敗（HTTP {res.status}）"
     except urllib.error.HTTPError as e:
-        print("LINE send failed:", e.read().decode("utf-8"))
-    except urllib.error.URLError as e:
-        print("LINE send failed:", e)
+        print("LINE send failed:", e.code)
+        return f"送信失敗（HTTP {e.code}）"
+    except (urllib.error.URLError, TimeoutError) as e:
+        print("LINE send failed:", type(e).__name__)
+        return "送信失敗（次回再試行）"
 
 
 def main():
     watchlist = load_json(WATCHLIST_PATH, [])
-    catalog = load_json(ALL_STOCKS_PATH, {"stocks": []})
-    company_by_code = {str(item.get("code", "")): item for item in catalog.get("stocks", [])}
-    information_context = build_information_context()
     state = load_json(STATE_PATH, {})
     stocks = []
     errors = []
     generated_at = datetime.now(timezone.utc).isoformat()
+    news_data = load_json(NEWS_PATH, {})
+    news_config = load_json(NEWS_CONFIG_PATH, {})
+    aliases = news_config.get("aliases", {})
 
     for item in watchlist:
         code, name = item["code"], item["name"]
@@ -467,10 +504,20 @@ def main():
             errors.append(error)
             continue
 
-        technical_score, _, technical_reasons = compute_score(closes)
-        score, tag, reasons, information_adjustment, related_news = combine_information_score(
-            technical_score, technical_reasons, code, name, generated_at, information_context
+        technical_score, _, reasons = compute_score(closes)
+        evidence, cautions, news_points = analyze_stock_news(
+            {"code": code, "name": name}, news_data, aliases, generated_at
         )
+        caution_penalty = min(24, len(cautions) * 12)
+        information_adjustment = news_points - caution_penalty
+        score = max(0, min(100, technical_score + information_adjustment))
+        if evidence:
+            reasons.append(f"直近72時間の好材料見出し{len(evidence)}件→+{news_points}点")
+        else:
+            reasons.append("直近72時間に追加判断へ使える好材料見出しなし→+0点")
+        if cautions:
+            reasons.append(f"注意見出し{len(cautions)}件→-{caution_penalty}点")
+        tag = "強気" if score >= 65 else "弱気" if score <= 35 else "様子見"
         change_pct = ((price - prev_close) / prev_close) * 100
         prev_tag = state.get(code, {}).get("tag")
         print(f"{code} {name}: score={score} tag={tag} prev={prev_tag}")
@@ -479,21 +526,18 @@ def main():
                    f"価格: ¥{price:,.0f} ({change_pct:+.2f}%)\n" + "\n".join(reasons)
                    + "\n※これは自動判定の提案です。最終判断はご自身で。")
             send_line_message(msg)
-        state[code] = {"tag": tag, "score": score, "technical_score": technical_score,
-                       "information_adjustment": information_adjustment}
-        company = company_by_code.get(str(code), {})
+        state[code] = {"tag": tag, "score": score}
         stocks.append({"code": code, "name": name, "price": price, "previous_close": prev_close,
-                       "change_pct": round(change_pct, 2), "score": score, "tag": tag,
+                       "change_pct": round(change_pct, 2), "score": score,
                        "technical_score": technical_score,
                        "information_adjustment": information_adjustment,
-                       "company": {"market": company.get("market", ""), "sector": company.get("sector", "")},
-                       "related_news": related_news,
+                       "news_evidence": evidence, "news_cautions": cautions, "tag": tag,
                        "reasons": reasons, "history": history, "bars": bars,
                        "updated_at": generated_at})
 
     save_json(STATE_PATH, state)
     save_json(LATEST_PATH, {"generated_at": generated_at, "stocks": stocks, "errors": errors})
-    run_market_scan(generated_at, watchlist, information_context)
+    run_market_scan(generated_at, watchlist)
 
 
 if __name__ == "__main__":
