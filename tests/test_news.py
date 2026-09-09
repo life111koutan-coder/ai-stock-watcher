@@ -43,6 +43,16 @@ class NewsTests(unittest.TestCase):
         self.assertFalse(news.has_term('Thailand retail', 'AI'))
         self.assertTrue(news.has_term('生成AI搭載', 'AI'))
 
+    def test_company_sources_cover_every_watched_company_in_batches(self):
+        config = news.with_company_sources(self.config, self.watchlist)
+        added = config['sources'][len(self.config['sources']):]
+        self.assertEqual(len(added), (len(self.watchlist) + news.COMPANY_SOURCE_BATCH_SIZE - 1) // news.COMPANY_SOURCE_BATCH_SIZE)
+        query = ' '.join(source['query'] for source in added)
+        self.assertIn('富士通', query)
+        self.assertIn('安川電機', query)
+        self.assertIn('下方修正', query)
+        self.assertEqual(len(self.config['sources']), 5)
+
     def test_invalid_dates_urls_and_old_news(self):
         for date in ['nonsense','Sun, 06 Sep 2020 08:00:00 GMT','Sun, 06 Sep 2030 08:00:00 GMT']:
             self.assertEqual(self.parse(self.feed(date=date)), [])
