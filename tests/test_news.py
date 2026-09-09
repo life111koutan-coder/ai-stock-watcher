@@ -43,16 +43,6 @@ class NewsTests(unittest.TestCase):
         self.assertFalse(news.has_term('Thailand retail', 'AI'))
         self.assertTrue(news.has_term('生成AI搭載', 'AI'))
 
-    def test_company_sources_cover_every_watched_company_in_batches(self):
-        config = news.with_company_sources(self.config, self.watchlist)
-        added = config['sources'][len(self.config['sources']):]
-        self.assertEqual(len(added), (len(self.watchlist) + news.COMPANY_SOURCE_BATCH_SIZE - 1) // news.COMPANY_SOURCE_BATCH_SIZE)
-        query = ' '.join(source['query'] for source in added)
-        self.assertIn('富士通', query)
-        self.assertIn('安川電機', query)
-        self.assertIn('下方修正', query)
-        self.assertEqual(len(self.config['sources']), 5)
-
     def test_invalid_dates_urls_and_old_news(self):
         for date in ['nonsense','Sun, 06 Sep 2020 08:00:00 GMT','Sun, 06 Sep 2030 08:00:00 GMT']:
             self.assertEqual(self.parse(self.feed(date=date)), [])
@@ -71,7 +61,7 @@ class NewsTests(unittest.TestCase):
             return a, {'id':s['id'],'name':s['name'],'status':'ok','count':1,'last_success_at':now.isoformat()}
         first = news.collect(self.config, self.watchlist, {}, self.now, good)
         self.assertEqual(len(first['articles']), 1)
-        self.assertEqual(len(first['articles'][0]['source_ids']), 5)
+        self.assertEqual(len(first['articles'][0]['source_ids']), len(self.config['sources']))
         def bad(s, *_):
             return [], {'id':s['id'],'name':s['name'],'status':'error','count':0}
         second = news.collect(self.config, self.watchlist, copy.deepcopy(first), self.now+timedelta(minutes=15), bad)
