@@ -4,7 +4,8 @@ on:
     branches: [main]
     paths: ['news.py', 'news_sources.json', 'watchlist.json', '.github/workflows/news.yml']
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    # 5分ごとに新着見出しを確認。GitHub Actionsの開始時刻は混雑時に遅れる場合があります。
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
