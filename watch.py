@@ -3,7 +3,7 @@ import os
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 WATCHLIST_PATH = "watchlist.json"
 STATE_PATH = "state.json"
@@ -15,6 +15,10 @@ LINE_TOKEN = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
 SCAN_BATCH_SIZE = max(1, int(os.environ.get("SCAN_BATCH_SIZE", "200")))
 SCAN_WORKERS = max(1, min(16, int(os.environ.get("SCAN_WORKERS", "8"))))
 RANKING_SIZE = 20
+SCAN_MAX_RETRIES = max(1, int(os.environ.get("SCAN_MAX_RETRIES", "3")))
+AUTO_WATCH_MIN_SCORE = max(65, int(os.environ.get("AUTO_WATCH_MIN_SCORE", "75")))
+AUTO_WATCH_MIN_TURNOVER = max(50_000_000, int(os.environ.get("AUTO_WATCH_MIN_TURNOVER", "100000000")))
+JST = timezone(timedelta(hours=9))
 
 
 def load_json(path, default):
@@ -149,19 +153,91 @@ def scan_one_stock(item, generated_at):
     }
 
 
-def run_market_scan(generated_at):
+def choose_auto_watch(rankings, watchlist):
+    watched_codes = {str(item.get("code", "")) for item in watchlist}
+    for item in rankings:
+        if str(item.get("code", "")) in watched_codes:
+            continue
+        if int(item.get("score", 0)) < AUTO_WATCH_MIN_SCORE:
+            continue
+        if float(item.get("five_day_pct", 0)) <= 0 or float(item.get("twenty_day_pct", 0)) <= 0:
+            continue
+        if int(item.get("avg_turnover", 0)) < AUTO_WATCH_MIN_TURNOVER:
+            continue
+        return item
+    return None
+
+
+def add_recommendation_to_watchlist(rankings, watchlist, scan_state, generated_at, scan_date):
+    if scan_state.get("auto_watch_checked_date") == scan_date:
+        return None
+
+    scan_state["auto_watch_checked_date"] = scan_date
+    candidate = choose_auto_watch(rankings, watchlist)
+    if not candidate:
+        print("auto watch: no stock met today's strict criteria")
+        return None
+
+    added = {
+        "code": candidate["code"],
+        "name": candidate["name"],
+        "auto_added_at": generated_at,
+        "source": "全銘柄AIランキング",
+    }
+    watchlist.append(added)
+    save_json(WATCHLIST_PATH, watchlist)
+    scan_state["last_auto_added"] = added
+    message = (
+        "【AIイチオシ銘柄を監視へ追加】\n"
+        f"{candidate['name']}（{candidate['code']}）\n"
+        f"AIスコア: {candidate['score']}/100\n"
+        f"現在値: ¥{candidate['price']:,.0f}\n"
+        f"5日騰落率: {candidate['five_day_pct']:+.2f}%\n"
+        f"20日騰落率: {candidate['twenty_day_pct']:+.2f}%\n"
+        "監視対象へ自動追加しました。売買は実行していません。\n"
+        "※AI判定は判断材料の一つです。最終判断はご自身で。"
+    )
+    send_line_message(message)
+    print(f"auto watch: added {candidate['code']} {candidate['name']}")
+    return added
+
+
+def run_market_scan(generated_at, watchlist):
     catalog = load_json(ALL_STOCKS_PATH, {"stocks": []})
     universe = [x for x in catalog.get("stocks", []) if len(str(x.get("code", ""))) == 4]
+    universe_by_code = {str(item["code"]): item for item in universe}
     scan_state = load_json(SCAN_STATE_PATH, {})
     cached = scan_state.get("stocks", {})
-    cursor = int(scan_state.get("cursor", 0))
-    if cursor < 0 or cursor >= len(universe):
-        cursor = 0
-    if cursor == 0:
+    scan_date = datetime.now(JST).date().isoformat()
+
+    if scan_state.get("cycle_date") != scan_date:
+        scan_state["cycle_date"] = scan_date
+        scan_state["cursor"] = 0
+        scan_state["retry_codes"] = []
+        scan_state["retry_attempts"] = {}
+        scan_state["cycle_stocks"] = {}
+        scan_state["failed_codes"] = []
         scan_state["cycle_started_at"] = generated_at
 
-    batch = universe[cursor:cursor + SCAN_BATCH_SIZE]
+    cursor = max(0, min(int(scan_state.get("cursor", 0)), len(universe)))
+    retry_codes = [code for code in scan_state.get("retry_codes", []) if code in universe_by_code]
+    retry_attempts = scan_state.get("retry_attempts", {})
+    cycle_stocks = scan_state.get("cycle_stocks", {})
+    failed_codes = scan_state.get("failed_codes", [])
+    already_complete = scan_state.get("last_completed_date") == scan_date
+
+    is_retry_batch = cursor >= len(universe) and bool(retry_codes)
+    if already_complete:
+        batch = []
+    elif is_retry_batch:
+        selected_codes = retry_codes[:SCAN_BATCH_SIZE]
+        retry_codes = retry_codes[SCAN_BATCH_SIZE:]
+        batch = [universe_by_code[code] for code in selected_codes]
+    else:
+        batch = universe[cursor:cursor + SCAN_BATCH_SIZE]
+
     errors = []
+    failed_this_batch = []
     with ThreadPoolExecutor(max_workers=SCAN_WORKERS) as pool:
         futures = {pool.submit(scan_one_stock, item, generated_at): item for item in batch}
         for future in as_completed(futures):
@@ -169,19 +245,36 @@ def run_market_scan(generated_at):
             try:
                 result = future.result()
                 cached[result["code"]] = result
+                cycle_stocks[result["code"]] = result
+                retry_attempts.pop(result["code"], None)
             except Exception as exc:
-                errors.append(f"{item.get('code')} {item.get('name')}: {exc}")
+                code = str(item.get("code", ""))
+                attempts = int(retry_attempts.get(code, 0)) + 1
+                retry_attempts[code] = attempts
+                message = f"{code} {item.get('name')}: {exc} (attempt {attempts}/{SCAN_MAX_RETRIES})"
+                errors.append(message)
+                if attempts < SCAN_MAX_RETRIES:
+                    failed_this_batch.append(code)
+                elif code not in failed_codes:
+                    failed_codes.append(code)
 
-    scanned_to = min(len(universe), cursor + len(batch))
-    cycle_complete = bool(universe) and scanned_to >= len(universe)
-    scan_state["cursor"] = 0 if cycle_complete else scanned_to
+    if not already_complete and not is_retry_batch:
+        cursor = min(len(universe), cursor + len(batch))
+    retry_codes.extend(code for code in failed_this_batch if code not in retry_codes)
+    cycle_complete = bool(universe) and cursor >= len(universe) and not retry_codes
+    scan_state["cursor"] = cursor
+    scan_state["retry_codes"] = retry_codes
+    scan_state["retry_attempts"] = retry_attempts
+    scan_state["cycle_stocks"] = cycle_stocks
+    scan_state["failed_codes"] = failed_codes
     scan_state["stocks"] = cached
     scan_state["last_batch_at"] = generated_at
     if cycle_complete:
         scan_state["last_completed_at"] = generated_at
+        scan_state["last_completed_date"] = scan_date
 
     common_stocks = [
-        x for x in cached.values()
+        x for x in cycle_stocks.values()
         if "内国株式" in x.get("market", "")
         and float(x.get("price", 0)) >= 100
         and int(x.get("avg_turnover", 0)) >= 50_000_000
@@ -194,30 +287,31 @@ def run_market_scan(generated_at):
     scan_output = {
         "generated_at": generated_at,
         "universe_count": len(universe),
-        "covered_count": len(cached),
-        "cycle_scanned_count": scanned_to,
-        "progress_pct": round(scanned_to / max(1, len(universe)) * 100, 1),
+        "covered_count": len(cycle_stocks),
+        "cycle_scanned_count": min(len(universe), cursor),
+        "progress_pct": round(min(len(universe), cursor) / max(1, len(universe)) * 100, 1),
         "cycle_complete": cycle_complete,
+        "cycle_date": scan_date,
         "cycle_started_at": scan_state.get("cycle_started_at"),
         "last_completed_at": scan_state.get("last_completed_at"),
+        "last_completed_date": scan_state.get("last_completed_date"),
+        "retry_count": len(retry_codes),
+        "failed_count": len(failed_codes),
+        "auto_added": scan_state.get("last_auto_added") if scan_state.get("auto_watch_checked_date") == scan_date else None,
         "rankings": rankings,
         "batch_errors": errors[:30],
-        "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。",
+        "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。一定の流動性がある内国株式を順位付けしています。売買推奨ではありません。",
     }
+    if cycle_complete and rankings:
+        added = add_recommendation_to_watchlist(rankings, watchlist, scan_state, generated_at, scan_date)
+        if added:
+            scan_output["auto_added"] = added
     save_json(SCAN_STATE_PATH, scan_state)
     save_json(MARKET_SCAN_PATH, scan_output)
-    print(f"market scan: {scanned_to}/{len(universe)}, success cache={len(cached)}, errors={len(errors)}")
-
-    if cycle_complete and rankings:
-        signature = ",".join(x["code"] for x in rankings[:5])
-        if scan_state.get("last_line_signature") != signature:
-            lines = ["【全銘柄AI注目ランキング】"]
-            for index, item in enumerate(rankings[:5], 1):
-                lines.append(f"{index}. {item['name']}({item['code']}) {item['score']}点 ¥{item['price']:,.0f}")
-            lines.append("※全銘柄の自動分析です。売買推奨ではありません。")
-            send_line_message("\n".join(lines))
-            scan_state["last_line_signature"] = signature
-            save_json(SCAN_STATE_PATH, scan_state)
+    print(
+        f"market scan: {min(len(universe), cursor)}/{len(universe)}, "
+        f"today_success={len(cycle_stocks)}, retry={len(retry_codes)}, permanent_errors={len(failed_codes)}"
+    )
 
 
 def send_line_message(text):
@@ -234,6 +328,8 @@ def send_line_message(text):
             print("LINE send status:", res.status)
     except urllib.error.HTTPError as e:
         print("LINE send failed:", e.read().decode("utf-8"))
+    except urllib.error.URLError as e:
+        print("LINE send failed:", e)
 
 
 def main():
@@ -275,7 +371,7 @@ def main():
 
     save_json(STATE_PATH, state)
     save_json(LATEST_PATH, {"generated_at": generated_at, "stocks": stocks, "errors": errors})
-    run_market_scan(generated_at)
+    run_market_scan(generated_at, watchlist)
 
 
 if __name__ == "__main__":
