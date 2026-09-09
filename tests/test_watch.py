@@ -74,6 +74,15 @@ class AutoWatchTests(unittest.TestCase):
             watch.analyze_stock_news(candidate(), unofficial, {}, generated)[2],
         )
 
+    def test_syndicated_duplicate_headline_is_counted_once(self):
+        generated = "2026-09-09T06:00:00+00:00"
+        article = {"title": "テスト銘柄が業績を下方修正", "url": "https://example.com", "published_at": generated, "priority": "重要", "official": False}
+        data = {"status": "ok", "generated_at": generated, "articles": [
+            {**article, "publisher": "媒体A"}, {**article, "publisher": "媒体B", "url": "https://example.net"},
+        ]}
+        _, cautions, _ = watch.analyze_stock_news(candidate(), data, {}, generated)
+        self.assertEqual(len(cautions), 1)
+
     def test_adds_only_once_per_day_and_sends_line(self):
         with tempfile.TemporaryDirectory() as directory:
             watchlist_path = Path(directory) / "watchlist.json"
