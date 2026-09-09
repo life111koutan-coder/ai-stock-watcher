@@ -4,6 +4,7 @@ Google News is a discovery index, not a complete or real-time disclosure feed.
 Only headlines/links are stored. No article-body scraping or executable content.
 """
 import argparse
+import copy
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -20,6 +21,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parent
 UTC = timezone.utc
 MAX_BYTES = 2_000_000
+COMPANY_SOURCE_BATCH_SIZE = 6
 
 
 def read_json(path, default):
@@ -139,6 +141,25 @@ def fetch_source(source, config, watchlist, now):
         return [], status
 
 
+def with_company_sources(config, watchlist):
+    """Add focused searches for monitored companies without changing the saved config."""
+    result = copy.deepcopy(config)
+    names = []
+    for stock in watchlist:
+        name = clean(stock.get("name", ""))
+        if name and name not in names:
+            names.append(name)
+    for offset in range(0, len(names), COMPANY_SOURCE_BATCH_SIZE):
+        group = names[offset:offset + COMPANY_SOURCE_BATCH_SIZE]
+        terms = " OR ".join(f'\"{name}\"' for name in group)
+        result.setdefault("sources", []).append({
+            "id": f"companies-{offset // COMPANY_SOURCE_BATCH_SIZE + 1}",
+            "name": f"監視企業の決算・公式材料 {offset // COMPANY_SOURCE_BATCH_SIZE + 1}",
+            "query": f"({terms}) (決算 OR 業績 OR 上方修正 OR 下方修正 OR 配当 OR 自社株買い OR 受注 OR 提携 OR 不正 OR リコール) when:7d",
+        })
+    return result
+
+
 def collect(config, watchlist, previous, now, fetcher=fetch_source):
     cached = {a["id"]: a for a in previous.get("articles", [])
               if timestamp(a.get("published_at")) and now - timedelta(days=7) <= timestamp(a["published_at"]) <= now + timedelta(minutes=10)}
@@ -205,6 +226,7 @@ def main():
     args = parser.parse_args()
     config = read_json(ROOT / "news_sources.json", {})
     watchlist = read_json(ROOT / "watchlist.json", [])
+    config = with_company_sources(config, watchlist)
     data = collect(config, watchlist, read_json(args.output, {}), datetime.now(UTC))
     data["notification_status"] = notify(data, ROOT / "news_notify_state.json", args.notify)
     save_json(args.output, data)
