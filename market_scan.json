@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-09T09:18:14.060242+00:00",
+  "generated_at": "2026-09-09T09:40:47.424222+00:00",
   "universe_count": 4434,
-  "covered_count": 3195,
-  "cycle_scanned_count": 3250,
-  "progress_pct": 73.3,
+  "covered_count": 3443,
+  "cycle_scanned_count": 3500,
+  "progress_pct": 78.9,
   "cycle_complete": false,
   "cycle_date": "2026-09-09",
   "cycle_started_at": "2026-09-09T06:01:01.756191+00:00",
   "last_completed_at": "2026-09-09T04:44:47.709591+00:00",
   "last_completed_date": null,
-  "retry_count": 55,
+  "retry_count": 57,
   "failed_count": 0,
   "auto_added": null,
   "rankings": [
@@ -633,10 +633,40 @@
     }
   ],
   "batch_errors": [
-    "7098 エージェント: list index out of range (attempt 1/3)",
-    "7132 フローバル: list index out of range (attempt 1/3)"
+    "7355 一寸房: list index out of range (attempt 1/3)",
+    "7364 琉球アスティーダスポーツクラブ: list index out of range (attempt 1/3)"
   ],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "未実行",
-  "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。"
+  "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
+  "completion_notification_status": "未実行",
+  "performance_summary": {
+    "recommendations": 0,
+    "horizons": {
+      "1": {
+        "completed": 0,
+        "wins": 0,
+        "win_rate_pct": null,
+        "average_return_pct": null,
+        "best_return_pct": null,
+        "worst_return_pct": null
+      },
+      "5": {
+        "completed": 0,
+        "wins": 0,
+        "win_rate_pct": null,
+        "average_return_pct": null,
+        "best_return_pct": null,
+        "worst_return_pct": null
+      },
+      "20": {
+        "completed": 0,
+        "wins": 0,
+        "win_rate_pct": null,
+        "average_return_pct": null,
+        "best_return_pct": null,
+        "worst_return_pct": null
+      }
+    }
+  }
 }
