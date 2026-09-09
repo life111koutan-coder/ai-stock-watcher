@@ -27,9 +27,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Test watcher logic
+        run: python3 -m unittest discover -s tests -p 'test_watch.py'
       - name: Run watcher
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_NEWS_USER_ID: ${{ secrets.LINE_NEWS_USER_ID }}
           SCAN_BATCH_SIZE: '250'
           SCAN_WORKERS: '8'
           SCAN_MAX_RETRIES: '3'
@@ -40,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state.json latest.json scan_state.json market_scan.json watchlist.json
+          git add state.json latest.json scan_state.json market_scan.json watchlist.json recommendation_history.json
           if git diff --cached --quiet; then
             echo "No data changes to commit"
             exit 0
