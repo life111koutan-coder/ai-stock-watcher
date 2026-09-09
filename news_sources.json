@@ -4,7 +4,9 @@
     {"id":"robotics","name":"ロボット・自動化","query":"(ファナック OR 安川電機 OR ハーモニック・ドライブ) (AI OR ロボット OR 自動化 OR 決算 OR 受注) when:7d"},
     {"id":"quantum","name":"量子・IOWN","query":"(量子コンピュータ OR IOWN OR 光半導体) when:7d"},
     {"id":"chips","name":"半導体・計算基盤","query":"(AI半導体 OR データセンター OR GPU) (発表 OR 提携 OR 投資 OR 規制) when:7d"},
-    {"id":"official","name":"企業公式発表の検索","query":"(AI OR 生成AI OR ロボット OR 量子 OR IOWN) (site:global.ntt OR site:nec.com OR site:global.fujitsu OR site:yaskawa.co.jp OR site:fanuc.co.jp OR site:hds.co.jp OR site:nvidianews.nvidia.com) when:7d"}
+    {"id":"official","name":"企業公式発表の検索","query":"(AI OR 生成AI OR ロボット OR 量子 OR IOWN) (site:global.ntt OR site:nec.com OR site:global.fujitsu OR site:yaskawa.co.jp OR site:fanuc.co.jp OR site:hds.co.jp OR site:nvidianews.nvidia.com) when:7d"},
+    {"id":"corporate_events","name":"国内企業・決算材料","query":"(上方修正 OR 下方修正 OR 黒字転換 OR 最高益 OR 増配 OR 減配 OR 自社株買い OR 大型受注 OR 提携 OR 買収 OR 不正 OR リコール) 株 when:2d"},
+    {"id":"official_disclosures","name":"公式開示・取引所情報","query":"(AI OR ロボット OR 量子 OR 半導体 OR 決算) (site:jpx.co.jp OR site:release.tdnet.info) when:7d"}
   ],
   "aliases": {
     "6702":["富士通","Fujitsu"], "9432":["NTT","日本電信電話"],
@@ -14,12 +16,12 @@
     "7203":["トヨタ","Toyota"], "6954":["ファナック","FANUC"],
     "6506":["安川電機","Yaskawa"], "6324":["ハーモニック・ドライブ","Harmonic Drive"]
   },
-  "official_domains":["global.ntt","nec.com","global.fujitsu","yaskawa.co.jp","fanuc.co.jp","hds.co.jp","nvidianews.nvidia.com","openai.com","anthropic.com","sony.com","sony.co.jp","softbank.jp","group.softbank","hitachi.com","hitachi.co.jp","sakura.ad.jp","pkshatech.com","global.toyota","toyota.co.jp"],
+  "official_domains":["global.ntt","nec.com","global.fujitsu","yaskawa.co.jp","fanuc.co.jp","hds.co.jp","nvidianews.nvidia.com","openai.com","anthropic.com","sony.com","sony.co.jp","softbank.jp","group.softbank","hitachi.com","hitachi.co.jp","sakura.ad.jp","pkshatech.com","global.toyota","toyota.co.jp","jpx.co.jp","release.tdnet.info"],
   "themes": {
     "AI":["生成AI","人工知能","AI","OpenAI","ChatGPT","Anthropic","Claude","LLM"],
     "ロボット":["ロボット","robot","自動化","ファナック","安川電機","ハーモニック"],
     "量子・IOWN":["量子","quantum","IOWN","光半導体"],
     "半導体・基盤":["半導体","GPU","NVIDIA","データセンター"],
-    "企業・決算":["決算","業績","上方修正","下方修正","配当","増配","減配","自社株買い","受注","提携","買収","不正","リコール"]
+    "企業・決算":["決算","業績","上方修正","下方修正","黒字転換","最高益","配当","増配","減配","自社株買い","受注","提携","買収","不正","リコール"]
   }
 }
