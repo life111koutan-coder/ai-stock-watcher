@@ -213,8 +213,17 @@ def analyze_stock_news(stock, news_data, aliases, generated_at):
         elif any(word in title for word in positive_words):
             positive.append(item)
 
-    positive.sort(key=lambda item: item["published_at"], reverse=True)
-    cautions.sort(key=lambda item: item["published_at"], reverse=True)
+    def deduplicate(items):
+        selected = {}
+        for item in items:
+            key = unicodedata.normalize("NFKC", item["title"]).casefold()
+            current = selected.get(key)
+            if current is None or (item["official"] and not current["official"]):
+                selected[key] = item
+        return sorted(selected.values(), key=lambda item: item["published_at"], reverse=True)
+
+    positive = deduplicate(positive)
+    cautions = deduplicate(cautions)
     evidence = positive[:3]
     points = min(24, sum(
         4 + (6 if item["official"] else 0) + (2 if item["priority"] == "重要" else 0)
