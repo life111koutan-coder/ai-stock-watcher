@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-09T04:56:59.354942+00:00",
+  "generated_at": "2026-09-09T05:13:28.959564+00:00",
   "universe_count": 4434,
   "covered_count": 4365,
-  "cycle_scanned_count": 200,
-  "progress_pct": 4.5,
+  "cycle_scanned_count": 400,
+  "progress_pct": 9.0,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-09T04:56:59.354942+00:00",
   "last_completed_at": "2026-09-09T04:44:47.709591+00:00",
@@ -117,6 +117,28 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-09T04:28:58.684910+00:00"
+    },
+    {
+      "code": "1950",
+      "name": "日本電設工業",
+      "market": "プライム（内国株式）",
+      "sector": "建設業",
+      "price": 4135.0,
+      "previous_close": 4080.0,
+      "change_pct": 1.35,
+      "five_day_pct": 4.03,
+      "twenty_day_pct": 7.12,
+      "avg_turnover": 351360925,
+      "score": 86,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+2.90%→+12点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.41%→リスク低→+4点",
+        "5日騰落率+4.03%→+4点",
+        "平均売買代金5,000万円以上→+4点"
+      ],
+      "updated_at": "2026-09-09T05:13:28.959564+00:00"
     },
     {
       "code": "417A",
@@ -425,34 +447,23 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-08T06:35:09.771412+00:00"
-    },
-    {
-      "code": "153A",
-      "name": "カウリス",
-      "market": "グロース（内国株式）",
-      "sector": "情報・通信業",
-      "price": 1543.0,
-      "previous_close": 1561.0,
-      "change_pct": -1.15,
-      "five_day_pct": 8.97,
-      "twenty_day_pct": 15.32,
-      "avg_turnover": 128662065,
-      "score": 85,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+8.70%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.96%→リスク中→-4点",
-        "5日騰落率+8.97%→+8点",
-        "平均売買代金5,000万円以上→+4点"
-      ],
-      "updated_at": "2026-09-09T04:56:59.354942+00:00"
     }
   ],
   "batch_errors": [
-    "1432 動力: list index out of range",
-    "1445 ひかりホールディングス: list index out of range",
-    "1452 横浜ライト工業: list index out of range"
+    "1672 ＷｉｓｄｏｍＴｒｅｅ　金上場投資信託: insufficient data",
+    "1685 ＷｉｓｄｏｍＴｒｅｅ　エネルギー上場投資信託: insufficient data",
+    "1687 ＷｉｓｄｏｍＴｒｅｅ　農産物上場投資信託: insufficient data",
+    "1688 ＷｉｓｄｏｍＴｒｅｅ　穀物上場投資信託: insufficient data",
+    "1696 ＷｉｓｄｏｍＴｒｅｅ　とうもろこし上場投資信託: insufficient data",
+    "1697 ＷｉｓｄｏｍＴｒｅｅ　大豆上場投資信託: insufficient data",
+    "2031 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ダブル・ブル　ＥＴＮ: list index out of range",
+    "2032 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ベア　ＥＴＮ: list index out of range",
+    "2033 ＮＥＸＴ　ＮＯＴＥＳ　韓国ＫＯＳＰＩ・ダブル・ブル　ＥＴＮ: list index out of range",
+    "2036 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ダブル・ブル　ＥＴＮ: list index out of range",
+    "2037 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ベア　ＥＴＮ: list index out of range",
+    "2040 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ダブル・ブル・ドルヘッジ　ＥＴＮ: list index out of range",
+    "2041 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ベア・ドルヘッジ　ＥＴＮ: list index out of range",
+    "2043 ＮＥＸＴ　ＮＯＴＥＳ　ＳＴＯＸＸ　アセアン好配当５０（円、ネットリターン）ＥＴＮ: list index out of range"
   ],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
