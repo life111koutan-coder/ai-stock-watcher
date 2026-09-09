@@ -16,6 +16,7 @@ MARKET_SCAN_PATH = "market_scan.json"
 NEWS_PATH = "news.json"
 NEWS_CONFIG_PATH = "news_sources.json"
 RECOMMENDATION_HISTORY_PATH = "recommendation_history.json"
+PERFORMANCE_HORIZONS = (1, 5, 20)
 SCAN_BATCH_SIZE = max(1, int(os.environ.get("SCAN_BATCH_SIZE", "200")))
 SCAN_WORKERS = max(1, min(16, int(os.environ.get("SCAN_WORKERS", "8"))))
 RANKING_SIZE = 20
@@ -215,7 +216,10 @@ def analyze_stock_news(stock, news_data, aliases, generated_at):
     positive.sort(key=lambda item: item["published_at"], reverse=True)
     cautions.sort(key=lambda item: item["published_at"], reverse=True)
     evidence = positive[:3]
-    points = min(20, len(evidence) * 4 + sum(4 for x in evidence if x["official"]) + sum(2 for x in evidence if x["priority"] == "重要"))
+    points = min(24, sum(
+        4 + (6 if item["official"] else 0) + (2 if item["priority"] == "重要" else 0)
+        for item in evidence
+    ))
     return evidence, cautions[:3], points
 
 
@@ -252,6 +256,9 @@ def choose_auto_watch(rankings, watchlist):
             continue
         if not item.get("news_evidence") or item.get("news_cautions"):
             continue
+        publishers = {x.get("publisher") for x in item["news_evidence"] if x.get("publisher")}
+        if not any(x.get("official") for x in item["news_evidence"]) and len(publishers) < 2:
+            continue
         if float(item.get("five_day_pct", 0)) <= 0 or float(item.get("twenty_day_pct", 0)) <= 0:
             continue
         if int(item.get("avg_turnover", 0)) < AUTO_WATCH_MIN_TURNOVER:
@@ -287,6 +294,9 @@ def add_recommendation_to_watchlist(rankings, watchlist, scan_state, generated_a
         "news_score": candidate.get("news_score", 0),
         "combined_score": candidate["score"],
         "news_evidence": candidate["news_evidence"],
+        "entry_price": candidate["price"],
+        "entry_date": scan_date,
+        "evaluations": {},
     }
     watchlist.append(added)
     save_json(WATCHLIST_PATH, watchlist)
@@ -318,22 +328,141 @@ def add_recommendation_to_watchlist(rankings, watchlist, scan_state, generated_a
 
 
 def retry_pending_line(scan_state):
-    pending = scan_state.get("pending_line")
-    if not pending:
-        return scan_state.get("last_line_status", "未実行")
-    status = send_line_message(str(pending.get("message", "")))
-    scan_state["last_line_status"] = status
-    pending["attempts"] = int(pending.get("attempts", 0)) + 1
+    last_status = scan_state.get("last_line_status", "未実行")
+    for key in ("pending_line", "pending_completion_line"):
+        pending = scan_state.get(key)
+        if not pending:
+            continue
+        status = send_line_message(str(pending.get("message", "")))
+        pending["attempts"] = int(pending.get("attempts", 0)) + 1
+        if key == "pending_line":
+            last_status = status
+            scan_state["last_line_status"] = status
+            history = load_json(RECOMMENDATION_HISTORY_PATH, [])
+            for item in history:
+                if item.get("recommendation_id") == pending.get("recommendation_id"):
+                    item["notification_status"] = status
+                    item["notification_attempts"] = pending["attempts"]
+            save_json(RECOMMENDATION_HISTORY_PATH, history[-365:])
+        else:
+            scan_state["completion_notification_status"] = status
+        if status == "送信済み":
+            scan_state.pop(key, None)
+        else:
+            scan_state[key] = pending
+    return last_status
+
+
+def performance_summary(history):
+    summary = {"recommendations": len(history), "horizons": {}}
+    for horizon in PERFORMANCE_HORIZONS:
+        returns = [
+            float(item["evaluations"][str(horizon)]["return_pct"])
+            for item in history
+            if item.get("evaluations", {}).get(str(horizon))
+        ]
+        summary["horizons"][str(horizon)] = {
+            "completed": len(returns),
+            "wins": sum(value > 0 for value in returns),
+            "win_rate_pct": round(sum(value > 0 for value in returns) / len(returns) * 100, 1) if returns else None,
+            "average_return_pct": round(sum(returns) / len(returns), 2) if returns else None,
+            "best_return_pct": round(max(returns), 2) if returns else None,
+            "worst_return_pct": round(min(returns), 2) if returns else None,
+        }
+    return summary
+
+
+def update_recommendation_performance(stocks, generated_at):
     history = load_json(RECOMMENDATION_HISTORY_PATH, [])
-    for item in history:
-        if item.get("recommendation_id") == pending.get("recommendation_id"):
-            item["notification_status"] = status
-            item["notification_attempts"] = pending["attempts"]
-    save_json(RECOMMENDATION_HISTORY_PATH, history[-365:])
-    if status == "送信済み":
-        scan_state.pop("pending_line", None)
-    else:
-        scan_state["pending_line"] = pending
+    stocks_by_code = {str(item.get("code", "")): item for item in stocks}
+    changed = False
+    for recommendation in history:
+        stock = stocks_by_code.get(str(recommendation.get("code", "")))
+        entry_price = float(recommendation.get("entry_price") or 0)
+        entry_date = str(recommendation.get("entry_date") or "")
+        if not stock or entry_price <= 0 or not entry_date:
+            continue
+        future_bars = sorted(
+            [bar for bar in stock.get("bars", []) if str(bar.get("date", "")) > entry_date],
+            key=lambda bar: str(bar.get("date", "")),
+        )
+        evaluations = recommendation.setdefault("evaluations", {})
+        for horizon in PERFORMANCE_HORIZONS:
+            key = str(horizon)
+            if key in evaluations or len(future_bars) < horizon:
+                continue
+            bar = future_bars[horizon - 1]
+            close = float(bar["close"])
+            evaluations[key] = {
+                "trading_days": horizon,
+                "date": bar["date"],
+                "price": round(close, 2),
+                "return_pct": round((close / entry_price - 1) * 100, 2),
+            }
+            changed = True
+        recommendation["latest_price"] = round(float(stock.get("price", entry_price)), 2)
+        recommendation["current_return_pct"] = round((recommendation["latest_price"] / entry_price - 1) * 100, 2)
+        recommendation["performance_updated_at"] = generated_at
+        changed = True
+    if changed:
+        save_json(RECOMMENDATION_HISTORY_PATH, history[-365:])
+    return history[-365:], performance_summary(history[-365:])
+
+
+def update_removal_candidates(watchlist, stocks, state, generated_at):
+    today = (parse_time(generated_at) or datetime.now(timezone.utc)).astimezone(JST).date().isoformat()
+    progress = state.setdefault("removal_review", {})
+    stock_by_code = {str(item.get("code", "")): item for item in stocks}
+    candidates = []
+    for watched in watchlist:
+        code = str(watched.get("code", ""))
+        stock = stock_by_code.get(code)
+        if not stock:
+            continue
+        record = progress.setdefault(code, {"weak_days": 0})
+        if record.get("last_date") != today:
+            if int(stock.get("score", 50)) < 45:
+                record["weak_days"] = int(record.get("weak_days", 0)) + 1
+            elif int(stock.get("score", 50)) >= 50:
+                record["weak_days"] = 0
+            record["last_date"] = today
+        reasons = []
+        if int(record.get("weak_days", 0)) >= 3:
+            reasons.append(f"総合AI45点未満が{record['weak_days']}営業日継続")
+        if stock.get("news_cautions") and int(stock.get("score", 50)) < 50:
+            reasons.append(f"注意ニュース{len(stock['news_cautions'])}件・総合AI{stock['score']}点")
+        if reasons:
+            candidates.append({
+                "code": code,
+                "name": watched.get("name", stock.get("name", code)),
+                "score": stock.get("score"),
+                "weak_days": record.get("weak_days", 0),
+                "reasons": reasons,
+                "news_cautions": stock.get("news_cautions", []),
+                "action": "解除は師匠の承認後のみ",
+            })
+    return candidates
+
+
+def notify_scan_completion(scan_state, scan_output, added, scan_date):
+    if scan_state.get("completion_notified_date") == scan_date:
+        return scan_state.get("completion_notification_status", "通知済み")
+    result = f"イチオシ: {added['name']}（{added['code']}）を監視へ追加" if added else "厳格条件に該当する未監視銘柄なし"
+    message = (
+        "【全銘柄調査 完了】\n"
+        f"対象: {scan_output['universe_count']:,}銘柄\n"
+        f"取得成功: {scan_output['covered_count']:,}銘柄\n"
+        f"取得不能: {scan_output['failed_count']:,}銘柄\n"
+        f"結果: {result}\n"
+        "売買は実行していません。"
+    )
+    status = send_line_message(message)
+    scan_state["completion_notified_date"] = scan_date
+    scan_state["completion_notification_status"] = status
+    if status != "送信済み":
+        scan_state["pending_completion_line"] = {
+            "notification_id": f"scan-complete-{scan_date}", "message": message, "attempts": 1
+        }
     return status
 
 
@@ -443,11 +572,20 @@ def run_market_scan(generated_at, watchlist):
         "line_notification": scan_state.get("last_line_status", "未実行"),
         "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
     }
+    added = None
     if cycle_complete and ranked_stocks:
         added = add_recommendation_to_watchlist(ranked_stocks, watchlist, scan_state, generated_at, scan_date)
         if added:
             scan_output["auto_added"] = added
             scan_output["line_notification"] = added["notification_status"]
+    if cycle_complete:
+        scan_output["completion_notification_status"] = notify_scan_completion(
+            scan_state, scan_output, added, scan_date
+        )
+    else:
+        scan_output["completion_notification_status"] = scan_state.get("completion_notification_status", "未実行")
+    history = load_json(RECOMMENDATION_HISTORY_PATH, [])
+    scan_output["performance_summary"] = performance_summary(history)
     save_json(SCAN_STATE_PATH, scan_state)
     save_json(MARKET_SCAN_PATH, scan_output)
     print(
@@ -535,8 +673,12 @@ def main():
                        "reasons": reasons, "history": history, "bars": bars,
                        "updated_at": generated_at})
 
+    removal_candidates = update_removal_candidates(watchlist, stocks, state, generated_at)
+    _, summary = update_recommendation_performance(stocks, generated_at)
     save_json(STATE_PATH, state)
-    save_json(LATEST_PATH, {"generated_at": generated_at, "stocks": stocks, "errors": errors})
+    save_json(LATEST_PATH, {"generated_at": generated_at, "stocks": stocks, "errors": errors,
+                           "removal_candidates": removal_candidates,
+                           "recommendation_performance": summary})
     run_market_scan(generated_at, watchlist)
 
 
