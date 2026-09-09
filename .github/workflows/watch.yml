@@ -8,7 +8,8 @@ on:
       - 'watchlist.json'
       - '.github/workflows/watch.yml'
   schedule:
-    - cron: '*/15 0-6 * * 1-5'
+    # 09:00-17:45 JST。1日で全銘柄を一巡し、失敗分を再試行する余裕を確保。
+    - cron: '*/15 0-8 * * 1-5'
   workflow_dispatch:
 
 permissions:
@@ -29,14 +30,17 @@ jobs:
       - name: Run watcher
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-          SCAN_BATCH_SIZE: '200'
+          SCAN_BATCH_SIZE: '250'
           SCAN_WORKERS: '8'
+          SCAN_MAX_RETRIES: '3'
+          AUTO_WATCH_MIN_SCORE: '75'
+          AUTO_WATCH_MIN_TURNOVER: '100000000'
         run: python3 watch.py
       - name: Commit latest data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state.json latest.json scan_state.json market_scan.json
+          git add state.json latest.json scan_state.json market_scan.json watchlist.json
           if git diff --cached --quiet; then
             echo "No data changes to commit"
             exit 0
