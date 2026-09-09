@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-08T06:56:36.482463+00:00",
+  "generated_at": "2026-09-09T00:16:37.186950+00:00",
   "universe_count": 4434,
   "covered_count": 4365,
-  "cycle_scanned_count": 1200,
-  "progress_pct": 27.1,
+  "cycle_scanned_count": 1400,
+  "progress_pct": 31.6,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-08T05:26:15.283674+00:00",
   "last_completed_at": "2026-09-08T05:09:32.006514+00:00",
@@ -449,6 +449,10 @@
       "updated_at": "2026-09-08T06:35:09.771412+00:00"
     }
   ],
-  "batch_errors": [],
+  "batch_errors": [
+    "3448 清鋼材: list index out of range",
+    "3483 翔栄: list index out of range",
+    "3670 協立情報通信: list index out of range"
+  ],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
