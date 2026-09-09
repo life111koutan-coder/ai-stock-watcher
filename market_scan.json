@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-09T03:56:09.420585+00:00",
+  "generated_at": "2026-09-09T04:12:24.057076+00:00",
   "universe_count": 4434,
   "covered_count": 4365,
-  "cycle_scanned_count": 4000,
-  "progress_pct": 90.2,
+  "cycle_scanned_count": 4200,
+  "progress_pct": 94.7,
   "cycle_complete": false,
   "cycle_started_at": "2026-09-08T05:26:15.283674+00:00",
   "last_completed_at": "2026-09-08T05:09:32.006514+00:00",
@@ -51,6 +51,28 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-08T05:54:11.392236+00:00"
+    },
+    {
+      "code": "9009",
+      "name": "京成電鉄",
+      "market": "プライム（内国株式）",
+      "sector": "陸運業",
+      "price": 1395.5,
+      "previous_close": 1389.5,
+      "change_pct": 0.43,
+      "five_day_pct": 4.34,
+      "twenty_day_pct": 9.32,
+      "avg_turnover": 2130262385,
+      "score": 87,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+3.37%→+13点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ0.89%→リスク低→+4点",
+        "5日騰落率+4.34%→+4点",
+        "平均売買代金5,000万円以上→+4点"
+      ],
+      "updated_at": "2026-09-09T04:12:24.057076+00:00"
     },
     {
       "code": "417A",
@@ -425,32 +447,15 @@
         "平均売買代金5,000万円以上→+4点"
       ],
       "updated_at": "2026-09-08T06:35:09.771412+00:00"
-    },
-    {
-      "code": "6036",
-      "name": "ＫｅｅＰｅｒ技研",
-      "market": "プライム（内国株式）",
-      "sector": "サービス業",
-      "price": 3620.0,
-      "previous_close": 3590.0,
-      "change_pct": 0.84,
-      "five_day_pct": 8.55,
-      "twenty_day_pct": 22.38,
-      "avg_turnover": 620002520,
-      "score": 85,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+9.01%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.36%→リスク中→-4点",
-        "5日騰落率+8.55%→+8点",
-        "平均売買代金5,000万円以上→+4点"
-      ],
-      "updated_at": "2026-09-09T02:27:18.328196+00:00"
     }
   ],
   "batch_errors": [
-    "8921 シーズクリエイト: list index out of range"
+    "9146 五健堂ホールディングス: list index out of range",
+    "9149 大友ロジスティクスサービス: list index out of range",
+    "9156 はなホールディングス: list index out of range",
+    "9169 大伸社: list index out of range",
+    "9226 アイガー: list index out of range",
+    "9334 アイビスホールディングス: insufficient data"
   ],
   "note": "全上場銘柄を分割取得し、内国株式のうち一定の流動性がある銘柄を順位付けしています。売買推奨ではありません。"
 }
