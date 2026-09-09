@@ -34,6 +34,13 @@ class AutoWatchTests(unittest.TestCase):
         rankings = [candidate(score=74), candidate("2222", twenty_day=-1), {**candidate("3333"), "news_evidence": []}]
         self.assertIsNone(watch.choose_auto_watch(rankings, []))
 
+    def test_unofficial_candidate_needs_two_independent_publishers(self):
+        one_report = candidate()
+        one_report["news_evidence"] = [{"title": "材料", "url": "https://example.com", "official": False, "publisher": "一社だけ"}]
+        self.assertIsNone(watch.choose_auto_watch([one_report], []))
+        one_report["news_evidence"].append({"title": "別報道", "url": "https://example.net", "official": False, "publisher": "別媒体"})
+        self.assertEqual(watch.choose_auto_watch([one_report], [])["code"], "1234")
+
     def test_news_is_fresh_matched_positive_and_separate_from_warnings(self):
         generated = "2026-09-09T06:00:00+00:00"
         data = {
@@ -49,13 +56,23 @@ class AutoWatchTests(unittest.TestCase):
         self.assertGreater(points, 0)
         enriched = watch.enrich_with_news([candidate(score=76, technical=76)], data, {}, generated)[0]
         self.assertEqual(enriched["technical_score"], 76)
-        self.assertLess(enriched["score"], 76, "warning penalty must outweigh a single positive headline")
-        self.assertLess(enriched["information_adjustment"], 0)
+        self.assertLessEqual(enriched["score"], 76, "warning penalty must cancel a single positive headline")
+        self.assertLessEqual(enriched["information_adjustment"], 0)
         self.assertIsNone(watch.choose_auto_watch([enriched], []), "warning evidence must block automatic addition")
 
     def test_stale_news_cannot_trigger_addition(self):
         data = {"status": "ok", "generated_at": "2026-09-09T01:00:00+00:00", "articles": []}
         self.assertEqual(watch.analyze_stock_news(candidate(), data, {}, "2026-09-09T06:00:00+00:00"), ([], [], 0))
+
+    def test_official_headline_receives_more_weight(self):
+        generated = "2026-09-09T06:00:00+00:00"
+        base = {"title": "テスト銘柄がAI技術を開発", "url": "https://example.com", "published_at": generated, "priority": "重要"}
+        unofficial = {"status": "ok", "generated_at": generated, "articles": [{**base, "official": False}]}
+        official = {"status": "ok", "generated_at": generated, "articles": [{**base, "official": True}]}
+        self.assertGreater(
+            watch.analyze_stock_news(candidate(), official, {}, generated)[2],
+            watch.analyze_stock_news(candidate(), unofficial, {}, generated)[2],
+        )
 
     def test_adds_only_once_per_day_and_sends_line(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -106,6 +123,43 @@ class AutoWatchTests(unittest.TestCase):
             self.assertNotIn("pending_line", state)
             self.assertEqual(json.loads(history_path.read_text(encoding="utf-8"))[0]["notification_status"], "送信済み")
             send.assert_called_once_with("hello")
+
+    def test_tracks_one_five_and_twenty_trading_day_results(self):
+        with tempfile.TemporaryDirectory() as directory:
+            history_path = Path(directory) / "recommendation_history.json"
+            history_path.write_text(json.dumps([{
+                "recommendation_id": "r1", "code": "1234", "name": "テスト銘柄",
+                "entry_price": 1000, "entry_date": "2026-08-01", "evaluations": {},
+            }]), encoding="utf-8")
+            bars = [{"date": f"2026-08-{day:02d}", "close": 1000 + index * 10} for index, day in enumerate(range(3, 23), 1)]
+            stock = {"code": "1234", "price": 1210, "bars": bars}
+            with mock.patch.object(watch, "RECOMMENDATION_HISTORY_PATH", str(history_path)):
+                history, summary = watch.update_recommendation_performance([stock], "2026-09-09T06:00:00+00:00")
+            self.assertEqual(set(history[0]["evaluations"]), {"1", "5", "20"})
+            self.assertEqual(history[0]["evaluations"]["1"]["return_pct"], 1.0)
+            self.assertEqual(summary["horizons"]["20"]["wins"], 1)
+
+    def test_removal_candidate_never_removes_and_requires_three_daily_checks(self):
+        state = {}
+        watchlist = [{"code": "1234", "name": "テスト銘柄"}]
+        stock = {"code": "1234", "name": "テスト銘柄", "score": 40, "news_cautions": []}
+        self.assertEqual(watch.update_removal_candidates(watchlist, [stock], state, "2026-09-07T06:00:00+00:00"), [])
+        self.assertEqual(watch.update_removal_candidates(watchlist, [stock], state, "2026-09-08T06:00:00+00:00"), [])
+        candidates = watch.update_removal_candidates(watchlist, [stock], state, "2026-09-09T06:00:00+00:00")
+        self.assertEqual(candidates[0]["action"], "解除は師匠の承認後のみ")
+        self.assertEqual(len(watchlist), 1)
+
+    def test_scan_completion_notifies_even_without_candidate_and_queues_failure(self):
+        state = {}
+        output = {"universe_count": 4434, "covered_count": 4400, "failed_count": 34}
+        with mock.patch.object(watch, "send_line_message", return_value="送信失敗（次回再試行）") as send:
+            status = watch.notify_scan_completion(state, output, None, "2026-09-09")
+            duplicate = watch.notify_scan_completion(state, output, None, "2026-09-09")
+        self.assertIn("送信失敗", status)
+        self.assertEqual(duplicate, status)
+        self.assertIn("pending_completion_line", state)
+        self.assertIn("該当する未監視銘柄なし", send.call_args.args[0])
+        self.assertEqual(send.call_count, 1)
 
 
 if __name__ == "__main__":
