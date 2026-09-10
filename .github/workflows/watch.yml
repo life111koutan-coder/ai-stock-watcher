@@ -9,7 +9,8 @@ on:
       - '.github/workflows/watch.yml'
   schedule:
     # 09:00-18:45 JST。全銘柄を一巡した後、通信失敗分を再試行する時間も確保。
-    - cron: '*/15 0-9 * * 1-5'
+    - cron: '*/5 0-8 * * 1-5'
+    - cron: '0-45/5 9 * * 1-5'
   workflow_dispatch:
 
 permissions:
