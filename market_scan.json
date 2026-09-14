@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-14T01:00:36.958955+00:00",
+  "generated_at": "2026-09-14T01:12:28.731141+00:00",
   "universe_count": 4434,
-  "covered_count": 1222,
-  "cycle_scanned_count": 1250,
-  "progress_pct": 28.2,
+  "covered_count": 1470,
+  "cycle_scanned_count": 1500,
+  "progress_pct": 33.8,
   "cycle_complete": false,
   "cycle_date": "2026-09-14",
   "cycle_started_at": "2026-09-14T00:01:30.624506+00:00",
   "last_completed_at": "2026-09-11T09:55:33.809837+00:00",
   "last_completed_date": "2026-09-11",
-  "retry_count": 28,
+  "retry_count": 30,
   "failed_count": 0,
   "auto_added": null,
   "rankings": [
@@ -406,6 +406,34 @@
       "news_cautions": []
     },
     {
+      "code": "3692",
+      "name": "ＦＦＲＩセキュリティ",
+      "market": "グロース（内国株式）",
+      "sector": "情報・通信業",
+      "price": 6970.0,
+      "previous_close": 6330.0,
+      "change_pct": 10.11,
+      "five_day_pct": 11.52,
+      "twenty_day_pct": 47.05,
+      "avg_turnover": 1023145900,
+      "score": 79,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+14.67%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ5.44%→リスク高→-10点",
+        "5日騰落率+11.52%→+8点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+      ],
+      "updated_at": "2026-09-14T01:12:28.731141+00:00",
+      "technical_score": 79,
+      "news_score": 0,
+      "information_adjustment": 0,
+      "news_evidence": [],
+      "news_cautions": []
+    },
+    {
       "code": "2321",
       "name": "ソフトフロントホールディングス",
       "market": "グロース（内国株式）",
@@ -544,38 +572,11 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
-    },
-    {
-      "code": "2820",
-      "name": "やまみ",
-      "market": "スタンダード（内国株式）",
-      "sector": "食料品",
-      "price": 6710.0,
-      "previous_close": 6700.0,
-      "change_pct": 0.15,
-      "five_day_pct": 1.98,
-      "twenty_day_pct": 15.29,
-      "avg_turnover": 127829400,
-      "score": 79,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+6.99%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.60%→リスク中→-4点",
-        "5日騰落率+1.98%→+2点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-09-14T00:52:35.190601+00:00",
-      "technical_score": 79,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
     }
   ],
   "batch_errors": [
-    "3448 清鋼材: list index out of range (attempt 1/3)"
+    "3483 翔栄: list index out of range (attempt 1/3)",
+    "3670 協立情報通信: list index out of range (attempt 1/3)"
   ],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "未設定（宛先またはトークン不足）",
