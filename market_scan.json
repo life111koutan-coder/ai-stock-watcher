@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-16T02:55:02.041865+00:00",
+  "generated_at": "2026-09-16T03:01:12.169309+00:00",
   "universe_count": 4434,
-  "covered_count": 4182,
-  "cycle_scanned_count": 4250,
-  "progress_pct": 95.9,
+  "covered_count": 4365,
+  "cycle_scanned_count": 4434,
+  "progress_pct": 100.0,
   "cycle_complete": false,
   "cycle_date": "2026-09-16",
   "cycle_started_at": "2026-09-16T00:01:11.398569+00:00",
   "last_completed_at": "2026-09-15T09:50:53.807524+00:00",
   "last_completed_date": "2026-09-15",
-  "retry_count": 68,
+  "retry_count": 69,
   "failed_count": 0,
   "auto_added": null,
   "rankings": [
@@ -385,6 +385,34 @@
       "news_cautions": []
     },
     {
+      "code": "9543",
+      "name": "静岡ガス",
+      "market": "プライム（内国株式）",
+      "sector": "電気・ガス業",
+      "price": 1400.0,
+      "previous_close": 1373.0,
+      "change_pct": 1.97,
+      "five_day_pct": 3.55,
+      "twenty_day_pct": 10.58,
+      "avg_turnover": 199848110,
+      "score": 89,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+4.26%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ0.80%→リスク低→+4点",
+        "5日騰落率+3.55%→+4点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+      ],
+      "updated_at": "2026-09-16T03:01:12.169309+00:00",
+      "technical_score": 89,
+      "news_score": 0,
+      "information_adjustment": 0,
+      "news_evidence": [],
+      "news_cautions": []
+    },
+    {
       "code": "9533",
       "name": "東邦瓦斯",
       "market": "プライム（内国株式）",
@@ -579,43 +607,10 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
-    },
-    {
-      "code": "8387",
-      "name": "四国銀行",
-      "market": "プライム（内国株式）",
-      "sector": "銀行業",
-      "price": 4250.0,
-      "previous_close": 4090.0,
-      "change_pct": 3.91,
-      "five_day_pct": 13.48,
-      "twenty_day_pct": 25.37,
-      "avg_turnover": 637313750,
-      "score": 85,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+11.88%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.43%→リスク中→-4点",
-        "5日騰落率+13.48%→+8点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-09-16T02:47:17.432770+00:00",
-      "technical_score": 85,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
     }
   ],
   "batch_errors": [
-    "9156 はなホールディングス: 'close' (attempt 1/3)",
-    "9146 五健堂ホールディングス: 'close' (attempt 1/3)",
-    "9149 大友ロジスティクスサービス: 'close' (attempt 1/3)",
-    "9169 大伸社: 'close' (attempt 1/3)",
-    "9226 アイガー: 'close' (attempt 1/3)",
-    "9334 アイビスホールディングス: 'close' (attempt 1/3)"
+    "9914 植松商会: list index out of range (attempt 1/3)"
   ],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "未設定（宛先またはトークン不足）",
