@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-18T02:43:37.292858+00:00",
+  "generated_at": "2026-09-18T02:51:25.760524+00:00",
   "universe_count": 4434,
-  "covered_count": 3939,
-  "cycle_scanned_count": 4000,
-  "progress_pct": 90.2,
+  "covered_count": 4183,
+  "cycle_scanned_count": 4250,
+  "progress_pct": 95.9,
   "cycle_complete": false,
   "cycle_date": "2026-09-18",
   "cycle_started_at": "2026-09-18T00:01:17.104092+00:00",
   "last_completed_at": "2026-09-17T09:56:40.642624+00:00",
   "last_completed_date": "2026-09-17",
-  "retry_count": 61,
+  "retry_count": 67,
   "failed_count": 0,
   "auto_added": null,
   "rankings": [
@@ -434,6 +434,34 @@
       "news_cautions": []
     },
     {
+      "code": "9436",
+      "name": "沖縄セルラー電話",
+      "market": "スタンダード（内国株式）",
+      "sector": "情報・通信業",
+      "price": 4400.0,
+      "previous_close": 4450.0,
+      "change_pct": -1.12,
+      "five_day_pct": 2.09,
+      "twenty_day_pct": 10.0,
+      "avg_turnover": 538142075,
+      "score": 87,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+5.16%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ0.84%→リスク低→+4点",
+        "5日騰落率+2.09%→+2点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+      ],
+      "updated_at": "2026-09-18T02:51:25.760524+00:00",
+      "technical_score": 87,
+      "news_score": 0,
+      "information_adjustment": 0,
+      "news_evidence": [],
+      "news_cautions": []
+    },
+    {
       "code": "2986",
       "name": "ＬＡホールディングス",
       "market": "グロース（内国株式）",
@@ -544,38 +572,15 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
-    },
-    {
-      "code": "7811",
-      "name": "中本パックス",
-      "market": "スタンダード（内国株式）",
-      "sector": "その他製品",
-      "price": 2300.0,
-      "previous_close": 2280.0,
-      "change_pct": 0.88,
-      "five_day_pct": 18.74,
-      "twenty_day_pct": 17.77,
-      "avg_turnover": 66392665,
-      "score": 85,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+9.03%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.82%→リスク中→-4点",
-        "5日騰落率+18.74%→+8点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-09-18T02:32:58.341145+00:00",
-      "technical_score": 85,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
     }
   ],
   "batch_errors": [
-    "8921 シーズクリエイト: 'close' (attempt 1/3)"
+    "9146 五健堂ホールディングス: 'close' (attempt 1/3)",
+    "9149 大友ロジスティクスサービス: 'close' (attempt 1/3)",
+    "9156 はなホールディングス: 'close' (attempt 1/3)",
+    "9169 大伸社: 'close' (attempt 1/3)",
+    "9226 アイガー: 'close' (attempt 1/3)",
+    "9334 アイビスホールディングス: 'close' (attempt 1/3)"
   ],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "未設定（宛先またはトークン不足）",
