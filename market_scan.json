@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-21T02:53:03.283273+00:00",
+  "generated_at": "2026-09-21T02:59:13.680153+00:00",
   "universe_count": 4434,
-  "covered_count": 3938,
-  "cycle_scanned_count": 4000,
-  "progress_pct": 90.2,
+  "covered_count": 4181,
+  "cycle_scanned_count": 4250,
+  "progress_pct": 95.9,
   "cycle_complete": false,
   "cycle_date": "2026-09-21",
   "cycle_started_at": "2026-09-21T00:01:32.403601+00:00",
   "last_completed_at": "2026-09-18T09:53:08.345636+00:00",
   "last_completed_date": "2026-09-18",
-  "retry_count": 62,
+  "retry_count": 69,
   "failed_count": 0,
   "auto_added": null,
   "rankings": [
@@ -322,6 +322,34 @@
       "news_cautions": []
     },
     {
+      "code": "9436",
+      "name": "沖縄セルラー電話",
+      "market": "スタンダード（内国株式）",
+      "sector": "情報・通信業",
+      "price": 4450.0,
+      "previous_close": 4450.0,
+      "change_pct": 0.0,
+      "five_day_pct": 3.25,
+      "twenty_day_pct": 11.25,
+      "avg_turnover": 559276325,
+      "score": 88,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+5.35%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ0.77%→リスク低→+4点",
+        "5日騰落率+3.25%→+3点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+      ],
+      "updated_at": "2026-09-21T02:59:13.680153+00:00",
+      "technical_score": 88,
+      "news_score": 0,
+      "information_adjustment": 0,
+      "news_evidence": [],
+      "news_cautions": []
+    },
+    {
       "code": "4628",
       "name": "エスケー化研",
       "market": "スタンダード（内国株式）",
@@ -544,38 +572,16 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
-    },
-    {
-      "code": "7181",
-      "name": "かんぽ生命保険",
-      "market": "プライム（内国株式）",
-      "sector": "保険業",
-      "price": 1799.5,
-      "previous_close": 1813.5,
-      "change_pct": -0.77,
-      "five_day_pct": 1.81,
-      "twenty_day_pct": 8.96,
-      "avg_turnover": 3898789195,
-      "score": 87,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+4.33%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ1.12%→リスク低→+4点",
-        "5日騰落率+1.81%→+2点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-09-21T02:21:25.906606+00:00",
-      "technical_score": 87,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
     }
   ],
   "batch_errors": [
-    "8921 シーズクリエイト: HTTP Error 404: Not Found (attempt 1/3)"
+    "9146 五健堂ホールディングス: HTTP Error 404: Not Found (attempt 1/3)",
+    "9156 はなホールディングス: HTTP Error 404: Not Found (attempt 1/3)",
+    "9149 大友ロジスティクスサービス: HTTP Error 404: Not Found (attempt 1/3)",
+    "9169 大伸社: HTTP Error 404: Not Found (attempt 1/3)",
+    "9226 アイガー: HTTP Error 404: Not Found (attempt 1/3)",
+    "9239 ケーイーティ: HTTP Error 404: Not Found (attempt 1/3)",
+    "9334 アイビスホールディングス: HTTP Error 404: Not Found (attempt 1/3)"
   ],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "未設定（宛先またはトークン不足）",
