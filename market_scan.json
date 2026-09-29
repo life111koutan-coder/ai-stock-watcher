@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-29T01:03:49.502037+00:00",
+  "generated_at": "2026-09-29T01:18:08.223853+00:00",
   "universe_count": 4434,
-  "covered_count": 1222,
-  "cycle_scanned_count": 1250,
-  "progress_pct": 28.2,
+  "covered_count": 1470,
+  "cycle_scanned_count": 1500,
+  "progress_pct": 33.8,
   "cycle_complete": false,
   "cycle_date": "2026-09-29",
   "cycle_started_at": "2026-09-29T00:01:25.321373+00:00",
   "last_completed_at": "2026-09-28T09:51:50.049378+00:00",
   "last_completed_date": "2026-09-28",
-  "retry_count": 28,
+  "retry_count": 30,
   "failed_count": 0,
   "auto_added": null,
   "rankings": [
@@ -378,6 +378,34 @@
       "news_cautions": []
     },
     {
+      "code": "3791",
+      "name": "ＩＧポート",
+      "market": "スタンダード（内国株式）",
+      "sector": "情報・通信業",
+      "price": 1088.0,
+      "previous_close": 1109.0,
+      "change_pct": -1.89,
+      "five_day_pct": 4.21,
+      "twenty_day_pct": -0.82,
+      "avg_turnover": 61156820,
+      "score": 82,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+1.94%→+8点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.29%→リスク低→+4点",
+        "5日騰落率+4.21%→+4点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+      ],
+      "updated_at": "2026-09-29T01:18:08.223853+00:00",
+      "technical_score": 82,
+      "news_score": 0,
+      "information_adjustment": 0,
+      "news_evidence": [],
+      "news_cautions": []
+    },
+    {
       "code": "3106",
       "name": "倉敷紡績",
       "market": "プライム（内国株式）",
@@ -544,38 +572,11 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
-    },
-    {
-      "code": "1965",
-      "name": "テクノ菱和",
-      "market": "スタンダード（内国株式）",
-      "sector": "建設業",
-      "price": 7290.0,
-      "previous_close": 2430.0,
-      "change_pct": 200.0,
-      "five_day_pct": 205.87,
-      "twenty_day_pct": 214.22,
-      "avg_turnover": 469945866,
-      "score": 79,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+32.97%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ41.61%→リスク高→-10点",
-        "5日騰落率+205.87%→+8点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-09-29T00:20:29.699520+00:00",
-      "technical_score": 79,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
     }
   ],
   "batch_errors": [
-    "3448 清鋼材: HTTP Error 404: Not Found (attempt 1/3)"
+    "3483 翔栄: HTTP Error 404: Not Found (attempt 1/3)",
+    "3670 協立情報通信: list index out of range (attempt 1/3)"
   ],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "未設定（宛先またはトークン不足）",
