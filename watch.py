@@ -459,7 +459,9 @@ def update_removal_candidates(watchlist, stocks, state, generated_at):
 def notify_scan_completion(scan_state, scan_output, added, scan_date):
     if scan_state.get("completion_notified_date") == scan_date:
         return scan_state.get("completion_notification_status", "通知済み")
-    result = f"イチオシ: {added['name']}（{added['code']}）を監視へ追加" if added else "厳格条件に該当する未監視銘柄なし"
+    result = scan_output.get("recommendation_status") or (
+        f"イチオシ: {added['name']}（{added['code']}）を監視へ追加" if added else "厳格条件に該当する未監視銘柄なし"
+    )
     message = (
         "【全銘柄調査 完了】\n"
         f"対象: {scan_output['universe_count']:,}銘柄\n"
@@ -582,6 +584,7 @@ def run_market_scan_batch(generated_at, watchlist):
         "retry_count": len(retry_codes),
         "failed_count": len(failed_codes),
         "auto_added": scan_state.get("last_auto_added") if scan_state.get("auto_watch_checked_date") == scan_date else None,
+        "recommendation_status": "日付をまたいだ調査のため自動追加を保留" if scan_date != today else None,
         "rankings": rankings,
         "batch_errors": errors[:30],
         "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",

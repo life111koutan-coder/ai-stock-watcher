@@ -95,6 +95,18 @@ class RecoveryTests(unittest.TestCase):
         self.assertEqual(attempts['1000'], 3)
         self.assertEqual(attempts['1001'], 2)
 
+    def test_old_cycle_finishes_without_discarding_result_or_claiming_no_candidate(self):
+        with mock.patch.object(watch, 'scan_one_stock', side_effect=self.result):
+            watch.run_market_scan_batch(self.generated, [])
+        with mock.patch.object(watch, 'scan_one_stock', side_effect=self.result) as fetch, mock.patch.object(
+            watch.time, 'monotonic', return_value=0
+        ):
+            output = watch.run_market_scan('2026-10-10T06:00:00+00:00', [])
+        self.assertTrue(output['cycle_complete'])
+        self.assertEqual(output['cycle_date'], '2026-10-09')
+        self.assertEqual(fetch.call_count, 3)
+        self.assertIn('自動追加を保留', self.send.call_args.args[0])
+
     def test_main_retries_failed_decision_even_when_tag_has_not_changed(self):
         watch.save_json(watch.WATCHLIST_PATH, [{'code': '1000', 'name': 'テスト'}])
         prices = (1000, 990, [900, 920, 940, 960, 980, 1000], [], [])
