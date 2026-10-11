@@ -5,12 +5,16 @@ on:
     branches: [main]
     paths:
       - 'watch.py'
+      - 'news.py'
+      - 'news_sources.json'
+      - 'tests/test_watch*.py'
+      - 'tests/test_watch*.cjs'
       - 'watchlist.json'
       - '.github/workflows/watch.yml'
   schedule:
-    # 09:00-18:45 JST。全銘柄を一巡した後、通信失敗分を再試行する時間も確保。
-    - cron: '*/5 0-8 * * 1-5'
-    - cron: '0-45/5 9 * * 1-5'
+    # 09:02-18:47 JST。毎時00分の混雑を避け、1回の実行でも複数バッチを進める。
+    - cron: '2-57/5 0-8 * * 1-5'
+    - cron: '2-47/5 9 * * 1-5'
   workflow_dispatch:
 
 permissions:
@@ -23,24 +27,33 @@ concurrency:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
       - name: Test watcher logic
-        run: python3 -m unittest discover -s tests -p 'test_watch.py'
+        run: |
+          python3 -m unittest discover -s tests -p 'test_watch*.py'
+          python3 -m unittest discover -s tests -p 'test_news.py'
+          node tests/test_watch_ui.cjs
       - name: Run watcher
+        id: watcher
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_NEWS_USER_ID: ${{ secrets.LINE_NEWS_USER_ID }}
-          SCAN_BATCH_SIZE: '250'
+          SCAN_BATCH_SIZE: '100'
+          SCAN_RUN_BUDGET_SECONDS: '300'
           SCAN_WORKERS: '8'
           SCAN_MAX_RETRIES: '3'
           AUTO_WATCH_MIN_SCORE: '75'
           AUTO_WATCH_MIN_TURNOVER: '100000000'
-        run: python3 watch.py
+          WATCH_NEWS_PATH: ${{ runner.temp }}/watch-news.json
+        run: |
+          python3 news.py --output "$WATCH_NEWS_PATH"
+          python3 watch.py
       - name: Commit latest data
+        if: ${{ always() && steps.watcher.outcome != 'skipped' && !cancelled() }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -55,3 +68,19 @@ jobs:
             if git push origin HEAD:main; then exit 0; fi
           done
           exit 1
+      - name: Report scan and notification health
+        if: ${{ always() && !cancelled() }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          scan = json.loads(Path('market_scan.json').read_text())
+          latest = json.loads(Path('latest.json').read_text())
+          line = latest.get('line_notification', {})
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write(f"## Stock watcher\nUpdated: {latest.get('generated_at')}\n\n")
+              f.write(f"Monitored: {len(latest.get('stocks', []))}; price errors: {len(latest.get('errors', []))}\n\n")
+              f.write(f"Scan date: {scan.get('cycle_date')}; processed: {scan.get('cycle_scanned_count')}/{scan.get('universe_count')}; complete: {scan.get('cycle_complete')}\n\n")
+              f.write(f"Retries: {scan.get('retry_count')}; failed: {scan.get('failed_count')}\n\n")
+              f.write(f"LINE configured: {line.get('configured', False)}; missing: {', '.join(line.get('missing', []))}; pending decisions: {line.get('pending_count', 0)}\n")
+          PY

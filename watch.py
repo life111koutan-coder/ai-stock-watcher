@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import time
 import unicodedata
 import urllib.error
 import urllib.request
@@ -13,7 +14,7 @@ LATEST_PATH = "latest.json"
 ALL_STOCKS_PATH = "all_stocks.json"
 SCAN_STATE_PATH = "scan_state.json"
 MARKET_SCAN_PATH = "market_scan.json"
-NEWS_PATH = "news.json"
+NEWS_PATH = os.environ.get("WATCH_NEWS_PATH", "news.json")
 NEWS_CONFIG_PATH = "news_sources.json"
 RECOMMENDATION_HISTORY_PATH = "recommendation_history.json"
 PERFORMANCE_HORIZONS = (1, 5, 20)
@@ -21,6 +22,7 @@ SCAN_BATCH_SIZE = max(1, int(os.environ.get("SCAN_BATCH_SIZE", "200")))
 SCAN_WORKERS = max(1, min(16, int(os.environ.get("SCAN_WORKERS", "8"))))
 RANKING_SIZE = 20
 SCAN_MAX_RETRIES = max(1, int(os.environ.get("SCAN_MAX_RETRIES", "3")))
+SCAN_RUN_BUDGET_SECONDS = max(0, min(300, int(os.environ.get("SCAN_RUN_BUDGET_SECONDS", "0"))))
 AUTO_WATCH_MIN_SCORE = max(65, int(os.environ.get("AUTO_WATCH_MIN_SCORE", "75")))
 AUTO_WATCH_MIN_TURNOVER = max(50_000_000, int(os.environ.get("AUTO_WATCH_MIN_TURNOVER", "100000000")))
 NEWS_DATA_MAX_AGE = timedelta(hours=2)
@@ -244,6 +246,7 @@ def enrich_with_news(stocks, news_data, aliases, generated_at):
         item["news_score"] = points
         item["information_adjustment"] = news_adjustment
         item["score"] = max(0, min(100, technical + news_adjustment))
+        item["tag"] = "強気" if item["score"] >= 65 else "弱気" if item["score"] <= 35 else "様子見"
         item["news_evidence"] = evidence
         item["news_cautions"] = cautions
         news_reasons = [f"直近72時間の好材料見出し{len(evidence)}件→+{points}点"] if evidence else ["直近72時間に追加判断へ使える好材料見出しなし→+0点"]
@@ -475,23 +478,27 @@ def notify_scan_completion(scan_state, scan_output, added, scan_date):
     return status
 
 
-def run_market_scan(generated_at, watchlist):
+def run_market_scan_batch(generated_at, watchlist):
     catalog = load_json(ALL_STOCKS_PATH, {"stocks": []})
     universe = [x for x in catalog.get("stocks", []) if len(str(x.get("code", ""))) == 4]
     universe_by_code = {str(item["code"]): item for item in universe}
     scan_state = load_json(SCAN_STATE_PATH, {})
-    retry_pending_line(scan_state)
     cached = scan_state.get("stocks", {})
-    scan_date = datetime.now(JST).date().isoformat()
+    today = (parse_time(generated_at) or datetime.now(timezone.utc)).astimezone(JST).date().isoformat()
 
-    if scan_state.get("cycle_date") != scan_date:
-        scan_state["cycle_date"] = scan_date
+    previous_cycle = scan_state.get("cycle_date")
+    previous_complete = bool(previous_cycle) and scan_state.get("last_completed_date") == previous_cycle
+    if not previous_cycle or (previous_cycle != today and previous_complete):
+        scan_state["cycle_date"] = today
         scan_state["cursor"] = 0
         scan_state["retry_codes"] = []
         scan_state["retry_attempts"] = {}
         scan_state["cycle_stocks"] = {}
         scan_state["failed_codes"] = []
         scan_state["cycle_started_at"] = generated_at
+
+    # An interrupted cycle keeps its cursor and retries across midnight.
+    scan_date = scan_state["cycle_date"]
 
     cursor = max(0, min(int(scan_state.get("cursor", 0)), len(universe)))
     retry_codes = [code for code in scan_state.get("retry_codes", []) if code in universe_by_code]
@@ -543,7 +550,7 @@ def run_market_scan(generated_at, watchlist):
     scan_state["failed_codes"] = failed_codes
     scan_state["stocks"] = cached
     scan_state["last_batch_at"] = generated_at
-    if cycle_complete:
+    if cycle_complete and not already_complete:
         scan_state["last_completed_at"] = generated_at
         scan_state["last_completed_date"] = scan_date
 
@@ -582,7 +589,7 @@ def run_market_scan(generated_at, watchlist):
         "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
     }
     added = None
-    if cycle_complete and ranked_stocks:
+    if cycle_complete and ranked_stocks and scan_date == today:
         added = add_recommendation_to_watchlist(ranked_stocks, watchlist, scan_state, generated_at, scan_date)
         if added:
             scan_output["auto_added"] = added
@@ -601,6 +608,63 @@ def run_market_scan(generated_at, watchlist):
         f"market scan: {min(len(universe), cursor)}/{len(universe)}, "
         f"today_success={len(cycle_stocks)}, retry={len(retry_codes)}, permanent_errors={len(failed_codes)}"
     )
+    return scan_output
+
+
+def run_market_scan(generated_at, watchlist):
+    scan_state = load_json(SCAN_STATE_PATH, {})
+    retry_pending_line(scan_state)
+    save_json(SCAN_STATE_PATH, scan_state)
+    deadline = time.monotonic() + SCAN_RUN_BUDGET_SECONDS
+    batches = 0
+    while True:
+        output = run_market_scan_batch(generated_at, watchlist)
+        batches += 1
+        if output["cycle_complete"]:
+            break
+        if time.monotonic() >= deadline:
+            break
+    if not output["cycle_complete"]:
+        print(f"::warning::Market scan incomplete after {batches} batches; checkpoint retained for the next run")
+    return output
+
+
+def line_configuration_status():
+    missing = [name for name in ("LINE_CHANNEL_ACCESS_TOKEN", "LINE_NEWS_USER_ID") if not os.environ.get(name)]
+    return {"configured": not missing, "missing": missing}
+
+
+def queue_decision_notification(state, code, tag, message, generated_at):
+    pending = state.setdefault("pending_decision_notifications", {})
+    if tag == "様子見":
+        pending.pop(code, None)
+        return
+    previous = pending.get(code, {})
+    pending[code] = {
+        "tag": tag, "message": message,
+        "created_at": previous.get("created_at", generated_at) if previous.get("tag") == tag else generated_at,
+        "attempts": previous.get("attempts", 0) if previous.get("tag") == tag else 0,
+    }
+
+
+def retry_decision_notifications(state):
+    pending = state.setdefault("pending_decision_notifications", {})
+    sent = 0
+    for code, item in list(pending.items()):
+        if state.get(code, {}).get("tag") != item["tag"]:
+            pending.pop(code, None)
+            continue
+        status = send_line_message(item["message"])
+        item["attempts"] = int(item.get("attempts", 0)) + 1
+        item["last_status"] = status
+        if status == "送信済み":
+            pending.pop(code, None)
+            sent += 1
+        save_json(STATE_PATH, state)
+    configuration = line_configuration_status()
+    result = {**configuration, "sent_count": sent, "pending_count": len(pending)}
+    state["decision_notification_status"] = result
+    return result
 
 
 def send_line_message(text):
@@ -635,11 +699,18 @@ def main():
     news_data = load_json(NEWS_PATH, {})
     news_config = load_json(NEWS_CONFIG_PATH, {})
     aliases = news_config.get("aliases", {})
+    configuration = line_configuration_status()
+    if not configuration["configured"]:
+        print("::warning::LINE configuration missing: " + ", ".join(configuration["missing"]))
+
+    # Bound the monitored-price stage so the scan still has time to checkpoint.
+    with ThreadPoolExecutor(max_workers=SCAN_WORKERS) as pool:
+        prices = {str(item["code"]): pool.submit(fetch_price_series, item["code"]) for item in watchlist}
 
     for item in watchlist:
         code, name = item["code"], item["name"]
         try:
-            price, prev_close, closes, history, bars = fetch_price_series(code)
+            price, prev_close, closes, history, bars = prices[str(code)].result()
         except Exception as e:
             error = f"{code} {name}: price fetch failed: {e}"
             print(error)
@@ -668,15 +739,17 @@ def main():
         change_pct = ((price - prev_close) / prev_close) * 100
         prev_tag = state.get(code, {}).get("tag")
         print(f"{code} {name}: score={score} tag={tag} prev={prev_tag}")
-        if tag != "様子見" and tag != prev_tag:
+        pending = state.get("pending_decision_notifications", {})
+        if tag != prev_tag or code in pending:
             msg = (f"【{name}(証券コード{code})】\n判定: {tag}(スコア{score}/100)\n"
                    f"価格: ¥{price:,.0f} ({change_pct:+.2f}%)\n" + "\n".join(reasons)
                    + "\n※これは自動判定の提案です。最終判断はご自身で。")
-            send_line_message(msg)
+            queue_decision_notification(state, code, tag, msg, generated_at)
         state[code] = {"tag": tag, "score": score}
         stocks.append({"code": code, "name": name, "price": price, "previous_close": prev_close,
                        "change_pct": round(change_pct, 2), "score": score,
                        "technical_score": technical_score,
+                       "news_score": news_points,
                        "information_adjustment": information_adjustment,
                        "news_evidence": evidence, "news_cautions": cautions, "tag": tag,
                        "reasons": reasons, "history": history, "bars": bars,
@@ -685,7 +758,10 @@ def main():
     removal_candidates = update_removal_candidates(watchlist, stocks, state, generated_at)
     _, summary = update_recommendation_performance(stocks, generated_at)
     save_json(STATE_PATH, state)
+    notification_status = retry_decision_notifications(state)
+    save_json(STATE_PATH, state)
     save_json(LATEST_PATH, {"generated_at": generated_at, "stocks": stocks, "errors": errors,
+                           "line_notification": notification_status,
                            "removal_candidates": removal_candidates,
                            "recommendation_performance": summary})
     run_market_scan(generated_at, watchlist)
