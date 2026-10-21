@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-20T14:15:12.282561+00:00",
+  "generated_at": "2026-10-21T02:43:47.352142+00:00",
   "stocks": [
     {
       "code": "6702",
       "name": "富士通",
-      "price": 4391.0,
-      "previous_close": 4349.0,
-      "change_pct": 0.97,
+      "price": 4436.0,
+      "previous_close": 4391.0,
+      "change_pct": 1.02,
       "score": 81,
       "technical_score": 81,
       "news_score": 0,
@@ -15,16 +15,12 @@
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+5.81%→+15点",
+        "短期平均が全体平均比+6.16%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.37%→リスク低→+4点",
+        "値動きの荒さ1.26%→リスク低→+4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4026.0
-        },
         {
           "date": "2026-09-15",
           "close": 3945.0
@@ -112,6 +108,10 @@
         {
           "date": "2026-10-20",
           "close": 4391.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4436.0
         }
       ],
       "bars": [
@@ -602,34 +602,85 @@
           "low": 4334.0,
           "close": 4391.0,
           "volume": 5164000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4430.0,
+          "high": 4457.0,
+          "low": 4408.0,
+          "close": 4436.0,
+          "volume": 1900800
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9432",
       "name": "NTT",
-      "price": 177.1,
-      "previous_close": 175.1,
-      "change_pct": 1.14,
-      "score": 67,
-      "technical_score": 67,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": [],
-      "tag": "強気",
+      "price": 175.5,
+      "previous_close": 177.1,
+      "change_pct": -0.9,
+      "score": 51,
+      "technical_score": 69,
+      "news_score": 6,
+      "information_adjustment": -18,
+      "news_evidence": [
+        {
+          "title": "決算発表以降株価が上昇しているNTTはこのまま上昇していくのかを解説します Naomi Osaka (esbYyDmZlS)",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9RaENBVWd4cjZaWkpScWdVVE5SQ3Jsb0ViX05tZm9tdTBYcEp1S1BMSUZUNDRrTGZERWxRWmV6OUxsWFRMVWItLTEzRV9jZHBYcGh6d1pCVU9rajdYd3dsdnlDbEZvQQ?oc=5",
+          "published_at": "2026-10-19T07:57:12+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "news_cautions": [
+        {
+          "title": "NTTソルマーレの電子書籍ストア「コミックシーモア」に不正アクセス、会員情報が流出",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMSzRKWTF6N0dRcENvQlFqVkxKVWZpT1BJMmV4WE9pcUppUFBnWmRvTEczcWhiZzBIUzRaWllHVnpjdDBLYnBMQ0w5dktmRXFLV29vSU5mTEhscE1ubktJRzVTVGZoUEhKaFlUbw?oc=5",
+          "published_at": "2026-10-19T23:05:24+00:00",
+          "publisher": "ScanNetSecurity",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "NTTソルマーレの電子書籍ストア「コミックシーモア」に不正アクセス、会員情報が流出 4枚目の写真・画像",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5TaU5QS2JFQW9iVHk1T0xLdEdxUjZzS3o5dDAxMWtfVG5ZV0dMeFhjR2NiU0gtMWpSbzluMDFFTWVsNkZnbUFudVB6OUhnNUVwQ1hZUlB4Rm80aXlpSWZrakNJb1BBV08zZzFXa0I5R3VJUlo0NEE?oc=5",
+          "published_at": "2026-10-19T23:05:24+00:00",
+          "publisher": "ScanNetSecurity",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "NTTソルマーレの「コミックシーモア」に不正アクセス、サービスを停止し調査中",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1lbElydEVYWTh0bEhvYXM1bHg2NXYycTJydWRvZko3WmkxRXlKZXp4WGdGa2R0LVNZc0w0dksxbnRoeVlEdWhKZkEwd1hXcHBHeDNwQjRZM1lJY0czZ0hvdHNhQkU?oc=5",
+          "published_at": "2026-10-19T07:54:20+00:00",
+          "publisher": "千葉テレビ放送株式会社",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+0.27%→+1点",
+        "短期平均が全体平均比+0.69%→+3点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ0.87%→リスク低→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ0.89%→リスク低→+4点",
+        "直近72時間の好材料見出し1件→+6点",
+        "注意見出し3件→-24点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 178.3
-        },
         {
           "date": "2026-09-15",
           "close": 178.1
@@ -717,6 +768,10 @@
         {
           "date": "2026-10-20",
           "close": 177.1
+        },
+        {
+          "date": "2026-10-21",
+          "close": 175.5
         }
       ],
       "bars": [
@@ -1207,34 +1262,50 @@
           "low": 174.6,
           "close": 177.1,
           "volume": 178537300
+        },
+        {
+          "date": "2026-10-21",
+          "open": 176.0,
+          "high": 177.1,
+          "low": 175.4,
+          "close": 175.5,
+          "volume": 88067300
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6758",
       "name": "ソニーグループ",
-      "price": 3960.0,
+      "price": 3986.0,
       "previous_close": 3960.0,
-      "change_pct": 0.0,
-      "score": 81,
+      "change_pct": 0.66,
+      "score": 87,
       "technical_score": 81,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
+      "news_score": 6,
+      "information_adjustment": 6,
+      "news_evidence": [
+        {
+          "title": "ソニー、業績発表を今後15時30分以降に公開(株取引終了後)。2026年度第2四半期 業績説明会を11月5日(木)16時30分開催。",
+          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE8talZHejdjclpMSmlBUVAtWldfclQ0dnAtcEVrXzF4V24xZy1EOU8yaEhhZkotaVBzNXFvd1lHZDhJdVY4MGQ0?oc=5",
+          "published_at": "2026-10-19T09:04:40+00:00",
+          "publisher": "ソニーが基本的に好き。",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+3.80%→+15点",
+        "短期平均が全体平均比+4.23%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.16%→リスク低→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ1.09%→リスク低→+4点",
+        "直近72時間の好材料見出し1件→+6点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3788.0
-        },
         {
           "date": "2026-09-15",
           "close": 3725.0
@@ -1322,6 +1393,10 @@
         {
           "date": "2026-10-20",
           "close": 3960.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3986.0
         }
       ],
       "bars": [
@@ -1812,16 +1887,24 @@
           "low": 3928.0,
           "close": 3960.0,
           "volume": 11996800
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3992.0,
+          "high": 3995.0,
+          "low": 3920.0,
+          "close": 3986.0,
+          "volume": 4892100
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9984",
       "name": "ソフトバンクグループ",
-      "price": 4554.0,
-      "previous_close": 4845.0,
-      "change_pct": -6.01,
+      "price": 4653.0,
+      "previous_close": 4554.0,
+      "change_pct": 2.17,
       "score": 13,
       "technical_score": 13,
       "news_score": 0,
@@ -1830,16 +1913,12 @@
       "news_cautions": [],
       "tag": "弱気",
       "reasons": [
-        "短期平均が全体平均比-16.91%→-15点",
+        "短期平均が全体平均比-18.56%→-15点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ4.33%→リスク高→-10点",
+        "値動きの荒さ3.98%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 5839.0
-        },
         {
           "date": "2026-09-15",
           "close": 6279.0
@@ -1927,6 +2006,10 @@
         {
           "date": "2026-10-20",
           "close": 4554.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4653.0
         }
       ],
       "bars": [
@@ -2417,34 +2500,85 @@
           "low": 4520.0,
           "close": 4554.0,
           "volume": 50425000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4694.0,
+          "high": 4794.0,
+          "low": 4631.0,
+          "close": 4653.0,
+          "volume": 25506700
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6701",
       "name": "NEC",
-      "price": 5349.0,
-      "previous_close": 5307.0,
-      "change_pct": 0.79,
-      "score": 81,
+      "price": 5409.0,
+      "previous_close": 5349.0,
+      "change_pct": 1.12,
+      "score": 63,
       "technical_score": 81,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": [],
-      "tag": "強気",
+      "news_score": 6,
+      "information_adjustment": -18,
+      "news_evidence": [
+        {
+          "title": "NECネクサソリューションズとマイクロニティ、自治体システムのコスト最適化で提携",
+          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE45cEhOVTd0OEtOVFFmSkcwdDB3UExFLXNHODRIYlpYcWZWTlA0SEw3NFdIUklnRFZHQlo4cVItdF9sd1M1aHc?oc=5",
+          "published_at": "2026-10-20T00:07:06+00:00",
+          "publisher": "Dellows News",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "news_cautions": [
+        {
+          "title": "企業への不正アクセス相次ぐ 「ふるさとチョイス」約445万件の個人情報流出 NECも委託先がサイバー攻撃受け漏えい",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE12anFWTUtTMl9OSUYtbjRkUWoyTDEtVTkxMmMyZmd4R2swX3cyRmFETGRFV2xVR18wY0xGYlB4WHBHNGNYb1F3UTd2OFBtN2o4ZDFSdEhDRQ?oc=5",
+          "published_at": "2026-10-20T19:16:00+00:00",
+          "publisher": "TBS NEWS DIG",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "NEC、システム開発の協力会社に不正アクセス 顧客3社の情報漏洩（産経新聞）",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBOYzVMWkNXSl9IdVY4RzhhbHZ2N0lSclV1ampWbGx3dy14Y3VxemgycUIzRjZiWDdjdG91SXhyR3dES2Q1MmhGeGtjRmNVVHU0blVKdTA1dnFveWFmSkdabjZBMXRpYVkweXpXV1lNaHB1SXZJSG5kTmNucFlQcDA?oc=5",
+          "published_at": "2026-10-20T09:59:33+00:00",
+          "publisher": "Yahoo!ニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "NEC、システム開発の協力会社に不正アクセス 顧客3社の情報漏洩（写真・画像 1/1）",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORWp1X2hibWpnTVFEc2lybzhkeDlBVHZrZDZhd29FNm5KYkhLd201azdUZ0piaHNIV040anlVV0tFV2xodWo3RmdoY21haElidTNYaFF0cHozdGxEdzJXM1RPcm85TDJMcXVFQXNfUVlXeFJzMjRFV3FORTc2QzFaWFN2b0tkSjFNWUdjei1VU2t4clNUREpxZndaMDRCWnFON0E?oc=5",
+          "published_at": "2026-10-20T09:55:30+00:00",
+          "publisher": "産経ニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+6.16%→+15点",
+        "短期平均が全体平均比+6.54%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.33%→リスク低→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ1.29%→リスク低→+4点",
+        "直近72時間の好材料見出し1件→+6点",
+        "注意見出し3件→-24点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4849.0
-        },
         {
           "date": "2026-09-15",
           "close": 4795.0
@@ -2532,6 +2666,10 @@
         {
           "date": "2026-10-20",
           "close": 5349.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 5409.0
         }
       ],
       "bars": [
@@ -3022,34 +3160,38 @@
           "low": 5276.0,
           "close": 5349.0,
           "volume": 5142000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 5400.0,
+          "high": 5441.0,
+          "low": 5370.0,
+          "close": 5409.0,
+          "volume": 2928800
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6501",
       "name": "日立製作所",
-      "price": 5810.0,
-      "previous_close": 5773.0,
-      "change_pct": 0.64,
-      "score": 71,
-      "technical_score": 71,
+      "price": 5900.0,
+      "previous_close": 5810.0,
+      "change_pct": 1.55,
+      "score": 78,
+      "technical_score": 78,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+3.19%→+13点",
+        "短期平均が全体平均比+3.05%→+12点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.50%→リスク中→-4点",
+        "値動きの荒さ1.43%→リスク低→+4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 5325.0
-        },
         {
           "date": "2026-09-15",
           "close": 5221.0
@@ -3137,6 +3279,10 @@
         {
           "date": "2026-10-20",
           "close": 5810.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 5900.0
         }
       ],
       "bars": [
@@ -3627,34 +3773,38 @@
           "low": 5716.0,
           "close": 5810.0,
           "volume": 9421400
+        },
+        {
+          "date": "2026-10-21",
+          "open": 5868.0,
+          "high": 5913.0,
+          "low": 5844.0,
+          "close": 5900.0,
+          "volume": 5025300
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "3778",
       "name": "さくらインターネット",
-      "price": 3100.0,
-      "previous_close": 3250.0,
-      "change_pct": -4.62,
-      "score": 13,
-      "technical_score": 13,
+      "price": 3205.0,
+      "previous_close": 3100.0,
+      "change_pct": 3.39,
+      "score": 37,
+      "technical_score": 37,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-10.36%→-15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ4.12%→リスク高→-10点",
+        "短期平均が全体平均比-11.59%→-15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ4.21%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3605.0
-        },
         {
           "date": "2026-09-15",
           "close": 3580.0
@@ -3742,6 +3892,10 @@
         {
           "date": "2026-10-20",
           "close": 3100.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3205.0
         }
       ],
       "bars": [
@@ -4232,16 +4386,24 @@
           "low": 3100.0,
           "close": 3100.0,
           "volume": 695600
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3160.0,
+          "high": 3215.0,
+          "low": 3130.0,
+          "close": 3205.0,
+          "volume": 341300
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "3993",
       "name": "PKSHA Technology",
-      "price": 3550.0,
-      "previous_close": 3640.0,
-      "change_pct": -2.47,
+      "price": 3620.0,
+      "previous_close": 3550.0,
+      "change_pct": 1.97,
       "score": 73,
       "technical_score": 73,
       "news_score": 0,
@@ -4250,16 +4412,12 @@
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+7.33%→+15点",
+        "短期平均が全体平均比+7.49%→+15点",
         "直近5本は上向き→+12点",
         "値動きの荒さ2.36%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3195.0
-        },
         {
           "date": "2026-09-15",
           "close": 3175.0
@@ -4347,6 +4505,10 @@
         {
           "date": "2026-10-20",
           "close": 3550.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3620.0
         }
       ],
       "bars": [
@@ -4837,34 +4999,38 @@
           "low": 3510.0,
           "close": 3550.0,
           "volume": 201300
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3600.0,
+          "high": 3660.0,
+          "low": 3585.0,
+          "close": 3620.0,
+          "volume": 58500
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "7203",
       "name": "トヨタ自動車",
-      "price": 3102.0,
+      "price": 3093.0,
       "previous_close": 3102.0,
-      "change_pct": 0.0,
-      "score": 78,
-      "technical_score": 78,
+      "change_pct": -0.29,
+      "score": 80,
+      "technical_score": 80,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+2.99%→+12点",
+        "短期平均が全体平均比+3.44%→+14点",
         "直近5本は上向き→+12点",
         "値動きの荒さ1.36%→リスク低→+4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3025.0
-        },
         {
           "date": "2026-09-15",
           "close": 3021.0
@@ -4952,6 +5118,10 @@
         {
           "date": "2026-10-20",
           "close": 3102.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3093.0
         }
       ],
       "bars": [
@@ -5442,34 +5612,38 @@
           "low": 3075.0,
           "close": 3102.0,
           "volume": 15718300
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3149.0,
+          "high": 3149.0,
+          "low": 3062.0,
+          "close": 3093.0,
+          "volume": 9045200
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "8306",
       "name": "三菱UFJフィナンシャル・グループ",
-      "price": 3351.0,
-      "previous_close": 3478.0,
-      "change_pct": -3.65,
-      "score": 19,
-      "technical_score": 19,
+      "price": 3429.0,
+      "previous_close": 3351.0,
+      "change_pct": 2.33,
+      "score": 43,
+      "technical_score": 43,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-3.95%→-15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ2.12%→リスク中→-4点",
+        "短期平均が全体平均比-3.91%→-15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.18%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3720.0
-        },
         {
           "date": "2026-09-15",
           "close": 3668.0
@@ -5557,6 +5731,10 @@
         {
           "date": "2026-10-20",
           "close": 3351.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3429.0
         }
       ],
       "bars": [
@@ -6047,34 +6225,64 @@
           "low": 3340.0,
           "close": 3351.0,
           "volume": 32113900
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3388.0,
+          "high": 3434.0,
+          "low": 3379.0,
+          "close": 3429.0,
+          "volume": 17505900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9983",
       "name": "ファーストリテイリング",
-      "price": 75360.0,
-      "previous_close": 73850.0,
-      "change_pct": 2.04,
-      "score": 49,
+      "price": 75320.0,
+      "previous_close": 75360.0,
+      "change_pct": -0.05,
+      "score": 41,
       "technical_score": 49,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": [],
+      "news_score": 4,
+      "information_adjustment": -8,
+      "news_evidence": [
+        {
+          "title": "ファーストリテイリング(9983)の株価は今後も伸びるか｜最高益後の下落とユニクロの海外成長",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ZeWJsZ0RZTjR0ZXR5R0JTLXhUekZQZFR0QTc3LXJqcnZMNDRpRjZJT1lrZi1hMWdGVEFMZjRBWWFfWHNra2RBTXV4Z0wtcGRMRjllbEZ5V0VGZw?oc=5",
+          "published_at": "2026-10-20T02:25:25+00:00",
+          "publisher": "日本投資機構株式会社",
+          "official": false,
+          "priority": "注目",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "news_cautions": [
+        {
+          "title": "イオンがアオキを切り捨て。安川電機減益。ファーストリテイリング急騰。アクティビスト一斉蜂起～あす上がる株 2026年１月１３日（火）に上がる銘柄。～最新の日本株情報。高配当株の株価やデイトレ情報～ Arson (ohcgArzyZa)",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTjg2ZWNNZDB0WnVTVWZzQXRiMnhOa1BIYWMzeE81YXQ0dW9jaTBzeVNtaVNaLVl4VGRNYmFkN3lZb0NMUzc0ZmFvN2VWWkp5QjdNWDZ0a3FrMmVXazdUZnk1dlVaWTlMcDQ1QWlnUzR1QmMyZGYyV3Jka1JaNEpaOGZ3?oc=5",
+          "published_at": "2026-10-19T14:34:28+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット",
+            "企業・決算"
+          ]
+        }
+      ],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+5.32%→+15点",
+        "短期平均が全体平均比+4.63%→+15点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ1.90%→リスク中→-4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ1.89%→リスク中→-4点",
+        "直近72時間の好材料見出し1件→+4点",
+        "注意見出し1件→-12点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 66760.0
-        },
         {
           "date": "2026-09-15",
           "close": 66620.0
@@ -6162,6 +6370,10 @@
         {
           "date": "2026-10-20",
           "close": 75360.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 75320.0
         }
       ],
       "bars": [
@@ -6652,16 +6864,24 @@
           "low": 73800.0,
           "close": 75360.0,
           "volume": 911000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 75470.0,
+          "high": 75800.0,
+          "low": 74660.0,
+          "close": 75320.0,
+          "volume": 404200
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "4052",
       "name": "フィーチャ",
-      "price": 729.0,
-      "previous_close": 774.0,
-      "change_pct": -5.81,
+      "price": 743.0,
+      "previous_close": 729.0,
+      "change_pct": 1.92,
       "score": 13,
       "technical_score": 13,
       "news_score": 0,
@@ -6670,16 +6890,12 @@
       "news_cautions": [],
       "tag": "弱気",
       "reasons": [
-        "短期平均が全体平均比-16.86%→-15点",
+        "短期平均が全体平均比-18.62%→-15点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ7.92%→リスク高→-10点",
+        "値動きの荒さ7.94%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 938.0
-        },
         {
           "date": "2026-09-15",
           "close": 948.0
@@ -6767,6 +6983,10 @@
         {
           "date": "2026-10-20",
           "close": 729.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 743.0
         }
       ],
       "bars": [
@@ -7257,34 +7477,38 @@
           "low": 722.0,
           "close": 729.0,
           "volume": 403700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 740.0,
+          "high": 755.0,
+          "low": 730.0,
+          "close": 743.0,
+          "volume": 112900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "1436",
       "name": "グリーンエナジー＆カンパニー",
-      "price": 1550.0,
-      "previous_close": 1691.0,
-      "change_pct": -8.34,
-      "score": 13,
-      "technical_score": 13,
+      "price": 1581.0,
+      "previous_close": 1550.0,
+      "change_pct": 2.0,
+      "score": 37,
+      "technical_score": 37,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-9.13%→-15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ3.84%→リスク高→-10点",
+        "短期平均が全体平均比-8.93%→-15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ3.88%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1767.0
-        },
         {
           "date": "2026-09-15",
           "close": 1757.0
@@ -7372,6 +7596,10 @@
         {
           "date": "2026-10-20",
           "close": 1550.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1581.0
         }
       ],
       "bars": [
@@ -7862,34 +8090,38 @@
           "low": 1548.0,
           "close": 1550.0,
           "volume": 113500
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1580.0,
+          "high": 1605.0,
+          "low": 1573.0,
+          "close": 1581.0,
+          "volume": 13400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "153A",
       "name": "カウリス",
-      "price": 2210.0,
-      "previous_close": 2494.0,
-      "change_pct": -11.39,
-      "score": 43,
-      "technical_score": 43,
+      "price": 2382.0,
+      "previous_close": 2210.0,
+      "change_pct": 7.78,
+      "score": 67,
+      "technical_score": 67,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "様子見",
+      "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+21.78%→+15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ9.83%→リスク高→-10点",
+        "短期平均が全体平均比+17.07%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ9.90%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1649.0
-        },
         {
           "date": "2026-09-15",
           "close": 1658.0
@@ -7977,6 +8209,10 @@
         {
           "date": "2026-10-20",
           "close": 2210.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 2382.0
         }
       ],
       "bars": [
@@ -8467,34 +8703,38 @@
           "low": 2170.0,
           "close": 2210.0,
           "volume": 449000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 2309.0,
+          "high": 2534.0,
+          "low": 2260.0,
+          "close": 2382.0,
+          "volume": 960400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "141A",
       "name": "トライアルホールディングス",
-      "price": 3660.0,
-      "previous_close": 3540.0,
-      "change_pct": 3.39,
-      "score": 43,
-      "technical_score": 43,
+      "price": 3615.0,
+      "previous_close": 3660.0,
+      "change_pct": -1.23,
+      "score": 46,
+      "technical_score": 46,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-4.29%→-15点",
+        "短期平均が全体平均比-3.08%→-12点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ2.72%→リスク中→-4点",
+        "値動きの荒さ2.71%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3920.0
-        },
         {
           "date": "2026-09-15",
           "close": 3960.0
@@ -8582,6 +8822,10 @@
         {
           "date": "2026-10-20",
           "close": 3660.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3615.0
         }
       ],
       "bars": [
@@ -9072,34 +9316,50 @@
           "low": 3525.0,
           "close": 3660.0,
           "volume": 444200
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3650.0,
+          "high": 3665.0,
+          "low": 3570.0,
+          "close": 3615.0,
+          "volume": 233200
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6954",
       "name": "ファナック",
-      "price": 5788.0,
-      "previous_close": 5946.0,
-      "change_pct": -2.66,
-      "score": 33,
-      "technical_score": 33,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
+      "price": 5876.0,
+      "previous_close": 5788.0,
+      "change_pct": 1.52,
+      "score": 34,
+      "technical_score": 28,
+      "news_score": 6,
+      "information_adjustment": 6,
+      "news_evidence": [
+        {
+          "title": "年初来42%高のキーエンス、7%安のファナック、「100万円」投資するならどっち？ 執筆",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA2cFAtSWRRdFdDMmFiNE5idDhqZFhNd3ZMRmdTN0Vyam5hRmJZeTlaWEkwNlJ3Y055WmpuSEhGS1F4Y29hYk1ocHFmVVIyZVZQNFVWQkVfYTE5T2t6RWgwXzhYclhWdVBrZjJhaG4zRWc?oc=5",
+          "published_at": "2026-10-20T03:27:00+00:00",
+          "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット"
+          ]
+        }
+      ],
       "news_cautions": [],
       "tag": "弱気",
       "reasons": [
-        "短期平均が全体平均比-0.22%→-1点",
+        "短期平均が全体平均比-1.54%→-6点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ1.93%→リスク中→-4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ1.94%→リスク中→-4点",
+        "直近72時間の好材料見出し1件→+6点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 5776.0
-        },
         {
           "date": "2026-09-15",
           "close": 5716.0
@@ -9187,6 +9447,10 @@
         {
           "date": "2026-10-20",
           "close": 5788.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 5876.0
         }
       ],
       "bars": [
@@ -9677,34 +9941,90 @@
           "low": 5763.0,
           "close": 5788.0,
           "volume": 4307800
+        },
+        {
+          "date": "2026-10-21",
+          "open": 5928.0,
+          "high": 5950.0,
+          "low": 5861.0,
+          "close": 5876.0,
+          "volume": 1481400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6506",
       "name": "安川電機",
-      "price": 4277.0,
-      "previous_close": 4373.0,
-      "change_pct": -2.2,
-      "score": 20,
-      "technical_score": 20,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": [],
+      "price": 4280.0,
+      "previous_close": 4277.0,
+      "change_pct": 0.07,
+      "score": 31,
+      "technical_score": 43,
+      "news_score": 12,
+      "information_adjustment": -12,
+      "news_evidence": [
+        {
+          "title": "安川電機の決算でわかる｢AI関連｣設備投資のポテンシャル",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1GNXN5bWQzNmNoWHM0RXFMWmZmdGdFcElaQ216ZHJydUNDTDNTZng1QWp5LVk3NWdGNm1IN2tPSDlfUnl4M0ZzV05ndS1tR0YtMFliOFFTOA?oc=5",
+          "published_at": "2026-10-19T09:30:00+00:00",
+          "publisher": "四季報オンライン",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "AI",
+            "ロボット",
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "安川電機(6506)の株価は今後どうなる？｜受注38%増でも営業利益予想を下げた理由",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5wN2pYMlJsR2pqVG5LVk1ZYklVczVzZVFHdHlWVy1BdE9PLUdtaV9pOWNFRjNkZmVtbXdiUHFVLWhjclZqUVFpNkU4YzEtTnlsSlpwUWNZMmdVdw?oc=5",
+          "published_at": "2026-10-19T07:00:00+00:00",
+          "publisher": "日本投資機構株式会社",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット",
+            "企業・決算"
+          ]
+        }
+      ],
+      "news_cautions": [
+        {
+          "title": "イオンがアオキを切り捨て。安川電機減益。ファーストリテイリング急騰。アクティビスト一斉蜂起～あす上がる株 2026年１月１３日（火）に上がる銘柄。～最新の日本株情報。高配当株の株価やデイトレ情報～ Arson (ohcgArzyZa)",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTjg2ZWNNZDB0WnVTVWZzQXRiMnhOa1BIYWMzeE81YXQ0dW9jaTBzeVNtaVNaLVl4VGRNYmFkN3lZb0NMUzc0ZmFvN2VWWkp5QjdNWDZ0a3FrMmVXazdUZnk1dlVaWTlMcDQ1QWlnUzR1QmMyZGYyV3Jka1JaNEpaOGZ3?oc=5",
+          "published_at": "2026-10-19T14:34:28+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット",
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "安川電機が上方修正。イオンFSは減益。古野電機が上方修正と増配。ジンズHDは減益・減配。～あす上がる株 2026年１０月１３日（火）に上がる銘柄。最新の日本株情報。高配当株の株価やデイトレ情報 Archiviazione (T9SNDW3iO7)",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOd2I1MVZNaUhELU10OWZHcTFSdWN2NEluc252dWFzMm1xcTRNMjNEbnlwbFp0Y2FIb2NnTVY5R2Utb3lTNXY4Z0dTODFqRVhGRE5nRndrdTBzRHgzeHdWeWxlbzdCSFZyUE55R3Zsbm83Qm81VWhFb2ZaRTQzNzJiTHZOWnVlVDk2?oc=5",
+          "published_at": "2026-10-19T09:09:58+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット",
+            "企業・決算"
+          ]
+        }
+      ],
       "tag": "弱気",
       "reasons": [
-        "短期平均が全体平均比-3.61%→-14点",
-        "直近5本は下向き→-12点",
+        "短期平均が全体平均比-5.49%→-15点",
+        "直近5本は上向き→+12点",
         "値動きの荒さ2.68%→リスク中→-4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "直近72時間の好材料見出し2件→+12点",
+        "注意見出し2件→-24点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4299.0
-        },
         {
           "date": "2026-09-15",
           "close": 4296.0
@@ -9792,6 +10112,10 @@
         {
           "date": "2026-10-20",
           "close": 4277.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4280.0
         }
       ],
       "bars": [
@@ -10282,34 +10606,38 @@
           "low": 4240.0,
           "close": 4277.0,
           "volume": 3499900
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4277.0,
+          "high": 4354.0,
+          "low": 4264.0,
+          "close": 4280.0,
+          "volume": 1919200
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6324",
       "name": "ハーモニック・ドライブ・システムズ",
-      "price": 5260.0,
-      "previous_close": 5300.0,
-      "change_pct": -0.75,
-      "score": 13,
-      "technical_score": 13,
+      "price": 5440.0,
+      "previous_close": 5260.0,
+      "change_pct": 3.42,
+      "score": 37,
+      "technical_score": 37,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-11.60%→-15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ3.46%→リスク高→-10点",
+        "短期平均が全体平均比-12.67%→-15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ3.55%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 5830.0
-        },
         {
           "date": "2026-09-15",
           "close": 5850.0
@@ -10397,6 +10725,10 @@
         {
           "date": "2026-10-20",
           "close": 5260.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 5440.0
         }
       ],
       "bars": [
@@ -10887,34 +11219,38 @@
           "low": 5180.0,
           "close": 5260.0,
           "volume": 1157700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 5450.0,
+          "high": 5540.0,
+          "low": 5380.0,
+          "close": 5440.0,
+          "volume": 579900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "5032",
       "name": "ＡＮＹＣＯＬＯＲ",
       "price": 3250.0,
-      "previous_close": 3255.0,
-      "change_pct": -0.15,
-      "score": 68,
-      "technical_score": 68,
+      "previous_close": 3250.0,
+      "change_pct": 0.0,
+      "score": 71,
+      "technical_score": 71,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+2.56%→+10点",
+        "短期平均が全体平均比+3.31%→+13点",
         "直近5本は上向き→+12点",
         "値動きの荒さ2.11%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3240.0
-        },
         {
           "date": "2026-09-15",
           "close": 3240.0
@@ -11001,6 +11337,10 @@
         },
         {
           "date": "2026-10-20",
+          "close": 3250.0
+        },
+        {
+          "date": "2026-10-21",
           "close": 3250.0
         }
       ],
@@ -11492,34 +11832,38 @@
           "low": 3230.0,
           "close": 3250.0,
           "volume": 275300
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3265.0,
+          "high": 3265.0,
+          "low": 3210.0,
+          "close": 3250.0,
+          "volume": 127300
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "2735",
       "name": "ワッツ",
-      "price": 746.0,
-      "previous_close": 761.0,
-      "change_pct": -1.97,
-      "score": 49,
-      "technical_score": 49,
+      "price": 753.0,
+      "previous_close": 746.0,
+      "change_pct": 0.94,
+      "score": 47,
+      "technical_score": 47,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+4.14%→+15点",
+        "短期平均が全体平均比+3.36%→+13点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ1.88%→リスク中→-4点",
+        "値動きの荒さ1.85%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 725.0
-        },
         {
           "date": "2026-09-15",
           "close": 715.0
@@ -11607,6 +11951,10 @@
         {
           "date": "2026-10-20",
           "close": 746.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 753.0
         }
       ],
       "bars": [
@@ -12097,34 +12445,96 @@
           "low": 745.0,
           "close": 746.0,
           "volume": 32900
+        },
+        {
+          "date": "2026-10-21",
+          "open": 747.0,
+          "high": 756.0,
+          "low": 745.0,
+          "close": 753.0,
+          "volume": 6900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9602",
       "name": "東宝",
-      "price": 1714.0,
-      "previous_close": 1633.5,
-      "change_pct": 4.93,
-      "score": 62,
-      "technical_score": 62,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": [],
+      "price": 1699.5,
+      "previous_close": 1714.0,
+      "change_pct": -0.85,
+      "score": 64,
+      "technical_score": 70,
+      "news_score": 18,
+      "information_adjustment": -6,
+      "news_evidence": [
+        {
+          "title": "10/21 朝一レポート③【東宝（9602）・コーエーテクモHD（3635）】日経平均841円安でも逆行高！半導体株からゲーム・エンタメ株へ資金循環が始まったのか？ - 株式投資/お金のなる木",
+          "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBoVTdDSFdDN1h3VjVTQXZoQ3A0Q2JDb0dUQzdYMjI3bHFYMTM3MVFxSGlnYWlLdWRYMERv?oc=5",
+          "published_at": "2026-10-20T20:44:23+00:00",
+          "publisher": "Howl.link",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "半導体・基盤"
+          ]
+        },
+        {
+          "title": "業績予想の上方修正を受け、東宝株が注目を集めている",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPc2p2eDNPLTVEZmVrSXVaY0E5cmhnNlAwMEtxdUFpaE1kR21OWDBXbEZ0NHdDLWNmcEFyQ09BN0tZSVhCZ1RCcGFHenM0UEhvZUU3czRqa1FRay1BSDZmanFJamF5ek1TY29WQ0pEWUhBaE1KNEs4cUhKdTVMcmJsNHV0TVdwbnE4TENv0gGQAUFVX3lxTE1IYUJaeWZtdVRLZEl1SkhfVWVnS21zaHNGbVZHRE9WbTA2ZF9zNHF6bDZsTi0tVzRqNVVyTE1TX3NzTE44WWZmbDJ1dUlINGNIdEsxakhYb3NmRW9xRFVLRC1BeDBaNTVUZmRhZDNkSjNaelUteXNKQ0lYZ19MaExwaElmQjZNZVlsYmZUVDdlNA?oc=5",
+          "published_at": "2026-10-20T01:09:29+00:00",
+          "publisher": "Simply Wall Street",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "【おはようgamebiz(10/20)】コーエーテクモ・SEH&I上方修正、急成長する東宝のゲーム事業、『AION2』14日連続首位",
+          "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9GcnlsdnhwY1FRNFl5YW9FUTFYV01Dc1dzM2paZnItcXJ4SmRrM0c2bUlOVm1PcjFSdmZOdGdSZHEyaUxh?oc=5",
+          "published_at": "2026-10-19T23:30:00+00:00",
+          "publisher": "gamebiz【ゲームビズ】",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "news_cautions": [
+        {
+          "title": "東宝、中間期は減収減益も映画とIPアニメが下支え 通期予想は最終利益を上方修正",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5BMGdUSGZUeTI0azB4czlHUDg1Vld3NWNRdGdBNXk0STBVWTVpNnFNUWdDQndEWmNpVUVENlo1U2NTeFotbWJNNlByN3N2cktBVDNuUnZzOExSeEdkUUFnNjVCVlUweW42cFE?oc=5",
+          "published_at": "2026-10-20T07:00:03+00:00",
+          "publisher": "Media Innovation",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "東宝決算、中間期は営業収入1,851億円で減収減益。前年メガヒットの反動と期ズレを抱えつつ、IP・アニメの海外配信収入は大きく増加",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBTMjJWTEQ1bEhvVmQ5TFIzM3NMNkZPTUZDTHEtcS1vdXEwY0FydFZyVXlNcGp5dnhVbzNOU3BRQmUzNWhQakwycUlfWHFHdW4tdFBhdVQtNmU?oc=5",
+          "published_at": "2026-10-20T03:00:03+00:00",
+          "publisher": "Brand New Creativity",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+0.91%→+4点",
+        "短期平均が全体平均比+3.05%→+12点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ2.32%→リスク中→-4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ2.30%→リスク中→-4点",
+        "直近72時間の好材料見出し3件→+18点",
+        "注意見出し2件→-24点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1644.0
-        },
         {
           "date": "2026-09-15",
           "close": 1618.5
@@ -12212,6 +12622,10 @@
         {
           "date": "2026-10-20",
           "close": 1714.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1699.5
         }
       ],
       "bars": [
@@ -12702,34 +13116,38 @@
           "low": 1627.0,
           "close": 1714.0,
           "volume": 8692300
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1674.0,
+          "high": 1720.0,
+          "low": 1639.5,
+          "close": 1699.5,
+          "volume": 3890200
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "5019",
       "name": "出光興産",
-      "price": 1561.5,
-      "previous_close": 1553.5,
-      "change_pct": 0.51,
-      "score": 27,
-      "technical_score": 27,
+      "price": 1557.0,
+      "previous_close": 1561.5,
+      "change_pct": -0.29,
+      "score": 51,
+      "technical_score": 51,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-1.67%→-7点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ2.09%→リスク中→-4点",
+        "短期平均が全体平均比-1.65%→-7点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.04%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1638.0
-        },
         {
           "date": "2026-09-15",
           "close": 1601.0
@@ -12817,6 +13235,10 @@
         {
           "date": "2026-10-20",
           "close": 1561.5
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1557.0
         }
       ],
       "bars": [
@@ -13307,34 +13729,38 @@
           "low": 1542.0,
           "close": 1561.5,
           "volume": 3697200
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1550.0,
+          "high": 1558.5,
+          "low": 1531.5,
+          "close": 1557.0,
+          "volume": 919500
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9960",
       "name": "東テク",
-      "price": 4235.0,
-      "previous_close": 4320.0,
-      "change_pct": -1.97,
-      "score": 36,
-      "technical_score": 36,
+      "price": 4345.0,
+      "previous_close": 4235.0,
+      "change_pct": 2.6,
+      "score": 61,
+      "technical_score": 61,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+0.49%→+2点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ2.21%→リスク中→-4点",
+        "短期平均が全体平均比+0.70%→+3点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.24%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4115.0
-        },
         {
           "date": "2026-09-15",
           "close": 4065.0
@@ -13422,6 +13848,10 @@
         {
           "date": "2026-10-20",
           "close": 4235.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4345.0
         }
       ],
       "bars": [
@@ -13912,34 +14342,38 @@
           "low": 4195.0,
           "close": 4235.0,
           "volume": 114700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4335.0,
+          "high": 4485.0,
+          "low": 4330.0,
+          "close": 4345.0,
+          "volume": 71500
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "5021",
       "name": "コスモエネルギーホールディングス",
-      "price": 4223.0,
-      "previous_close": 4220.0,
-      "change_pct": 0.07,
-      "score": 46,
-      "technical_score": 46,
+      "price": 4232.0,
+      "previous_close": 4223.0,
+      "change_pct": 0.21,
+      "score": 50,
+      "technical_score": 50,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-2.88%→-12点",
+        "短期平均が全体平均比-2.12%→-8点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.93%→リスク中→-4点",
+        "値動きの荒さ1.91%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4570.0
-        },
         {
           "date": "2026-09-15",
           "close": 4490.0
@@ -14027,6 +14461,10 @@
         {
           "date": "2026-10-20",
           "close": 4223.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4232.0
         }
       ],
       "bars": [
@@ -14517,34 +14955,38 @@
           "low": 4201.0,
           "close": 4223.0,
           "volume": 793700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4223.0,
+          "high": 4240.0,
+          "low": 4184.0,
+          "close": 4232.0,
+          "volume": 207400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9009",
       "name": "京成電鉄",
-      "price": 1375.5,
-      "previous_close": 1375.0,
-      "change_pct": 0.04,
-      "score": 72,
-      "technical_score": 72,
+      "price": 1374.0,
+      "previous_close": 1375.5,
+      "change_pct": -0.11,
+      "score": 74,
+      "technical_score": 74,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+1.50%→+6点",
+        "短期平均が全体平均比+2.09%→+8点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.18%→リスク低→+4点",
+        "値動きの荒さ1.16%→リスク低→+4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1400.0
-        },
         {
           "date": "2026-09-15",
           "close": 1387.0
@@ -14632,6 +15074,10 @@
         {
           "date": "2026-10-20",
           "close": 1375.5
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1374.0
         }
       ],
       "bars": [
@@ -15122,16 +15568,24 @@
           "low": 1360.0,
           "close": 1375.5,
           "volume": 1303200
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1390.0,
+          "high": 1390.0,
+          "low": 1367.0,
+          "close": 1374.0,
+          "volume": 464500
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "4661",
       "name": "オリエンタルランド",
-      "price": 3277.0,
-      "previous_close": 3222.0,
-      "change_pct": 1.71,
+      "price": 3238.0,
+      "previous_close": 3277.0,
+      "change_pct": -1.19,
       "score": 73,
       "technical_score": 73,
       "news_score": 0,
@@ -15140,16 +15594,12 @@
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+5.53%→+15点",
+        "短期平均が全体平均比+6.86%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.64%→リスク中→-4点",
+        "値動きの荒さ1.60%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3112.0
-        },
         {
           "date": "2026-09-15",
           "close": 3053.0
@@ -15237,6 +15687,10 @@
         {
           "date": "2026-10-20",
           "close": 3277.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3238.0
         }
       ],
       "bars": [
@@ -15727,34 +16181,38 @@
           "low": 3205.0,
           "close": 3277.0,
           "volume": 5539600
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3277.0,
+          "high": 3277.0,
+          "low": 3226.0,
+          "close": 3238.0,
+          "volume": 2036000
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "256A",
       "name": "飛島ホールディングス",
-      "price": 2200.0,
-      "previous_close": 2247.0,
-      "change_pct": -2.09,
-      "score": 34,
-      "technical_score": 34,
+      "price": 2247.0,
+      "previous_close": 2200.0,
+      "change_pct": 2.14,
+      "score": 59,
+      "technical_score": 59,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-1.89%→-8点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ1.31%→リスク低→+4点",
+        "短期平均が全体平均比-1.81%→-7点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.37%→リスク低→+4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 2285.0
-        },
         {
           "date": "2026-09-15",
           "close": 2308.0
@@ -15842,6 +16300,10 @@
         {
           "date": "2026-10-20",
           "close": 2200.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 2247.0
         }
       ],
       "bars": [
@@ -16332,34 +16794,38 @@
           "low": 2200.0,
           "close": 2200.0,
           "volume": 147100
+        },
+        {
+          "date": "2026-10-21",
+          "open": 2220.0,
+          "high": 2249.0,
+          "low": 2217.0,
+          "close": 2247.0,
+          "volume": 48800
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "4847",
       "name": "インテリジェント　ウェイブ",
-      "price": 1495.0,
-      "previous_close": 1551.0,
-      "change_pct": -3.61,
-      "score": 41,
-      "technical_score": 41,
+      "price": 1486.0,
+      "previous_close": 1495.0,
+      "change_pct": -0.6,
+      "score": 39,
+      "technical_score": 39,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+1.69%→+7点",
+        "短期平均が全体平均比+1.20%→+5点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ1.88%→リスク中→-4点",
+        "値動きの荒さ1.87%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1408.0
-        },
         {
           "date": "2026-09-15",
           "close": 1427.0
@@ -16447,6 +16913,10 @@
         {
           "date": "2026-10-20",
           "close": 1495.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1486.0
         }
       ],
       "bars": [
@@ -16937,34 +17407,38 @@
           "low": 1494.0,
           "close": 1495.0,
           "volume": 97000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1485.0,
+          "high": 1502.0,
+          "low": 1457.0,
+          "close": 1486.0,
+          "volume": 92200
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9532",
       "name": "大阪瓦斯",
-      "price": 5727.0,
-      "previous_close": 5664.0,
-      "change_pct": 1.11,
-      "score": 48,
-      "technical_score": 48,
+      "price": 5752.0,
+      "previous_close": 5727.0,
+      "change_pct": 0.44,
+      "score": 51,
+      "technical_score": 51,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-2.51%→-10点",
+        "短期平均が全体平均比-1.75%→-7点",
         "直近5本は上向き→+12点",
         "値動きの荒さ1.61%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 6112.0
-        },
         {
           "date": "2026-09-15",
           "close": 6078.0
@@ -17052,6 +17526,10 @@
         {
           "date": "2026-10-20",
           "close": 5727.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 5752.0
         }
       ],
       "bars": [
@@ -17542,34 +18020,38 @@
           "low": 5622.0,
           "close": 5727.0,
           "volume": 922500
+        },
+        {
+          "date": "2026-10-21",
+          "open": 5751.0,
+          "high": 5770.0,
+          "low": 5711.0,
+          "close": 5752.0,
+          "volume": 311400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9533",
       "name": "東邦瓦斯",
-      "price": 1185.5,
+      "price": 1204.5,
       "previous_close": 1185.5,
-      "change_pct": 0.0,
-      "score": 27,
-      "technical_score": 27,
+      "change_pct": 1.6,
+      "score": 43,
+      "technical_score": 43,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-4.39%→-15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ1.49%→リスク低→+4点",
+        "短期平均が全体平均比-3.74%→-15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.54%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1325.0
-        },
         {
           "date": "2026-09-15",
           "close": 1308.5
@@ -17657,6 +18139,10 @@
         {
           "date": "2026-10-20",
           "close": 1185.5
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1204.5
         }
       ],
       "bars": [
@@ -18147,34 +18633,38 @@
           "low": 1178.5,
           "close": 1185.5,
           "volume": 592100
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1197.5,
+          "high": 1206.5,
+          "low": 1183.5,
+          "close": 1204.5,
+          "volume": 199100
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "2212",
       "name": "山崎製パン",
-      "price": 3939.0,
-      "previous_close": 3882.0,
-      "change_pct": 1.47,
-      "score": 71,
-      "technical_score": 71,
+      "price": 3877.0,
+      "previous_close": 3939.0,
+      "change_pct": -1.57,
+      "score": 73,
+      "technical_score": 73,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+3.37%→+13点",
+        "短期平均が全体平均比+4.70%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.75%→リスク中→-4点",
+        "値動きの荒さ1.74%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3889.0
-        },
         {
           "date": "2026-09-15",
           "close": 3821.0
@@ -18262,6 +18752,10 @@
         {
           "date": "2026-10-20",
           "close": 3939.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3877.0
         }
       ],
       "bars": [
@@ -18752,34 +19246,38 @@
           "low": 3858.0,
           "close": 3939.0,
           "volume": 589900
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3930.0,
+          "high": 3940.0,
+          "low": 3869.0,
+          "close": 3877.0,
+          "volume": 91600
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "8131",
       "name": "ミツウロコグループホールディングス",
-      "price": 2407.0,
-      "previous_close": 2442.0,
-      "change_pct": -1.43,
-      "score": 51,
-      "technical_score": 51,
+      "price": 2427.0,
+      "previous_close": 2407.0,
+      "change_pct": 0.83,
+      "score": 53,
+      "technical_score": 53,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-1.87%→-7点",
+        "短期平均が全体平均比-1.27%→-5点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.93%→リスク中→-4点",
+        "値動きの荒さ1.95%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 2589.0
-        },
         {
           "date": "2026-09-15",
           "close": 2579.0
@@ -18867,6 +19365,10 @@
         {
           "date": "2026-10-20",
           "close": 2407.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 2427.0
         }
       ],
       "bars": [
@@ -19357,16 +19859,24 @@
           "low": 2400.0,
           "close": 2407.0,
           "volume": 49200
+        },
+        {
+          "date": "2026-10-21",
+          "open": 2440.0,
+          "high": 2492.0,
+          "low": 2382.0,
+          "close": 2427.0,
+          "volume": 28900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9556",
       "name": "ＩＮＴＬＯＯＰ",
-      "price": 2200.0,
-      "previous_close": 2218.0,
-      "change_pct": -0.81,
+      "price": 2188.0,
+      "previous_close": 2200.0,
+      "change_pct": -0.55,
       "score": 37,
       "technical_score": 37,
       "news_score": 0,
@@ -19375,16 +19885,12 @@
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-5.74%→-15点",
+        "短期平均が全体平均比-5.79%→-15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ4.54%→リスク高→-10点",
+        "値動きの荒さ4.51%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 2197.0
-        },
         {
           "date": "2026-09-15",
           "close": 2248.0
@@ -19472,6 +19978,10 @@
         {
           "date": "2026-10-20",
           "close": 2200.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 2188.0
         }
       ],
       "bars": [
@@ -19962,34 +20472,38 @@
           "low": 2137.0,
           "close": 2200.0,
           "volume": 51000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 2205.0,
+          "high": 2211.0,
+          "low": 2114.0,
+          "close": 2188.0,
+          "volume": 35400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "276A",
       "name": "ククレブ・アドバイザーズ",
-      "price": 3780.0,
-      "previous_close": 3815.0,
-      "change_pct": -0.92,
-      "score": 19,
-      "technical_score": 19,
+      "price": 4480.0,
+      "previous_close": 3780.0,
+      "change_pct": 18.52,
+      "score": 38,
+      "technical_score": 38,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-4.95%→-15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ2.41%→リスク中→-4点",
+        "短期平均が全体平均比-3.57%→-14点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ4.61%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4110.0
-        },
         {
           "date": "2026-09-15",
           "close": 4155.0
@@ -20077,6 +20591,10 @@
         {
           "date": "2026-10-20",
           "close": 3780.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4480.0
         }
       ],
       "bars": [
@@ -20567,34 +21085,61 @@
           "low": 3725.0,
           "close": 3780.0,
           "volume": 58000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4200.0,
+          "high": 4475.0,
+          "low": 4185.0,
+          "close": 4480.0,
+          "volume": 75000
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "2531",
       "name": "宝ホールディングス",
-      "price": 2835.0,
-      "previous_close": 2962.5,
-      "change_pct": -4.3,
-      "score": 67,
+      "price": 2860.5,
+      "previous_close": 2835.0,
+      "change_pct": 0.9,
+      "score": 79,
       "technical_score": 67,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
+      "news_score": 12,
+      "information_adjustment": 12,
+      "news_evidence": [
+        {
+          "title": "宝ホールディングス、開示延期していた決算を23日発表へ",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE94SkM1Mi01SkVuTktLTTVwT3JRVktoOWJHaXRteDRaUzhtaFhOemt5MEJKSE1MUjVvVktOZE1WRENMdlU2eTF0elFXemNYZEMzSjczNGdOQzdFeDA?oc=5",
+          "published_at": "2026-10-20T20:40:00+00:00",
+          "publisher": "京都新聞デジタル",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "宝ホールディングス[2531]：2027年３月期第１四半期 決算発表日に関するお知らせ 2026年10月20日(適時開示) ：日経会社情報DIGITAL",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQbXB3R0plc09Ya0Q1NGd3ckYxeElVWUl1a2tOVTRKM1QzM1VDbDJJVjJkcElSUUcyNlNKWGFELTJoX1g3MGdGZ0d6NHE0T3YzWXgwd3cxX1NtbERlN1NtUzhzSlRUa1ZBWXhfaEQ1YU5Ra2htRkwzV2g4cUJ3TzN6dTVkUW5kTGFTMmwwZUNMd20ybDRmT2pENmlMT01HOFVLTGY1SzAxOEhUbG9UWk55R0h3Ylh4eXFPdGxRRGRVRzc0LUpIcGFod1M3b2c?oc=5",
+          "published_at": "2026-10-20T06:30:00+00:00",
+          "publisher": "日本経済新聞",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+9.09%→+15点",
+        "短期平均が全体平均比+9.87%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ4.07%→リスク高→-10点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ4.05%→リスク高→-10点",
+        "直近72時間の好材料見出し2件→+12点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 2481.5
-        },
         {
           "date": "2026-09-15",
           "close": 2450.0
@@ -20682,6 +21227,10 @@
         {
           "date": "2026-10-20",
           "close": 2835.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 2860.5
         }
       ],
       "bars": [
@@ -21172,16 +21721,24 @@
           "low": 2826.5,
           "close": 2835.0,
           "volume": 737700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 2858.0,
+          "high": 2882.0,
+          "low": 2804.5,
+          "close": 2860.5,
+          "volume": 210900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "4882",
       "name": "ペルセウスプロテオミクス",
-      "price": 144.0,
-      "previous_close": 149.0,
-      "change_pct": -3.36,
+      "price": 148.0,
+      "previous_close": 144.0,
+      "change_pct": 2.78,
       "score": 19,
       "technical_score": 19,
       "news_score": 0,
@@ -21190,16 +21747,12 @@
       "news_cautions": [],
       "tag": "弱気",
       "reasons": [
-        "短期平均が全体平均比-8.78%→-15点",
+        "短期平均が全体平均比-8.74%→-15点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ2.71%→リスク中→-4点",
+        "値動きの荒さ2.79%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 170.0
-        },
         {
           "date": "2026-09-15",
           "close": 171.0
@@ -21287,6 +21840,10 @@
         {
           "date": "2026-10-20",
           "close": 144.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 148.0
         }
       ],
       "bars": [
@@ -21777,16 +22334,24 @@
           "low": 144.0,
           "close": 144.0,
           "volume": 234700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 146.0,
+          "high": 149.0,
+          "low": 146.0,
+          "close": 148.0,
+          "volume": 73600
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "2782",
       "name": "セリア",
-      "price": 4220.0,
-      "previous_close": 4230.0,
-      "change_pct": -0.24,
+      "price": 4255.0,
+      "previous_close": 4220.0,
+      "change_pct": 0.83,
       "score": 43,
       "technical_score": 43,
       "news_score": 0,
@@ -21795,16 +22360,12 @@
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-7.23%→-15点",
+        "短期平均が全体平均比-5.39%→-15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.81%→リスク中→-4点",
+        "値動きの荒さ1.75%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4795.0
-        },
         {
           "date": "2026-09-15",
           "close": 4885.0
@@ -21892,6 +22453,10 @@
         {
           "date": "2026-10-20",
           "close": 4220.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4255.0
         }
       ],
       "bars": [
@@ -22382,16 +22947,24 @@
           "low": 4205.0,
           "close": 4220.0,
           "volume": 288800
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4270.0,
+          "high": 4275.0,
+          "low": 4220.0,
+          "close": 4255.0,
+          "volume": 116400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6036",
       "name": "ＫｅｅＰｅｒ技研",
-      "price": 3715.0,
-      "previous_close": 3720.0,
-      "change_pct": -0.13,
+      "price": 3725.0,
+      "previous_close": 3715.0,
+      "change_pct": 0.27,
       "score": 70,
       "technical_score": 70,
       "news_score": 0,
@@ -22400,16 +22973,12 @@
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+2.99%→+12点",
+        "短期平均が全体平均比+2.95%→+12点",
         "直近5本は上向き→+12点",
         "値動きの荒さ2.66%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3600.0
-        },
         {
           "date": "2026-09-15",
           "close": 3590.0
@@ -22497,6 +23066,10 @@
         {
           "date": "2026-10-20",
           "close": 3715.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3725.0
         }
       ],
       "bars": [
@@ -22987,16 +23560,24 @@
           "low": 3685.0,
           "close": 3715.0,
           "volume": 71000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3745.0,
+          "high": 3750.0,
+          "low": 3715.0,
+          "close": 3725.0,
+          "volume": 33900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "5801",
       "name": "古河電気工業",
-      "price": 3126.0,
-      "previous_close": 3322.0,
-      "change_pct": -5.9,
+      "price": 3217.0,
+      "previous_close": 3126.0,
+      "change_pct": 2.91,
       "score": 13,
       "technical_score": 13,
       "news_score": 0,
@@ -23005,16 +23586,12 @@
       "news_cautions": [],
       "tag": "弱気",
       "reasons": [
-        "短期平均が全体平均比-11.88%→-15点",
+        "短期平均が全体平均比-14.73%→-15点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ4.43%→リスク高→-10点",
+        "値動きの荒さ4.46%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3845.0
-        },
         {
           "date": "2026-09-15",
           "close": 3719.0
@@ -23102,6 +23679,10 @@
         {
           "date": "2026-10-20",
           "close": 3126.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 3217.0
         }
       ],
       "bars": [
@@ -23592,34 +24173,73 @@
           "low": 3074.0,
           "close": 3126.0,
           "volume": 18050700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3266.0,
+          "high": 3287.0,
+          "low": 3180.0,
+          "close": 3217.0,
+          "volume": 8326200
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9434",
       "name": "ソフトバンク",
-      "price": 247.2,
-      "previous_close": 246.3,
-      "change_pct": 0.37,
-      "score": 67,
-      "technical_score": 67,
+      "price": 247.0,
+      "previous_close": 247.2,
+      "change_pct": -0.08,
+      "score": 45,
+      "technical_score": 69,
       "news_score": 0,
-      "information_adjustment": 0,
+      "information_adjustment": -24,
       "news_evidence": [],
-      "news_cautions": [],
-      "tag": "強気",
+      "news_cautions": [
+        {
+          "title": "ソフトバンク、「My SoftBank」などWebサイトを一時停止…不正アクセスの試みを検知",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5WeXBxbGhxZ0lvWlpZSzYwWkNfQ1JoQUx0RTc2bUVGajZwOW9wUktQemlzc2tSM0lLU2dtOGE1SDE2VUVIWkY5VjlzVTlzenItRUlZMTU1YzVzYmpDRzJMVUtkU2NfaFh3c0Y1RUNDNGx1RzlBUkk0LWlR0gF_QVVfeXFMUHlYVHlEcHBvZDB0d2l2dDQ2MkVXTFlGRGlSdzJ3ZDJrcG1POGRDVXcxb2VyZ1FPS1YzcXFfMVRxdl9YYUdBNEt2RENXNXRQdEpNQnJmZDNscFNkVGg5Tm9YT1RZdHNvMGprVW5UbjI0TG1MaUVJNXY1cXZBNDFfcw?oc=5",
+          "published_at": "2026-10-20T12:22:30+00:00",
+          "publisher": "ｄメニューニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "ソフトバンク「My SoftBank」に不正アクセスの試み、ウェブ版の会員サイトを10月17日から停止",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9xbXdpQ1lHdTZ2Qm5oTFNyS1lGSElnT1RoTzZoYWpVNENUdWdCRjRVN0hNaHJKUFlKOGZUbWhPaDVtTEZ4UXNjOQ?oc=5",
+          "published_at": "2026-10-20T01:31:26+00:00",
+          "publisher": "株式会社アクト",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "ソフトバンク「My SoftBank」など3サイトを一時停止 不正アクセスの試みを検知",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9jTGRhQ2NOTmgtdE5KdDBhVnhPckN0cUNUcGFjUks0YlloRWJEVWFySUFDUWpxY2tnVV9uOUd2alh4WGxBcVV5WG1hXzZrMUF2SXdOSU9WdnpDT05qVnY0?oc=5",
+          "published_at": "2026-10-20T01:08:03+00:00",
+          "publisher": "ライブドアニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+0.20%→+1点",
+        "短期平均が全体平均比+0.69%→+3点",
         "直近5本は上向き→+12点",
         "値動きの荒さ0.79%→リスク低→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "直近72時間に追加判断へ使える好材料見出しなし→+0点",
+        "注意見出し3件→-24点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 250.8
-        },
         {
           "date": "2026-09-15",
           "close": 250.6
@@ -23707,6 +24327,10 @@
         {
           "date": "2026-10-20",
           "close": 247.2
+        },
+        {
+          "date": "2026-10-21",
+          "close": 247.0
         }
       ],
       "bars": [
@@ -24197,16 +24821,24 @@
           "low": 244.5,
           "close": 247.2,
           "volume": 71823200
+        },
+        {
+          "date": "2026-10-21",
+          "open": 247.5,
+          "high": 248.7,
+          "low": 245.5,
+          "close": 247.0,
+          "volume": 32933500
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6085",
       "name": "アーキテクツ・スタジオ・ジャパン",
-      "price": 84.0,
-      "previous_close": 87.0,
-      "change_pct": -3.45,
+      "price": 82.0,
+      "previous_close": 84.0,
+      "change_pct": -2.38,
       "score": 13,
       "technical_score": 13,
       "news_score": 0,
@@ -24215,16 +24847,12 @@
       "news_cautions": [],
       "tag": "弱気",
       "reasons": [
-        "短期平均が全体平均比-15.53%→-15点",
+        "短期平均が全体平均比-16.14%→-15点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ6.46%→リスク高→-10点",
+        "値動きの荒さ5.91%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 141.0
-        },
         {
           "date": "2026-09-15",
           "close": 121.0
@@ -24312,6 +24940,10 @@
         {
           "date": "2026-10-20",
           "close": 84.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 82.0
         }
       ],
       "bars": [
@@ -24802,34 +25434,38 @@
           "low": 82.0,
           "close": 84.0,
           "volume": 1864700
+        },
+        {
+          "date": "2026-10-21",
+          "open": 83.0,
+          "high": 84.0,
+          "low": 81.0,
+          "close": 82.0,
+          "volume": 1193300
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "9101",
       "name": "日本郵船",
-      "price": 7230.0,
-      "previous_close": 7361.0,
-      "change_pct": -1.78,
-      "score": 37,
-      "technical_score": 37,
+      "price": 7294.0,
+      "previous_close": 7230.0,
+      "change_pct": 0.89,
+      "score": 58,
+      "technical_score": 58,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+0.65%→+3点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ1.81%→リスク中→-4点",
+        "短期平均が全体平均比+0.02%→+0点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.79%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 7337.0
-        },
         {
           "date": "2026-09-15",
           "close": 7234.0
@@ -24917,6 +25553,10 @@
         {
           "date": "2026-10-20",
           "close": 7230.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 7294.0
         }
       ],
       "bars": [
@@ -25407,34 +26047,38 @@
           "low": 7188.0,
           "close": 7230.0,
           "volume": 1748800
+        },
+        {
+          "date": "2026-10-21",
+          "open": 7281.0,
+          "high": 7305.0,
+          "low": 7196.0,
+          "close": 7294.0,
+          "volume": 1090700
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6209",
       "name": "リケンＮＰＲ",
       "price": 3880.0,
-      "previous_close": 3930.0,
-      "change_pct": -1.27,
-      "score": 44,
-      "technical_score": 44,
+      "previous_close": 3880.0,
+      "change_pct": 0.0,
+      "score": 42,
+      "technical_score": 42,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+0.55%→+2点",
+        "短期平均が全体平均比+0.10%→+0点",
         "直近5本は下向き→-12点",
         "値動きの荒さ1.43%→リスク低→+4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3815.0
-        },
         {
           "date": "2026-09-15",
           "close": 3825.0
@@ -25521,6 +26165,10 @@
         },
         {
           "date": "2026-10-20",
+          "close": 3880.0
+        },
+        {
+          "date": "2026-10-21",
           "close": 3880.0
         }
       ],
@@ -26012,16 +26660,24 @@
           "low": 3870.0,
           "close": 3880.0,
           "volume": 52900
+        },
+        {
+          "date": "2026-10-21",
+          "open": 3930.0,
+          "high": 3930.0,
+          "low": 3865.0,
+          "close": 3880.0,
+          "volume": 28900
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6730",
       "name": "アクセル",
-      "price": 1551.0,
-      "previous_close": 1652.0,
-      "change_pct": -6.11,
+      "price": 1623.0,
+      "previous_close": 1551.0,
+      "change_pct": 4.64,
       "score": 43,
       "technical_score": 43,
       "news_score": 0,
@@ -26030,16 +26686,12 @@
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+9.03%→+15点",
+        "短期平均が全体平均比+6.94%→+15点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ5.64%→リスク高→-10点",
+        "値動きの荒さ5.67%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 1139.0
-        },
         {
           "date": "2026-09-15",
           "close": 1172.0
@@ -26127,6 +26779,10 @@
         {
           "date": "2026-10-20",
           "close": 1551.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1623.0
         }
       ],
       "bars": [
@@ -26617,16 +27273,24 @@
           "low": 1550.0,
           "close": 1551.0,
           "volume": 151600
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1583.0,
+          "high": 1630.0,
+          "low": 1556.0,
+          "close": 1623.0,
+          "volume": 70500
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "7552",
       "name": "ハピネット",
-      "price": 5630.0,
-      "previous_close": 5780.0,
-      "change_pct": -2.6,
+      "price": 5750.0,
+      "previous_close": 5630.0,
+      "change_pct": 2.13,
       "score": 67,
       "technical_score": 67,
       "news_score": 0,
@@ -26635,16 +27299,12 @@
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+15.91%→+15点",
+        "短期平均が全体平均比+15.02%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ3.38%→リスク高→-10点",
+        "値動きの荒さ3.34%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 3920.0
-        },
         {
           "date": "2026-09-15",
           "close": 3900.0
@@ -26732,6 +27392,10 @@
         {
           "date": "2026-10-20",
           "close": 5630.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 5750.0
         }
       ],
       "bars": [
@@ -27222,34 +27886,72 @@
           "low": 5620.0,
           "close": 5630.0,
           "volume": 239400
+        },
+        {
+          "date": "2026-10-21",
+          "open": 5670.0,
+          "high": 5760.0,
+          "low": 5610.0,
+          "close": 5750.0,
+          "volume": 81700
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "7047",
       "name": "ポート",
-      "price": 2093.0,
-      "previous_close": 2166.0,
-      "change_pct": -3.37,
-      "score": 33,
-      "technical_score": 33,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
+      "price": 2114.0,
+      "previous_close": 2093.0,
+      "change_pct": 1.0,
+      "score": 48,
+      "technical_score": 30,
+      "news_score": 18,
+      "information_adjustment": 18,
+      "news_evidence": [
+        {
+          "title": "GPUコールドプレートの世界市場（2026年～2032年）、市場規模（マイクロチャネル、チューブイン、フィン／ピンフィン、マルチチャネル）・分析レポートを発表",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1iMlhNcDh5NWRDMXE5cHRMVUtMMmlWbV90b1Vjb1ZRYTFCc2h2N25IT1FMdVVsTzlmY1R0bG11TUFuUWZUSTlLLTFaX3BiZkU?oc=5",
+          "published_at": "2026-10-21T00:30:00+00:00",
+          "publisher": "アットプレス",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "半導体・基盤"
+          ]
+        },
+        {
+          "title": "10/21 朝一レポート③【東宝（9602）・コーエーテクモHD（3635）】日経平均841円安でも逆行高！半導体株からゲーム・エンタメ株へ資金循環が始まったのか？ - 株式投資/お金のなる木",
+          "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBoVTdDSFdDN1h3VjVTQXZoQ3A0Q2JDb0dUQzdYMjI3bHFYMTM3MVFxSGlnYWlLdWRYMERv?oc=5",
+          "published_at": "2026-10-20T20:44:23+00:00",
+          "publisher": "Howl.link",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "半導体・基盤"
+          ]
+        },
+        {
+          "title": "フリーポート・マクモランの決算発表で株価4%の動きをオプションが示唆 執筆",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9KREo5a0ZlcDV2RFF3Z3gtY01qZnFEaTZsUFdWSzdNWlFmTnZLNXB5WlhNczlaSGhGOTJ2czVOaU9uRGpSeEhYYnJ1NGVRNlFnMjdMaU1ZMkJlV0FrakoyRnZVcG1JMUtGVVlPaGVYb0cyWHdqU1hr?oc=5",
+          "published_at": "2026-10-20T14:29:00+00:00",
+          "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
       "news_cautions": [],
-      "tag": "弱気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比-0.23%→-1点",
+        "短期平均が全体平均比-0.92%→-4点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ1.92%→リスク中→-4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+        "値動きの荒さ1.91%→リスク中→-4点",
+        "直近72時間の好材料見出し3件→+18点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 2140.0
-        },
         {
           "date": "2026-09-15",
           "close": 2173.0
@@ -27337,6 +28039,10 @@
         {
           "date": "2026-10-20",
           "close": 2093.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 2114.0
         }
       ],
       "bars": [
@@ -27827,34 +28533,38 @@
           "low": 2092.0,
           "close": 2093.0,
           "volume": 83800
+        },
+        {
+          "date": "2026-10-21",
+          "open": 2102.0,
+          "high": 2122.0,
+          "low": 2095.0,
+          "close": 2114.0,
+          "volume": 26600
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6814",
       "name": "古野電気",
-      "price": 8310.0,
-      "previous_close": 8730.0,
-      "change_pct": -4.81,
-      "score": 43,
-      "technical_score": 43,
+      "price": 8380.0,
+      "previous_close": 8310.0,
+      "change_pct": 0.84,
+      "score": 67,
+      "technical_score": 67,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "様子見",
+      "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+6.87%→+15点",
-        "直近5本は下向き→-12点",
-        "値動きの荒さ3.29%→リスク高→-10点",
+        "短期平均が全体平均比+5.70%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ3.25%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 7160.0
-        },
         {
           "date": "2026-09-15",
           "close": 7030.0
@@ -27942,6 +28652,10 @@
         {
           "date": "2026-10-20",
           "close": 8310.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 8380.0
         }
       ],
       "bars": [
@@ -28432,34 +29146,38 @@
           "low": 8290.0,
           "close": 8310.0,
           "volume": 567900
+        },
+        {
+          "date": "2026-10-21",
+          "open": 8390.0,
+          "high": 8440.0,
+          "low": 8300.0,
+          "close": 8380.0,
+          "volume": 105000
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "8081",
       "name": "カナデン",
-      "price": 2661.0,
-      "previous_close": 2763.0,
-      "change_pct": -3.69,
-      "score": 49,
-      "technical_score": 49,
+      "price": 2668.0,
+      "previous_close": 2661.0,
+      "change_pct": 0.26,
+      "score": 47,
+      "technical_score": 47,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
       "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+4.36%→+15点",
+        "短期平均が全体平均比+3.13%→+13点",
         "直近5本は下向き→-12点",
-        "値動きの荒さ2.00%→リスク中→-4点",
+        "値動きの荒さ1.99%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 2514.0
-        },
         {
           "date": "2026-09-15",
           "close": 2544.0
@@ -28547,6 +29265,10 @@
         {
           "date": "2026-10-20",
           "close": 2661.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 2668.0
         }
       ],
       "bars": [
@@ -29037,16 +29759,24 @@
           "low": 2651.0,
           "close": 2661.0,
           "volume": 53400
+        },
+        {
+          "date": "2026-10-21",
+          "open": 2681.0,
+          "high": 2686.0,
+          "low": 2646.0,
+          "close": 2668.0,
+          "volume": 24000
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "6532",
       "name": "ベイカレント",
-      "price": 10845.0,
-      "previous_close": 10740.0,
-      "change_pct": 0.98,
+      "price": 10830.0,
+      "previous_close": 10845.0,
+      "change_pct": -0.14,
       "score": 67,
       "technical_score": 67,
       "news_score": 0,
@@ -29055,16 +29785,12 @@
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+17.82%→+15点",
+        "短期平均が全体平均比+20.95%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ4.11%→リスク高→-10点",
+        "値動きの荒さ4.12%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 7691.0
-        },
         {
           "date": "2026-09-15",
           "close": 7710.0
@@ -29152,6 +29878,10 @@
         {
           "date": "2026-10-20",
           "close": 10845.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 10830.0
         }
       ],
       "bars": [
@@ -29642,16 +30372,24 @@
           "low": 10510.0,
           "close": 10845.0,
           "volume": 1757900
+        },
+        {
+          "date": "2026-10-21",
+          "open": 10640.0,
+          "high": 11065.0,
+          "low": 10600.0,
+          "close": 10830.0,
+          "volume": 855000
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "3697",
       "name": "ＳＨＩＦＴ",
-      "price": 1095.0,
-      "previous_close": 1116.0,
-      "change_pct": -1.88,
+      "price": 1076.0,
+      "previous_close": 1095.0,
+      "change_pct": -1.74,
       "score": 67,
       "technical_score": 67,
       "news_score": 0,
@@ -29660,16 +30398,12 @@
       "news_cautions": [],
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+11.87%→+15点",
+        "短期平均が全体平均比+14.71%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ4.15%→リスク高→-10点",
+        "値動きの荒さ4.16%→リスク高→-10点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 884.8
-        },
         {
           "date": "2026-09-15",
           "close": 872.5
@@ -29757,6 +30491,10 @@
         {
           "date": "2026-10-20",
           "close": 1095.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 1076.0
         }
       ],
       "bars": [
@@ -30247,34 +30985,38 @@
           "low": 1050.5,
           "close": 1095.0,
           "volume": 8219300
+        },
+        {
+          "date": "2026-10-21",
+          "open": 1080.0,
+          "high": 1086.0,
+          "low": 1050.5,
+          "close": 1076.0,
+          "volume": 3388400
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     },
     {
       "code": "7453",
       "name": "良品計画",
-      "price": 4743.0,
-      "previous_close": 4719.0,
-      "change_pct": 0.51,
-      "score": 73,
-      "technical_score": 73,
+      "price": 4739.0,
+      "previous_close": 4743.0,
+      "change_pct": -0.08,
+      "score": 49,
+      "technical_score": 49,
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": [],
-      "tag": "強気",
+      "tag": "様子見",
       "reasons": [
-        "短期平均が全体平均比+9.30%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.32%→リスク中→-4点",
+        "短期平均が全体平均比+10.18%→+15点",
+        "直近5本は下向き→-12点",
+        "値動きの荒さ2.28%→リスク中→-4点",
         "直近72時間に追加判断へ使える好材料見出しなし→+0点"
       ],
       "history": [
-        {
-          "date": "2026-09-14",
-          "close": 4055.0
-        },
         {
           "date": "2026-09-15",
           "close": 4003.0
@@ -30362,6 +31104,10 @@
         {
           "date": "2026-10-20",
           "close": 4743.0
+        },
+        {
+          "date": "2026-10-21",
+          "close": 4739.0
         }
       ],
       "bars": [
@@ -30852,16 +31598,24 @@
           "low": 4660.0,
           "close": 4743.0,
           "volume": 2915000
+        },
+        {
+          "date": "2026-10-21",
+          "open": 4779.0,
+          "high": 4779.0,
+          "low": 4703.0,
+          "close": 4739.0,
+          "volume": 1003700
         }
       ],
-      "updated_at": "2026-10-20T14:15:12.282561+00:00"
+      "updated_at": "2026-10-21T02:43:47.352142+00:00"
     }
   ],
   "errors": [],
   "line_notification": {
     "configured": true,
     "missing": [],
-    "sent_count": 4,
+    "sent_count": 2,
     "pending_count": 0
   },
   "removal_candidates": [
@@ -30869,6 +31623,17 @@
       "code": "9984",
       "name": "ソフトバンクグループ",
       "score": 13,
+      "weak_days": 12,
+      "reasons": [
+        "総合AI45点未満が12営業日継続"
+      ],
+      "news_cautions": [],
+      "action": "解除は師匠の承認後のみ"
+    },
+    {
+      "code": "3778",
+      "name": "さくらインターネット",
+      "score": 37,
       "weak_days": 11,
       "reasons": [
         "総合AI45点未満が11営業日継続"
@@ -30877,9 +31642,9 @@
       "action": "解除は師匠の承認後のみ"
     },
     {
-      "code": "3778",
-      "name": "さくらインターネット",
-      "score": 13,
+      "code": "8306",
+      "name": "三菱UFJフィナンシャル・グループ",
+      "score": 43,
       "weak_days": 10,
       "reasons": [
         "総合AI45点未満が10営業日継続"
@@ -30888,23 +31653,36 @@
       "action": "解除は師匠の承認後のみ"
     },
     {
-      "code": "8306",
-      "name": "三菱UFJフィナンシャル・グループ",
-      "score": 19,
-      "weak_days": 9,
+      "code": "9983",
+      "name": "ファーストリテイリング",
+      "score": 41,
+      "weak_days": 1,
       "reasons": [
-        "総合AI45点未満が9営業日継続"
+        "注意ニュース1件・総合AI41点"
       ],
-      "news_cautions": [],
+      "news_cautions": [
+        {
+          "title": "イオンがアオキを切り捨て。安川電機減益。ファーストリテイリング急騰。アクティビスト一斉蜂起～あす上がる株 2026年１月１３日（火）に上がる銘柄。～最新の日本株情報。高配当株の株価やデイトレ情報～ Arson (ohcgArzyZa)",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTjg2ZWNNZDB0WnVTVWZzQXRiMnhOa1BIYWMzeE81YXQ0dW9jaTBzeVNtaVNaLVl4VGRNYmFkN3lZb0NMUzc0ZmFvN2VWWkp5QjdNWDZ0a3FrMmVXazdUZnk1dlVaWTlMcDQ1QWlnUzR1QmMyZGYyV3Jka1JaNEpaOGZ3?oc=5",
+          "published_at": "2026-10-19T14:34:28+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット",
+            "企業・決算"
+          ]
+        }
+      ],
       "action": "解除は師匠の承認後のみ"
     },
     {
       "code": "4052",
       "name": "フィーチャ",
       "score": 13,
-      "weak_days": 4,
+      "weak_days": 5,
       "reasons": [
-        "総合AI45点未満が4営業日継続"
+        "総合AI45点未満が5営業日継続"
       ],
       "news_cautions": [],
       "action": "解除は師匠の承認後のみ"
@@ -30912,10 +31690,10 @@
     {
       "code": "1436",
       "name": "グリーンエナジー＆カンパニー",
-      "score": 13,
-      "weak_days": 12,
+      "score": 37,
+      "weak_days": 13,
       "reasons": [
-        "総合AI45点未満が12営業日継続"
+        "総合AI45点未満が13営業日継続"
       ],
       "news_cautions": [],
       "action": "解除は師匠の承認後のみ"
@@ -30923,7 +31701,7 @@
     {
       "code": "141A",
       "name": "トライアルホールディングス",
-      "score": 43,
+      "score": 46,
       "weak_days": 9,
       "reasons": [
         "総合AI45点未満が9営業日継続"
@@ -30932,45 +31710,48 @@
       "action": "解除は師匠の承認後のみ"
     },
     {
+      "code": "6506",
+      "name": "安川電機",
+      "score": 31,
+      "weak_days": 1,
+      "reasons": [
+        "注意ニュース2件・総合AI31点"
+      ],
+      "news_cautions": [
+        {
+          "title": "イオンがアオキを切り捨て。安川電機減益。ファーストリテイリング急騰。アクティビスト一斉蜂起～あす上がる株 2026年１月１３日（火）に上がる銘柄。～最新の日本株情報。高配当株の株価やデイトレ情報～ Arson (ohcgArzyZa)",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTjg2ZWNNZDB0WnVTVWZzQXRiMnhOa1BIYWMzeE81YXQ0dW9jaTBzeVNtaVNaLVl4VGRNYmFkN3lZb0NMUzc0ZmFvN2VWWkp5QjdNWDZ0a3FrMmVXazdUZnk1dlVaWTlMcDQ1QWlnUzR1QmMyZGYyV3Jka1JaNEpaOGZ3?oc=5",
+          "published_at": "2026-10-19T14:34:28+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット",
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "安川電機が上方修正。イオンFSは減益。古野電機が上方修正と増配。ジンズHDは減益・減配。～あす上がる株 2026年１０月１３日（火）に上がる銘柄。最新の日本株情報。高配当株の株価やデイトレ情報 Archiviazione (T9SNDW3iO7)",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOd2I1MVZNaUhELU10OWZHcTFSdWN2NEluc252dWFzMm1xcTRNMjNEbnlwbFp0Y2FIb2NnTVY5R2Utb3lTNXY4Z0dTODFqRVhGRE5nRndrdTBzRHgzeHdWeWxlbzdCSFZyUE55R3Zsbm83Qm81VWhFb2ZaRTQzNzJiTHZOWnVlVDk2?oc=5",
+          "published_at": "2026-10-19T09:09:58+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "ロボット",
+            "企業・決算"
+          ]
+        }
+      ],
+      "action": "解除は師匠の承認後のみ"
+    },
+    {
       "code": "6324",
       "name": "ハーモニック・ドライブ・システムズ",
-      "score": 13,
-      "weak_days": 4,
+      "score": 37,
+      "weak_days": 5,
       "reasons": [
-        "総合AI45点未満が4営業日継続"
-      ],
-      "news_cautions": [],
-      "action": "解除は師匠の承認後のみ"
-    },
-    {
-      "code": "5021",
-      "name": "コスモエネルギーホールディングス",
-      "score": 46,
-      "weak_days": 18,
-      "reasons": [
-        "総合AI45点未満が18営業日継続"
-      ],
-      "news_cautions": [],
-      "action": "解除は師匠の承認後のみ"
-    },
-    {
-      "code": "256A",
-      "name": "飛島ホールディングス",
-      "score": 34,
-      "weak_days": 10,
-      "reasons": [
-        "総合AI45点未満が10営業日継続"
-      ],
-      "news_cautions": [],
-      "action": "解除は師匠の承認後のみ"
-    },
-    {
-      "code": "9532",
-      "name": "大阪瓦斯",
-      "score": 48,
-      "weak_days": 17,
-      "reasons": [
-        "総合AI45点未満が17営業日継続"
+        "総合AI45点未満が5営業日継続"
       ],
       "news_cautions": [],
       "action": "解除は師匠の承認後のみ"
@@ -30978,10 +31759,10 @@
     {
       "code": "9533",
       "name": "東邦瓦斯",
-      "score": 27,
-      "weak_days": 12,
+      "score": 43,
+      "weak_days": 13,
       "reasons": [
-        "総合AI45点未満が12営業日継続"
+        "総合AI45点未満が13営業日継続"
       ],
       "news_cautions": [],
       "action": "解除は師匠の承認後のみ"
@@ -30990,39 +31771,6 @@
       "code": "9556",
       "name": "ＩＮＴＬＯＯＰ",
       "score": 37,
-      "weak_days": 8,
-      "reasons": [
-        "総合AI45点未満が8営業日継続"
-      ],
-      "news_cautions": [],
-      "action": "解除は師匠の承認後のみ"
-    },
-    {
-      "code": "4882",
-      "name": "ペルセウスプロテオミクス",
-      "score": 19,
-      "weak_days": 11,
-      "reasons": [
-        "総合AI45点未満が11営業日継続"
-      ],
-      "news_cautions": [],
-      "action": "解除は師匠の承認後のみ"
-    },
-    {
-      "code": "2782",
-      "name": "セリア",
-      "score": 43,
-      "weak_days": 18,
-      "reasons": [
-        "総合AI45点未満が18営業日継続"
-      ],
-      "news_cautions": [],
-      "action": "解除は師匠の承認後のみ"
-    },
-    {
-      "code": "5801",
-      "name": "古河電気工業",
-      "score": 13,
       "weak_days": 9,
       "reasons": [
         "総合AI45点未満が9営業日継続"
@@ -31031,20 +31779,9 @@
       "action": "解除は師匠の承認後のみ"
     },
     {
-      "code": "6085",
-      "name": "アーキテクツ・スタジオ・ジャパン",
-      "score": 13,
-      "weak_days": 27,
-      "reasons": [
-        "総合AI45点未満が27営業日継続"
-      ],
-      "news_cautions": [],
-      "action": "解除は師匠の承認後のみ"
-    },
-    {
-      "code": "9101",
-      "name": "日本郵船",
-      "score": 37,
+      "code": "276A",
+      "name": "ククレブ・アドバイザーズ",
+      "score": 38,
       "weak_days": 3,
       "reasons": [
         "総合AI45点未満が3営業日継続"
@@ -31053,12 +31790,101 @@
       "action": "解除は師匠の承認後のみ"
     },
     {
+      "code": "4882",
+      "name": "ペルセウスプロテオミクス",
+      "score": 19,
+      "weak_days": 12,
+      "reasons": [
+        "総合AI45点未満が12営業日継続"
+      ],
+      "news_cautions": [],
+      "action": "解除は師匠の承認後のみ"
+    },
+    {
+      "code": "2782",
+      "name": "セリア",
+      "score": 43,
+      "weak_days": 19,
+      "reasons": [
+        "総合AI45点未満が19営業日継続"
+      ],
+      "news_cautions": [],
+      "action": "解除は師匠の承認後のみ"
+    },
+    {
+      "code": "5801",
+      "name": "古河電気工業",
+      "score": 13,
+      "weak_days": 10,
+      "reasons": [
+        "総合AI45点未満が10営業日継続"
+      ],
+      "news_cautions": [],
+      "action": "解除は師匠の承認後のみ"
+    },
+    {
+      "code": "9434",
+      "name": "ソフトバンク",
+      "score": 45,
+      "weak_days": 0,
+      "reasons": [
+        "注意ニュース3件・総合AI45点"
+      ],
+      "news_cautions": [
+        {
+          "title": "ソフトバンク、「My SoftBank」などWebサイトを一時停止…不正アクセスの試みを検知",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5WeXBxbGhxZ0lvWlpZSzYwWkNfQ1JoQUx0RTc2bUVGajZwOW9wUktQemlzc2tSM0lLU2dtOGE1SDE2VUVIWkY5VjlzVTlzenItRUlZMTU1YzVzYmpDRzJMVUtkU2NfaFh3c0Y1RUNDNGx1RzlBUkk0LWlR0gF_QVVfeXFMUHlYVHlEcHBvZDB0d2l2dDQ2MkVXTFlGRGlSdzJ3ZDJrcG1POGRDVXcxb2VyZ1FPS1YzcXFfMVRxdl9YYUdBNEt2RENXNXRQdEpNQnJmZDNscFNkVGg5Tm9YT1RZdHNvMGprVW5UbjI0TG1MaUVJNXY1cXZBNDFfcw?oc=5",
+          "published_at": "2026-10-20T12:22:30+00:00",
+          "publisher": "ｄメニューニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "ソフトバンク「My SoftBank」に不正アクセスの試み、ウェブ版の会員サイトを10月17日から停止",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9xbXdpQ1lHdTZ2Qm5oTFNyS1lGSElnT1RoTzZoYWpVNENUdWdCRjRVN0hNaHJKUFlKOGZUbWhPaDVtTEZ4UXNjOQ?oc=5",
+          "published_at": "2026-10-20T01:31:26+00:00",
+          "publisher": "株式会社アクト",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        },
+        {
+          "title": "ソフトバンク「My SoftBank」など3サイトを一時停止 不正アクセスの試みを検知",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9jTGRhQ2NOTmgtdE5KdDBhVnhPckN0cUNUcGFjUks0YlloRWJEVWFySUFDUWpxY2tnVV9uOUd2alh4WGxBcVV5WG1hXzZrMUF2SXdOSU9WdnpDT05qVnY0?oc=5",
+          "published_at": "2026-10-20T01:08:03+00:00",
+          "publisher": "ライブドアニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "action": "解除は師匠の承認後のみ"
+    },
+    {
+      "code": "6085",
+      "name": "アーキテクツ・スタジオ・ジャパン",
+      "score": 13,
+      "weak_days": 28,
+      "reasons": [
+        "総合AI45点未満が28営業日継続"
+      ],
+      "news_cautions": [],
+      "action": "解除は師匠の承認後のみ"
+    },
+    {
       "code": "6730",
       "name": "アクセル",
       "score": 43,
-      "weak_days": 4,
+      "weak_days": 5,
       "reasons": [
-        "総合AI45点未満が4営業日継続"
+        "総合AI45点未満が5営業日継続"
       ],
       "news_cautions": [],
       "action": "解除は師匠の承認後のみ"
@@ -31068,18 +31894,18 @@
     "recommendations": 12,
     "horizons": {
       "1": {
-        "completed": 11,
-        "wins": 7,
-        "win_rate_pct": 63.6,
-        "average_return_pct": 3.4,
+        "completed": 12,
+        "wins": 8,
+        "win_rate_pct": 66.7,
+        "average_return_pct": 3.15,
         "best_return_pct": 33.77,
         "worst_return_pct": -3.7
       },
       "5": {
-        "completed": 7,
-        "wins": 3,
-        "win_rate_pct": 42.9,
-        "average_return_pct": 3.91,
+        "completed": 8,
+        "wins": 4,
+        "win_rate_pct": 50.0,
+        "average_return_pct": 3.92,
         "best_return_pct": 39.31,
         "worst_return_pct": -5.29
       },
