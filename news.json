@@ -1,155 +1,647 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T09:44:22.948159+00:00",
-  "last_success_at": "2026-10-22T09:44:22.948159+00:00",
+  "generated_at": "2026-10-22T14:42:16.141743+00:00",
+  "last_success_at": "2026-10-22T14:42:16.141743+00:00",
   "status": "ok",
   "sources": [
     {
       "id": "ai",
       "name": "AI・生成AI",
       "url": "https://news.google.com/rss/search?q=%28%E7%94%9F%E6%88%90AI+OR+%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD+OR+OpenAI+OR+NVIDIA%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
       "count": 96,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "robotics",
       "name": "ロボット・自動化",
       "url": "https://news.google.com/rss/search?q=%28%E3%83%95%E3%82%A1%E3%83%8A%E3%83%83%E3%82%AF+OR+%E5%AE%89%E5%B7%9D%E9%9B%BB%E6%A9%9F+OR+%E3%83%8F%E3%83%BC%E3%83%A2%E3%83%8B%E3%83%83%E3%82%AF%E3%83%BB%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%29+%28AI+OR+%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88+OR+%E8%87%AA%E5%8B%95%E5%8C%96+OR+%E6%B1%BA%E7%AE%97+OR+%E5%8F%97%E6%B3%A8%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 8,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 9,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "quantum",
       "name": "量子・IOWN",
       "url": "https://news.google.com/rss/search?q=%28%E9%87%8F%E5%AD%90%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF+OR+IOWN+OR+%E5%85%89%E5%8D%8A%E5%B0%8E%E4%BD%93%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 99,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 98,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "chips",
       "name": "半導体・計算基盤",
       "url": "https://news.google.com/rss/search?q=%28AI%E5%8D%8A%E5%B0%8E%E4%BD%93+OR+%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC+OR+GPU%29+%28%E7%99%BA%E8%A1%A8+OR+%E6%8F%90%E6%90%BA+OR+%E6%8A%95%E8%B3%87+OR+%E8%A6%8F%E5%88%B6%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
       "count": 97,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "official",
       "name": "企業公式発表の検索",
       "url": "https://news.google.com/rss/search?q=%28AI+OR+%E7%94%9F%E6%88%90AI+OR+%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88+OR+%E9%87%8F%E5%AD%90+OR+IOWN%29+%28site%3Aglobal.ntt+OR+site%3Anec.com+OR+site%3Aglobal.fujitsu+OR+site%3Ayaskawa.co.jp+OR+site%3Afanuc.co.jp+OR+site%3Ahds.co.jp+OR+site%3Anvidianews.nvidia.com%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
       "count": 16,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "corporate_events",
       "name": "国内企業・決算材料",
       "url": "https://news.google.com/rss/search?q=%28%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%BB%92%E5%AD%97%E8%BB%A2%E6%8F%9B+OR+%E6%9C%80%E9%AB%98%E7%9B%8A+OR+%E5%A2%97%E9%85%8D+OR+%E6%B8%9B%E9%85%8D+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%A4%A7%E5%9E%8B%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E8%B2%B7%E5%8F%8E+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+%E6%A0%AA+when%3A2d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 96,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 85,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "official_disclosures",
       "name": "公式開示・取引所情報",
       "url": "https://news.google.com/rss/search?q=%28AI+OR+%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88+OR+%E9%87%8F%E5%AD%90+OR+%E5%8D%8A%E5%B0%8E%E4%BD%93+OR+%E6%B1%BA%E7%AE%97%29+%28site%3Ajpx.co.jp+OR+site%3Arelease.tdnet.info%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
       "count": 3,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-1",
       "name": "監視企業の決算・公式材料 1",
       "url": "https://news.google.com/rss/search?q=%28%22%E5%AF%8C%E5%A3%AB%E9%80%9A%22+OR+%22NTT%22+OR+%22%E3%82%BD%E3%83%8B%E3%83%BC%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%22+OR+%22%E3%82%BD%E3%83%95%E3%83%88%E3%83%90%E3%83%B3%E3%82%AF%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%22+OR+%22NEC%22+OR+%22%E6%97%A5%E7%AB%8B%E8%A3%BD%E4%BD%9C%E6%89%80%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 73,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 74,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-2",
       "name": "監視企業の決算・公式材料 2",
       "url": "https://news.google.com/rss/search?q=%28%22%E3%81%95%E3%81%8F%E3%82%89%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%22+OR+%22PKSHA+Technology%22+OR+%22%E3%83%88%E3%83%A8%E3%82%BF%E8%87%AA%E5%8B%95%E8%BB%8A%22+OR+%22%E4%B8%89%E8%8F%B1UFJ%E3%83%95%E3%82%A3%E3%83%8A%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%22+OR+%22%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%83%AA%E3%83%86%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%B0%22+OR+%22%E3%83%95%E3%82%A3%E3%83%BC%E3%83%81%E3%83%A3%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 23,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 18,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-3",
       "name": "監視企業の決算・公式材料 3",
       "url": "https://news.google.com/rss/search?q=%28%22%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%A8%E3%83%8A%E3%82%B8%E3%83%BC%EF%BC%86%E3%82%AB%E3%83%B3%E3%83%91%E3%83%8B%E3%83%BC%22+OR+%22%E3%82%AB%E3%82%A6%E3%83%AA%E3%82%B9%22+OR+%22%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%22+OR+%22%E3%83%95%E3%82%A1%E3%83%8A%E3%83%83%E3%82%AF%22+OR+%22%E5%AE%89%E5%B7%9D%E9%9B%BB%E6%A9%9F%22+OR+%22%E3%83%8F%E3%83%BC%E3%83%A2%E3%83%8B%E3%83%83%E3%82%AF%E3%83%BB%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 47,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 45,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-4",
       "name": "監視企業の決算・公式材料 4",
       "url": "https://news.google.com/rss/search?q=%28%22%EF%BC%A1%EF%BC%AE%EF%BC%B9%EF%BC%A3%EF%BC%AF%EF%BC%AC%EF%BC%AF%EF%BC%B2%22+OR+%22%E3%83%AF%E3%83%83%E3%83%84%22+OR+%22%E6%9D%B1%E5%AE%9D%22+OR+%22%E5%87%BA%E5%85%89%E8%88%88%E7%94%A3%22+OR+%22%E6%9D%B1%E3%83%86%E3%82%AF%22+OR+%22%E3%82%B3%E3%82%B9%E3%83%A2%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 39,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 38,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-5",
       "name": "監視企業の決算・公式材料 5",
       "url": "https://news.google.com/rss/search?q=%28%22%E4%BA%AC%E6%88%90%E9%9B%BB%E9%89%84%22+OR+%22%E3%82%AA%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%AB%E3%83%A9%E3%83%B3%E3%83%89%22+OR+%22%E9%A3%9B%E5%B3%B6%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%22+OR+%22%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88+%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%96%22+OR+%22%E5%A4%A7%E9%98%AA%E7%93%A6%E6%96%AF%22+OR+%22%E6%9D%B1%E9%82%A6%E7%93%A6%E6%96%AF%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 12,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 13,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-6",
       "name": "監視企業の決算・公式材料 6",
       "url": "https://news.google.com/rss/search?q=%28%22%E5%B1%B1%E5%B4%8E%E8%A3%BD%E3%83%91%E3%83%B3%22+OR+%22%E3%83%9F%E3%83%84%E3%82%A6%E3%83%AD%E3%82%B3%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%22+OR+%22%EF%BC%A9%EF%BC%AE%EF%BC%B4%EF%BC%AC%EF%BC%AF%EF%BC%AF%EF%BC%B0%22+OR+%22%E3%82%AF%E3%82%AF%E3%83%AC%E3%83%96%E3%83%BB%E3%82%A2%E3%83%89%E3%83%90%E3%82%A4%E3%82%B6%E3%83%BC%E3%82%BA%22+OR+%22%E5%AE%9D%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%22+OR+%22%E3%83%9A%E3%83%AB%E3%82%BB%E3%82%A6%E3%82%B9%E3%83%97%E3%83%AD%E3%83%86%E3%82%AA%E3%83%9F%E3%82%AF%E3%82%B9%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
       "count": 6,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-7",
       "name": "監視企業の決算・公式材料 7",
       "url": "https://news.google.com/rss/search?q=%28%22%E3%82%BB%E3%83%AA%E3%82%A2%22+OR+%22%EF%BC%AB%EF%BD%85%EF%BD%85%EF%BC%B0%EF%BD%85%EF%BD%92%E6%8A%80%E7%A0%94%22+OR+%22%E5%8F%A4%E6%B2%B3%E9%9B%BB%E6%B0%97%E5%B7%A5%E6%A5%AD%22+OR+%22%E3%82%BD%E3%83%95%E3%83%88%E3%83%90%E3%83%B3%E3%82%AF%22+OR+%22%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%84%E3%83%BB%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%22+OR+%22%E6%97%A5%E6%9C%AC%E9%83%B5%E8%88%B9%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 50,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 49,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-8",
       "name": "監視企業の決算・公式材料 8",
       "url": "https://news.google.com/rss/search?q=%28%22%E3%83%AA%E3%82%B1%E3%83%B3%EF%BC%AE%EF%BC%B0%EF%BC%B2%22+OR+%22%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%AB%22+OR+%22%E3%83%8F%E3%83%94%E3%83%8D%E3%83%83%E3%83%88%22+OR+%22%E3%83%9D%E3%83%BC%E3%83%88%22+OR+%22%E5%8F%A4%E9%87%8E%E9%9B%BB%E6%B0%97%22+OR+%22%E3%82%AB%E3%83%8A%E3%83%87%E3%83%B3%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 34,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 30,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     },
     {
       "id": "companies-9",
       "name": "監視企業の決算・公式材料 9",
       "url": "https://news.google.com/rss/search?q=%28%22%E3%83%99%E3%82%A4%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%22+OR+%22%EF%BC%B3%EF%BC%A8%EF%BC%A9%EF%BC%A6%EF%BC%B4%22+OR+%22%E8%89%AF%E5%93%81%E8%A8%88%E7%94%BB%22+OR+%22%E5%A1%A9%E9%87%8E%E7%BE%A9%E8%A3%BD%E8%96%AC%22%29+%28%E6%B1%BA%E7%AE%97+OR+%E6%A5%AD%E7%B8%BE+OR+%E4%B8%8A%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E4%B8%8B%E6%96%B9%E4%BF%AE%E6%AD%A3+OR+%E9%85%8D%E5%BD%93+OR+%E8%87%AA%E7%A4%BE%E6%A0%AA%E8%B2%B7%E3%81%84+OR+%E5%8F%97%E6%B3%A8+OR+%E6%8F%90%E6%90%BA+OR+%E4%B8%8D%E6%AD%A3+OR+%E3%83%AA%E3%82%B3%E3%83%BC%E3%83%AB%29+when%3A7d&hl=ja&gl=JP&ceid=JP%3Aja",
-      "checked_at": "2026-10-22T09:44:22.948159+00:00",
+      "checked_at": "2026-10-22T14:42:16.141743+00:00",
       "status": "ok",
-      "count": 37,
-      "last_success_at": "2026-10-22T09:44:22.948159+00:00"
+      "count": 17,
+      "last_success_at": "2026-10-22T14:42:16.141743+00:00"
     }
   ],
   "articles": [
+    {
+      "id": "db992cf4d78dcf715f3e40a9",
+      "title": "Danantaraは、New Asia Forum 2026でAI投資とデータセンターの発表を準備",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1FT25CQzFGN1U2YTdCNUNzTTd0R1VrRFc0ZENyZzRraGhObWwwTHVzT1BxbGRBRldMRk9vZUVsQUpReVXSAUJBVV95cUxNRklxUmJKdl9rT1d6MlVuVkIxRHNya0I3S3NwaHRwZlRudmloaFpVQnpQZHNtSWV0N1U5M29EWld3dmc?oc=5",
+      "publisher": "VOI.ID",
+      "publisher_url": "https://voi.id",
+      "published_at": "2026-10-22T12:43:33+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "chips"
+      ],
+      "themes": [
+        "AI",
+        "半導体・基盤"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "投資／発表",
+      "summary": "見出しに「投資・発表」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "229318da223db856c88beba3",
+      "title": "古野電気(株)【6814】：企業情報（決算時期・代表者名・大株主情報・IR動画など）",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBLMzFlLWZGc1lFV0UwNUVETHZMS19WNFRxaVhCeS1WczRXWE52SWRIaDJ4ZkpONTlWRWh3bkNWN0RlY2tNdzZvV3h1c2U2VDgydjJtRTBBcDV3OHRmSGloN0Nla29JUk4tQVpNMDBZY2xudGVWYmc?oc=5",
+      "publisher": "Yahoo!ファイナンス",
+      "publisher_url": "https://finance.yahoo.co.jp",
+      "published_at": "2026-10-22T12:37:06+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-8"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "6814",
+          "name": "古野電気",
+          "basis": "見出しに企業名",
+          "matched": "古野電気"
+        }
+      ],
+      "official": false,
+      "priority": "重要",
+      "signal": "企業イベント・影響未評価",
+      "reason": "決算",
+      "summary": "見出しに「決算」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "7d0e2dbd711be99f14a29837",
+      "title": "旧村上ファンド系、テレビ朝日HD株5.06%取得 増配や非公開化を提案",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE80b25BSUVmRmpvNkh3emQ2dTFQZGFDMlh0bmV6cFBmNlBHRDY2QWtIZFp5ejNDMXNlNHQ4azFnU2F3VmVjRVVCU2VwQkNxMlVLWThPcVRZY092VkRoVFpfaWx2ZU45Z2cyOGIydWtqSkdjazVK?oc=5",
+      "publisher": "BigGo ファイナンス",
+      "publisher_url": "https://finance.biggo.jp",
+      "published_at": "2026-10-22T11:35:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "dc7169d08dfd5d0703d1cffa",
+      "title": "ＵＥＸは後場急騰し年初来高値更新、２７年３月期通期業績予想を上方修正",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE92N2hHV3kwMVF1RjM2Mm1Ia1V6c3Vuc2NVQ3QzbjVKQUV1WHFQVFdLMUQzaGR0Z0d0VVdUU3FXYzlFVFB2aVpnMDJkV2hvVkxmMUE?oc=5",
+      "publisher": "株探",
+      "publisher_url": "https://s.kabutan.jp",
+      "published_at": "2026-10-22T11:30:28+00:00",
+      "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "上方修正",
+      "summary": "見出しに「上方修正」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "a2c491f5a6b6e5503775e5db",
+      "title": "【10万円で3銘柄】NTT・ソフトバンク・東京海上の配当と優待はいつから？初心者向けに解説",
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE01N2VhX2VvTTYwSTFNcXdHVnMwWG9pZUdfN0FNNVJOMC1KNEJYWE5IWktiT0ZjZzNsV2dF?oc=5",
+      "publisher": "Howl.link",
+      "publisher_url": "https://t.co",
+      "published_at": "2026-10-22T11:18:02+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-1",
+        "companies-7"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "9432",
+          "name": "NTT",
+          "basis": "見出しに企業名",
+          "matched": "NTT"
+        },
+        {
+          "code": "9434",
+          "name": "ソフトバンク",
+          "basis": "見出しに企業名",
+          "matched": "ソフトバンク"
+        }
+      ],
+      "official": false,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "239d0605815aed6111af08ed",
+      "title": "Relx株が上昇、9カ月間の業績更新と自社株買いが好感される 執筆",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5RUm5yMW1nY3dpWU9KNXBraVRnYkk2MDduWXdiNk83ZGh0SnJhTkRMQ3N4TnNUOXlLTzAwV3RuZFRTNnpOUmJnSkVOdUpheDUxNjdjSldrTEpnYzdGczV1akN6dlFDV2JPWjhmdHFQQ0Z5dGFQWmdV?oc=5",
+      "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+      "publisher_url": "https://jp.investing.com",
+      "published_at": "2026-10-22T11:09:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "f0e45296fc08a88ca8b07523",
+      "title": "生成 ai",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOVGNGOHE2VkF5U05CWEp3QWRaVXIxQ2gyNjF3cFo3YUFTc2x0ZW9JVWY2VkJTUF9vSzZwT0dObV80UV9ycXF1UkptSmhPcTB1MjBoYkNGSUFKbENTa0pXZHdtU3B5ZV9pMWk0dEl6R0NUcTlmeGhrNFg3OC10TXlfUE5JM25GY3Jld0tBMFdqdC1nRHFrWUV6a0hLejVlSlNNd3d0aGhCNWlHYm9SelVfTloxQnprdFg2MDVxT0ZvOHgtNnBtWDVrV0JHUnp0OGVBNUJEU2hxaG5mQldhQWdQNnln?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T10:49:25+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "45a1b912ea0d45f5d8c753f3",
+      "title": "発表迫る、好業績＆低PBRの27年3月期【上方修正】期待リスト〔第2弾〕 ＜成長株特集＞",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9tQWdkU2dueWdodkJUc3d5WmQyWVFUTTJoWnRVZjUwelZIMWU5Ym5uUkhxd0VUTlRnT3lFOGJnLW5DM3QzVHVYczhjdlE2allNY1dDZmZCWXZTUm90c1R2bA?oc=5",
+      "publisher": "株探",
+      "publisher_url": "https://kabutan.jp",
+      "published_at": "2026-10-22T10:40:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "上方修正／発表",
+      "summary": "見出しに「上方修正・発表」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "cc18859896287341e2d4e6ba",
+      "title": "(株)安川電機【6506】：株つぶやき",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0yZzI3VHNTWjlteVl3MmJJRDRRNWd5d1lfUF9GOWdiV2wxMDdUbVdrY1RxTVpHT0xjN1U0ZmdfZWdocVRuYkNGbmh2alp5U3U2NzFPRnlYdzQ?oc=5",
+      "publisher": "Yahoo!ファイナンス",
+      "publisher_url": "https://finance.yahoo.co.jp",
+      "published_at": "2026-10-22T10:21:09+00:00",
+      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-3"
+      ],
+      "themes": [
+        "ロボット"
+      ],
+      "related_stocks": [
+        {
+          "code": "6506",
+          "name": "安川電機",
+          "basis": "見出しに企業名",
+          "matched": "安川電機"
+        }
+      ],
+      "official": false,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "3770224ca0e5ad826dc74157",
+      "title": "本日の【自社株買い】銘柄 (22日大引け後 発表分)(株探ニュース)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNjBoeVNOT0UxOU5HVC1rbF9XRS1KMzNCaU9UUGFsaVF1NGZIb19RdTY0cDlZdUNDaFk3WVBfUXdoMnBBaWFGcUN6dTFPQWlsd0VZeEVRTWZ5VDdUN0hsN1Y2ekRKMkx5VXpVN0h2YVRsUFlWZ0VDdUhPWHhVYTA3eEFvejhNWjQ?oc=5",
+      "publisher": "Yahoo!ファイナンス",
+      "publisher_url": "https://finance.yahoo.co.jp",
+      "published_at": "2026-10-22T10:20:37+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "発表",
+      "summary": "見出しに「発表」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "7b01ea9696a2f30b47ecec49",
+      "title": "本日の【自社株買い】銘柄 (22日大引け後 発表分) 投稿日時： 2026/10/22 19:20[株探]",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9GLThYNi1ZV0U4MnJlQmtYYWlxU21OVWJ1bUNoRk8taHEtVE5rN252Z2Rjdl9LQlNLeXI3WXpVQmduQXR3SlE?oc=5",
+      "publisher": "みんかぶ",
+      "publisher_url": "https://minkabu.jp",
+      "published_at": "2026-10-22T10:20:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "発表",
+      "summary": "見出しに「発表」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "50b39c96b91e862d0937d67d",
+      "title": "画像から動画生成AI NSFWジェネレーター 無料 ai",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNdGZraS1BN1NVT2JNTUdEQWVBZk5TZ2UzOG9FdW1wU3BnUTc2aGthcEpSbWZqQ0tvYjhRNGhsN0hEb2FrQlljRFByNVZkTUx4UWJJeGRmcFJZQ1NmTWJXb1p1YVZsTmk3cXlNenpOSTI1dFpwNnhEVUtLWHZIUDdaOGh5Y1RJVDE3VkxOLThnMEpjLThxYWxZR0VlUGhLeTdMeWJ5T1dEUGNvd1lDQkxybzhCNlB3VUl2RDNBRWhlTWFWRkgxN2cyd3BsWGtUbFlZaUR4d3MzTlJVamdvaTRTLXpCSUh0ZFQ2ZGhUTHRUVDlwSmZRWkZXTjNSMHU1cV9TMjh2dkNmYWNQb0NqeG1Xa0dXQVpmek50OU9JLVRpRUs?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T10:13:11+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "6e2ad0cdccef670bbb4d198a",
+      "title": "動画生成AIでアニメーション制作を手軽に！おすすめ12選を紹介 ai",
+      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQcDhsOVR0Z0ZiV04zWVdjOUFPSnprMUZsQWdERXBLRThYWEJyMkpUb2JXQ3RTenNEZW9aZEJVNTdINUdsX2szYXFqUE9laklleGRocUtheTRkaHBHWW9ZbnB1VVhQQ3dHakFwa09TajNxbnpjS0Fpa2cxa2oxU0ZhZ0J4Y1pJNlFXdW5hQWJqcWlNVE9qUVlPSDdUZGVfbGxjQWo5azZrWXA3VkNyQ0sxTUFnRXRkalVwZDRnalVBSDZ6eS01emVmcVVNVVB2RDBveERXVnpfZ1JFV3VuUndEUE53dFJCNjVyT2lsRlJiTzVzSXdsNVNsRUFScE9KeWZzTFMwMFhHMWxOYm5pdGJ2YW5pbTVKbU80SVFldjJORHQ1Rzl5b3U2U0g4N25NY2NrYU4yV2w2U1JrQTRTWVE?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T10:12:55+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "89ac0ae2a80daa7a3316fe89",
+      "title": "アニメ動画作りにおすすめの動画生成AIは ai",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNdThSMlpnVmZfYU1FN1pnNnNQemVRWVI1aFJrRHhJWllWMEZsVDNVcElpTjR3b21EcG51MUdYWXBJWVJjeUNVY2ZDSDk1UURzUXZlbWlJd3U4QXdlNEl1X1VHRWxSLVFnTFlTLVhYaUJva09mWDVHYU9nSGQ1M0FDRzQyenJCUzFkZl8wcXY0NDgwU0pFeEJGZXNScDdqaFpzLWFGSGpMT2U1TlFOenNuUFY0eE96d0ZSenFKRVRpNktZdS1YOFRMaXZUSF9vRG1aVGRRNXEwZkRxYWlsVjBMRkRGNm5nX2JwR0tlRG1uZUhFZDNTSk1JM3R3SEljVmJiRHRpeFZ5SDlxbF9TLTkzUy1NTTI1TGww?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T10:12:46+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "989fe5c2e694520b83e42f48",
+      "title": "AI彼女 生成 ai",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQamRIczgtX0dQWnVNR09YWXFsWXd1OW9IaFNUSXRuLUZRX1V1UkFkM05kcl9qcVZLUU90UFZmMHJzcHpFTVBzZ0RjLTZ3VUNVenUxNFMtOXpMeHRUVVFYVGFCYkFsb3RFckpZbjJDOTRoaENCbE9aRW1relV3dlpnN0I3ZUZsaTZDNkpiMHpBMHVRV25DREU3RHpEZFFWdkxDWlJ0d2ZieUZ1ZE5VQ05hQVJLQkM4cHNmb3dYOVRTSnlNLVUzMkphZ3ozemF0QnJxVEc0c0l4UkhCUTZYdmFNRDNTaWZWbGZqcHc?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T10:11:31+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "e7aa3d94203a263d6fccc5fb",
+      "title": "AI彼女 キャラクター 作成 ai",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTHBlM0MybjlIeGhYUGJKeHBEYWJtNXYwZGcyWUZIMXFQb0NmVkVFVFhMUzRTbDVnT0wwRUZ1OVVjUDdVaFZkZmUtaDNHTE5ROGxHYWRYMEdvS24ydWMwRThwank5MGlnZmxZd2hYRTNmXy15RGtLMnBiWHdkY2ZHYmRUV2lwMEZSQnZHTDdQZlBPeVNhN3ViSC1sVWItaXJkUFdQMFk5ZnJXQ0pJMWlERFBlNEIzWnpvUWplRXZzVnhHSGZabUtENzRfbGFsSlhHcHVCMWZTQXFlRVZURVpJMkZ4bWVXLVQzdFBUbldkbU5kdklzb244?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T10:11:20+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "da70e922a91c55b902d2fd22",
+      "title": "AIアニメ生成 - 無料でAIがアニメーションを生成 ai",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPcjI5SFpaeVFLQkdXVzVmRWNDc1JGR0p6Q3F4MDI5bTNYSlFibEdpM0V2cnBlaFpJVEhubE5HaVJnek9Xb25fZE1hR1VHX0dINFpUTkx6UWFlZXBvandHQjdtZHhqZU9obUw2ZHI5MWc4OHAwRTRQZnBsVFdjTG15X29YRnlZOHBPWVF2SEtKRkRrV3VmVzQ5YkRYMDdINkFzdy0tbDktdkdkSWpJLVJYTVJ2ZW5GbDRkNVJlYWhJeGlVZzJGWlhTNEwxT0FseVpWN0luYmRCN3Z1N09WaTJuQVhCMmxaSEhWQnViXzNTck15MWNoTFNuMjZUTm5Nd3FMN0p0UW1PNkpOU2NVX3ZvVFNsQmZqbjlOWm5JeEtfb3g?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T10:10:58+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "f962ae3dd063c10e43b9b4a0",
+      "title": "フィジカルAI CNCとは?",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ETXlsbkh3QUc2WHlhTmtmNVBBS1UyOGNkcGtma0RFVHlCaHhOblpOYTh5aXlxTHVzM2JkbmxuVEVfcTFqX1dUVmJjNFVDVDVfTlFZSkpJX2IzX0lCdE5WdVgyWkdkTEtaZzZaRWU0akFhT2M?oc=5",
+      "publisher": "Fanuc Corporation",
+      "publisher_url": "https://www.fanuc.co.jp",
+      "published_at": "2026-10-22T10:10:38+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "official"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": true,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "02096c8a3d545025e23bb54c",
+      "title": "英企業がオマーンで大型AIデータセンター計画 初期投資10億ポンド超",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA3QnowZGhtTDI5a0NKS1B1QWdUOEVweGltMFZ0ckxrVFIxUVZaNkRlSUE0cVIzSnRrMnJlSVBHZ0pUUHl2c05BWWkzbkM0TE9qS21LaGM0QlR0SzJxcXd3?oc=5",
+      "publisher": "千葉テレビ放送",
+      "publisher_url": "https://www.chiba-tv.com",
+      "published_at": "2026-10-22T10:00:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "chips"
+      ],
+      "themes": [
+        "AI",
+        "半導体・基盤"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "投資",
+      "summary": "見出しに「投資」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "3f3e0ff2477bc54cd75ac717",
+      "title": "AI彼女 見た目 作成",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPd19uaWxCSWlvbVg0WmVpTm0yS1BQc1RONjlQZ1FjemVjaDJVQndmaU5LWXQzSEFwZlRJeEJmQm5MY2hyOTdZdVVzRk5fVmUzbnBKU2RCQloyRVFoTHBGNi12N1NfbjJBc0tZSEZFNHpJVHFYWGNaSmVHT3d2eHBaaFJsRklIX0t6RXVZdlBFOXhQUVZob1cwcV96RU9rZWxma1R2aHhEOGk0Zzhmc1RnWEU5MGFydHdMSkl3NHhIWTJfcWExejYwRUFMZmRFZjFL?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T09:49:24+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "73c74a5a2c164f418f1d7890",
+      "title": "AI彼女 オリジナル 作成 ai",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQVkhjMVVGMW9sd0xqbl9pSGVuTE9sdk1FRFRYcFBEZVBLQU80bTk4S21iNUpqcGpQMTVrWDRVWlNkZjhxOFVtSWstcEh1eTVjN05HM2NEY3FwbllsaG5Xa21Oem1zZHAydWdNRTdqZTVGbjZxMlBjSGZoUVc1LXJFeENFVlVVVi1ZUHk3MHdZMXN4NVZTeDR1MWpXNS1UNVZsWVM0VGdsOTNPWlluMWF5bEVvYWVhMzBDV1ZzN3IwUEJzOVJWS1RXRXIzM1d2d05wUTNiTEotaHFMeVh2cWt0TUNyRlZGTGZ1WEZwNHVkSWZsVm95?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T09:47:55+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
     {
       "id": "9307661030d524eb30990087",
       "title": "NTTソルマーレの「コミックシーモア」、不正アクセスで最大約420万件の情報流出を発表（INTERNET Watch）",
@@ -159,6 +651,35 @@
       "published_at": "2026-10-22T09:30:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
       "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "source_ids": [
+        "companies-1"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "9432",
+          "name": "NTT",
+          "basis": "見出しに企業名",
+          "matched": "NTT"
+        }
+      ],
+      "official": false,
+      "priority": "重要",
+      "signal": "注意語あり・原文確認",
+      "reason": "不正",
+      "summary": "見出しに「不正」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "17a85347401a6c08aa01e208",
+      "title": "NTTソルマーレの「コミックシーモア」、不正アクセスで最大約420万件の情報流出を発表",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE43Vm5Nc25EaGsxdk1iaXhzT2RPTXRwTWRqYms2eUh4T1paX0lKblk4VkRxSjBaTHFDMVBPMGdtVzFjY2hVZ3RicTJGUFFseUhOYk5pWmhNM1cxTnhUa3VpY29CVFlIc1BqU0ZJ?oc=5",
+      "publisher": "INTERNET Watch",
+      "publisher_url": "https://internet.watch.impress.co.jp",
+      "published_at": "2026-10-22T09:30:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -209,7 +730,7 @@
       "publisher_url": "https://jp.investing.com",
       "published_at": "2026-10-22T08:43:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -231,7 +752,7 @@
       "publisher_url": "https://sattu-ai-agent.com",
       "published_at": "2026-10-22T08:38:20+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -247,14 +768,81 @@
       "summary": "見出しに「発表」。発表内容と対象範囲を原文で確認。"
     },
     {
+      "id": "df6fffe9edaee14e72644a27",
+      "title": "ChatGPT の画像認識と音声機能",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9FSFJSaDl3bzZQWDloejQzN1E1ZnFDZkZ6MUpLcHlFOWMyeW9wOVJNU0tteGJXZjhBUWM5MUk2ekRRN3E4ZFZNN0U2Ql95Mjh0ZnFGcTdoQ2xZcmhXUVU5QmFZc3J6eFZvSS1tRUNmY05jbFBQY1ZN?oc=5",
+      "publisher": "OpenAI",
+      "publisher_url": "https://openai.com",
+      "published_at": "2026-10-22T08:37:59+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": true,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "54991053cd47800db25c8cf5",
+      "title": "今買うと大化けを狙える光半導体銘柄5選、2026年秋の商用化局面を分析 Candace Parker (4sjgNqoDn4)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdWM1ckNJdTVTSDRQd2QxV2JhUTdoU3MxSmVoMFdtY0FLZ2IwZWptZnRkdjExNnE3NHkyVjNqMHR6VS1pcGlLdkJVSWgwbi0xMmdnSjZRN1RaTFFreDZYQW9wdEp0VHZxOFJiam93eDY5QjgyMjBZT1pwX1l1R2lHLXNlTkl1STg?oc=5",
+      "publisher": "Unisba Media",
+      "publisher_url": "https://media.unisba.ac.id",
+      "published_at": "2026-10-22T08:17:40+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "quantum"
+      ],
+      "themes": [
+        "量子・IOWN",
+        "半導体・基盤"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "d9f061eca640e7aa7bceb49c",
+      "title": "【決算速報】日本調理機、前期経常を一転50％増益に上方修正・2期ぶり最高益、配当も30円増額(株探ニュース)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRERfV2RRQ1NLMVlGX3UxTm0wd25CYmIyTmNSbUNHbGttMmN3cjN3WHg1Q2t3VW5uSHA3ZUU1WV9RVHNvNHhTankyb2lDRXNuZ09VZkliZWpLWHRlMjQ5a1c1aTZpOFp6SlRZU1k2Wk9ZSXQzMmFtLVBxY1lLNlFkQThFNWdxZkU?oc=5",
+      "publisher": "Yahoo!ファイナンス",
+      "publisher_url": "https://finance.yahoo.co.jp",
+      "published_at": "2026-10-22T08:16:03+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "上方修正／決算",
+      "summary": "見出しに「上方修正・決算」。発表内容と対象範囲を原文で確認。"
+    },
+    {
       "id": "7939c22efb1b716d1a1d2b36",
       "title": "日本調理機、前期経常を一転50％増益に上方修正・2期ぶり最高益、配当も30円増額",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA1T1VoOTBoZGRIdkFrQXl3bWdWeXRqbHhPalJwazJEZVh2ZXIwVEV5aEk1VVVmZFZFdDlHSEk2d3lLdVZFc0VVdEtycTlERS0xR0E?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9SeFZVSGdpRS1oTDEzNWs3X1E0VkZSUU9qd1YwV0RyTHlYNlVMVjRNeXJRbzUxX1JibFVYbDFJa1lzb0ZpYUJJRnFudUJVT1F6TGc?oc=5",
       "publisher": "株探",
-      "publisher_url": "https://s.kabutan.jp",
+      "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T08:15:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -276,7 +864,7 @@
       "publisher_url": "https://diamond.jp",
       "published_at": "2026-10-22T08:10:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -298,7 +886,7 @@
       "publisher_url": "https://www.atpress.ne.jp",
       "published_at": "2026-10-22T08:04:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -327,7 +915,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-22T08:00:59+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -349,7 +937,7 @@
       "publisher_url": "https://www.nomura.co.jp",
       "published_at": "2026-10-22T08:00:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-8"
       ],
@@ -365,14 +953,65 @@
       "summary": "見出しに「決算」。発表内容と対象範囲を原文で確認。"
     },
     {
+      "id": "948033a2cddab113438e83f6",
+      "title": "水回収企業Aquaria、データセンター向けモジュール型オンサイト給水システムの実証試験を開始",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcnlPeWVLd0FvVXFCRDNiMktKaTQ1QWFaT0ZxQzI0cDBIcGYwR2syV0E4UGVRUUxKVnpGM1kyV180ajZnTDNCWmdUanFXc01KbDA2VkNTTmZVV3kyejFfVUt0UFQ4RXViYWN5enRHVXFVVTFBU1o0R0JabldFOENfZHdjd002cGdaSlNXZzdpdjZoVG8wMGpYOTNYclhRSy1hVFRDaDRNZS1IaDQySjhDSkM5Sktlejg?oc=5",
+      "publisher": "データセンターカフェ",
+      "publisher_url": "https://cafe-dc.com",
+      "published_at": "2026-10-22T07:54:24+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "chips"
+      ],
+      "themes": [
+        "半導体・基盤"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "4f4f8f4a02854951ddc61514",
+      "title": "ソフトバンク会員サイト「My Softbank」など再開 不正アクセスの試み判明し一時停止",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE11MmZNWmtfLUJVR2xpNVJZbDZUaFRackJSTDAzUkI5cG9ZczlMMFNHZ2luUUh1aE1TTXc1YXpoc2JBRnBEdVkwSFR0Y0F3QlNYbi1md1Z1TQ?oc=5",
+      "publisher": "TBS NEWS DIG",
+      "publisher_url": "https://newsdig.tbs.co.jp",
+      "published_at": "2026-10-22T07:41:21+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-7"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "9434",
+          "name": "ソフトバンク",
+          "basis": "見出しに企業名",
+          "matched": "ソフトバンク"
+        }
+      ],
+      "official": false,
+      "priority": "重要",
+      "signal": "注意語あり・原文確認",
+      "reason": "不正",
+      "summary": "見出しに「不正」。発表内容と対象範囲を原文で確認。"
+    },
+    {
       "id": "bcda8276076abc38fddf3483",
       "title": "データクレシスが提供する量子コンピュータ時代のPQC対応IRM「DataClasys PQC」の特徴と魅力",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uYjRzaTVjU0wzUmlwU3hDQ1BQVkk2NHpxNkI1dUppeVJCUWtjRDR1S3h5a2pPakdLeXdZd2tEbFA5X3V2amZuU0hYSGNiWDM2M3dpeVdMUk45VGh5Qnd0Yml6MkxxbG53WWV2aS1QQQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zV3NtMGltWmxraXBaZ19RclQ2Mkc4SE5uTEgyN0VYN3pLd2l3V0tlb0RwQzZwemJnTUhhU3M3S2hXRU1jbDNSd05iTkh5UjZCTVY2aUFZS0JYdnVvWGpwWENVYUlSNEdJejlSRg?oc=5",
       "publisher": "ニュースメディアVOIX",
       "publisher_url": "https://voix.jp",
       "published_at": "2026-10-22T07:35:17+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -394,12 +1033,56 @@
       "publisher_url": "https://xenospectrum.com",
       "published_at": "2026-10-22T07:27:18+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
       "themes": [
         "量子・IOWN"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "5cf58fd42912e6885bdc7dcf",
+      "title": "香港市場の自社株買い、100銘柄で総額320億円（10月22日）",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1rTGZnSldzRXZ6RHVQNXJpeXNpTzhUZlFBajltejFqT25BdHRxM0VONnd2Qk1VbnNWVXp5a19FWERDRGtqWllSdmFQSjJzVTY1MDhLdXF2RXp0NFZrUXVDbGppWHJwY3ZYS05xVlRhb1k?oc=5",
+      "publisher": "TradingView",
+      "publisher_url": "https://www.tradingview.com",
+      "published_at": "2026-10-22T07:25:36+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "corporate_events"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "9c6012476720be4870ee66e1",
+      "title": "生成AIを利用する就活生の77％が応募判断でAI回答を参考。内定承諾でも69％",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9RaE90UXlJSzBTb18tNEJBLVA5TnJFemZRMHNmTzVweTZMWExiOHJCMnRza1Q1MGFUMjhzNGZsS1gydXZsV25JcnFLLU52dmNiZXpMZm5CamJ5bDBDcjBaU3Fxaw?oc=5",
+      "publisher": "AIsmiley",
+      "publisher_url": "https://aismiley.co.jp",
+      "published_at": "2026-10-22T07:17:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
       ],
       "related_stocks": [],
       "official": false,
@@ -416,7 +1099,7 @@
       "publisher_url": "https://www.mk.co.kr",
       "published_at": "2026-10-22T07:11:38+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -439,7 +1122,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T07:11:02+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -456,12 +1139,12 @@
     {
       "id": "9447760d22ae6b9f232a3ede",
       "title": "Ｔスマート、上期経常を64％上方修正",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9SWUN0TmlOVS1EVGRoSFNyUURVS21kTXBGc29KLXdQMWczYWVmbDBrY2ZjNzloazFod0N2QzFYaG9DbUFoT24tZkNaazAzVHZQNWc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1DUHFjQkh1NFRWd1U4TGxrUWY0S2V1cTJ1LWxDdy14T0VuNm15NEVPOHhhR052SDcxVFRTUTN2ckdNLXZSQ0JtbWs0d1M1T0dMSmc?oc=5",
       "publisher": "株探",
-      "publisher_url": "https://s.kabutan.jp",
+      "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T07:10:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -483,7 +1166,7 @@
       "publisher_url": "https://www.fanuc.co.jp",
       "published_at": "2026-10-22T07:07:47+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "official"
       ],
@@ -499,6 +1182,35 @@
         }
       ],
       "official": true,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "597bd8a82b97151a23baf94d",
+      "title": "古野電気(株)【6814】：今の株価の理由は？値動きの背景をAIが解説",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1mY0Fua0V0RjBac3NaMkNQekhOSDNNd2g2aEpObXltQkp4ZjBPc0F4dmprdFFHcEpGSTlCMFRURk1qdTRwV21VQWFyUllZcXdjYTZFTWV1dGdveWMtaDdZ?oc=5",
+      "publisher": "Yahoo!ファイナンス",
+      "publisher_url": "https://finance.yahoo.co.jp",
+      "published_at": "2026-10-22T07:06:18+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-8"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [
+        {
+          "code": "6814",
+          "name": "古野電気",
+          "basis": "見出しに企業名",
+          "matched": "古野電気"
+        }
+      ],
+      "official": false,
       "priority": "注目",
       "signal": "動向情報・影響未評価",
       "reason": "AI関連キーワードに一致",
@@ -541,7 +1253,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T07:03:22+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-2"
       ],
@@ -563,7 +1275,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T07:00:53+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -580,12 +1292,12 @@
     {
       "id": "51a8c68e700b71174308ed76",
       "title": "サークレイス、上期経常を一転赤字に下方修正",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE11LWVza09mQnFjcW5uTWZPdE54MlBSQU5GQnZfaUZTNC1JdEtjYlN3YjRjeXdURVpaUVgtNmJjcFc0clJQM3FycFZmYmdobi04Y2c?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE05NmdVNl9zUmU3Ty1FN0FLc1lpVkFmNmRPS1RZMXhDUWZIbll1Yjc3XzgyYlF1ZUVoS1FJcWxVM2JaR3FxbV96ejFVYTFHMlNlc3c?oc=5",
       "publisher": "株探",
-      "publisher_url": "https://s.kabutan.jp",
+      "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T07:00:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -617,6 +1329,37 @@
       "related_stocks": [],
       "official": false,
       "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "a566e8156fcf4b65869f0714",
+      "title": "(株)ハーモニック・ドライブ・システムズ【6324】：今の株価の理由は？値動きの背景をAIが解説",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1VdE1UaWNTVmVYOUp5bGRhdllrSVJsRm9DMldpRVdlY2EwTkxGZDMwWDFKeFhoODZoSVpkS2pKc085YTExTVRpRENoaXpLSk14Q0tOOWhRRG1yZGI2OXg4?oc=5",
+      "publisher": "Yahoo!ファイナンス",
+      "publisher_url": "https://finance.yahoo.co.jp",
+      "published_at": "2026-10-22T06:57:45+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-3",
+        "robotics"
+      ],
+      "themes": [
+        "AI",
+        "ロボット"
+      ],
+      "related_stocks": [
+        {
+          "code": "6324",
+          "name": "ハーモニック・ドライブ・システムズ",
+          "basis": "見出しに企業名",
+          "matched": "ハーモニック・ドライブ・システムズ"
+        }
+      ],
+      "official": false,
+      "priority": "注目",
       "signal": "動向情報・影響未評価",
       "reason": "AI関連キーワードに一致",
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
@@ -658,7 +1401,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T06:53:06+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-2"
       ],
@@ -682,12 +1425,12 @@
     {
       "id": "45bb6a9ef631bdfe2848bdb0",
       "title": "(株)三菱ＵＦＪフィナンシャル・グループ【8306】：今の株価の理由は？値動きの背景をAIが解説",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1UNHFKRmdJbVM3Z3JOeW9GQTRTNlJiNURfTlVNTUNLSklHb1FJc1JseWp6TzQ3YlYtRjB4T3RBSmpheTBBWGtpVGVYUlNESW5WZnppRXp1SzYwbmM0ZG9R?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1oNVRyU21seTRreG9UUWh2VU9PUkRfbHNWdWxFMHFIZnZ5dnNPTnR2dU8taVdGb0xkZEc5MkdnZ2tmY1VHc0dkODdqZXpnS01xZGtMMGhoYkg3OUUzamRF?oc=5",
       "publisher": "Yahoo!ファイナンス",
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T06:52:43+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-2"
       ],
@@ -731,7 +1474,7 @@
       "publisher_url": "https://topics.smt.docomo.ne.jp",
       "published_at": "2026-10-22T06:41:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3",
         "robotics"
@@ -761,7 +1504,7 @@
       "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T06:41:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -791,7 +1534,7 @@
       "publisher_url": "https://www.mk.co.kr",
       "published_at": "2026-10-22T06:34:12+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -835,7 +1578,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T06:31:16+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -857,7 +1600,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T06:31:16+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -879,7 +1622,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T06:31:16+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -901,7 +1644,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T06:31:05+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -918,12 +1661,12 @@
     {
       "id": "7c16757409f66ccf875933da",
       "title": "明星工、上期経常を一転7％減益に下方修正",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE04c0tJOEdGYzNPMUdQTFlKTWZRRlVHY05mNzVMdTdQYWJjSU00THprSklDOVp2TG5IZkplS2RCUm85TE9SYlcxVk1SUHZ6V09LcHc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lOEZReng1ank2SDVfSTNBRU95WV9MTW80aXloZDVzODlDSThMdzhXUUJZVTE1dzhNWmtfcnBSWjVtWkJrR1BBRkxkVWYwV1VrQUE?oc=5",
       "publisher": "株探",
-      "publisher_url": "https://s.kabutan.jp",
+      "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T06:30:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -940,12 +1683,12 @@
     {
       "id": "f08a569a43c4d1307a4bff4f",
       "title": "コロナ、上期経常を赤字拡大に下方修正",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5WQzhHeUY2YlBzQWdLcjdWODhKUzRVRGhPTHlvQ0MtZnNLVjFQMHdVaDhGR2dfdUowNzVscjg0dVlXeUFZc0QxRy1uLWY4dVZYeF9r?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RRUZiYkdPVlZodmhvcnFneHRVWHJ5U3FwSS1HVnRCUWpEWUtfaUMyakdJRHBwRm5XRmJ0NUtoZDZlUWNCaUZiaFNtX2pWeTdSVkE?oc=5",
       "publisher": "株探",
       "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T06:30:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -962,12 +1705,12 @@
     {
       "id": "04fd916199db32e6a58aa36f",
       "title": "共栄セキュリ、今期最終を一転赤字に下方修正",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9XS0t5Z2s4NEE4MXkxbEUwNFI2YXR2el8wcUhCQUg3eklBcnI3T0hGdndLZjRkdkMwX0ZSM0UtYlR6MXNXZ3dvUlYxcEx3amxZZ2c?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE83Z21xM3YwVzlxdUgzUTdnN2gzN3pQczFubjM4aEFOTnp1QlVXeVJXSFF2OXhqSG94Q2ZIQUEzb2pzUHRnMVNmVDc1TFk5RG9scFE?oc=5",
       "publisher": "株探",
-      "publisher_url": "https://s.kabutan.jp",
+      "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T06:30:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -989,7 +1732,7 @@
       "publisher_url": "https://s.kabutan.jp",
       "published_at": "2026-10-22T06:30:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -1011,7 +1754,7 @@
       "publisher_url": "https://www.nikkei.com",
       "published_at": "2026-10-22T06:30:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-8"
       ],
@@ -1033,6 +1776,35 @@
       "summary": "見出しに「決算」。発表内容と対象範囲を原文で確認。"
     },
     {
+      "id": "585aa4ac80f87f1eac5f4ce0",
+      "title": "アクセルマークが債権取立不能のおそれ、提携先と貸付先 企業不況",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5SdjJRZFI5b1FhNDcwb3FNM3UzOU1JQmMyWC1JNnIybHZ0azktd2IyenpickNHODVYQ1BKanZIWGJRYWJ6SGtKNlVJSjBKd3JyNjNvQjRDejBNZzNucGRYSk5TSUZyRlFVRWpabG5oaDY?oc=5",
+      "publisher": "不景気.com",
+      "publisher_url": "https://www.fukeiki.com",
+      "published_at": "2026-10-22T06:14:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-8"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "6730",
+          "name": "アクセル",
+          "basis": "見出しに企業名",
+          "matched": "アクセル"
+        }
+      ],
+      "official": false,
+      "priority": "重要",
+      "signal": "企業イベント・影響未評価",
+      "reason": "提携",
+      "summary": "見出しに「提携」。発表内容と対象範囲を原文で確認。"
+    },
+    {
       "id": "57093d2cca59957539395795",
       "title": "AI彼女 無料 iPhone おすすめ",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNRlk0bWhGYXU3VUhTa1F5Yjk1dlZXbjhJanMtUERVWEM0ejBCMzZ4TlpvdnVWeE96ZXplNVROWU5mZi01Y2hwZ3kxT2VOdFMxU1E3VHBCZjdoOXFrV3RwaUM4MnZULUQ5RWJ5YWJGN1R0VDZXaF9SMjJWakZrVGt1RFlqdl9rbFEwQXJVMjlEUVYxbnpVUWZnTmgtbFRINkJWZTFpM3lveEFFZEhORWxkTDlDSWljTWJuX0wyOVkxVUZUY3E5a183NHA2amZHOWpQ?oc=5",
@@ -1040,7 +1812,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:11:49+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1106,7 +1878,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:10:27+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1150,7 +1922,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:10:16+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1172,7 +1944,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:10:14+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1194,7 +1966,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:09:01+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1282,7 +2054,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:02:15+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1326,7 +2098,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:01:44+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1370,7 +2142,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T06:00:15+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1385,6 +2157,29 @@
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
     },
     {
+      "id": "26f51303768091297ac8d351",
+      "title": "日立エナジー、データセンター分野および電力網向けの統合電力ソリューション開発でAnsaldoと提携",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbm9GR0dJMGItdHBXYk1MRkpuUGUyVGNOMl9fR05acEx6ZElURXpVYXloSzQ5NFJKZjB4cEpra1dUOUxXWUl0ei1ScFVGX2htTnRlbkhEMkhtMmVxaFdRa3daTzNvNjFFbThDQUhBTkwtcFRKVnF2MWF4am4xVGRYc0I1YWd2NVRHTjFmRWtwNi1WcjJ0NENBdW5iNUZsR2FZM2hXb1lIYWRBS1o5aUI5ei1udEIxMjR4V3gxczhSRDlkT1lqbjBKdEhJRXV3Zw?oc=5",
+      "publisher": "データセンターカフェ",
+      "publisher_url": "https://cafe-dc.com",
+      "published_at": "2026-10-22T05:59:47+00:00",
+      "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "chips"
+      ],
+      "themes": [
+        "半導体・基盤",
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "提携",
+      "summary": "見出しに「提携」。発表内容と対象範囲を原文で確認。"
+    },
+    {
       "id": "79bf5535c7e2f33ff35f8e1b",
       "title": "恋愛AI iPhone",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQaF9DODR4YVFnbHpKZlROOWcwUFlrZjJUaWlFMkxadmRCRE1weFFJN0l4U0toLU1nRExuUHhMZG9UTkh4cjJ1Y3hPQm5mSUNJZEQ1UjE1cG5fLXNLVTFvX2hidjdPUU9iLUo0R2s4di1aWmY3NXlnOFk3OEhkRkdKOHZTWWw4UDIyNmNPLVhLZmU0ZVpBUTJ0czc0M2hsWVIxX0RHalRFWncwUjI2Nk1pMFFuRmQwR2RRUURqU2VsUjlOLW9pZkNGOGE0cXV1d2NB?oc=5",
@@ -1392,7 +2187,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:51:41+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1414,7 +2209,7 @@
       "publisher_url": "https://spacemedia.jp",
       "published_at": "2026-10-22T05:51:11+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-8"
       ],
@@ -1436,7 +2231,7 @@
       "publisher_url": "https://cloud.google.com",
       "published_at": "2026-10-22T05:51:08+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1458,7 +2253,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:50:38+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1480,7 +2275,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:50:29+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1524,7 +2319,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:49:30+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1539,29 +2334,6 @@
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
     },
     {
-      "id": "26f51303768091297ac8d351",
-      "title": "日立エナジー、データセンター分野および電力網向けの統合電力ソリューション開発でAnsaldoと提携",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbm9GR0dJMGItdHBXYk1MRkpuUGUyVGNOMl9fR05acEx6ZElURXpVYXloSzQ5NFJKZjB4cEpra1dUOUxXWUl0ei1ScFVGX2htTnRlbkhEMkhtMmVxaFdRa3daTzNvNjFFbThDQUhBTkwtcFRKVnF2MWF4am4xVGRYc0I1YWd2NVRHTjFmRWtwNi1WcjJ0NENBdW5iNUZsR2FZM2hXb1lIYWRBS1o5aUI5ei1udEIxMjR4V3gxczhSRDlkT1lqbjBKdEhJRXV3Zw?oc=5",
-      "publisher": "データセンターカフェ",
-      "publisher_url": "https://cafe-dc.com",
-      "published_at": "2026-10-22T05:42:18+00:00",
-      "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "半導体・基盤",
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "提携",
-      "summary": "見出しに「提携」。発表内容と対象範囲を原文で確認。"
-    },
-    {
       "id": "2f448fcf439220053b5063ac",
       "title": "KDDI、BroadcomとAIデータセンター省電力化に向け技術提携",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5wOHNURko1WlIwNGdYc0tDaDg5eEF1b2FOdGZ4emJ4Ulo4VlNqRFB0WFlWbEwyM2NkcUR4enpYNnRHbEd6RWw4dVNkN1R1dEZvMXlpNHNubVBUdw?oc=5",
@@ -1569,7 +2341,7 @@
       "publisher_url": "https://enterprisezine.jp",
       "published_at": "2026-10-22T05:40:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -1637,7 +2409,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:36:39+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1659,7 +2431,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T05:36:37+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -1682,7 +2454,7 @@
       "publisher_url": "https://www.sbbit.jp",
       "published_at": "2026-10-22T05:36:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -1699,28 +2471,6 @@
       "summary": "見出しに「提携」。発表内容と対象範囲を原文で確認。"
     },
     {
-      "id": "dc7169d08dfd5d0703d1cffa",
-      "title": "ＵＥＸは後場急騰し年初来高値更新、２７年３月期通期業績予想を上方修正",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE92N2hHV3kwMVF1RjM2Mm1Ia1V6c3Vuc2NVQ3QzbjVKQUV1WHFQVFdLMUQzaGR0Z0d0VVdUU3FXYzlFVFB2aVpnMDJkV2hvVkxmMUE?oc=5",
-      "publisher": "株探",
-      "publisher_url": "https://s.kabutan.jp",
-      "published_at": "2026-10-22T05:34:00+00:00",
-      "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "corporate_events"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "上方修正",
-      "summary": "見出しに「上方修正」。発表内容と対象範囲を原文で確認。"
-    },
-    {
       "id": "25a5c1e0f4dfdeb79b4cfee4",
       "title": "エロ動画生成ai",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNNkR2dms3ZzhaNW1nUzFSclhIQUJpVDVjS2lYQjlhYUx4WENYQWZoSVhoRmJXOFlwa1FsODZteDloU2Etb0xTMWZNVFBYcVhlRjVmdXNWbTF6b0RXT2w4VjhETDE3M05ZUlhNSUprZ3E4aGloWDFPdHRMeW9BamdPR3pUSkZFLWdCQnN1R2ZCLWd4LW5DQS1OUlJaZFhFVHhOSFpzMEx4azJjc0FLUDJmcVVJSDhKVERfQXdnNHhVbG9WLVdGQXhCZEFsOFM?oc=5",
@@ -1728,7 +2478,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:31:22+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1750,7 +2500,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:31:21+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1772,7 +2522,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:25:58+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1794,7 +2544,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:22:48+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1816,7 +2566,29 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:19:43+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "1e57cdd8f140160722de4b67",
+      "title": "話し相手AI 日本語",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZXR3eHU2QkE1cVd0dGFkUkhYX3I2c19vZ3lOQzNOczhxOG5rTWh4UjU1WEY0cXl6X0VwTHA3aDg1NTNEb3h5a2d1R1p5Vy0yRnBlXzd2bDR5TnJvVWJOZnhxRS1hQlI2WGhfdG10TnJCdkduVGQtcGRmcWQyOFFnSldsR0oxNXJZRERJcnZWTFpqZlBadm1WX1VLNEhucVlVT0kySGNTYUpSTFY1d3c1bTVmT3ZNQll4RUVicnNxZFBtaWQ4eGs5dXNLdkNoQmoz?oc=5",
+      "publisher": "北陸地方整備局",
+      "publisher_url": "https://www.hrr.mlit.go.jp",
+      "published_at": "2026-10-22T05:19:15+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1860,7 +2632,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:16:56+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1882,7 +2654,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:14:15+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1904,7 +2676,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T05:12:30+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -1948,7 +2720,7 @@
       "publisher_url": "https://www.hrr.mlit.go.jp",
       "published_at": "2026-10-22T05:10:50+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -1987,12 +2759,12 @@
     {
       "id": "0ae814cd66fa321e9dfe845c",
       "title": "ＵＥＸ、今期経常を28億～33億円に上方修正",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE91NmYtY055RmRHYWZxSlBKR1FJaF9uV0NBbjBmR28xTVBsMkFLQzJVbklONk5XVXlWaDNjVTJiZG1SNldCSkUza2pjaG1UblhkX1E?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE43dXp5QmZuQndCczZZUzVVemtzanFlRE1wYTVxeXFsalhrMU04dE5aaEZHRHpMeUhXNUdRZzE5ZC1sMjlQc0NzVTlBZ3lRNDQ2T2c?oc=5",
       "publisher": "株探",
-      "publisher_url": "https://s.kabutan.jp",
+      "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T05:00:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2007,6 +2779,29 @@
       "summary": "見出しに「上方修正」。発表内容と対象範囲を原文で確認。"
     },
     {
+      "id": "a8083c92a05e9fa5280ee227",
+      "title": "イオレ---反落、NVIDIA Blackwell Ultra搭載GPUサーバーの受注開始発表も 執筆",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5KaDkwSVd5MG42T1VQd0lseDdfb3EteGM4eTJpRXBLLUt0bzVvX1cxNldqNEUzNmtJekE0Y3M2elU2NVRrdFNOX240WG5WYUtCYk5fNUhzYzBkdU96Zzgtb09XcHRpYXhxLTJ0M1RlbmU?oc=5",
+      "publisher": "Investing.com - FX | 株式市場 | ファイナンス | 金融ニュース",
+      "publisher_url": "https://jp.investing.com",
+      "published_at": "2026-10-22T05:00:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "chips"
+      ],
+      "themes": [
+        "半導体・基盤",
+        "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "企業イベント・影響未評価",
+      "reason": "受注／発表",
+      "summary": "見出しに「受注・発表」。発表内容と対象範囲を原文で確認。"
+    },
+    {
       "id": "08913c5024e2b285b6d4407d",
       "title": "上松電子、MENOUの「外観検査AI」を導入 車載USBポート外観検査工程を効率化",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1LNUNVWUloVzdSbHZaMHJEcy1PRHVvbEczamVxbjc3YmZseGdZc3FEUWhwOGg2OHFWeThjMmtnNzdVUzNZUTA2UzRaSVRiam53M0huYXhR?oc=5",
@@ -2014,7 +2809,7 @@
       "publisher_url": "https://enterprisezine.jp",
       "published_at": "2026-10-22T04:59:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-8"
       ],
@@ -2036,6 +2831,28 @@
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
     },
     {
+      "id": "95f74cd9542f9adc7dd25a83",
+      "title": "Komdigiはインドネシア東部へのデータセンター開発の拡大のステップを準備します",
+      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1wOGJZY21CcDU5c0NBaEZaSHNvOE5Ta09GRHpaWFF5T1F1c0Q4Q1J6Sy1NQk9Xc3hoNV84dHVLTUUwZ9IBQkFVX3lxTE1wOGJZY21CcDU5c0NBaEZaSHNvOE5Ta09GRHpaWFF5T1F1c0Q4Q1J6Sy1NQk9Xc3hoNV84dHVLTUUwZw?oc=5",
+      "publisher": "VOI.ID",
+      "publisher_url": "https://voi.id",
+      "published_at": "2026-10-22T04:58:19+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "chips"
+      ],
+      "themes": [
+        "半導体・基盤"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
       "id": "ccb46cf7f68a1a383c4dabc0",
       "title": "イオレ---反落、NVIDIA Blackwell Ultra搭載GPUサーバーの受注開始発表も(フィスコ)",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeElPQTh2STZWaW1MbTBzbTkxbWdUUkc3WmlUMjdYc2tsbEs3dDNfa05GYnQzVmtKaU9Sc3Mwa19VOFJCUGtqYjRLWEUxRmVCZXllUm1ialowTFp2UTlHRThDZC1rLVZGR2pZZG5heVJvQnI5Z0JEcDZzSzdYQ1RDUlloVHNGMVE?oc=5",
@@ -2043,7 +2860,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T04:55:42+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -2066,7 +2883,7 @@
       "publisher_url": "https://topics.smt.docomo.ne.jp",
       "published_at": "2026-10-22T04:55:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -2112,7 +2929,7 @@
       "publisher_url": "https://openai.com",
       "published_at": "2026-10-22T04:35:58+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -2134,7 +2951,7 @@
       "publisher_url": "https://ascii.jp",
       "published_at": "2026-10-22T04:32:52+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -2216,6 +3033,28 @@
       "summary": "見出しに「発表」。発表内容と対象範囲を原文で確認。"
     },
     {
+      "id": "d0bd61f71a80caea3a7746cd",
+      "title": "プラスアルファが大幅続伸､生成AI活用の教材作成支援機能搭載",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5xTUVnMXlUS2c5cWJITVZ6bVFRRGhWSDR4NzUzRlkxX2NyTENOT3dXMXBuZFZHNXhSYnBIR0FqQU42M1g3bFhHM1lZVlNuc0lNRnNHUVRVUQ?oc=5",
+      "publisher": "四季報オンライン",
+      "publisher_url": "https://shikiho.toyokeizai.net",
+      "published_at": "2026-10-22T04:18:09+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
       "id": "373987615b6f76a9fc8f3500",
       "title": "パステルカラーの「FMV Note C」がモデルチェンジ Ryzen AI 7搭載でAI機能を強化",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5RMmg2T3l4U0FwV05Hcjdpclk1Y1I3QXFWVWp3dzFIUllnTjNOTktZR3QyQWl1Z195NFExSWUtalRTaFZwY1FKakRKUmhrdWJtdFNxa3dZNXBNbXVNS3ZKUDNDOWlvRU14X1BVcHlhVzFLX2JSdVHSAXZBVV95cUxOUTJoNk95eFNBcFdOR3I3aXJZNWNSN0FxVlVqd3cxSFJZZ04zTk5LWUd0MkFpdWdfeTRRMUllLWpUU2hWcGNRSmpESlJoa3VibXRTcWt3WTVwTW11TUt2SlAzQzlpb0VNeF9QVXB5YVcxS19iUnVR?oc=5",
@@ -2223,7 +3062,7 @@
       "publisher_url": "https://news.infoseek.co.jp",
       "published_at": "2026-10-22T04:10:08+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-8"
       ],
@@ -2245,7 +3084,7 @@
       "publisher_url": "https://atmarkit.itmedia.co.jp",
       "published_at": "2026-10-22T04:00:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -2268,7 +3107,7 @@
       "publisher_url": "https://www.nikkei.com",
       "published_at": "2026-10-22T03:29:26+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -2334,7 +3173,7 @@
       "publisher_url": "https://news.infoseek.co.jp",
       "published_at": "2026-10-22T02:55:56+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -2380,7 +3219,7 @@
       "publisher_url": "https://kai-you.net",
       "published_at": "2026-10-22T02:52:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -2402,7 +3241,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-22T02:30:37+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -2462,7 +3301,7 @@
       "publisher_url": "https://ai.watch.impress.co.jp",
       "published_at": "2026-10-22T02:26:59+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -2484,7 +3323,7 @@
       "publisher_url": "https://www.kddi-research.jp",
       "published_at": "2026-10-22T02:10:02+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -2506,7 +3345,7 @@
       "publisher_url": "https://www.moomoo.com",
       "published_at": "2026-10-22T02:09:26+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -2557,7 +3396,7 @@
       "publisher_url": "https://prtimes.jp",
       "published_at": "2026-10-22T02:03:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -2579,7 +3418,7 @@
       "publisher_url": "https://corporate.jp.sharp",
       "published_at": "2026-10-22T02:02:53+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -2601,7 +3440,7 @@
       "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T02:02:08+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2623,7 +3462,7 @@
       "publisher_url": "https://www.chosun.com",
       "published_at": "2026-10-22T02:02:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -2667,7 +3506,7 @@
       "publisher_url": "https://newsroom.kddi.com",
       "published_at": "2026-10-22T02:00:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -2690,7 +3529,7 @@
       "publisher_url": "https://www.itmedia.co.jp",
       "published_at": "2026-10-22T01:56:01+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -2705,6 +3544,35 @@
       "signal": "企業イベント・影響未評価",
       "reason": "発表",
       "summary": "見出しに「発表」。発表内容と対象範囲を原文で確認。"
+    },
+    {
+      "id": "d3b700847142a0e45dfa11c1",
+      "title": "【PHP影響広がる】さくらインターネットや関西私鉄4社、自治体などがwebサービス停止「不正に遠隔操作される恐れ」修正パッチ適用のため緊急メンテナンス相次ぐ",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBXb2VHYVhOUUVJazBnck13UUw4ZnZtRnk4MzNJT3lXNWdlU21EdlZUYkZVRFM1elBCdWhQa01HTjF4UXNzVTBKNV9BMUF1TS1lX0wzUFZxVQ?oc=5",
+      "publisher": "TBS NEWS DIG",
+      "publisher_url": "https://newsdig.tbs.co.jp",
+      "published_at": "2026-10-22T01:49:13+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-2"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "3778",
+          "name": "さくらインターネット",
+          "basis": "見出しに企業名",
+          "matched": "さくらインターネット"
+        }
+      ],
+      "official": false,
+      "priority": "重要",
+      "signal": "注意語あり・原文確認",
+      "reason": "不正",
+      "summary": "見出しに「不正」。発表内容と対象範囲を原文で確認。"
     },
     {
       "id": "4c38520e839e67f59f99021e",
@@ -2743,7 +3611,29 @@
       "publisher_url": "https://enterprisezine.jp",
       "published_at": "2026-10-22T01:45:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "5454f6c0a287de2ff8aa9d17",
+      "title": "OpenAI、PHPの重大欠陥をAIで発見 Google傘下のウィズもAI活用し独自に脆弱性を発見",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwS2Y1amJDUnNmazg0TTNOWk04dFVPWjJBbkk3cEdMNmhGQjdzaHhRSTJKOEYxWE9icU1zQi1MaGFwVmx2bjBHUnBEM0hHVG12SUZGTXlOWEEyS1d2SVYwWG9BZ1NONzFqa3BnX3A3TDZ5OUVJeTF3UnVPajZWd0E?oc=5",
+      "publisher": "Yahoo!ニュース",
+      "publisher_url": "https://news.yahoo.co.jp",
+      "published_at": "2026-10-22T01:30:41+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -2765,7 +3655,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-22T01:06:47+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-4"
       ],
@@ -2794,7 +3684,7 @@
       "publisher_url": "https://global.fujitsu",
       "published_at": "2026-10-22T00:56:35+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "official"
       ],
@@ -2823,7 +3713,7 @@
       "publisher_url": "https://www.reuters.com",
       "published_at": "2026-10-22T00:44:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2845,7 +3735,7 @@
       "publisher_url": "https://www.tradingview.com",
       "published_at": "2026-10-22T00:44:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-4"
       ],
@@ -2874,7 +3764,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-22T00:43:55+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2896,7 +3786,7 @@
       "publisher_url": "https://news.infoseek.co.jp",
       "published_at": "2026-10-22T00:43:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2918,7 +3808,7 @@
       "publisher_url": "https://www.newsweekjapan.jp",
       "published_at": "2026-10-22T00:43:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2940,7 +3830,7 @@
       "publisher_url": "https://topics.smt.docomo.ne.jp",
       "published_at": "2026-10-22T00:43:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2957,12 +3847,12 @@
     {
       "id": "61a37ac1f9292bb0f73878f2",
       "title": "サイバーセキュリティクラウド株が20％高、不正アクセス相次ぎ需要拡大期待",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBnUElxRWJ0cnVua1daRnF3QS1uY196SE1fQy1JMEp3RHhXSE16WDR6dnYyWkh0Tl9ucnZUVGVwY2NubmhwTzYxLXRERkJucFhYTV9tVTJmTHpKakFITko1RXlNajJSbTFvNV9nMmZRNkVjeUhzWVhJ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4tQzJmR2dVaDcxZHV2Wmo3V0U4Qi1CcE81aTctdjNvUjkzR2ZXNi02b3Nkc3BYMWRfYUpaZUN5NjRnN0hLLUJIcFRkZHRqTWFDMXZtZ0xOZDRLbHZ2WVhrWU5pc0MwS1ROamxoVzdVUkpUVjZmYmkw?oc=5",
       "publisher": "TradingView",
-      "publisher_url": "https://fr.tradingview.com",
-      "published_at": "2026-10-22T00:40:59+00:00",
+      "publisher_url": "https://es.tradingview.com",
+      "published_at": "2026-10-22T00:40:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -2984,7 +3874,7 @@
       "publisher_url": "https://biz.chosun.com",
       "published_at": "2026-10-22T00:40:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3006,7 +3896,7 @@
       "publisher_url": "https://news.infoseek.co.jp",
       "published_at": "2026-10-22T00:35:29+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -3029,7 +3919,7 @@
       "publisher_url": "https://s.japanese.joins.com",
       "published_at": "2026-10-22T00:35:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -3074,7 +3964,7 @@
       "publisher_url": "https://thebridge.jp",
       "published_at": "2026-10-22T00:24:08+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3118,7 +4008,7 @@
       "publisher_url": "https://openai.com",
       "published_at": "2026-10-22T00:20:42+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3162,7 +4052,7 @@
       "publisher_url": "https://cloud.google.com",
       "published_at": "2026-10-22T00:10:49+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3184,7 +4074,7 @@
       "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-22T00:08:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3199,6 +4089,35 @@
       "summary": "見出しに「上方修正」。発表内容と対象範囲を原文で確認。"
     },
     {
+      "id": "b1566fb15dac9dc3b4da452a",
+      "title": "ＮＴＴ安値更新。トヨタ安値更新。三井不動産、安値。住友不動産、安値。-9%超の急落大型株。～あす上がる株 2026年６月９日（火）に上がる銘柄。最新の日本株情報。高配当株の株価やデイトレ情報 Ctv News Winnipeg (lpOqMh2mWQ)",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeHBCX1czcWlzYjU2aWJiRlZldXhLT2NwVGwxUGdEVnp6VEdNcDBIcTlVWmYxMVRIbXYtbXQ1N25Vd09MMUhiMWxObmdoY0JneF9BMXVxWjVHa3RJY1pLTFYzdjFIM3liV3MxZEpSUEw5UC1teW16dERTaW9tUm8ydkxrZWR1d0lO?oc=5",
+      "publisher": "Unisba Media",
+      "publisher_url": "https://media.unisba.ac.id",
+      "published_at": "2026-10-22T00:02:12+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-1"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "7203",
+          "name": "トヨタ自動車",
+          "basis": "見出しに企業名",
+          "matched": "トヨタ"
+        }
+      ],
+      "official": false,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
       "id": "fe7e8cd7c8d5f0e88ecdeb75",
       "title": "AI株の反発は買い場か？ヘッジファンドの大量売却とデータセンター投資の壁",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtU0Q4N3piellsMDRldTBCSFBaZUlrTENSZTlpY1lXUmw5OFh2bTduWFdYSDhiRlFwZjNfSlYzYTZEODZNYTVnRWZ0YUt1R0ludUplUk5DbUN6TFNqeXc?oc=5",
@@ -3206,7 +4125,7 @@
       "publisher_url": "https://jioinc.jp",
       "published_at": "2026-10-22T00:00:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -3274,7 +4193,7 @@
       "publisher_url": "https://www.itmedia.co.jp",
       "published_at": "2026-10-21T23:27:53+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3296,7 +4215,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T23:21:35+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -3325,7 +4244,7 @@
       "publisher_url": "https://diamond.jp",
       "published_at": "2026-10-21T23:00:00+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3347,7 +4266,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-21T22:32:08+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3413,7 +4332,7 @@
       "publisher_url": "https://xenospectrum.com",
       "published_at": "2026-10-21T22:01:35+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -3480,7 +4399,7 @@
       "publisher_url": "https://monoist.itmedia.co.jp",
       "published_at": "2026-10-21T21:45:00+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3525,7 +4444,7 @@
       "publisher_url": "https://www.watch.impress.co.jp",
       "published_at": "2026-10-21T21:00:00+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3547,7 +4466,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T20:41:14+00:00",
       "first_seen_at": "2026-10-20T07:11:33.303206+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -3599,7 +4518,7 @@
       "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-21T20:24:56+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3614,6 +4533,29 @@
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
     },
     {
+      "id": "4a37c81baf260621aa461bad",
+      "title": "OpenAI o3 による複雑なワークフローの自動化",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPWUNyVmtSWWFSYmlHZy1URkprNG11Sm04aDBGTHZJOU9rdkp2ekxIY3ZZUFc3ZHgzSm1MR3prUDJEb3BFSV9VdWNnWS16a1BYRXcyVFNpMGxzbXV3VHFzSUtmQWNzVFFNVktKc3hiQkU2eldsdHMxX1lITmxpbXFJcmZTd09keTBkcnc?oc=5",
+      "publisher": "OpenAI",
+      "publisher_url": "https://openai.com",
+      "published_at": "2026-10-21T20:12:53+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI",
+        "ロボット"
+      ],
+      "related_stocks": [],
+      "official": true,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
       "id": "134e63c0f29b09322a770af8",
       "title": "ChatGPT 広告、新たに 26 か国へ拡大 — 利用広告主は 100,000 社超",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9OWHNWdzFXX2VEUklRQlJLR3Q2Z092RFAwdG5zZ202c2FLVnlDYjk2Wl9lZXdmb2tfWXlTNUZ2aG55U2N1dlJvS21lZEZMVTFMczFXQXJRaHRhYWVVYUNIYm5vcU56WjhmSXdOT05aa3FBaXZkcm5Z?oc=5",
@@ -3621,7 +4563,7 @@
       "publisher_url": "https://openai.com",
       "published_at": "2026-10-21T19:36:25+00:00",
       "first_seen_at": "2026-10-21T21:34:35.493259+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3643,7 +4585,7 @@
       "publisher_url": "https://japan.ajunews.com",
       "published_at": "2026-10-21T19:35:18+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -3666,7 +4608,7 @@
       "publisher_url": "https://finance.biggo.jp",
       "published_at": "2026-10-21T18:26:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -3689,7 +4631,7 @@
       "publisher_url": "https://media.unisba.ac.id",
       "published_at": "2026-10-21T18:24:40+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -3719,7 +4661,7 @@
       "publisher_url": "https://finance.biggo.jp",
       "published_at": "2026-10-21T18:17:00+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3741,7 +4683,7 @@
       "publisher_url": "https://coki.jp",
       "published_at": "2026-10-21T18:10:42+00:00",
       "first_seen_at": "2026-10-21T21:34:35.493259+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -3792,7 +4734,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T16:47:43+00:00",
       "first_seen_at": "2026-10-21T21:34:35.493259+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3814,7 +4756,7 @@
       "publisher_url": "https://fr.tradingview.com",
       "published_at": "2026-10-21T16:36:13+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3836,7 +4778,7 @@
       "publisher_url": "https://www.tradingview.com",
       "published_at": "2026-10-21T16:35:29+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -3880,7 +4822,7 @@
       "publisher_url": "https://www.itmedia.co.jp",
       "published_at": "2026-10-21T16:12:28+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3902,7 +4844,7 @@
       "publisher_url": "https://www.nikkei.com",
       "published_at": "2026-10-21T16:04:47+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3918,35 +4860,6 @@
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
     },
     {
-      "id": "c846a3366142af1d1266f322",
-      "title": "NECネクサソリューションズとマイクロニティ、自治体システムのコスト最適化で提携",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE45cEhOVTd0OEtOVFFmSkcwdDB3UExFLXNHODRIYlpYcWZWTlA0SEw3NFdIUklnRFZHQlo4cVItdF9sd1M1aHc?oc=5",
-      "publisher": "Dellows News",
-      "publisher_url": "https://news.dellows.jp",
-      "published_at": "2026-10-21T15:53:25+00:00",
-      "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "companies-1"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [
-        {
-          "code": "6701",
-          "name": "NEC",
-          "basis": "見出しに企業名",
-          "matched": "NEC"
-        }
-      ],
-      "official": false,
-      "priority": "重要",
-      "signal": "企業イベント・影響未評価",
-      "reason": "提携",
-      "summary": "見出しに「提携」。発表内容と対象範囲を原文で確認。"
-    },
-    {
       "id": "2a9869e8da42b61ec13d5034",
       "title": "spaceX黒字化決算を好感するも上値が重い株式市場｜大橋ひろこ",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8wUnlPZHF4X1V4MmpIYUkwVmZxdERhbXVQSGEwS3dsWU1EdF9EeEN3OVJjVmtqbFFNelRTOUl4RE51bV9Dam44V3JlR0hWdDV6dkVYTzFBbEFaQQ?oc=5",
@@ -3954,7 +4867,7 @@
       "publisher_url": "https://note.com",
       "published_at": "2026-10-21T15:47:13+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-7"
       ],
@@ -3976,7 +4889,7 @@
       "publisher_url": "https://gigazine.net",
       "published_at": "2026-10-21T15:06:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -3998,12 +4911,34 @@
       "publisher_url": "https://www.nna.jp",
       "published_at": "2026-10-21T15:00:00+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
       "themes": [
         "企業・決算"
+      ],
+      "related_stocks": [],
+      "official": false,
+      "priority": "参考",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
+      "id": "af1072dcdf2bcafa8135f918",
+      "title": "生成AIは誰が、何に使っているのか－日本の利用率と技術進化の現在地－",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1sV0tkR3c0LVRjVGFjdXowQUthLUd1ZzRYeGNJU0phb01mWFJNcURxYk1BcTRlVUZBeEwwaThvRFpaUklnc3JQV2Z4Y25hcnh0Nk5ESW5OdkdwbzJ3YzA2Z0pBUExkWkFaWEZyRnZQSdIBf0FVX3lxTE1lSkNCYmV1RVkwWHVaYU42VlIzZlMwcTB0dlYzLUt3WjJMcTNDYnNkamR4UnBYSF9VTExlOGFBSXRJeXl3QkxmSnV3QTBCdVBMY3VjSlVHdXdJUkNYT2VWdy1tRjRnWUp2WUZUOHFKdGtJT0lqMkxyWDdsUTVIejQ?oc=5",
+      "publisher": "ニッセイ基礎研究所",
+      "publisher_url": "https://www.nli-research.co.jp",
+      "published_at": "2026-10-21T15:00:00+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "ai"
+      ],
+      "themes": [
+        "AI"
       ],
       "related_stocks": [],
       "official": false,
@@ -4049,7 +4984,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-21T14:38:19+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -4071,7 +5006,7 @@
       "publisher_url": "https://finance.biggo.jp",
       "published_at": "2026-10-21T13:35:00+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -4138,7 +5073,7 @@
       "publisher_url": "https://innovatopia.jp",
       "published_at": "2026-10-21T13:26:25+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -4160,7 +5095,7 @@
       "publisher_url": "https://finance.biggo.jp",
       "published_at": "2026-10-21T13:25:00+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -4206,7 +5141,7 @@
       "publisher_url": "https://tradersunion.com",
       "published_at": "2026-10-21T12:55:45+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -4235,7 +5170,7 @@
       "publisher_url": "https://www.nikkei.com",
       "published_at": "2026-10-21T12:46:46+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -4295,6 +5230,42 @@
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
     },
     {
+      "id": "0be47c5e8aaeb6e71b15ad26",
+      "title": "ファナックでも安川電機でもない…国策10.5兆円「フィジカルAI」で”目”や”関節”を提供する4社の名前（現代ビジネス）",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9QX1ZELUx4RG5OWmxrSlowcjZnMTB1ZjdhQkNWZWw2enJmT1FUQ3VNRUJOTmcyOXJmc0NJbXdOX1hDTjh5NjY2MHVqdWsxbDlPaGJfQmxBQXVHRExJYUVhNDFqaU5KVEwzV0dYQ3BlRkVYbGJYX21MakloVTg?oc=5",
+      "publisher": "LINE NEWS",
+      "publisher_url": "https://news.line.me",
+      "published_at": "2026-10-21T12:33:09+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "robotics"
+      ],
+      "themes": [
+        "AI",
+        "ロボット"
+      ],
+      "related_stocks": [
+        {
+          "code": "6954",
+          "name": "ファナック",
+          "basis": "見出しに企業名",
+          "matched": "ファナック"
+        },
+        {
+          "code": "6506",
+          "name": "安川電機",
+          "basis": "見出しに企業名",
+          "matched": "安川電機"
+        }
+      ],
+      "official": false,
+      "priority": "注目",
+      "signal": "動向情報・影響未評価",
+      "reason": "AI関連キーワードに一致",
+      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
+    },
+    {
       "id": "e95723de12da88d6d0ea6fb3",
       "title": "日立とファナック、フィジカルAI実装の共同事業化に向けパートナーシップ締結",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1LbFZpaGpQMTJnd3ItVnc3eVJEQ2cwTmFVbEcwUFBqYzBibnlJR1RtSHZXUktORjQxd1VJbDB4aWtCLWU0SlE?oc=5",
@@ -4302,7 +5273,7 @@
       "publisher_url": "https://news.dellows.jp",
       "published_at": "2026-10-21T12:21:45+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -4332,7 +5303,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-21T12:20:27+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -4361,7 +5332,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-21T12:20:27+00:00",
       "first_seen_at": "2026-10-21T21:34:35.493259+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -4390,7 +5361,7 @@
       "publisher_url": "https://www.mk.co.kr",
       "published_at": "2026-10-21T12:01:00+00:00",
       "first_seen_at": "2026-10-21T21:34:35.493259+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -4412,7 +5383,7 @@
       "publisher_url": "https://www.nikkei.com",
       "published_at": "2026-10-21T11:45:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -4434,7 +5405,7 @@
       "publisher_url": "https://jp.investing.com",
       "published_at": "2026-10-21T11:42:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -4527,7 +5498,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-21T11:00:43+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-6"
       ],
@@ -4549,7 +5520,7 @@
       "publisher_url": "https://crypto-times.jp",
       "published_at": "2026-10-21T10:54:28+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -4571,7 +5542,7 @@
       "publisher_url": "https://news.yahoo.co.jp",
       "published_at": "2026-10-21T10:47:19+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-2"
       ],
@@ -4600,7 +5571,7 @@
       "publisher_url": "https://finance.biggo.jp",
       "published_at": "2026-10-21T10:35:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -4624,7 +5595,7 @@
       "publisher_url": "https://media.unisba.ac.id",
       "published_at": "2026-10-21T10:29:18+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -4669,6 +5640,35 @@
       "summary": "見出しに「不正」。発表内容と対象範囲を原文で確認。"
     },
     {
+      "id": "e480857d35d1fed4f87c1019",
+      "title": "(株)日立製作所【6501】：企業情報（決算時期・代表者名・大株主情報・IR動画など）",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1WMGo2ZVlyLU52NF9yUk9WZFA4VGtsYmR0U0xqeGwxMmJzTUFHUU5zUkdheExZbER0QWtvUkZEQS0xM2JLYm9CYXRkV09zYmU4U1NBZjh2eDBaWDRmdjRvYi0tZ3piMHhfRkotVk1VTTRpODJYOXc?oc=5",
+      "publisher": "Yahoo!ファイナンス",
+      "publisher_url": "https://finance.yahoo.co.jp",
+      "published_at": "2026-10-21T10:02:22+00:00",
+      "first_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
+      "source_ids": [
+        "companies-1"
+      ],
+      "themes": [
+        "企業・決算"
+      ],
+      "related_stocks": [
+        {
+          "code": "6501",
+          "name": "日立製作所",
+          "basis": "見出しに企業名",
+          "matched": "日立製作所"
+        }
+      ],
+      "official": false,
+      "priority": "重要",
+      "signal": "企業イベント・影響未評価",
+      "reason": "決算",
+      "summary": "見出しに「決算」。発表内容と対象範囲を原文で確認。"
+    },
+    {
       "id": "f859005ac83e14f7001c7975",
       "title": "米写真販売ゲッティ、破産申請＝生成AI画像との競争激化(時事通信)",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMi10STd0TlFIaktaVllkZmdPMlN5b1U4Rm5PUnVIY2JnNF9IdmMwTHZlWGxfUXRLV010YWsxQ1VNOGpIc1dkZi0yay04bFRqUDAtZy1mTUpsT3p0THRweFRjdlZKWXVrOHcwUkdHN1JFQXhDMHRVS1BfNFJzVTcwMG9odDZiZzg?oc=5",
@@ -4698,7 +5698,7 @@
       "publisher_url": "https://mag.minkabu.jp",
       "published_at": "2026-10-21T10:00:00+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -4720,7 +5720,7 @@
       "publisher_url": "https://finance.biggo.jp",
       "published_at": "2026-10-21T09:55:00+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -4809,7 +5809,7 @@
       "publisher_url": "https://jpn.nec.com",
       "published_at": "2026-10-21T09:02:02+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "official"
       ],
@@ -4855,7 +5855,7 @@
       "publisher_url": "https://finance.biggo.jp",
       "published_at": "2026-10-21T08:55:00+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -4871,35 +5871,6 @@
       "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
     },
     {
-      "id": "cc18859896287341e2d4e6ba",
-      "title": "(株)安川電機【6506】：株つぶやき",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBoVVk4a0w3RmJzdjF2Z0hlMENzSXNpZ2w1eFRSeG5IOGNkdlQxR2VvN2xxemloYUU2YnA1NXJSOVk0bGhyYS04eUhRVm03LUhqeDhETnNJM1o?oc=5",
-      "publisher": "Yahoo!ファイナンス",
-      "publisher_url": "https://finance.yahoo.co.jp",
-      "published_at": "2026-10-21T08:42:12+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "companies-3"
-      ],
-      "themes": [
-        "ロボット"
-      ],
-      "related_stocks": [
-        {
-          "code": "6506",
-          "name": "安川電機",
-          "basis": "見出しに企業名",
-          "matched": "安川電機"
-        }
-      ],
-      "official": false,
-      "priority": "注目",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
       "id": "4e852380270a722aa9034408",
       "title": "なぜマイクロソフト（MSFT）は英国のAIデータセンター計画から撤退したのか？",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZmtsNjQ2TGxmWXZqVFEyRExiSEp2Ni0ySnJDUEw3Z2I2cHltRVY1RHRwU3h5cmVObzhfNzR4RUJha2tnb1V2UlI3ZjdhdFpDMGdnR2xjQXJqSHRLdHRKOGQtVk9JeWZWTHMxY3NkQzdqa2UxRlJVUGdLRXhZQkM2c0ZsX1cxcjA3OFVIVlBCMWvSAZYBQVVfeXFMUHRmRDNqdWFNc2ZsbmRDeVpKRER1N24tcF80X0xXSGJuN3lOWlBBWTd1eGdFMVJsME44a2pRaGFMVVlpSkh5LUwya1lKNWtwSzIteW5oY2oxMzhEOUZZMFpWNDM0V0FMS25xOWVRT2lYdzA0SnZTaDdpSDZqbjd6clJ3N1F3aGFZa2tONFFXSzk1SlN4djBR?oc=5",
@@ -4907,7 +5878,7 @@
       "publisher_url": "https://simplywall.st",
       "published_at": "2026-10-21T08:41:25+00:00",
       "first_seen_at": "2026-10-21T21:34:35.493259+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -4930,7 +5901,7 @@
       "publisher_url": "https://www.moomoo.com",
       "published_at": "2026-10-21T08:40:31+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-2"
       ],
@@ -4981,7 +5952,7 @@
       "publisher_url": "https://biz.chosun.com",
       "published_at": "2026-10-21T08:31:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5003,7 +5974,7 @@
       "publisher_url": "https://ascii.jp",
       "published_at": "2026-10-21T08:25:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -5070,7 +6041,7 @@
       "publisher_url": "https://media.unisba.ac.id",
       "published_at": "2026-10-21T08:01:08+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5115,7 +6086,7 @@
       "publisher_url": "https://www.nikkei.com",
       "published_at": "2026-10-21T08:00:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5182,7 +6153,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T07:31:04+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5204,7 +6175,7 @@
       "publisher_url": "https://media.rakuten-sec.net",
       "published_at": "2026-10-21T07:30:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5226,7 +6197,7 @@
       "publisher_url": "https://monoist.itmedia.co.jp",
       "published_at": "2026-10-21T07:30:00+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -5352,7 +6323,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T06:55:09+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -5382,7 +6353,7 @@
       "publisher_url": "",
       "published_at": "2026-10-21T06:54:43+00:00",
       "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5404,7 +6375,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T06:54:24+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-1"
       ],
@@ -5491,7 +6462,7 @@
       "publisher_url": "https://www.itmedia.co.jp",
       "published_at": "2026-10-21T06:43:26+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai"
       ],
@@ -5535,7 +6506,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T06:31:19+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5557,7 +6528,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T06:31:19+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5579,7 +6550,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T06:31:19+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-21T07:27:05.742545+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5601,7 +6572,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T06:31:08+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5623,7 +6594,7 @@
       "publisher_url": "https://www.remio.ai",
       "published_at": "2026-10-21T06:30:57+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5645,7 +6616,7 @@
       "publisher_url": "https://prtimes.jp",
       "published_at": "2026-10-21T06:30:02+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "ai",
         "chips"
@@ -5691,7 +6662,7 @@
       "publisher_url": "https://news.kobekeizai.jp",
       "published_at": "2026-10-21T06:30:00+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -5713,7 +6684,7 @@
       "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-21T06:30:00+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5735,7 +6706,7 @@
       "publisher_url": "https://kabutan.jp",
       "published_at": "2026-10-21T06:30:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -5824,7 +6795,7 @@
       "publisher_url": "https://biz.chosun.com",
       "published_at": "2026-10-21T06:29:00+00:00",
       "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "chips"
       ],
@@ -5892,7 +6863,7 @@
       "publisher_url": "https://www.fanuc.co.jp",
       "published_at": "2026-10-21T06:03:41+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "official"
       ],
@@ -5921,7 +6892,7 @@
       "publisher_url": "https://digital-construction.jp",
       "published_at": "2026-10-21T05:44:48+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -5979,7 +6950,7 @@
       "publisher_url": "https://www.mag2.com",
       "published_at": "2026-10-21T05:39:25+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -6009,7 +6980,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T05:36:22+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -6063,7 +7034,7 @@
       "publisher_url": "https://topics.smt.docomo.ne.jp",
       "published_at": "2026-10-21T05:29:00+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "companies-3"
       ],
@@ -6115,7 +7086,7 @@
       "publisher_url": "https://media.unisba.ac.id",
       "published_at": "2026-10-21T05:07:03+00:00",
       "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "quantum"
       ],
@@ -6159,7 +7130,7 @@
       "publisher_url": "https://www.remio.ai",
       "published_at": "2026-10-21T05:06:58+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -6182,7 +7153,7 @@
       "publisher_url": "https://www.remio.ai",
       "published_at": "2026-10-21T05:06:57+00:00",
       "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -6204,7 +7175,7 @@
       "publisher_url": "https://www.moomoo.com",
       "published_at": "2026-10-21T05:06:00+00:00",
       "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -6226,7 +7197,7 @@
       "publisher_url": "https://finance.yahoo.co.jp",
       "published_at": "2026-10-21T05:00:59+00:00",
       "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
+      "last_seen_at": "2026-10-22T14:42:16.141743+00:00",
       "source_ids": [
         "corporate_events"
       ],
@@ -6239,937 +7210,6 @@
       "signal": "企業イベント・影響未評価",
       "reason": "上方修正／決算",
       "summary": "見出しに「上方修正・決算」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "bfc66518473bc5756a5ee244",
-      "title": "【決算速報】山善、今期経常を21％上方修正・8期ぶり最高益更新へ(株探ニュース)",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVWxmQzhFTVZXZXk5OXBENWJ2b0pkYmpXdVAxcVVWYnBtY0ZBc19FSHprVFVrTjVxTzlmTEpYc2ZqVG5UN3Z4dVJaMy1jcENGMFN0djMwd0h1RFhrRFBkUDBhQ0ZvNkc4TTBpSW9fOUFmSUIySXItMzc2dkhzYVliaThqRFhnZE0?oc=5",
-      "publisher": "Yahoo!ファイナンス",
-      "publisher_url": "https://finance.yahoo.co.jp",
-      "published_at": "2026-10-21T05:00:58+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "corporate_events"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "上方修正／決算",
-      "summary": "見出しに「上方修正・決算」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "4b1004fbc0d35246a7bbd158",
-      "title": "植松商会、上期経常を28％上方修正",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBoQ3FaWXdhaGh1LVlPSjE4Y3lKM1BsLVRDbjZVbk92NGJjN1ZUd1VRZTNjM2VGb0REa2kwVmNhRXRGdjhGS1F2TkNYMWJEdGVLbUE?oc=5",
-      "publisher": "株探",
-      "publisher_url": "https://kabutan.jp",
-      "published_at": "2026-10-21T05:00:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "corporate_events"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "上方修正",
-      "summary": "見出しに「上方修正」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "184fc3bad5e95ce5236f67f7",
-      "title": "良品計画、本決算は営業収益・各段階利益とも過去最高を更新。27年8月期は営業収益1兆円超に",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9UWldPR0t2T1E3QkwtczJrT3Y3bktUdkFOZ25lenI3eGh0bDJVLXJWNkZ4VWpRNzVPdjZIYTZLWFJnRnBxUXVPUUN0MDZ6YzZXVWFIX3VTMjkxaGprOTlR?oc=5",
-      "publisher": "千葉テレビ放送",
-      "publisher_url": "https://www.chiba-tv.com",
-      "published_at": "2026-10-21T04:57:32+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "companies-9"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [
-        {
-          "code": "7453",
-          "name": "良品計画",
-          "basis": "見出しに企業名",
-          "matched": "良品計画"
-        }
-      ],
-      "official": false,
-      "priority": "重要",
-      "signal": "企業イベント・影響未評価",
-      "reason": "決算",
-      "summary": "見出しに「決算」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "4ae2711061f69cb33bd74c24",
-      "title": "オラクルのデータセンター反対運動、環境活動家の全米展開のひな型に",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9EUENLcVFxR19PQV9sb2tNNlJDRFBmajNqaGZqbmI0ekVzUmVQV2k1V0o4ZWo4UFJRRFJYUVlaTF8tLTYydzFWSTJXNnVmWmhNTnhLMWt1dFhTNWpSWlNZS1NPOWpDX3ZZ0gFoQVVfeXFMT0RQQ0txUXFHX09BX2xva002UkNEUGZqM2poZmpuYjR6RXNSZVBXaTVXSjhlajhQUlFEUlhRWVpMXy0tNjJ3MVZJMlc2dWZaaE1OeEsxa3V0WFM1alJaU1lLU085akNfdlk?oc=5",
-      "publisher": "Infoseek",
-      "publisher_url": "https://news.infoseek.co.jp",
-      "published_at": "2026-10-21T04:51:47+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "6b5274e887617b18b04ef3a8",
-      "title": "良品計画、本決算は営業収益・各段階利益とも過去最高を更新。27年8月期は営業収益1兆円超に",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0zV3ZoakZtR2tMM0hSSl9KV1V4ellGTGZrY1ktOUJNUFoyVVJtSng1b3U0UGFfVHlBNFlQcG0xM01BSTlRUjZBY01UU2c2eEhacEpZ?oc=5",
-      "publisher": "ダイヤモンド・チェーンストアオンライン",
-      "publisher_url": "https://diamond-rm.net",
-      "published_at": "2026-10-21T04:45:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "source_ids": [
-        "companies-9"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [
-        {
-          "code": "7453",
-          "name": "良品計画",
-          "basis": "見出しに企業名",
-          "matched": "良品計画"
-        }
-      ],
-      "official": false,
-      "priority": "重要",
-      "signal": "企業イベント・影響未評価",
-      "reason": "決算",
-      "summary": "見出しに「決算」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "74657dfdc2fe3ca7ef4c0ddd",
-      "title": "【生成AI・フィジカルAI ファクトリー 樋口製作所】岐阜の老舗製造業が四足歩行ロボットで工場内の自律巡回を実現",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9oU3hfMHA5dWRuSmpCZkVfNElMamtMS3p1RGctdDZzeHc0eXZpSFBvZ1NZMjV4Y21uTVUyU0x0RmNoOHhUSFh4V2N6dnI3dTlxNS1MYlV1enNsRnVfNjlCRGZvMTRnUUxUdEE?oc=5",
-      "publisher": "PR TIMES",
-      "publisher_url": "https://prtimes.jp",
-      "published_at": "2026-10-21T04:40:02+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI",
-        "ロボット"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "705de82df9283f5692d71da5",
-      "title": "量子コンピューターに必要な物理量子ビットを90％削減へ、NVIDIAが過去最大規模の検証を実施",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBvZzZTaUNrTnNLM1lEenFKMENrelhWRWtXNnE1WVhld3BnY2FGVk8ydUthcjhIbWRwdW5TbW9fQ0VlbEN1TTc5S1lxSVpmdFdCbXFqeS1CTUZscDFtVExqVDdmeHYtM1NF?oc=5",
-      "publisher": "マイナビニュース",
-      "publisher_url": "https://news.mynavi.jp",
-      "published_at": "2026-10-21T04:32:25+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "quantum"
-      ],
-      "themes": [
-        "量子・IOWN",
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "b1706246d68b86a1ab43338e",
-      "title": "量子コンピューターに必要な物理量子ビットを90％削減へ、NVIDIAが過去最大規模の検証を実施",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE55Rkwxa3NaempHWWljNTdvOUE3R0RpNjQ5Q3p2eVBjRWRabFZvZXp3T0NCRksyMTlYYXNkVDhpZWc5cVFkM1N2VGZ2c0tzanFWM0duZ0NycDYyRzMxOUozeTFXbWNRVHIwdzZBOHo3NHJLRklqNVpDeldKSS3SAXxBVV95cUxOeUZMMWtzWnpqR1lpYzU3bzlBN0dEaTY0OUN6dnlQY0VkWmxWb2V6d09DQkZLMjE5WGFzZFQ4aWVnOXFRZDNTdlRmdnNLc2pxVjNHbmdDcnA2MkczMTlKM3kxV21jUVRyMHc2QTh6NzRyS0ZJajVaQ3pXSkkt?oc=5",
-      "publisher": "ｄメニューニュース",
-      "publisher_url": "https://topics.smt.docomo.ne.jp",
-      "published_at": "2026-10-21T04:32:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "source_ids": [
-        "quantum"
-      ],
-      "themes": [
-        "量子・IOWN",
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "17751ea6195bbe939fec7ccd",
-      "title": "OpenAI、AIエージェントが監視機能を弱める－問題行動の検知システム",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE05NVRORXdvNWpLa210UDdtZFN0cnAyVnFfamZZakQ2ZHhhT2tzcnIwRHh0UXlJUExfWjlPelhQd1l1ZlFmTFplclVxaUpxSWVCTlZWVFhrS3hRSjE0Q2lYQmRQdEMyMVZBS3huMzJzZG5CaUli?oc=5",
-      "publisher": "TBS NEWS DIG",
-      "publisher_url": "https://newsdig.tbs.co.jp",
-      "published_at": "2026-10-21T04:23:00+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "4fcdf4c408f8121bfb29ec6c",
-      "title": "アテインがCanvas LMSの生成AI機能「IgniteAI」解説ページを公開 11月5日の無料セミナーで大学運営における活用方法を詳しく解説",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9hSnJMSmVmd21yaS13SGl4enQyMnZ4OGY2VmVRYXhycUE2dnBxSGtUaVItTFVkNXA3TlRZNWRzcjdKSDlQTVNnN29BMTdLTGFHY3VCYmE3aU8tTXg0QXc?oc=5",
-      "publisher": "valuepress",
-      "publisher_url": "https://www.value-press.com",
-      "published_at": "2026-10-21T04:00:00+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "912a172f62a005011fae8e20",
-      "title": "宝HD、延期の26年4～6月期決算を23日に発表(時事通信)",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR011dXd4blZEdW1SdnRubEs1NTVwWHQyZTFLTW44Zk1iRHlTaC1PXy14Tm5HdVZDNUJXLWFkR2pKLXQtTWp5d1lZeFppR2g2Qy16RjBEYzUxOV9EUjJBN3JhN3hlZDlKVktLdkFVNjltQWYwUlE2c1hua2hhcEgyM2RfUjBUUVE?oc=5",
-      "publisher": "Yahoo!ファイナンス",
-      "publisher_url": "https://finance.yahoo.co.jp",
-      "published_at": "2026-10-21T03:57:16+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "source_ids": [
-        "companies-6"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "決算／発表",
-      "summary": "見出しに「決算・発表」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "957707b0ce32e45a855da02c",
-      "title": "アリックスパートナーズ、世界のデータセンター関係者480名以上を対象にした「2027年 グローバル・データセンター市場見通し」を発表",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9xNm1icy1pY1JSWjk1UjR5eFVHQlNoOEQyb1pSS1ZYZmsxWndZWEVrTWpuX2wwTmRCSUJGRjM3b1pjUnZfSW8wdDlkc2NRWHExVUdRcE9Tcml4U3AxM0NXWnhjTFlrTVBUZU1z?oc=5",
-      "publisher": "時事ドットコム",
-      "publisher_url": "https://www.jiji.com",
-      "published_at": "2026-10-21T03:46:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "発表",
-      "summary": "見出しに「発表」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "93c5c08dfd0c0f86a3d390ef",
-      "title": "ドイツは防衛、AI、半導体分野への投資を強化している。",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5vcHpURGNXOUN4V1dKYWZlbHZCTDVjRDBCSXpSczFhZmV6T21Ca1VyWV9oVkR1Vzl4VHU3Rk8wX210Z0M5RlNzWG84blpsYUNBSWxuZndPX2REc1VoUmE4OUFCLUtpMnc4anlSeTh5Y1RZdDdBMVF5OXFWMHEzcWs?oc=5",
-      "publisher": "Vietnam.vn",
-      "publisher_url": "https://www.vietnam.vn",
-      "published_at": "2026-10-21T03:33:06+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "AI",
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "投資",
-      "summary": "見出しに「投資」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "02905466e938f144c471e2df",
-      "title": "データセンター向け小型モジュール炉（SMR）の世界市場（2026年～2032年）、市場規模（軽水SMR、高温ガス炉（HTGR）SMR、ナトリウム冷却SMR、溶融塩SMR）・分析レポートを発表",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBheTQyMmlLbnNiQW5ZWUIxZXpqOG1ocEJBMEduLWsydmJ5eGNfakZoTHQ3RmNPMUJaNnNrZUQtUUh3dENBUExyLVVUSGJwVlU?oc=5",
-      "publisher": "アットプレス",
-      "publisher_url": "https://www.atpress.ne.jp",
-      "published_at": "2026-10-21T03:30:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "半導体・基盤"
-      ],
-      "related_stocks": [
-        {
-          "code": "7047",
-          "name": "ポート",
-          "basis": "見出しに企業名",
-          "matched": "ポート"
-        }
-      ],
-      "official": false,
-      "priority": "重要",
-      "signal": "企業イベント・影響未評価",
-      "reason": "発表",
-      "summary": "見出しに「発表」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "c75fa5635ab26bae534e8915",
-      "title": "静岡県磐田市、財務会計業務への生成AI活用で「年間590.4時間」相当削減 テックタッチとの共同実証",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oRHFjenUwVHo4RURCWjZTUjhFU1cxMTRxM0I1RjJRdHJpS3ZjSnhUeWRPMVpUb2xmaEszNV9sRF9WZ1VjbE5tNWhiT1JZbi1GZWRIRER4dXlsZw?oc=5",
-      "publisher": "EnterpriseZine",
-      "publisher_url": "https://enterprisezine.jp",
-      "published_at": "2026-10-21T02:42:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "3e6e465f2a6d13eac9f00718",
-      "title": "前場コメント No.4 岩井コスモ、ファナック、ククレブ、クリーク＆リバ、スズキ、ＳＵＢＡＲＵ(トレーダーズ・ウェブ)",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMW4zaUVYOVRJa0dpOFBWdlF1Yk9sTzBKUmY1cHRpUjBoUUNNSnhiZ1BGanBHVXdCTWJpZ1RJRGUzZnJ0Y096cHA0RkdYTHMxVTJZbk9sa2NJZENUY1FkT2h3QXZPWGVCam9MQjdtcjBtMEsxcGIyejc4Z3lHMHRqUlZ6aFBjTDQ?oc=5",
-      "publisher": "Yahoo!ファイナンス",
-      "publisher_url": "https://finance.yahoo.co.jp",
-      "published_at": "2026-10-21T02:31:04+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "companies-3"
-      ],
-      "themes": [
-        "ロボット"
-      ],
-      "related_stocks": [
-        {
-          "code": "6954",
-          "name": "ファナック",
-          "basis": "見出しに企業名",
-          "matched": "ファナック"
-        }
-      ],
-      "official": false,
-      "priority": "注目",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "bb4cdca45cb17f4c59598c4a",
-      "title": "【本日の材料と銘柄】医療用の人工知能システム開発へ(フィスコ)",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQM1FMSFRSdHpyS1daLUFLZTN0QWdCd0FOY1JpTkJoTzY0WmVpMm04OEJpc282U1pwMEpvTENmbDROQ3RaZ081clpmcFVCdngwV3JFX3ZNR0FKSzBRM0twWnpxUVdjSlV5SHByRzBvZ3pTYjZueVZfMjJyUG1zc2RsMmVVSlpYVTA?oc=5",
-      "publisher": "Yahoo!ファイナンス",
-      "publisher_url": "https://finance.yahoo.co.jp",
-      "published_at": "2026-10-21T02:30:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-21T21:34:35.493259+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "6d79d50f15ff53e3bc4fb497",
-      "title": "かつては「利益率40％超」を誇ったが… ファナックで「フィジカルAI」より先に起きていた”米中ロボット事業”の大変化",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YZUNDbVh3a0UwOWx3ZzBFRU9fdkdrSjJTOGJGazNHOGh3UEJ6WFpEM2lZZTU2U0lSdV9BeHNBY2hxbGNrZTAwWTZHV0xQZ2JrREJvXzlwUF8?oc=5",
-      "publisher": "AERA DIGITAL",
-      "publisher_url": "https://dot.asahi.com",
-      "published_at": "2026-10-21T02:30:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "source_ids": [
-        "companies-3"
-      ],
-      "themes": [
-        "AI",
-        "ロボット"
-      ],
-      "related_stocks": [
-        {
-          "code": "6954",
-          "name": "ファナック",
-          "basis": "見出しに企業名",
-          "matched": "ファナック"
-        }
-      ],
-      "official": false,
-      "priority": "注目",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "66546abcec9d6d23b485da5b",
-      "title": "OpenAIのサム・アルトマンに対する実妹の性的虐待訴訟、米連邦地裁が棄却",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xaWtGSTcyZ2dJdU1qTTluOUl6Y2EtQUxuQzZ6Y2dGR29LX1BnQ25TWGlJUDFGZ3RVQVhtd0ptdXc2MksxOTNsbGQ5cU95Y1RwbUdKRlZtcHpVUQ?oc=5",
-      "publisher": "Forbes JAPAN",
-      "publisher_url": "https://forbesjapan.com",
-      "published_at": "2026-10-21T02:30:00+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "46af58cef730391076d8ffc4",
-      "title": "OpenAIのサム・アルトマンに対する実妹の性的虐待訴訟、米連邦地裁が棄却",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5XSXNDSFMyWlRORDgwSTUtdkNwTWU1NjBsWk84WlEtenV1QUZDZS1RTjRCd09VclFTUGp0UnY4WnFKOFRJdGt5RFd6bDJzR1RVUnoxZm83a2RfTnhXT1kxS2V5VEZmMi1Cc3dVVTlqRkFzQkRvYWJLaW1mZ3FHQk0?oc=5",
-      "publisher": "Yahoo!ニュース",
-      "publisher_url": "https://news.yahoo.co.jp",
-      "published_at": "2026-10-21T02:30:00+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "e7eb36432bcc7ec6619d9117",
-      "title": "Amazon Bedrock と LiteLLM による OpenAI ChatGPT Codex の予算・レート制限管理",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWTRIQTlJZUdkWE5tRWNVZmxhMjZvYTF0MktJR01pMEkxWk5fbEJra0xqMGZ4d0xXYU5XTFM5LXZJWFlZMS1VSEJvbnE2cF9DcXVmQ0JqS0ItNDd5VzA1UWx5N2JVcmMyZE5xaklOc2tDeGEwaVdkck9KLTdWX2lEUDhrSm9BdHg3c3BhVVdISFA2MUhyaVhhVjRHblU4NElNemkxQWtGVFl0RnQtZkhERg?oc=5",
-      "publisher": "Amazon Web Services (AWS)",
-      "publisher_url": "https://aws.amazon.com",
-      "published_at": "2026-10-21T02:29:46+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "c1f072ea9bfeb6de924aa5ab",
-      "title": "Amazon Bedrock と LiteLLM による OpenAI ChatGPT Codex の予算・レート制限管理",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWTRIQTlJZUdkWE5tRWNVZmxhMjZvYTF0MktJR01pMEkxWk5fbEJra0xqMGZ4d0xXYU5XTFM5LXZJWFlZMS1VSEJvbnE2cF9DcXVmQ0JqS0ItNDd5VzA1UWx5N2JVcmMyZE5xaklOc2tDeGEwaVdkck9KLTdWX2lEUDhrSm9BdHg3c3BhVVdISFA2MUhyaVhhVjRHblU4NElNemkxQWtGVFl0RnQtZkhERg?oc=5",
-      "publisher": "Amazon Web Services",
-      "publisher_url": "https://aws.amazon.com",
-      "published_at": "2026-10-21T02:29:46+00:00",
-      "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "e13b15bc4d697cf64e2858f1",
-      "title": "スペースＸ決算 売上高が市場予想を上回る １株利益も黒字転換 株価は上昇",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvbWItMXhIeC1DQ1ZDejlJOFU0MkNiVUxaWUM4bUdlOGFpN3RoUGhFRjZjMVBFOVAwYkxmaEFIRFpmQmNaMkZYM2JwMU9zWXQxSU1vU29B?oc=5",
-      "publisher": "QUICK Money World",
-      "publisher_url": "https://moneyworld.jp",
-      "published_at": "2026-10-21T02:24:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "corporate_events"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "決算",
-      "summary": "見出しに「決算」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "bad1a8126510c581f5fc8b5c",
-      "title": "「年間配当110円への増配」と「最終利益72%増の上方修正」発表も急落…業績とのギャップで要注目の〈好決算株〉【10月",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1qaHMzbGhWdUhUM3ZqbkNrWW5mTk9nMWJOclN0U2lDT1UtRFNhamdPNWxESnY1ZnVHaUU1YWhlTTN1MFJKbHJVYkV5c1N6TlFUYlp3Xw?oc=5",
-      "publisher": "ニコニコニュース",
-      "publisher_url": "https://news.nicovideo.jp",
-      "published_at": "2026-10-21T02:15:27+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "corporate_events"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "上方修正／決算／発表",
-      "summary": "見出しに「上方修正・決算・発表」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "d2986f0bd2db1cee188f6c68",
-      "title": "11月6日「AGIの日」を起点に AGI時代を見据えた共創プロジェクトの募集を開始 | 人工知能開発基金事務局、日本X-TECH連盟",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5BUWp6MklOVDA4S3JVSzVwdUpYZUJVWnh3RU1fSFdGVUNDNjFFNFMxQzlyVG9vQ2lwZnFFMFNpemNFYmVqRlNuekl3SHpMZw?oc=5",
-      "publisher": "アットプレス",
-      "publisher_url": "https://www.atpress.ne.jp",
-      "published_at": "2026-10-21T02:15:00+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "2ea203c7d5a3ca831c8d0547",
-      "title": "HSBC CEO、データセンター投資は選別必要 AI需要でも「一律に有望ではない」",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNX1hTejZwQnphSEtUQldyb0lRTTZLLWFmeW1hX3FWNjIxWTZKN284MGZ5OUdYT285YVpaUkEwZmpmeVNsSVZ5UjdLV2RIVTZGYWlPSEI0S0FnbTREWmJkd3diREViTnRsNVFTb3hiemdWWGhxdFExRDdMNW5zZHRDQzFxeXpPQjYxVGMxdW5TRmo4X1QzUl9HNnRLd2Z6Tng2cUZ5dA?oc=5",
-      "publisher": "디지털투데이",
-      "publisher_url": "https://www.digitaltoday.co.kr",
-      "published_at": "2026-10-21T02:11:06+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "AI",
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "投資",
-      "summary": "見出しに「投資」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "8ffd4a3fdcb023399299bf7c",
-      "title": "AI投資拡大で急上昇のCDSとは？テック大手の巨額債務に警戒する理由",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5uRllVekNXN3hIQ0xUUkZhQjFaVUE2UU9YU2IxYmtKNVpUNkVMVmlpNk55YnhPMXhBZkdTU29LUHRyaTZfMmkzclloNFhwd0ZoQmZOQnBGcG1TMi1LUU85OEc5UVZzTzU00gFoQVVfeXFMTm5GWVV6Q1c3eEhDTFRSRmFCMVpVQTZRT1hTYjFia0o1WlQ2RUxWaWk2TnlieE8xeEFmR1NTb0tQdHJpNl8yaTNyWWg0WHB3RmhCZk5CcEZwbVMyLUtRTzk4RzlRVnNPNTQ?oc=5",
-      "publisher": "Infoseek",
-      "publisher_url": "https://news.infoseek.co.jp",
-      "published_at": "2026-10-21T02:08:25+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "投資",
-      "summary": "見出しに「投資」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "43a716cfe862e789d2bf0335",
-      "title": "ファナック(株)【6954】：株つぶやき",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBlakJCUkNrWFBnQ1I5YVlySzZuNGFQZlVZSWJsc1dPLVlvamg4dl9tdVItTkZ2eS1fNGh1dzJLWjVFM2hNQlRVaWpSVDlULU0xc3BKYU8wNG8?oc=5",
-      "publisher": "Yahoo!ファイナンス",
-      "publisher_url": "https://finance.yahoo.co.jp",
-      "published_at": "2026-10-21T02:01:31+00:00",
-      "first_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "companies-3"
-      ],
-      "themes": [
-        "ロボット"
-      ],
-      "related_stocks": [
-        {
-          "code": "6954",
-          "name": "ファナック",
-          "basis": "見出しに企業名",
-          "matched": "ファナック"
-        }
-      ],
-      "official": false,
-      "priority": "注目",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "d6cc73708c0565db95e7229b",
-      "title": "磐田市とテックタッチ、行政事務に生成AIを組み込む実証結果を公開 | テックタッチ株式会社のプレスリリース",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBKbWFRWkk5RGY1SHBYRnF6OUtxOFAxQmVXT1o4U1I2SnJwZ0tOZ1RzdjVYUEQ5QW1fZVpyN0NDNGVETFJyVDZlOUtwQUVOS1FxZDlZQTlKM1BCcGRnYXA1b2R3eE01b0x0dmc?oc=5",
-      "publisher": "PR TIMES",
-      "publisher_url": "https://prtimes.jp",
-      "published_at": "2026-10-21T02:00:02+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "fdf432e3a742ab5031813e6b",
-      "title": "韓国、AIデータセンター専用の系統コード導入に政界から反発…「既存事業は適用除外にすべき」",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1rZWk3STgzVVRoQ0toekdEaFRtQWM0YndJellLMnNWLWZVY0dvYXJSdllobXU5cHcyN19tM3Fua0RLT3hhOHpFUkliSEVOS1hyand3dFZ6czJvSHplc0xwS05vdEtaVENUbWRfd0tlN3h4Mnpj?oc=5",
-      "publisher": "BigGo ファイナンス",
-      "publisher_url": "https://finance.biggo.jp",
-      "published_at": "2026-10-21T01:59:06+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "AI",
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "b1f387aa8e50aa3a4ea38dc1",
-      "title": "ChatGPT を活用した市場調査",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Ja1U3OXFsNXNFdGpyaGFUNWo4VVFTVlVndW5yZUFMOG9KbFViWGN1UzM4YjIyVDl0eVdSUEFPUkVTdzdFMnJ3dmhpajd2Y1oyY3BUQ1FzdWhkeENHdDk0VGIyOGpMUUg4RGlKSW50aXVGcUhRX3JCUA?oc=5",
-      "publisher": "OpenAI",
-      "publisher_url": "https://openai.com",
-      "published_at": "2026-10-21T01:58:02+00:00",
-      "first_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": true,
-      "priority": "注目",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "8ee74147011cc3449067731f",
-      "title": "◎宝ＨＤ、延期の２６年４～６月期決算を２３日に発表",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5mY21zRmx0eFlBMVA5bHFNdk5kbkdmREx0dXJ1eXVrd2ZCalhJX3FjbDZ3a3U0Tm00V2NaanlkeEkzNV9yM0dkQ2NQREpfdWczU2lndEUyQUp1eHhRZ2c?oc=5",
-      "publisher": "時事通信ニュース",
-      "publisher_url": "https://sp.m.jiji.com",
-      "published_at": "2026-10-21T01:56:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "companies-6"
-      ],
-      "themes": [
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "決算／発表",
-      "summary": "見出しに「決算・発表」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "d4d1ce36b8f084d7c637ef95",
-      "title": "アンリツの Jonathan BorrillがIOWN Global ForumのOfficial Spokespersonに就任",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9YbG5KUUQ0MHlKLU1Bem5za0k2Y2s4SjF0amJjYUJMRmhmd1BmSVVuNm5ZSWk2Q1JWSTVTc09Bb2VKaFpvTHhCa25ieUVwT3lHRHdEMFhzeFlQbVc2MGU1cmVKUGg0NVE2akxLMGpJdkhEeTBaRjd2Yld6Yw?oc=5",
-      "publisher": "ニコニコニュース",
-      "publisher_url": "https://news.nicovideo.jp",
-      "published_at": "2026-10-21T01:51:30+00:00",
-      "first_seen_at": "2026-10-21T01:58:30.638893+00:00",
-      "last_seen_at": "2026-10-21T01:58:30.638893+00:00",
-      "source_ids": [
-        "quantum"
-      ],
-      "themes": [
-        "量子・IOWN"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "9987f75e0133579255de340d",
-      "title": "Mercedes-Benz と NVIDIA、今後 10 年間の安全な高度自動運転の進化に向け、戦略的パートナーシップを拡大",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMWdBUEl3MkxPb2FNaUdZTU9jejlKUnpKN05WaU5lYS1sYi1YWnEzLVMzV0tQeE93ZHNzeUcwaG91QkZ5TTIzeGkwZXlUVkJia3Rzb3l0MlZBaG1oVUItdWNiTVljZHdCMXQ0WnZWT19GSENnQVlLelQtd0dJUmRPZzVOeXdzM1lmZGFJMDFoWm5ZTkdqRmpsUnhJaFZaZDJZcEJYLUNGbExpMFF1MjlFeGktZ0g0VWs2OHk2cHNKNGdiZ1RNa0IzRGpERmo0eGxCbGpIazl5MFplbVktU1Jn?oc=5",
-      "publisher": "NVIDIA | Japan Blog",
-      "publisher_url": "https://blogs.nvidia.co.jp",
-      "published_at": "2026-10-21T01:51:14+00:00",
-      "first_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "last_seen_at": "2026-10-22T00:10:56.679263+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "d8fe56a143d86d7497b4721b",
-      "title": "草野絵美がハイパーミュージアム飯能で大型個展。生成AIで「ありえたかもしれない過去」を描く",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE54c2JRVXBISV9OSnQydzVLbDV6OWRoOFY5S3YyLS02U1hCU0hLNWNTSDlTc2llZno1eGhLeE5jY2Z1aWtUME5hczJJdzhuYlNJS2pwbUtIYk9lYThtak9rSGhRYmJ1Zw?oc=5",
-      "publisher": "美術手帖",
-      "publisher_url": "https://bijutsutecho.com",
-      "published_at": "2026-10-21T01:46:34+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "b8936ae0cb08a7973382422f",
-      "title": "OpenAIが医薬品開発プラットフォームのOrchestra Bioを買収",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA3WWJORFpDb2hHbTJrTjRNTVFGcHk2cUlUOGJNZXdlQkRlQm5SYi1oSl9rZkVZZlhrYXVHQndmdzdQanlUeEFMc0tVZGw1ekRSUG9LM0hGRklSYU5yZGtMSENhd0EzVGVJR2VDTFVuaXoyRWM?oc=5",
-      "publisher": "GIGAZINE",
-      "publisher_url": "https://gigazine.net",
-      "published_at": "2026-10-21T01:46:00+00:00",
-      "first_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "last_seen_at": "2026-10-21T18:01:23.314361+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI",
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "買収",
-      "summary": "見出しに「買収」。発表内容と対象範囲を原文で確認。"
-    },
-    {
-      "id": "3ffd587f755d167d02726352",
-      "title": "豪ネクストディーシー株44%安、データセンター計画遅延で－住民反対",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5LdUF4bGNDOE5jT0tUNGJpenRhb1JaazRDY093bVRveTR4TkNzekFLX3VTUktYbjdGZno4X3RkZkJ6a2xNVENvbFlBdjZ1azVPVWttZUdzZGFCcFNtV1JRWUxZUkFiZkZnLW9QTVVmLUc2SFEtSDVN?oc=5",
-      "publisher": "Bloomberg.com",
-      "publisher_url": "https://www.bloomberg.com",
-      "published_at": "2026-10-21T01:46:00+00:00",
-      "first_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "last_seen_at": "2026-10-22T09:44:22.948159+00:00",
-      "source_ids": [
-        "chips"
-      ],
-      "themes": [
-        "半導体・基盤"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "127490459ad92732ec00bcb0",
-      "title": "JPXと日立、取引システムの運用監視業務に生成AIを本格適用 PoCで判断精度97％以上",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvbmZYaTRxNS12OEszX0dLb2FvUFVvOUliTnZoaVdSazREQ1lCNTU3M1JmN0JYWngwUEZYXzhkTkpldlYzbTgzWnRrLU9TNmtCdmtnUm9R?oc=5",
-      "publisher": "EnterpriseZine",
-      "publisher_url": "https://enterprisezine.jp",
-      "published_at": "2026-10-21T01:45:00+00:00",
-      "first_seen_at": "2026-10-21T01:58:30.638893+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "d9cae1a488f8046f29e14fa9",
-      "title": "OpenAI、「COBOL」など学習リソースの少ない言語でのコーディング能力が大幅向上 COBOL移行の正解率は最大97.9％に",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5UazRFZ3hyQlh4Vk5Pelh2aDdDNGhoOWJsVUQzZk1WUnZEMTlDRlc1Rm4zclltZUl2RDcyTjdqRmJiTnU2OGNNNk8xcWtQajh6UVVoMGwzS3ZWUVN0eTN1YWgtQlVtVU9GMUE?oc=5",
-      "publisher": "ITmedia",
-      "publisher_url": "https://www.itmedia.co.jp",
-      "published_at": "2026-10-21T01:35:42+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-22T04:50:56.929598+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "動向情報・影響未評価",
-      "reason": "AI関連キーワードに一致",
-      "summary": "技術・業界動向の参考情報。監視銘柄への影響は未評価。"
-    },
-    {
-      "id": "58a562d6caadceb09678c6e2",
-      "title": "OpenAI、創薬AIのOrchestra Bioを買収 「Rosalind」に統合",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9zdElhRzVJUVhQa2dJQVhYbGg5TFBudG1ic0JvYzlqR3A4Q09PUG1nV1lyUGZlTzNUMHlVaV9XMVRHd1pHX0VqSVVpejFGNnJYSnc?oc=5",
-      "publisher": "CNET Japan",
-      "publisher_url": "https://japan.cnet.com",
-      "published_at": "2026-10-21T01:20:00+00:00",
-      "first_seen_at": "2026-10-21T07:27:05.742545+00:00",
-      "last_seen_at": "2026-10-21T13:07:53.699247+00:00",
-      "source_ids": [
-        "ai"
-      ],
-      "themes": [
-        "AI",
-        "企業・決算"
-      ],
-      "related_stocks": [],
-      "official": false,
-      "priority": "参考",
-      "signal": "企業イベント・影響未評価",
-      "reason": "買収",
-      "summary": "見出しに「買収」。発表内容と対象範囲を原文で確認。"
     }
   ],
   "watchlist": [
