@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T03:42:07.146123+00:00",
+  "generated_at": "2026-11-02T11:41:32.102892+00:00",
   "universe_count": 4434,
   "covered_count": 4348,
   "cycle_scanned_count": 4434,
@@ -11,7 +11,45 @@
   "last_completed_date": "2026-11-02",
   "retry_count": 0,
   "failed_count": 86,
-  "auto_added": null,
+  "auto_added": {
+    "code": "9104",
+    "name": "商船三井",
+    "auto_added_at": "2026-11-02T11:41:32.102892+00:00",
+    "source": "全銘柄の株価分析＋直近ニュース",
+    "recommendation_id": "2026-11-02-9104",
+    "reason": "株価分析74/100、ニュース加点+8。5日+2.56%・20日+6.08%、平均売買代金19,641,839,565円。関連ニュース：【決算速報】商船三井、今期経常を31％上方修正(株探ニュース)",
+    "technical_score": 74,
+    "news_score": 8,
+    "combined_score": 82,
+    "news_evidence": [
+      {
+        "title": "【決算速報】商船三井、今期経常を31％上方修正(株探ニュース)",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSHNnMkVWTURLQkdhTTR3d2R0dDU1YTFZRXJ0NDNhdE9LWHg3ZHpCMmYtdEVSbzBSUnFSdHotUy10VzVtVTI3YVRkMjIwME4zZG9Qai1ETU1pbjJfZVk4R01mdG5TVThjNGs2cXU3aVpwMkZIcXdfcnpMc1BkT1lucUE4UHlGdWs?oc=5",
+        "published_at": "2026-11-02T06:31:39+00:00",
+        "publisher": "Yahoo!ファイナンス",
+        "official": false,
+        "priority": "参考",
+        "themes": [
+          "企業・決算"
+        ]
+      },
+      {
+        "title": "商船三井、今期経常を31％上方修正",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE81WkpvcE9pY2xicE1uenZ3a1VVRXpMOXJtU0UzX0VUa2lybTVOWl81WEZsRjJET0h0bUMtcFFzYVR6OU5OQTVMQkV6ejNMVE5qZUE?oc=5",
+        "published_at": "2026-11-02T06:30:00+00:00",
+        "publisher": "株探",
+        "official": false,
+        "priority": "参考",
+        "themes": [
+          "企業・決算"
+        ]
+      }
+    ],
+    "entry_price": 7571.0,
+    "entry_date": "2026-11-02",
+    "evaluations": {},
+    "notification_status": "送信済み"
+  },
   "recommendation_status": null,
   "rankings": [
     {
@@ -130,6 +168,86 @@
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
+      "news_cautions": []
+    },
+    {
+      "code": "3003",
+      "name": "ヒューリック",
+      "market": "プライム（内国株式）",
+      "sector": "不動産業",
+      "price": 1829.0,
+      "previous_close": 1804.5,
+      "change_pct": 1.36,
+      "five_day_pct": 1.41,
+      "twenty_day_pct": 8.61,
+      "avg_turnover": 5286107070,
+      "score": 91,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+3.41%→+14点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.21%→リスク低→+4点",
+        "5日騰落率+1.41%→+1点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間の好材料見出し1件→+6点"
+      ],
+      "updated_at": "2026-11-02T03:42:07.146123+00:00",
+      "technical_score": 85,
+      "news_score": 6,
+      "information_adjustment": 6,
+      "news_evidence": [
+        {
+          "title": "【ヒューリックリート投資法人 FY2026 Q2 決算説明会】調整後EPUが予想上回る3,455円、資産入れ替え745億円と賃料増額加速でDPU4,000円維持",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA0dFlLTG1sdHRvamt1TW5ydlFoRldKWVZMVjg2d3dxaGhGVlFhRW5NQ2VvNWdRcjdEOUc2V0J4SVM3NldtOGFQUGhIdFRja0tZQlJFZHRKbkk4YTlhSEpJ?oc=5",
+          "published_at": "2026-10-30T19:34:00+00:00",
+          "publisher": "BigGo ファイナンス",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "news_cautions": []
+    },
+    {
+      "code": "9533",
+      "name": "東邦瓦斯",
+      "market": "プライム（内国株式）",
+      "sector": "電気・ガス業",
+      "price": 1283.0,
+      "previous_close": 1275.0,
+      "change_pct": 0.63,
+      "five_day_pct": 4.69,
+      "twenty_day_pct": 2.64,
+      "avg_turnover": 794624578,
+      "score": 89,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+2.05%→+8点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.44%→リスク低→+4点",
+        "5日騰落率+4.69%→+5点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間の好材料見出し1件→+6点"
+      ],
+      "updated_at": "2026-11-02T03:42:07.146123+00:00",
+      "technical_score": 83,
+      "news_score": 6,
+      "information_adjustment": 6,
+      "news_evidence": [
+        {
+          "title": "東邦瓦斯---お客さま数は314万件に拡大、通期売上高・純利益予想を上方修正",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaXQ0U29fS0JiWnlJSlNCbF9wMW1veml6WEtwbUFxaGNNcWhnZmJQLXNTT045R2tCakM4aG1fRXRhTnVYUWc5a0JEMlU1czIxN1B4eHFBbkV3SmYxbjVTX29hS29rVW5oTHctcWpGa3JPYWM4SFJFbm9QcnZLMlNhOHNFeFVhNUZkS1pKctIBjAFBVV95cUxOaXQ0U29fS0JiWnlJSlNCbF9wMW1veml6WEtwbUFxaGNNcWhnZmJQLXNTT045R2tCakM4aG1fRXRhTnVYUWc5a0JEMlU1czIxN1B4eHFBbkV3SmYxbjVTX29hS29rVW5oTHctcWpGa3JPYWM4SFJFbm9QcnZLMlNhOHNFeFVhNUZkS1pKcg?oc=5",
+          "published_at": "2026-11-02T04:23:00+00:00",
+          "publisher": "ｄメニューニュース",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
       "news_cautions": []
     },
     {
@@ -298,6 +416,46 @@
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
+      "news_cautions": []
+    },
+    {
+      "code": "5929",
+      "name": "三和ホールディングス",
+      "market": "プライム（内国株式）",
+      "sector": "金属製品",
+      "price": 3882.0,
+      "previous_close": 3935.0,
+      "change_pct": -1.35,
+      "five_day_pct": 7.45,
+      "twenty_day_pct": 13.48,
+      "avg_turnover": 2514210955,
+      "score": 87,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+3.49%→+14点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.55%→リスク中→-4点",
+        "5日騰落率+7.45%→+7点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間の好材料見出し1件→+4点"
+      ],
+      "updated_at": "2026-11-02T03:42:07.146123+00:00",
+      "technical_score": 83,
+      "news_score": 4,
+      "information_adjustment": 4,
+      "news_evidence": [
+        {
+          "title": "三和ホールディングス---DOE目安を10％から15％へ引き上げ、期末配当予想を23円増配",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE56b3FMWnVHZXp3Z3dMczB6V3dVdXRhdFExeFdDQ1FIOFdLVG0yeWhrMkExN2dPekZNUkl0bjdFZUZ0NjZwUE1QWHJZNW1ra0ROMnc?oc=5",
+          "published_at": "2026-11-02T09:54:20+00:00",
+          "publisher": "株探",
+          "official": false,
+          "priority": "参考",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
       "news_cautions": []
     },
     {
@@ -523,130 +681,15 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
-    },
-    {
-      "code": "141A",
-      "name": "トライアルホールディングス",
-      "market": "グロース（内国株式）",
-      "sector": "小売業",
-      "price": 4060.0,
-      "previous_close": 4015.0,
-      "change_pct": 1.12,
-      "five_day_pct": 11.08,
-      "twenty_day_pct": 8.27,
-      "avg_turnover": 2488323375,
-      "score": 85,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+5.51%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.77%→リスク中→-4点",
-        "5日騰落率+11.08%→+8点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-11-02T03:42:07.146123+00:00",
-      "technical_score": 85,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
-    },
-    {
-      "code": "4933",
-      "name": "Ｉ－ｎｅ",
-      "market": "プライム（内国株式）",
-      "sector": "化学",
-      "price": 2475.0,
-      "previous_close": 2460.0,
-      "change_pct": 0.61,
-      "five_day_pct": 8.51,
-      "twenty_day_pct": 15.6,
-      "avg_turnover": 217528100,
-      "score": 85,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+5.80%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.10%→リスク中→-4点",
-        "5日騰落率+8.51%→+8点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-11-02T03:42:07.146123+00:00",
-      "technical_score": 85,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
-    },
-    {
-      "code": "4350",
-      "name": "メディカルシステムネットワーク",
-      "market": "スタンダード（内国株式）",
-      "sector": "小売業",
-      "price": 551.0,
-      "previous_close": 559.0,
-      "change_pct": -1.43,
-      "five_day_pct": 7.83,
-      "twenty_day_pct": 5.76,
-      "avg_turnover": 65750685,
-      "score": 85,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+4.47%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.41%→リスク中→-4点",
-        "5日騰落率+7.83%→+8点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-11-02T03:42:07.146123+00:00",
-      "technical_score": 85,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
     }
   ],
-  "batch_errors": [
-    "1432 動力: HTTP Error 404: Not Found (attempt 3/3)",
-    "1445 ひかりホールディングス: HTTP Error 404: Not Found (attempt 3/3)",
-    "1688 ＷｉｓｄｏｍＴｒｅｅ　穀物上場投資信託: list index out of range (attempt 3/3)",
-    "1452 横浜ライト工業: HTTP Error 404: Not Found (attempt 3/3)",
-    "1696 ＷｉｓｄｏｍＴｒｅｅ　とうもろこし上場投資信託: list index out of range (attempt 3/3)",
-    "1685 ＷｉｓｄｏｍＴｒｅｅ　エネルギー上場投資信託: list index out of range (attempt 3/3)",
-    "1687 ＷｉｓｄｏｍＴｒｅｅ　農産物上場投資信託: list index out of range (attempt 3/3)",
-    "1672 ＷｉｓｄｏｍＴｒｅｅ　金上場投資信託: list index out of range (attempt 3/3)",
-    "1948 弘電社: list index out of range (attempt 3/3)",
-    "2033 ＮＥＸＴ　ＮＯＴＥＳ　韓国ＫＯＳＰＩ・ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "1697 ＷｉｓｄｏｍＴｒｅｅ　大豆上場投資信託: list index out of range (attempt 3/3)",
-    "2036 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "1909 日本ドライケミカル: list index out of range (attempt 3/3)",
-    "2032 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ベア　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2037 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ベア　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2031 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2066 ＮＥＸＴ　ＮＯＴＥＳ　東証ＲＥＩＴ（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2040 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ダブル・ブル・ドルヘッジ　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2043 ＮＥＸＴ　ＮＯＴＥＳ　ＳＴＯＸＸ　アセアン好配当５０（円、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2065 ＮＥＸＴ　ＮＯＴＥＳ　日本株配当貴族（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2048 ＮＥＸＴ　ＮＯＴＥＳ　野村日本株高配当７０（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2041 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ベア・ドルヘッジ　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2069 ＮＥＸＴ　ＮＯＴＥＳ　低ベータ５０（ネットリターン）ＥＴＮ: insufficient data (attempt 3/3)",
-    "2068 ＮＥＸＴ　ＮＯＴＥＳ　高ベータ３０（ネットリターン）ＥＴＮ: insufficient data (attempt 3/3)",
-    "2994 アンサーホールディングス: HTTP Error 404: Not Found (attempt 3/3)",
-    "2452 コンピュータマインド: HTTP Error 404: Not Found (attempt 3/3)",
-    "2985 ファーストステージ: HTTP Error 404: Not Found (attempt 3/3)",
-    "2180 サニーサイドアップグループ: list index out of range (attempt 3/3)",
-    "2992 アーバンライク: HTTP Error 404: Not Found (attempt 3/3)",
-    "2643 ＮＥＸＴ　ＦＵＮＤＳ　ＭＳＣＩジャパンカントリー指数（セレクト）連動型上場投信: list index out of range (attempt 3/3)"
-  ],
+  "batch_errors": [],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "送信済み",
   "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
   "completion_notification_status": "送信済み",
   "performance_summary": {
-    "recommendations": 19,
+    "recommendations": 20,
     "horizons": {
       "1": {
         "completed": 19,
