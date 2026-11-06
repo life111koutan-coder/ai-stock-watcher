@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T17:17:00.548551+00:00",
+  "generated_at": "2026-11-06T04:28:43.501102+00:00",
   "universe_count": 4434,
   "covered_count": 4347,
   "cycle_scanned_count": 4434,
@@ -11,7 +11,45 @@
   "last_completed_date": "2026-11-06",
   "retry_count": 0,
   "failed_count": 87,
-  "auto_added": null,
+  "auto_added": {
+    "code": "8058",
+    "name": "三菱商事",
+    "auto_added_at": "2026-11-06T04:28:43.501102+00:00",
+    "source": "全銘柄の株価分析＋直近ニュース",
+    "recommendation_id": "2026-11-06-8058",
+    "reason": "株価分析77/100、ニュース加点+8。5日+4.29%・20日+9.32%、平均売買代金44,645,588,280円。関連ニュース：三菱商事、上限1兆円の自社株買いを発表 過去最高益予想で市場も好感",
+    "technical_score": 77,
+    "news_score": 8,
+    "combined_score": 85,
+    "news_evidence": [
+      {
+        "title": "三菱商事、上限1兆円の自社株買いを発表 過去最高益予想で市場も好感",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBzYndMTHgzM0dmQTVUM2Roa1k4SlFHaEVHVnZPc2xwSTNIQ0xrMGN4TVVTeE9GRUNYbF9pXy00N08ya3UxU1I3eXJDa2JvYWl4SWI0?oc=5",
+        "published_at": "2026-11-06T02:02:55+00:00",
+        "publisher": "東京報道新聞",
+        "official": false,
+        "priority": "参考",
+        "themes": [
+          "企業・決算"
+        ]
+      },
+      {
+        "title": "三菱商事、1兆円の自社株買いで株価7.9%高―商社4社の配当と100株投資額を比較",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE83X2h5SV82UXZjR1M1Q2JsdlhIZHpheS1uNkQ5V1BHOFMwNjRoOUE0ZVgxWkQ1M0NhYWZTX1ViQ2VLR1FzeWFSQjlURVlUOEZGeUhSYk95WElwRGN5WFBJMDJIUdIBaEFVX3lxTFBWSFZBMmw3M1U2X2EwYVo2N1Y2bzg3MWVNZ1dXM2FpNWs2eTByeVBWVEt0TXZEQ3NyYmNsUy1Kb1Z5RGhGRFk0N0Zkcy12VlBKMGw5YjFQeXZRM29haHJ0TTk4V0x3U1c3?oc=5",
+        "published_at": "2026-11-05T11:37:34+00:00",
+        "publisher": "財経新聞",
+        "official": false,
+        "priority": "参考",
+        "themes": [
+          "企業・決算"
+        ]
+      }
+    ],
+    "entry_price": 5274.0,
+    "entry_date": "2026-11-06",
+    "evaluations": {},
+    "notification_status": "送信済み"
+  },
   "recommendation_status": null,
   "rankings": [
     {
@@ -68,6 +106,46 @@
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
+      "news_cautions": []
+    },
+    {
+      "code": "4661",
+      "name": "オリエンタルランド",
+      "market": "プライム（内国株式）",
+      "sector": "サービス業",
+      "price": 3712.0,
+      "previous_close": 3482.0,
+      "change_pct": 6.61,
+      "five_day_pct": 8.63,
+      "twenty_day_pct": 23.76,
+      "avg_turnover": 16965918550,
+      "score": 91,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+7.10%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.12%→リスク中→-4点",
+        "5日騰落率+8.63%→+8点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間の好材料見出し1件→+6点"
+      ],
+      "updated_at": "2026-11-05T17:17:00.548551+00:00",
+      "technical_score": 85,
+      "news_score": 6,
+      "information_adjustment": 6,
+      "news_evidence": [
+        {
+          "title": "オリエンタルランドの決算発表と業績と株価の行方 Audi Q9 (foHenEuyX2)",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPRGR1bzFBZDZVU0RtamREYXluc3lCRGp2OUhsOWFObzdIM2d6QzktV09JSS1DRjZ2ZXFjVFIzRXJBdVZlSUFKZU9aek9RdFdUVkxxb0Z3eGk5U3BqTXRBY0t6QmZWbHdmNzU1NWpBc21KeWxtVENScE5qaDFkbDFrZG13?oc=5",
+          "published_at": "2026-11-05T14:50:04+00:00",
+          "publisher": "Unisba Media",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
       "news_cautions": []
     },
     {
@@ -545,74 +623,15 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
-    },
-    {
-      "code": "4536",
-      "name": "参天製薬",
-      "market": "プライム（内国株式）",
-      "sector": "医薬品",
-      "price": 1882.0,
-      "previous_close": 1794.5,
-      "change_pct": 4.88,
-      "five_day_pct": 2.45,
-      "twenty_day_pct": 8.19,
-      "avg_turnover": 1896095630,
-      "score": 86,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+3.46%→+14点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ1.17%→リスク低→+4点",
-        "5日騰落率+2.45%→+2点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-11-05T17:17:00.548551+00:00",
-      "technical_score": 86,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
     }
   ],
-  "batch_errors": [
-    "1452 横浜ライト工業: HTTP Error 404: Not Found (attempt 3/3)",
-    "1687 ＷｉｓｄｏｍＴｒｅｅ　農産物上場投資信託: list index out of range (attempt 3/3)",
-    "1432 動力: HTTP Error 404: Not Found (attempt 3/3)",
-    "1672 ＷｉｓｄｏｍＴｒｅｅ　金上場投資信託: list index out of range (attempt 3/3)",
-    "1688 ＷｉｓｄｏｍＴｒｅｅ　穀物上場投資信託: list index out of range (attempt 3/3)",
-    "1697 ＷｉｓｄｏｍＴｒｅｅ　大豆上場投資信託: list index out of range (attempt 3/3)",
-    "1445 ひかりホールディングス: HTTP Error 404: Not Found (attempt 3/3)",
-    "1685 ＷｉｓｄｏｍＴｒｅｅ　エネルギー上場投資信託: list index out of range (attempt 3/3)",
-    "1909 日本ドライケミカル: list index out of range (attempt 3/3)",
-    "2036 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2031 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2033 ＮＥＸＴ　ＮＯＴＥＳ　韓国ＫＯＳＰＩ・ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "1948 弘電社: list index out of range (attempt 3/3)",
-    "2032 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ベア　ＥＴＮ: list index out of range (attempt 3/3)",
-    "1696 ＷｉｓｄｏｍＴｒｅｅ　とうもろこし上場投資信託: list index out of range (attempt 3/3)",
-    "2037 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ベア　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2069 ＮＥＸＴ　ＮＯＴＥＳ　低ベータ５０（ネットリターン）ＥＴＮ: insufficient data (attempt 3/3)",
-    "2043 ＮＥＸＴ　ＮＯＴＥＳ　ＳＴＯＸＸ　アセアン好配当５０（円、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2040 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ダブル・ブル・ドルヘッジ　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2048 ＮＥＸＴ　ＮＯＴＥＳ　野村日本株高配当７０（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2066 ＮＥＸＴ　ＮＯＴＥＳ　東証ＲＥＩＴ（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2065 ＮＥＸＴ　ＮＯＴＥＳ　日本株配当貴族（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2068 ＮＥＸＴ　ＮＯＴＥＳ　高ベータ３０（ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2041 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ベア・ドルヘッジ　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2985 ファーストステージ: HTTP Error 404: Not Found (attempt 3/3)",
-    "2992 アーバンライク: HTTP Error 404: Not Found (attempt 3/3)",
-    "2452 コンピュータマインド: HTTP Error 404: Not Found (attempt 3/3)",
-    "2643 ＮＥＸＴ　ＦＵＮＤＳ　ＭＳＣＩジャパンカントリー指数（セレクト）連動型上場投信: list index out of range (attempt 3/3)",
-    "2994 アンサーホールディングス: HTTP Error 404: Not Found (attempt 3/3)",
-    "2995 ジェイレックス・コーポレーション: HTTP Error 404: Not Found (attempt 3/3)"
-  ],
+  "batch_errors": [],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "送信済み",
   "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
   "completion_notification_status": "送信済み",
   "performance_summary": {
-    "recommendations": 21,
+    "recommendations": 22,
     "horizons": {
       "1": {
         "completed": 21,
@@ -623,10 +642,10 @@
         "worst_return_pct": -3.7
       },
       "5": {
-        "completed": 16,
-        "wins": 9,
-        "win_rate_pct": 56.2,
-        "average_return_pct": 3.98,
+        "completed": 17,
+        "wins": 10,
+        "win_rate_pct": 58.8,
+        "average_return_pct": 4.03,
         "best_return_pct": 39.31,
         "worst_return_pct": -5.29
       },
