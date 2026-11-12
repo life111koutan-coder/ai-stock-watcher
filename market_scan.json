@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T05:08:01.141220+00:00",
+  "generated_at": "2026-11-12T13:41:41.273380+00:00",
   "universe_count": 4434,
   "covered_count": 4344,
   "cycle_scanned_count": 4434,
@@ -11,164 +11,78 @@
   "last_completed_date": "2026-11-12",
   "retry_count": 0,
   "failed_count": 90,
-  "auto_added": null,
+  "auto_added": {
+    "code": "6367",
+    "name": "ダイキン工業",
+    "auto_added_at": "2026-11-12T13:41:41.273380+00:00",
+    "source": "全銘柄の株価分析＋直近ニュース",
+    "recommendation_id": "2026-11-12-6367",
+    "reason": "株価分析87/100、ニュース加点+8。5日+9.16%・20日+8.31%、平均売買代金27,263,780,625円。関連ニュース：ダイキン工業、米子会社がNVIDIAの設計基盤に対応した大規模データセンター向け冷却リファレンスアーキテクチャを発表",
+    "technical_score": 87,
+    "news_score": 8,
+    "combined_score": 95,
+    "news_evidence": [
+      {
+        "title": "ダイキン工業、米子会社がNVIDIAの設計基盤に対応した大規模データセンター向け冷却リファレンスアーキテクチャを発表",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9vSXZKdnZOa0JTNDQ0V1ZzMVNZeVR3V18wblB3NDhIWVBBVXU3a0lYQ0VBZzc4OWd1THlzakRZc0JXMVRHQTBySjRnekQ2OHh5Qjc2cnByUXhJMHNDWUprMUNIeWtNeDg?oc=5",
+        "published_at": "2026-11-12T04:02:00+00:00",
+        "publisher": "クラウド Watch",
+        "official": false,
+        "priority": "参考",
+        "themes": [
+          "半導体・基盤"
+        ]
+      },
+      {
+        "title": "ダイキン工業、ＮＶＩＤＩＡのＡＩデータセンター向け６０ＭＷ級冷却モデルを発表",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1PQnN1dXVOcmxWRjMyOXIzcjgyX1BsZHFUZXRTN3VYZEVEU2xTS3V3US1rRDJtSGpRWVNNRS1VN3NrR0haRzRiRXJMeDNoSWxBQXhBSg?oc=5",
+        "published_at": "2026-11-12T00:23:55+00:00",
+        "publisher": "https://kabu-ir.com/",
+        "official": false,
+        "priority": "参考",
+        "themes": [
+          "半導体・基盤"
+        ]
+      }
+    ],
+    "entry_price": 23235.0,
+    "entry_date": "2026-11-12",
+    "evaluations": {},
+    "notification_status": "送信失敗（HTTP 429）"
+  },
   "recommendation_status": null,
   "rankings": [
     {
-      "code": "6869",
-      "name": "シスメックス",
+      "code": "7552",
+      "name": "ハピネット",
       "market": "プライム（内国株式）",
-      "sector": "電気機器",
-      "price": 2071.0,
-      "previous_close": 2138.5,
-      "change_pct": -3.16,
-      "five_day_pct": 9.36,
-      "twenty_day_pct": 14.66,
-      "avg_turnover": 7437913490,
-      "score": 100,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+6.24%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ1.75%→リスク中→-4点",
-        "5日騰落率+9.36%→+8点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間の好材料見出し3件→+18点"
-      ],
-      "updated_at": "2026-11-11T17:01:45.063912+00:00",
-      "technical_score": 85,
-      "news_score": 18,
-      "information_adjustment": 18,
-      "news_evidence": [
-        {
-          "title": "シスメックス－大幅反発 通期営業益を上方修正 上期は1％増〔DZH 個別株情報〕(時事通信)",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcndqTUdoTGUtbHpHeU5PelN0WndQdUwtNmc3SUM2OGxzbHYzUnhUX2ZWWExhWkYwNXNVelpPR2xEQTR1b2NhZVEwLTBoVHhKWkJVNjRob2ctdWZ6MlRhaTRYd2JSTzBqWXBzVHlHek14dk1MTE1SNF9HNVc4TFUxMlBkVXBLQ1k?oc=5",
-          "published_at": "2026-11-11T00:27:34+00:00",
-          "publisher": "Yahoo!ファイナンス",
-          "official": false,
-          "priority": "重要",
-          "themes": [
-            "企業・決算"
-          ]
-        },
-        {
-          "title": "シスメックス、今期純利益13％増に上方修正 米州好調で・ 事業構成の見直しに着手",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBJWlI4UExpbWtZRXdlR28xXzJ6ZWYxa3EyeGljdkFjVTRRM2ZuenpEYmhfUGg1bHN4aWlnbVktWVk5RTVuc0t4clgxWVFVZ1JvX3NsUWkzd1ZOTjZj?oc=5",
-          "published_at": "2026-11-10T16:30:00+00:00",
-          "publisher": "- 神戸経済ニュース",
-          "official": false,
-          "priority": "重要",
-          "themes": [
-            "企業・決算"
-          ]
-        },
-        {
-          "title": "シスメックス（東証：6869）の業績予想上方修正が株主にとって意味すること",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSmhxQV9ZTFlKbE1EODFRVEwyVFk1ZlZIX1NmSlhpUEFyaDlPVzRKUVBwZ2NYLXVtVl81dHpsc1A2eUJGbGUtU0psbnA1NVNYT3BJeUpSMHBlRk9qWHo5RWxqcmF3TXZXWGhtWXdDelAzem1WYUtRd3hnUnNlaEdFSUVCUjRkdnFrX2l1TkxNcWVMSFlXMFVMaXB30gGaAUFVX3lxTE5KaHFBX1lMWUpsTUQ4MVFUTDJUWTVmVkhfU2ZKWGlQQXJoOU9XNEpRUHBnY1gtdW1WXzV0emxzUDZ5QkZsZS1TSmxucDU1U1hPcEl5SlIwcGVGT2pYejlFbGpyYXdNdldYaG1Zd0N6UDN6bVZhS1F3eGdSc2VoR0VJRUJSNGR2cWtfaXVOTE1xZUxIWVcwVUxpcHc?oc=5",
-          "published_at": "2026-11-10T16:15:50+00:00",
-          "publisher": "Simply Wall St",
-          "official": false,
-          "priority": "重要",
-          "themes": [
-            "企業・決算"
-          ]
-        }
-      ],
-      "news_cautions": []
-    },
-    {
-      "code": "4478",
-      "name": "フリー",
-      "market": "グロース（内国株式）",
-      "sector": "情報・通信業",
-      "price": 4820.0,
-      "previous_close": 4775.0,
-      "change_pct": 0.94,
-      "five_day_pct": 2.26,
-      "twenty_day_pct": 29.08,
-      "avg_turnover": 3701673875,
-      "score": 97,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+13.54%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.52%→リスク中→-4点",
-        "5日騰落率+2.26%→+2点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間の好材料見出し3件→+18点"
-      ],
-      "updated_at": "2026-11-11T17:01:45.063912+00:00",
-      "technical_score": 79,
-      "news_score": 18,
-      "information_adjustment": 18,
-      "news_evidence": [
-        {
-          "title": "【決算速報】フリー---27年6月期1Qは増益、経常利益は311.4％増(フィスコ)",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMG5CRHNSeDVUQ2ltOFlQSXRoNmx5emd4eTBuLS02dk9OSWwxSnNvRHpoMHZhaXB2a2NDbGxKbDJ2bVRnclZKcUJpWG5US19ndElqZUtuNkdJQ0dJa0FLVXZURUN6NUpYN2d4R1JHbWRYdU9obG9TTTNhTkg0bGw4ei1mMkNyNHM?oc=5",
-          "published_at": "2026-11-11T09:48:53+00:00",
-          "publisher": "Yahoo!ファイナンス",
-          "official": false,
-          "priority": "重要",
-          "themes": [
-            "企業・決算"
-          ]
-        },
-        {
-          "title": "ラボルがギークス株式会社のITフリーランス向け福利厚生プログラム「フリノベ」と提携を開始",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9pUGUwT2Nycl9YSGczbEN0b1pkcEhyRkZNZC1ORTJnbm5SZ1BGVkJIV2pwZXM0cTliSTV1QkNyajVTeHR0YmtFVzdkV212aUstTEFBX19TWXFaTW9xWGF6MjBGcFJRM2R5dFE?oc=5",
-          "published_at": "2026-11-11T09:00:01+00:00",
-          "publisher": "PR TIMES",
-          "official": false,
-          "priority": "重要",
-          "themes": [
-            "企業・決算"
-          ]
-        },
-        {
-          "title": "ITフリーランス向け福利厚生プログラム「フリノベ」、請求書買い取りファクタリングサービスを展開するラボルと提携を開始",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5pNTQ5NldLRFhoYnhRcGRrM2UwdHFOYl9iOV9IUW5wS0ZVMEYycGoxYzNOQTk2empZbGdwNVB4MndkTUlZNV91T1NudlpzRU91bzcyVW9uV1hhb2FmOUNaTGthbWEwVmJfVHc?oc=5",
-          "published_at": "2026-11-11T01:30:01+00:00",
-          "publisher": "PR TIMES",
-          "official": false,
-          "priority": "重要",
-          "themes": [
-            "企業・決算"
-          ]
-        }
-      ],
-      "news_cautions": []
-    },
-    {
-      "code": "4661",
-      "name": "オリエンタルランド",
-      "market": "プライム（内国株式）",
-      "sector": "サービス業",
-      "price": 3690.0,
-      "previous_close": 3773.0,
-      "change_pct": -2.2,
-      "five_day_pct": 7.09,
-      "twenty_day_pct": 25.62,
-      "avg_turnover": 20247868540,
+      "sector": "卸売業",
+      "price": 6550.0,
+      "previous_close": 6490.0,
+      "change_pct": 0.92,
+      "five_day_pct": 7.48,
+      "twenty_day_pct": 20.48,
+      "avg_turnover": 1898945650,
       "score": 96,
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+11.38%→+15点",
+        "短期平均が全体平均比+8.79%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ2.89%→リスク中→-4点",
-        "5日騰落率+7.09%→+7点",
+        "値動きの荒さ3.01%→リスク高→-10点",
+        "5日騰落率+7.48%→+7点",
         "平均売買代金5,000万円以上→+4点",
-        "直近72時間の好材料見出し2件→+12点"
+        "直近72時間の好材料見出し3件→+18点"
       ],
       "updated_at": "2026-11-11T17:01:45.063912+00:00",
-      "technical_score": 84,
-      "news_score": 12,
-      "information_adjustment": 12,
+      "technical_score": 78,
+      "news_score": 18,
+      "information_adjustment": 18,
       "news_evidence": [
         {
-          "title": "【オリエンタルランド】決算＆長期経営戦略発表！今後の株価は？ Mojtaba Khamenei (FMlAFxwAPs)",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE55N1hJZFpQRDZrU0prWE9KMjdwZkZJZ2ZMYmVUdHFjbGRfdnQwcTZ5YzBBUXk4T1p3OVBuempZLTAwS2FwX3hqZ25zdzBLTnZNY09qaTdYTUJYUFZQTFQtVE5HRUxFVGFWdjdHXw?oc=5",
-          "published_at": "2026-11-11T10:41:18+00:00",
-          "publisher": "Unisba Media",
+          "title": "【決算速報】ハピネット---27年3月期2Qは増益、経常利益は53.3％増(フィスコ)",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSVRaa0lyMjVKSVVPa1FaY1pEa1E2WThtUG9TQWFjWW1vd3ctM0tMQ1pOM19xdmk3Mm5RSklxa3pVMmFjdERKLXE0R3BXZUdsdW9YenZsemw5RGVhdHpIejAxUzZzb2otUTEybW9UQkp5SHlSdFBmelc5aEs1c1l5bkdlSUlRRkk?oc=5",
+          "published_at": "2026-11-12T10:19:46+00:00",
+          "publisher": "Yahoo!ファイナンス",
           "official": false,
           "priority": "重要",
           "themes": [
@@ -176,14 +90,76 @@
           ]
         },
         {
-          "title": "オリエンタルランド（東証：4661）の業績予想上方修正が、同社の投資ストーリーにどのような変化をもたらしたか",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTXZqRzhJVEllc2VKZmVNbDNmSGlCakFKQVRERWcweDFPeGRsUHRPS1pxcTA3YUE2RmU2WEdDUExFNTBPbk5HS3I5aW82UjZPRkQ0YndVbS1hOUY1ZjFJNk8ycFJPc29xNU53N1ZjWUx4d211NHBaeDdNT3JuTnJYckdWcEljbjF0QW9DTFVpNmlIRVB6VWNabmRlUTNzel9qS2htRGhKc9IBrAFBVV95cUxOeUw3YUpsd3JEcTY1ZERWQVQ0SnJWcExnSWJpUFVaVTQ2Rzg2Q0N1VkNYMmliQno4SEpfRFIzZDkxTl82UlBkdmhhdDBCM0YzdjJTRF9HVk9Lclp5YUZkcWc4Um5qMGpvN01temhDMVh2ZjJXWVJKOXNXSE14d3U5SFJ0T3prVl8xczBQZEVobXNJVHlZc2VOdUI2cjJtX3U5N3JnbWFaakVsY0hQ?oc=5",
-          "published_at": "2026-11-10T11:24:01+00:00",
-          "publisher": "Simply Wall St",
+          "title": "【決算速報】ハピネット、上期経常が53％増益で着地・7-9月期も88％増益(株探ニュース)",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa3ZidTlLTzNIb2N2QlpfQUVfcXZGNkNUbmx3T0lTTWFVVTlHUGt5aTNXN1lBY1pPMHc5SnR0U0VHeHZISTRVN2ZsT1hRV3BlZDBaSnRVNUpYREhEREV0WU5UZUxWeTFOc2JyaUVGTlB6LVczNWNpYVVHV3BSNk1uQUpuS0E0REU?oc=5",
+          "published_at": "2026-11-12T06:38:13+00:00",
+          "publisher": "Yahoo!ファイナンス",
           "official": false,
           "priority": "重要",
           "themes": [
             "企業・決算"
+          ]
+        },
+        {
+          "title": "決算速報＞ハピネット、２７年３月期第２四半期決算は純利益３２．４％増の大幅増益(ウエルスアドバイザー)",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQckw1YVdjMFNTZ2lQUnlfUGYxLXpBa0R3ejdPU1JZVnc3X3ljbklrdTczNFVZY3pWNGZzUG9tQ2NyeEUtWEk0cGljSFByRUlZbU0yQkZRakZOdF9wQTdkeW8wRTVsa2lSWjB4V2t4VHdJSUdXMm9aYWp3TkY3dkI4QkxRenFoWEU?oc=5",
+          "published_at": "2026-11-12T06:32:44+00:00",
+          "publisher": "Yahoo!ファイナンス",
+          "official": false,
+          "priority": "重要",
+          "themes": [
+            "企業・決算"
+          ]
+        }
+      ],
+      "news_cautions": []
+    },
+    {
+      "code": "6367",
+      "name": "ダイキン工業",
+      "market": "プライム（内国株式）",
+      "sector": "機械",
+      "price": 23235.0,
+      "previous_close": 22445.0,
+      "change_pct": 3.52,
+      "five_day_pct": 9.16,
+      "twenty_day_pct": 8.31,
+      "avg_turnover": 27263780625,
+      "score": 95,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+2.23%→+9点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ1.18%→リスク低→+4点",
+        "5日騰落率+9.16%→+8点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間の好材料見出し2件→+8点"
+      ],
+      "updated_at": "2026-11-11T17:01:45.063912+00:00",
+      "technical_score": 87,
+      "news_score": 8,
+      "information_adjustment": 8,
+      "news_evidence": [
+        {
+          "title": "ダイキン工業、米子会社がNVIDIAの設計基盤に対応した大規模データセンター向け冷却リファレンスアーキテクチャを発表",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9vSXZKdnZOa0JTNDQ0V1ZzMVNZeVR3V18wblB3NDhIWVBBVXU3a0lYQ0VBZzc4OWd1THlzakRZc0JXMVRHQTBySjRnekQ2OHh5Qjc2cnByUXhJMHNDWUprMUNIeWtNeDg?oc=5",
+          "published_at": "2026-11-12T04:02:00+00:00",
+          "publisher": "クラウド Watch",
+          "official": false,
+          "priority": "参考",
+          "themes": [
+            "半導体・基盤"
+          ]
+        },
+        {
+          "title": "ダイキン工業、ＮＶＩＤＩＡのＡＩデータセンター向け６０ＭＷ級冷却モデルを発表",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1PQnN1dXVOcmxWRjMyOXIzcjgyX1BsZHFUZXRTN3VYZEVEU2xTS3V3US1rRDJtSGpRWVNNRS1VN3NrR0haRzRiRXJMeDNoSWxBQXhBSg?oc=5",
+          "published_at": "2026-11-12T00:23:55+00:00",
+          "publisher": "https://kabu-ir.com/",
+          "official": false,
+          "priority": "参考",
+          "themes": [
+            "半導体・基盤"
           ]
         }
       ],
@@ -298,78 +274,78 @@
       "news_cautions": []
     },
     {
-      "code": "6367",
-      "name": "ダイキン工業",
+      "code": "6869",
+      "name": "シスメックス",
       "market": "プライム（内国株式）",
-      "sector": "機械",
-      "price": 23235.0,
-      "previous_close": 22445.0,
-      "change_pct": 3.52,
-      "five_day_pct": 9.16,
-      "twenty_day_pct": 8.31,
-      "avg_turnover": 27263780625,
+      "sector": "電気機器",
+      "price": 2071.0,
+      "previous_close": 2138.5,
+      "change_pct": -3.16,
+      "five_day_pct": 9.36,
+      "twenty_day_pct": 14.66,
+      "avg_turnover": 7437913490,
       "score": 91,
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+2.23%→+9点",
+        "短期平均が全体平均比+6.24%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.18%→リスク低→+4点",
-        "5日騰落率+9.16%→+8点",
+        "値動きの荒さ1.75%→リスク中→-4点",
+        "5日騰落率+9.36%→+8点",
         "平均売買代金5,000万円以上→+4点",
-        "直近72時間の好材料見出し1件→+4点"
+        "直近72時間の好材料見出し1件→+6点"
       ],
       "updated_at": "2026-11-11T17:01:45.063912+00:00",
-      "technical_score": 87,
-      "news_score": 4,
-      "information_adjustment": 4,
+      "technical_score": 85,
+      "news_score": 6,
+      "information_adjustment": 6,
       "news_evidence": [
         {
-          "title": "ダイキン工業、米子会社がNVIDIAの設計基盤に対応した大規模データセンター向け冷却リファレンスアーキテクチャを発表",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB2X01mOUhheWwxNkdQZTUxZWxjbXltVHhBc0U1U1lDOXBZUklzUnZmUXAtU1pwNk9JTDJYUUp3MkVVYm1VRllpUkYtSFN6SW83VFBBMWo2ZHpwZnNZZWNkbHRxTzBRbGdma1M0QXJMSjZ5RVljMnFCdEdhTnBMLTQ?oc=5",
-          "published_at": "2026-11-12T04:02:00+00:00",
-          "publisher": "Yahoo!ニュース",
+          "title": "【Sysmex FY2026 Q2 決算説明会】シスメックス、通期営業利益予想を85億円上方修正し685億円に—米国ヘマトロジー機器の買い替え需要が牽引、一方で中国は現地通貨ベース22.4%減",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE50aVd0UGxwd1BNSHdLYUhxSzM3Y2loSWJoNVVYMzBoaGJNQmprUTZXdDlhSmJ2VURId3k1V0FxLV84VHQyd1NPWlZoYUgwN1k5SDV3RGVoMlBpRXhSYmRJ?oc=5",
+          "published_at": "2026-11-12T11:54:00+00:00",
+          "publisher": "BigGo ファイナンス",
           "official": false,
-          "priority": "参考",
+          "priority": "重要",
           "themes": [
-            "半導体・基盤"
+            "企業・決算"
           ]
         }
       ],
       "news_cautions": []
     },
     {
-      "code": "2730",
-      "name": "エディオン",
+      "code": "4661",
+      "name": "オリエンタルランド",
       "market": "プライム（内国株式）",
-      "sector": "小売業",
-      "price": 2550.0,
-      "previous_close": 2536.0,
-      "change_pct": 0.55,
-      "five_day_pct": 6.35,
-      "twenty_day_pct": 6.08,
-      "avg_turnover": 728907725,
-      "score": 87,
+      "sector": "サービス業",
+      "price": 3690.0,
+      "previous_close": 3773.0,
+      "change_pct": -2.2,
+      "five_day_pct": 7.09,
+      "twenty_day_pct": 25.62,
+      "avg_turnover": 20247868540,
+      "score": 90,
       "tag": "強気",
       "reasons": [
-        "短期平均が全体平均比+3.99%→+15点",
+        "短期平均が全体平均比+11.38%→+15点",
         "直近5本は上向き→+12点",
-        "値動きの荒さ1.67%→リスク中→-4点",
-        "5日騰落率+6.35%→+6点",
+        "値動きの荒さ2.89%→リスク中→-4点",
+        "5日騰落率+7.09%→+7点",
         "平均売買代金5,000万円以上→+4点",
-        "直近72時間の好材料見出し1件→+4点"
+        "直近72時間の好材料見出し1件→+6点"
       ],
       "updated_at": "2026-11-11T17:01:45.063912+00:00",
-      "technical_score": 83,
-      "news_score": 4,
-      "information_adjustment": 4,
+      "technical_score": 84,
+      "news_score": 6,
+      "information_adjustment": 6,
       "news_evidence": [
         {
-          "title": "エディオン、自社株買いの実施を発表(株探ニュース)",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR0tQanh2N1laejlieWI2ckJrQlJMR2RfMEFXbVlYakRoVmNQWmRKZUhsa04wVTNSeC1LNHh5cVZfNE5qRjNOME13eVdtSzJRODdlSDluVC01dW9ucTg5eDRZbmlPNUo0cWl3SXRZeVF4bkZWbmxJNExkVEc1NUhlcWRmdDZzcmM?oc=5",
-          "published_at": "2026-11-11T02:20:45+00:00",
-          "publisher": "Yahoo!ファイナンス",
+          "title": "【オリエンタルランド】決算＆長期経営戦略発表！今後の株価は？ Mojtaba Khamenei (FMlAFxwAPs)",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE55N1hJZFpQRDZrU0prWE9KMjdwZkZJZ2ZMYmVUdHFjbGRfdnQwcTZ5YzBBUXk4T1p3OVBuempZLTAwS2FwX3hqZ25zdzBLTnZNY09qaTdYTUJYUFZQTFQtVE5HRUxFVGFWdjdHXw?oc=5",
+          "published_at": "2026-11-11T10:41:18+00:00",
+          "publisher": "Unisba Media",
           "official": false,
-          "priority": "参考",
+          "priority": "重要",
           "themes": [
             "企業・決算"
           ]
@@ -712,6 +688,34 @@
       "information_adjustment": 0,
       "news_evidence": [],
       "news_cautions": []
+    },
+    {
+      "code": "8303",
+      "name": "ＳＢＩ新生銀行",
+      "market": "プライム（内国株式）",
+      "sector": "銀行業",
+      "price": 1740.0,
+      "previous_close": 1718.5,
+      "change_pct": 1.25,
+      "five_day_pct": 9.47,
+      "twenty_day_pct": 22.02,
+      "avg_turnover": 8003729238,
+      "score": 85,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+9.34%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.09%→リスク中→-4点",
+        "5日騰落率+9.47%→+8点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
+      ],
+      "updated_at": "2026-11-11T17:01:45.063912+00:00",
+      "technical_score": 85,
+      "news_score": 0,
+      "information_adjustment": 0,
+      "news_evidence": [],
+      "news_cautions": []
     }
   ],
   "batch_errors": [],
@@ -720,7 +724,7 @@
   "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
   "completion_notification_status": "送信失敗（HTTP 429）",
   "performance_summary": {
-    "recommendations": 25,
+    "recommendations": 26,
     "horizons": {
       "1": {
         "completed": 25,
