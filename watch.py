@@ -650,24 +650,41 @@ def queue_decision_notification(state, code, tag, message, generated_at):
     }
 
 
-def retry_decision_notifications(state):
+def retry_decision_notifications(state, now=None):
     pending = state.setdefault("pending_decision_notifications", {})
-    sent = 0
     for code, item in list(pending.items()):
         if state.get(code, {}).get("tag") != item["tag"]:
             pending.pop(code, None)
-            continue
-        status = send_line_message(item["message"])
-        item["attempts"] = int(item.get("attempts", 0)) + 1
-        item["last_status"] = status
+    current = (now or datetime.now(timezone.utc)).astimezone(JST)
+    minutes = current.hour * 60 + current.minute
+    slot = "afternoon" if minutes >= 15 * 60 + 30 else "morning" if minutes >= 11 * 60 + 30 else None
+    slot_key = f"{current.date()}:{slot}"
+    sent = 0
+    if pending and slot and state.get("last_decision_digest_slot") != slot_key:
+        header = "【株価判定まとめ】\n" + current.strftime("%m/%d %H:%M") + " 現在\n"
+        selected = []
+        message = header
+        for code, item in pending.items():
+            part = "\n" + item["message"] + "\n"
+            if len(message) + len(part) > 5000:
+                break
+            selected.append(code)
+            message += part
+        if not selected:
+            # Keep an unexpectedly long item in the queue; never silently truncate it.
+            print("::warning::LINE digest item exceeds the message size limit")
+            return {**line_configuration_status(), "sent_count": 0, "pending_count": len(pending)}
+        status = send_line_message(message)
+        for code in selected:
+            item = pending[code]
+            item["attempts"] = int(item.get("attempts", 0)) + 1
+            item["last_status"] = status
         if status == "送信済み":
-            pending.pop(code, None)
-            sent += 1
+            for code in selected:
+                pending.pop(code, None)
+            sent = len(selected)
+            state["last_decision_digest_slot"] = slot_key
         save_json(STATE_PATH, state)
-        # A 429 applies to the LINE channel, not just this item. Retain the
-        # rest of the queue and retry on the next scheduled run.
-        if "HTTP 429" in status:
-            break
     configuration = line_configuration_status()
     result = {**configuration, "sent_count": sent, "pending_count": len(pending)}
     state["decision_notification_status"] = result

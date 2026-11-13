@@ -1,4 +1,5 @@
 from contextlib import ExitStack
+from datetime import datetime, timezone
 import json
 from pathlib import Path
 import tempfile
@@ -111,9 +112,13 @@ class RecoveryTests(unittest.TestCase):
         watch.save_json(watch.WATCHLIST_PATH, [{'code': '1000', 'name': 'テスト'}])
         prices = (1000, 990, [900, 920, 940, 960, 980, 1000], [], [])
         self.send.side_effect = ['送信失敗（次回再試行）', '送信済み']
+        original_retry = watch.retry_decision_notifications
         with mock.patch.object(watch, 'fetch_price_series', return_value=prices), mock.patch.object(
             watch, 'compute_score', return_value=(72, '強気', [])
-        ), mock.patch.object(watch, 'run_market_scan'):
+        ), mock.patch.object(watch, 'run_market_scan'), mock.patch.object(
+            watch, 'retry_decision_notifications', side_effect=lambda state: original_retry(
+                state, datetime(2026, 11, 13, 3, 0, tzinfo=timezone.utc))
+        ):
             watch.main()
             first = watch.load_json(watch.STATE_PATH, {})
             self.assertEqual(first['pending_decision_notifications']['1000']['attempts'], 1)
@@ -152,3 +157,4 @@ class RecoveryTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

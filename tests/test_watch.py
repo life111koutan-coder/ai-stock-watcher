@@ -25,6 +25,33 @@ def candidate(code="1234", score=88, technical=76, five_day=3.2, twenty_day=7.5,
 
 
 class AutoWatchTests(unittest.TestCase):
+    def test_line_rate_limit_preserves_remaining_notifications(self):
+        state = {"1111": {"tag": "強気"}, "2222": {"tag": "弱気"},
+                 "pending_decision_notifications": {
+                     "1111": {"tag": "強気", "message": "one"},
+                     "2222": {"tag": "弱気", "message": "two"}}}
+        with mock.patch.object(watch, "send_line_message", return_value="送信失敗（HTTP 429）") as send, mock.patch.object(watch, "save_json"):
+            result = watch.retry_decision_notifications(state, datetime(2026, 11, 13, 3, 0, tzinfo=timezone.utc))
+        self.assertEqual(send.call_count, 1)
+        self.assertEqual(result["pending_count"], 2)
+        self.assertEqual(state["pending_decision_notifications"]["2222"]["attempts"], 1)
+
+    def test_decision_digest_combines_and_sends_once_per_slot(self):
+        state = {"1111": {"tag": "強気"}, "2222": {"tag": "弱気"},
+                 "pending_decision_notifications": {
+                     "1111": {"tag": "強気", "message": "one"},
+                     "2222": {"tag": "弱気", "message": "two"}}}
+        now = datetime(2026, 11, 13, 3, 0, tzinfo=timezone.utc)
+        with mock.patch.object(watch, "send_line_message", return_value="送信済み") as send, mock.patch.object(watch, "save_json"):
+            result = watch.retry_decision_notifications(state, now)
+            state["pending_decision_notifications"]["1111"] = {"tag": "強気", "message": "new"}
+            watch.retry_decision_notifications(state, now)
+        self.assertEqual(result["sent_count"], 2)
+        self.assertIn("one", send.call_args.args[0])
+        self.assertIn("two", send.call_args.args[0])
+        self.assertEqual(send.call_count, 1)
+        self.assertIn("1111", state["pending_decision_notifications"])
+
     def test_chooses_first_strict_candidate_not_already_watched(self):
         rankings = [candidate("1111"), candidate("2222")]
         selected = watch.choose_auto_watch(rankings, [{"code": "1111", "name": "登録済み"}])
@@ -173,3 +200,4 @@ class AutoWatchTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
