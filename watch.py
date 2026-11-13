@@ -664,13 +664,40 @@ def retry_decision_notifications(state):
             pending.pop(code, None)
             sent += 1
         save_json(STATE_PATH, state)
+        # A 429 applies to the LINE channel, not just this item. Retain the
+        # rest of the queue and retry on the next scheduled run.
+        if "HTTP 429" in status:
+            break
     configuration = line_configuration_status()
     result = {**configuration, "sent_count": sent, "pending_count": len(pending)}
     state["decision_notification_status"] = result
     return result
 
 
+_line_429_reported = False
+
+
+def report_line_quota(token):
+    """Report quota counts only; never print the token or response body."""
+    try:
+        results = []
+        for endpoint in ("quota", "quota/consumption"):
+            req = urllib.request.Request(
+                "https://api.line.me/v2/bot/message/" + endpoint,
+                headers={"Authorization": f"Bearer {token}"},
+            )
+            with urllib.request.urlopen(req, timeout=15) as response:
+                results.append(json.load(response))
+        quota, consumed = results
+        print("LINE monthly quota type:", quota.get("type"),
+              "limit:", quota.get("value", "unlimited"),
+              "used:", consumed.get("totalUsage", "unknown"))
+    except (urllib.error.URLError, TimeoutError, ValueError, OSError) as error:
+        print("LINE quota check unavailable:", type(error).__name__)
+
+
 def send_line_message(text):
+    global _line_429_reported
     token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
     recipient = os.environ.get("LINE_NEWS_USER_ID")
     if not token or not recipient:
@@ -687,6 +714,9 @@ def send_line_message(text):
             return "送信済み" if res.status == 200 else f"送信失敗（HTTP {res.status}）"
     except urllib.error.HTTPError as e:
         print("LINE send failed:", e.code)
+        if e.code == 429 and not _line_429_reported:
+            _line_429_reported = True
+            report_line_quota(token)
         return f"送信失敗（HTTP {e.code}）"
     except (urllib.error.URLError, TimeoutError) as e:
         print("LINE send failed:", type(e).__name__)
@@ -772,3 +802,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
