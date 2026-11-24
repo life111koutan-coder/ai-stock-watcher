@@ -607,6 +607,19 @@ def run_market_scan_batch(generated_at, watchlist):
     scan_output["performance_summary"] = performance_summary(history)
     save_json(SCAN_STATE_PATH, scan_state)
     save_json(MARKET_SCAN_PATH, scan_output)
+    # Keep the existing top-20 feed unchanged; provide a separate, paginatable
+    # snapshot of every eligible ranked stock for read-only clients.
+    save_json(os.path.join(os.path.dirname(MARKET_SCAN_PATH), "market_rankings.json"), {
+        "generated_at": generated_at,
+        "cycle_date": scan_date,
+        "cycle_complete": cycle_complete,
+        "universe_count": len(universe),
+        "covered_count": len(cycle_stocks),
+        "failed_count": len(failed_codes),
+        "selection": "内国株式、株価100円以上、平均売買代金5000万円以上",
+        "recommendation_method": scan_output["recommendation_method"],
+        "rankings": ranked_stocks,
+    })
     print(
         f"market scan: {min(len(universe), cursor)}/{len(universe)}, "
         f"today_success={len(cycle_stocks)}, retry={len(retry_codes)}, permanent_errors={len(failed_codes)}"
@@ -819,4 +832,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
