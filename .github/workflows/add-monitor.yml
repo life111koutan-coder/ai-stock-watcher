@@ -66,6 +66,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add watchlist.json state.json latest.json scan_state.json market_scan.json recommendation_history.json
+          if [ -f market_rankings.json ]; then git add market_rankings.json; fi
           git diff --cached --quiet || git commit -m "chore: add requested stock monitor"
           git pull --rebase origin main
           git push
