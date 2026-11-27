@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T16:17:37.818728+00:00",
+  "generated_at": "2026-11-27T18:49:25.569612+00:00",
   "universe_count": 4434,
   "covered_count": 4339,
   "cycle_scanned_count": 4434,
@@ -102,6 +102,47 @@
       "news_score": 0,
       "information_adjustment": 0,
       "news_evidence": [],
+      "news_cautions": []
+    },
+    {
+      "code": "4503",
+      "name": "アステラス製薬",
+      "market": "プライム（内国株式）",
+      "sector": "医薬品",
+      "price": 2935.0,
+      "previous_close": 2945.0,
+      "change_pct": -0.34,
+      "five_day_pct": 6.66,
+      "twenty_day_pct": 15.43,
+      "avg_turnover": 18042618138,
+      "score": 88,
+      "tag": "強気",
+      "reasons": [
+        "短期平均が全体平均比+6.72%→+15点",
+        "直近5本は上向き→+12点",
+        "値動きの荒さ2.92%→リスク中→-4点",
+        "5日騰落率+6.66%→+7点",
+        "平均売買代金5,000万円以上→+4点",
+        "直近72時間の好材料見出し1件→+4点"
+      ],
+      "updated_at": "2026-11-27T16:17:37.818728+00:00",
+      "technical_score": 84,
+      "news_score": 4,
+      "information_adjustment": 4,
+      "news_evidence": [
+        {
+          "title": "製造AIの導入を支援する企業が続々登場、アステラス製薬と安川電機の合弁はロボットAIで細胞製造法開発",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1qNzJVdWY2b3RyejNoTlFkbU9fZFNCQkdhd0NFaUNjWmNnY3h1bUJWVF9yWFZXQ2pocFJHWHlTdXBaZjdmQ1U2N1U2WTVYTTVENWtsaGJjZmlPNExhTndBUzgxSlZaYTJqbFhzSnRkMA?oc=5",
+          "published_at": "2026-11-26T15:39:08+00:00",
+          "publisher": "日経バイオテクONLINE",
+          "official": false,
+          "priority": "注目",
+          "themes": [
+            "AI",
+            "ロボット"
+          ]
+        }
+      ],
       "news_cautions": []
     },
     {
@@ -413,34 +454,6 @@
       "news_cautions": []
     },
     {
-      "code": "4503",
-      "name": "アステラス製薬",
-      "market": "プライム（内国株式）",
-      "sector": "医薬品",
-      "price": 2935.0,
-      "previous_close": 2945.0,
-      "change_pct": -0.34,
-      "five_day_pct": 6.66,
-      "twenty_day_pct": 15.43,
-      "avg_turnover": 18042618138,
-      "score": 84,
-      "tag": "強気",
-      "reasons": [
-        "短期平均が全体平均比+6.72%→+15点",
-        "直近5本は上向き→+12点",
-        "値動きの荒さ2.92%→リスク中→-4点",
-        "5日騰落率+6.66%→+7点",
-        "平均売買代金5,000万円以上→+4点",
-        "直近72時間に追加判断へ使える好材料見出しなし→+0点"
-      ],
-      "updated_at": "2026-11-27T16:17:37.818728+00:00",
-      "technical_score": 84,
-      "news_score": 0,
-      "information_adjustment": 0,
-      "news_evidence": [],
-      "news_cautions": []
-    },
-    {
       "code": "7844",
       "name": "マーベラス",
       "market": "プライム（内国株式）",
@@ -621,38 +634,7 @@
       "news_cautions": []
     }
   ],
-  "batch_errors": [
-    "1452 横浜ライト工業: HTTP Error 404: Not Found (attempt 3/3)",
-    "1696 ＷｉｓｄｏｍＴｒｅｅ　とうもろこし上場投資信託: list index out of range (attempt 3/3)",
-    "1688 ＷｉｓｄｏｍＴｒｅｅ　穀物上場投資信託: list index out of range (attempt 3/3)",
-    "1687 ＷｉｓｄｏｍＴｒｅｅ　農産物上場投資信託: list index out of range (attempt 3/3)",
-    "1445 ひかりホールディングス: HTTP Error 404: Not Found (attempt 3/3)",
-    "1672 ＷｉｓｄｏｍＴｒｅｅ　金上場投資信託: list index out of range (attempt 3/3)",
-    "1432 動力: HTTP Error 404: Not Found (attempt 3/3)",
-    "1685 ＷｉｓｄｏｍＴｒｅｅ　エネルギー上場投資信託: list index out of range (attempt 3/3)",
-    "2033 ＮＥＸＴ　ＮＯＴＥＳ　韓国ＫＯＳＰＩ・ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2032 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ベア　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2036 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "1948 弘電社: HTTP Error 404: Not Found (attempt 3/3)",
-    "1697 ＷｉｓｄｏｍＴｒｅｅ　大豆上場投資信託: list index out of range (attempt 3/3)",
-    "2031 ＮＥＸＴ　ＮＯＴＥＳ　香港ハンセン・ダブル・ブル　ＥＴＮ: list index out of range (attempt 3/3)",
-    "1909 日本ドライケミカル: list index out of range (attempt 3/3)",
-    "2043 ＮＥＸＴ　ＮＯＴＥＳ　ＳＴＯＸＸ　アセアン好配当５０（円、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2037 ＮＥＸＴ　ＮＯＴＥＳ　金先物　ベア　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2066 ＮＥＸＴ　ＮＯＴＥＳ　東証ＲＥＩＴ（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2041 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ベア・ドルヘッジ　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2048 ＮＥＸＴ　ＮＯＴＥＳ　野村日本株高配当７０（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2065 ＮＥＸＴ　ＮＯＴＥＳ　日本株配当貴族（ドルヘッジ、ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2452 コンピュータマインド: HTTP Error 404: Not Found (attempt 3/3)",
-    "2180 サニーサイドアップグループ: HTTP Error 404: Not Found (attempt 3/3)",
-    "2040 ＮＥＸＴ　ＮＯＴＥＳ　ＮＹダウ・ダブル・ブル・ドルヘッジ　ＥＴＮ: list index out of range (attempt 3/3)",
-    "2995 ジェイレックス・コーポレーション: HTTP Error 404: Not Found (attempt 3/3)",
-    "2992 アーバンライク: HTTP Error 404: Not Found (attempt 3/3)",
-    "2643 ＮＥＸＴ　ＦＵＮＤＳ　ＭＳＣＩジャパンカントリー指数（セレクト）連動型上場投信: list index out of range (attempt 3/3)",
-    "2069 ＮＥＸＴ　ＮＯＴＥＳ　低ベータ５０（ネットリターン）ＥＴＮ: list index out of range (attempt 3/3)",
-    "2068 ＮＥＸＴ　ＮＯＴＥＳ　高ベータ３０（ネットリターン）ＥＴＮ: insufficient data (attempt 3/3)",
-    "2985 ファーストステージ: HTTP Error 404: Not Found (attempt 3/3)"
-  ],
+  "batch_errors": [],
   "recommendation_method": "株価・出来高・5日/20日推移に、直近72時間の関連ニュース見出しを加点。注意語のある銘柄は自動追加しません。",
   "line_notification": "送信失敗（HTTP 429）",
   "note": "国内上場銘柄を営業日ごとに全件調査し、通信失敗は最大3回再試行します。ニュースは公開見出しの機械判定で、本文の将来予測ではありません。売買は実行しません。",
